@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans+TC:wght@100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 175%;
+    color: #000000;
+    --placeholder-color: #A0CDE4;
+}
+
+.no-overflow {
+    overflow: initial !important;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.hover-item .item {
+    display: none;
+    animation: fadeIn 400ms ease-out;
+}
+
+.hover-item:hover .item {
+    display: initial;
+}
+
+.hover-item .item-reverse {
+    display: initial;
+    animation: fadeIn 400ms ease-out;
+}
+
+.hover-item:hover .item-reverse {
+    display: none;
+}
+
+.absolute-cover {
+    position: absolute !important;
+    top: 0px !important;
+    left: 0px !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+}
+
+.truncate-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.menu-dropdown>ul {
+    transition: transform 200ms;
+    transform-origin: top left;
+    transform: scale(0);
+}
+
+.menu-dropdown:hover>div {
+    color: var(--tw-primary-300) !important;
+}
+
+.menu-dropdown:hover>ul {
+    visibility: visible !important;
+    transform: scale(1);
+}
+
+::-webkit-input-placeholder {
+    color: var(--placeholder-color, transparent) !important;
+}
+
+::-moz-placeholder {
+    color: var(--placeholder-color, transparent) !important;
+}
+
+:-ms-input-placeholder {
+    color: var(--placeholder-color, transparent) !important;
+}
+
+:-moz-placeholder {
+    color: var(--placeholder-color, transparent) !important;
+}
+
+/* ======================================================================================================================= */
+.hover-scale:hover img {
+    transform-origin: center;
+    transform: scale(var(--scale, 1.25));
+    transition-duration: 400ms;
+}
+/* ======================================================================================================================= */
+html[lang="zh-CN"] {
+    font-family: "Noto Sans TC", sans-serif !important;
+}
+
+html[lang="zh-TW"] {
+    font-family: "Noto Sans TC", sans-serif !important;
+}
+
+/* ======================================================================================================================= */
+.gradient-1 {
+    background: linear-gradient(90deg, #00D5E9 0%, #0895DA 100%);
+    -webkit-background-clip: text;
+    /* For Safari/Chrome */
+    -webkit-text-fill-color: transparent;
+    /* For Safari/Chrome */
+    background-clip: text;
+    /* Standard property */
+    color: transparent;
+    display: inline-block;
+}
+
+.gradient-2 {
+    background: linear-gradient(360deg, rgba(8, 149, 218, 0) 20%, rgba(8, 149, 218, 0.3) 100%);
+    -webkit-background-clip: text;
+    /* For Safari/Chrome */
+    -webkit-text-fill-color: transparent;
+    /* For Safari/Chrome */
+    background-clip: text;
+    /* Standard property */
+    color: transparent;
+}
+
+.gradient-bg-1 {
+    background: linear-gradient(90deg, #00D5E9 0%, #0895DA 100%);
+}
+
+.gradient-btn-1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(90deg, #0895DA 0%, #00D5E9 50%, #0895DA 100%);
+    transform: translateX(-50%);
+    transition: transform 300ms ease-in-out;
+}
+
+.gradient-btn-1:hover::before {
+    transform: translateX(0%);
+}
+
+.card-1 {
+    border: 1px solid #A0CDE433;
+    /* box-shadow: 0 0 0 1px #A0CDE433; */
+    backdrop-filter: blur(20px);
+    border-radius: 28px;
+
+    background: radial-gradient(ellipse 150% 150% at center, #0895DA00 0%, #0895DA33 100%);
+
+}
+
+/* ======================================================================================================================= */
+@media (min-width: 1024px) {
+    .lg\:grid-colspan-2 {
+        grid-column: span 2;
+    }
+}
+/* ======================================================================================================================= */
+.swiper-ani[data-effect="fade"] .swiper-slide:not(.swiper-slide-active){
+    visibility: hidden;
+}
+
+.toggle-scrolling {
+    transition: opacity 200ms ease-in-out;
+    opacity: 1;
+}
+.toggle-scrolling.active {
+    opacity: 0;
+}
+
+.fancybox__backdrop {
+    background: #030A11E5 !important;
+    backdrop-filter: blur(20px);
+}
+/* ======================================================================================================================= */
