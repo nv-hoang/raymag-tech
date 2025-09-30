@@ -1,19 +1,19 @@
 import { gsap } from "./gsap";
 import { ScrollTrigger } from "./gsap/ScrollTrigger";
-import { ScrollSmoother } from "./gsap/ScrollSmoother";
+// import { ScrollSmoother } from "./gsap/ScrollSmoother";
 import { ScrollToPlugin } from "./gsap/ScrollToPlugin";
 import { CountUp } from "countup.js";
 import jQuery from "jquery";
 var $ = window.jQuery || jQuery;
 
-gsap.registerPlugin(ScrollTrigger, ScrollSmoother, ScrollToPlugin);
-// gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+// gsap.registerPlugin(ScrollTrigger, ScrollSmoother, ScrollToPlugin);
+gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
-window.smoother = ScrollSmoother.create({
-    smooth: 0.8,
-    effects: true,
-    smoothTouch: 0,
-});
+// window.smoother = ScrollSmoother.create({
+//     smooth: 0.8,
+//     effects: true,
+//     smoothTouch: 0,
+// });
 
 var DEFAULT_STAGGER = 0.2;
 var DEFAULT_DURATION = 1;
