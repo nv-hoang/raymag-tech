@@ -63,9 +63,12 @@ html {
 }
 
 .menu-dropdown>ul {
-    transition: transform 200ms;
-    transform-origin: top left;
-    transform: scale(0);
+    /* transition: transform 200ms; */
+    /* transform-origin: top left; */
+    /* transform: scale(0); */
+    transition: max-height 400ms ease-in-out;
+    max-height: 0px;
+    overflow: hidden;
 }
 
 .menu-dropdown:hover>div {
@@ -73,8 +76,9 @@ html {
 }
 
 .menu-dropdown:hover>ul {
-    visibility: visible !important;
-    transform: scale(1);
+    /* visibility: visible !important; */
+    /* transform: scale(1); */
+    max-height: 1000px !important;
 }
 
 ::-webkit-input-placeholder {
@@ -99,6 +103,7 @@ html {
     transform: scale(var(--scale, 1.25));
     transition-duration: 400ms;
 }
+
 /* ======================================================================================================================= */
 html[lang="zh-CN"] {
     font-family: "Noto Sans TC", sans-serif !important;
@@ -168,15 +173,13 @@ html[lang="zh-TW"] {
         grid-column: span 2;
     }
 }
-/* ======================================================================================================================= */
-.swiper-ani[data-effect="fade"] .swiper-slide:not(.swiper-slide-active){
-    visibility: hidden;
-}
 
+/* ======================================================================================================================= */
 .toggle-scrolling {
     transition: opacity 200ms ease-in-out;
     opacity: 1;
 }
+
 .toggle-scrolling.active {
     opacity: 0;
 }
@@ -184,5 +187,32 @@ html[lang="zh-TW"] {
 .fancybox__backdrop {
     background: #030A11E5 !important;
     backdrop-filter: blur(20px);
+}
+
+.hamburger-menu-icon div:nth-child(1) {
+    top: 7px;
+}
+
+.hamburger-menu-icon div:nth-child(2) {
+    top: 13px;
+    opacity: 1;
+}
+
+.hamburger-menu-icon div:nth-child(3) {
+    top: 19px;
+}
+
+.hamburger-menu-icon.active div:nth-child(1) {
+    transform: rotate(45deg);
+    top: 13px;
+}
+
+.hamburger-menu-icon.active div:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu-icon.active div:nth-child(3) {
+    transform: rotate(-45deg);
+    top: 13px;
 }
 /* ======================================================================================================================= */

@@ -51,6 +51,9 @@ export function SwiperInit(gsap) {
             var swiperInstance = new Swiper(el, {
                 loop: el.dataset.loop == 'true',
                 effect: el.dataset.effect || 'slide',
+                fadeEffect: {
+                    crossFade: true
+                },
                 speed: el.dataset.effectSpeed || 300,
                 spaceBetween: el.dataset.spaceBetween || 0,
                 slidesPerView: el.dataset.slidesPerView || 1,

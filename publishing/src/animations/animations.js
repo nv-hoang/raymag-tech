@@ -133,6 +133,26 @@ gsap.registerEffect({
 });
 
 gsap.registerEffect({
+    name: "fadeOut",
+    effect: (targets, config) => {
+        return gsap.to(targets, {
+            duration: config.duration,
+            stagger: config.stagger,
+            delay: config.delay,
+            opacity: 0,
+            onComplete: config.onComplete,
+        });
+    },
+    defaults: {
+        duration: 0.2,
+        stagger: DEFAULT_STAGGER,
+        delay: 0,
+        onComplete: function () { },
+    },
+    extendTimeline: true,
+});
+
+gsap.registerEffect({
     name: "fadeInBlur",
     effect: (targets, config) => {
         return gsap.from(targets, {

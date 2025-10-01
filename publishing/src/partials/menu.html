@@ -34,7 +34,7 @@
                                 <path d="M3.67063 6.8272C3.70733 6.88049 3.75644 6.92407 3.81372 6.95417C3.871 6.98427 3.93474 7 3.99946 7C4.06417 7 4.12791 6.98427 4.1852 6.95417C4.24248 6.92407 4.29158 6.88049 4.32828 6.8272L7.92857 1.62756C7.97024 1.56758 7.99468 1.49734 7.99922 1.42445C8.00377 1.35157 7.98826 1.27883 7.95436 1.21414C7.92047 1.14946 7.86949 1.09529 7.80697 1.05754C7.74445 1.01979 7.67278 0.999885 7.59974 1H0.399176C0.326308 1.0003 0.2549 1.02046 0.192632 1.0583C0.130364 1.09615 0.079592 1.15025 0.0457757 1.21478C0.0119594 1.27932 -0.00362155 1.35185 0.000708374 1.42458C0.0050383 1.49731 0.0291153 1.56749 0.0703501 1.62756L3.67063 6.8272Z" fill="currentColor" />
                             </svg>
                         </div>
-                        <ul class="absolute z-10 w-max invisible pointer-events-none">
+                        <ul class="absolute z-10 w-max pointer-events-none" style="max-height: 0px;">
                             <div class="pointer-events-auto w-[150px]" style="background: #030A11E5; backdrop-filter: blur(20px);">
                                 <div class="flex flex-col">
                                     <a href="#" class="text-[16px] text-white hover:text-primary-300 transition-colors leading-175 p-5 text-center">English</a>
@@ -44,16 +44,19 @@
                     </div>
                 </div>
 
-                <div class="2xl:hidden p-3 lg:p-5">
-                    <img src="assets/img/menu.svg" class="cursor-pointer" @click="menu = true" x-show="!menu">
-                    <img src="assets/img/menu-x.svg" class="cursor-pointer" @click="menu = false" x-show="menu" style="display: none;">
+                <div class="2xl:hidden p-3 lg:p-5 cursor-pointer" @click="menu = !menu">
+                    <div class="hamburger-menu-icon size-[26px] relative" :class="menu ? 'active':''">
+                        <div class="w-[26px] h-[2px] bg-white transition-all duration-500 origin-center absolute left-0"></div>
+                        <div class="w-[26px] h-[2px] bg-white transition-all duration-500 origin-center absolute left-0"></div>
+                        <div class="w-[26px] h-[2px] bg-white transition-all duration-500 origin-center absolute left-0"></div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- Mobile menu -->
-    <div class="2xl:hidden relative overflow-auto transition-all h-0 duration-200" x-bind:style="menu ? 'height: calc(100dvh - 50px); background: #030A11E5;backdrop-filter: blur(20px);' : 'background: #030A11E5;backdrop-filter: blur(20px);'">
+    <div class="2xl:hidden relative overflow-auto transition-all h-0 duration-500" x-bind:style="menu ? 'height: calc(100dvh - 50px); background: #030A11E5;backdrop-filter: blur(20px);' : 'background: #030A11E5;backdrop-filter: blur(20px);'">
         <div class="pb-4 flex flex-col">
             <a href="#" class="text-[16px] leading-175 text-white transition-colors hover:text-primary-300 px-3 lg:px-10 py-5">關於銳鎂</a>
             <a href="#" class="text-[16px] leading-175 text-white transition-colors hover:text-primary-300 px-3 lg:px-10 py-5">全方位表面處理技術</a>
@@ -79,7 +82,7 @@
                         <path d="M3.67063 6.8272C3.70733 6.88049 3.75644 6.92407 3.81372 6.95417C3.871 6.98427 3.93474 7 3.99946 7C4.06417 7 4.12791 6.98427 4.1852 6.95417C4.24248 6.92407 4.29158 6.88049 4.32828 6.8272L7.92857 1.62756C7.97024 1.56758 7.99468 1.49734 7.99922 1.42445C8.00377 1.35157 7.98826 1.27883 7.95436 1.21414C7.92047 1.14946 7.86949 1.09529 7.80697 1.05754C7.74445 1.01979 7.67278 0.999885 7.59974 1H0.399176C0.326308 1.0003 0.2549 1.02046 0.192632 1.0583C0.130364 1.09615 0.079592 1.15025 0.0457757 1.21478C0.0119594 1.27932 -0.00362155 1.35185 0.000708374 1.42458C0.0050383 1.49731 0.0291153 1.56749 0.0703501 1.62756L3.67063 6.8272Z" fill="currentColor" />
                     </svg>
                 </div>
-                <div class="relative overflow-hidden transition-all max-h-0 duration-200" x-bind:style="openx ? 'max-height: ' + ($el.scrollHeight) + 'px' : ''">
+                <div class="relative overflow-hidden transition-all max-h-0 duration-300" x-bind:style="openx ? 'max-height: ' + ($el.scrollHeight) + 'px' : ''">
                     <div class="flex flex-col">
                         <a href="#" class="text-[16px] leading-175 text-white transition-colors hover:text-primary-300 py-5 pl-10 lg:pl-[68px] pr-3 lg:pr-10">English</a>
                     </div>

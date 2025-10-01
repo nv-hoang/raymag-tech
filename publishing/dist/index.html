@@ -22,8 +22,8 @@
   <link rel="stylesheet" crossorigin href="/assets/main.css">
 </head>
 
-<body style="background-color: #030A11; color: #fff;">
-    <div id="ploading">
+<body style="background-color: #030A11; color: #fff; overflow-x: hidden;">
+    <div id="ploading" style="pointer-events: none !important;">
         <div style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: #030A11; z-index: 9999; display: flex; align-items: center; justify-content: center; transform-origin: top center;">
             <div class="ani-item-1" style="display: inline-flex; opacity: 0;">
                 <div style="overflow: hidden; width: 65px; height: 58px;">
@@ -69,7 +69,7 @@
                                     <path d="M3.67063 6.8272C3.70733 6.88049 3.75644 6.92407 3.81372 6.95417C3.871 6.98427 3.93474 7 3.99946 7C4.06417 7 4.12791 6.98427 4.1852 6.95417C4.24248 6.92407 4.29158 6.88049 4.32828 6.8272L7.92857 1.62756C7.97024 1.56758 7.99468 1.49734 7.99922 1.42445C8.00377 1.35157 7.98826 1.27883 7.95436 1.21414C7.92047 1.14946 7.86949 1.09529 7.80697 1.05754C7.74445 1.01979 7.67278 0.999885 7.59974 1H0.399176C0.326308 1.0003 0.2549 1.02046 0.192632 1.0583C0.130364 1.09615 0.079592 1.15025 0.0457757 1.21478C0.0119594 1.27932 -0.00362155 1.35185 0.000708374 1.42458C0.0050383 1.49731 0.0291153 1.56749 0.0703501 1.62756L3.67063 6.8272Z" fill="currentColor" />
                                 </svg>
                             </div>
-                            <ul class="absolute z-10 w-max invisible pointer-events-none">
+                            <ul class="absolute z-10 w-max pointer-events-none" style="max-height: 0px;">
                                 <div class="pointer-events-auto w-[150px]" style="background: #030A11E5; backdrop-filter: blur(20px);">
                                     <div class="flex flex-col">
                                         <a href="#" class="text-[16px] text-white hover:text-primary-300 transition-colors leading-175 p-5 text-center">English</a>
@@ -79,16 +79,19 @@
                         </div>
                     </div>
     
-                    <div class="2xl:hidden p-3 lg:p-5">
-                        <img src="assets/img/menu.svg" class="cursor-pointer" @click="menu = true" x-show="!menu">
-                        <img src="assets/img/menu-x.svg" class="cursor-pointer" @click="menu = false" x-show="menu" style="display: none;">
+                    <div class="2xl:hidden p-3 lg:p-5 cursor-pointer" @click="menu = !menu">
+                        <div class="hamburger-menu-icon size-[26px] relative" :class="menu ? 'active':''">
+                            <div class="w-[26px] h-[2px] bg-white transition-all duration-500 origin-center absolute left-0"></div>
+                            <div class="w-[26px] h-[2px] bg-white transition-all duration-500 origin-center absolute left-0"></div>
+                            <div class="w-[26px] h-[2px] bg-white transition-all duration-500 origin-center absolute left-0"></div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     
         <!-- Mobile menu -->
-        <div class="2xl:hidden relative overflow-auto transition-all h-0 duration-200" x-bind:style="menu ? 'height: calc(100dvh - 50px); background: #030A11E5;backdrop-filter: blur(20px);' : 'background: #030A11E5;backdrop-filter: blur(20px);'">
+        <div class="2xl:hidden relative overflow-auto transition-all h-0 duration-500" x-bind:style="menu ? 'height: calc(100dvh - 50px); background: #030A11E5;backdrop-filter: blur(20px);' : 'background: #030A11E5;backdrop-filter: blur(20px);'">
             <div class="pb-4 flex flex-col">
                 <a href="#" class="text-[16px] leading-175 text-white transition-colors hover:text-primary-300 px-3 lg:px-10 py-5">關於銳鎂</a>
                 <a href="#" class="text-[16px] leading-175 text-white transition-colors hover:text-primary-300 px-3 lg:px-10 py-5">全方位表面處理技術</a>
@@ -114,7 +117,7 @@
                             <path d="M3.67063 6.8272C3.70733 6.88049 3.75644 6.92407 3.81372 6.95417C3.871 6.98427 3.93474 7 3.99946 7C4.06417 7 4.12791 6.98427 4.1852 6.95417C4.24248 6.92407 4.29158 6.88049 4.32828 6.8272L7.92857 1.62756C7.97024 1.56758 7.99468 1.49734 7.99922 1.42445C8.00377 1.35157 7.98826 1.27883 7.95436 1.21414C7.92047 1.14946 7.86949 1.09529 7.80697 1.05754C7.74445 1.01979 7.67278 0.999885 7.59974 1H0.399176C0.326308 1.0003 0.2549 1.02046 0.192632 1.0583C0.130364 1.09615 0.079592 1.15025 0.0457757 1.21478C0.0119594 1.27932 -0.00362155 1.35185 0.000708374 1.42458C0.0050383 1.49731 0.0291153 1.56749 0.0703501 1.62756L3.67063 6.8272Z" fill="currentColor" />
                         </svg>
                     </div>
-                    <div class="relative overflow-hidden transition-all max-h-0 duration-200" x-bind:style="openx ? 'max-height: ' + ($el.scrollHeight) + 'px' : ''">
+                    <div class="relative overflow-hidden transition-all max-h-0 duration-300" x-bind:style="openx ? 'max-height: ' + ($el.scrollHeight) + 'px' : ''">
                         <div class="flex flex-col">
                             <a href="#" class="text-[16px] leading-175 text-white transition-colors hover:text-primary-300 py-5 pl-10 lg:pl-[68px] pr-3 lg:pr-10">English</a>
                         </div>
@@ -275,7 +278,7 @@
     </div>
 
     <div class="relative mt-[80px]">
-        <div x-init="$dispatch('initswiper')" id="service-swiper" data-loop="true" data-effect="fade" data-next=".service-swiper-next" data-prev=".service-swiper-prev" data-index=".service-swiper-index" data-total=".service-swiper-total" class="relative swiper-ani">
+        <div x-init="$dispatch('initswiper')" id="service-swiper" data-effect-speed="600" data-loop="true" data-effect="fade" data-next=".service-swiper-next" data-prev=".service-swiper-prev" data-index=".service-swiper-index" data-total=".service-swiper-total" class="relative swiper-ani">
             <div> <!-- swiper-wrapper -->
                 <div class="swiper-slide swiper-slide-0">
                     <div data-ani="fadeUp" data-delay="0.4" data-target=".ani-item">
@@ -284,8 +287,12 @@
                                 <div class="hidden lg:block w-[580px]"></div>
                                 <div class="flex-1">
                                     <div class="lg:pt-10 lg:min-h-[300px] lg:max-w-[520px] lg:mx-auto">
-                                        <div class="ani-item text-[40px] lg:text-[64px] leading-125 lg:leading-100 font-semibold gradient-1" style="font-family: 'Inter';">EQUIPMENT MODULE RETROFIT</div>
-                                        <h2 class="ani-item text-[24px] lg:text-[32px] leading-150 font-medium text-white mt-5">設備模組改造</h2>
+                                        <div class="text-[40px] lg:text-[64px] leading-125 lg:leading-100 font-semibold overflow-hidden" style="font-family: 'Inter';">
+                                            <div class="ani-item gradient-1">EQUIPMENT MODULE RETROFIT</div>
+                                        </div>
+                                        <h2 class="text-[24px] lg:text-[32px] leading-150 font-medium text-white mt-5 overflow-hidden">
+                                            <div class="ani-item">設備模組改造</div>
+                                        </h2>
                                     </div>
 
                                     <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-[80px] mt-10">
@@ -305,7 +312,11 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <h6 class="ani-item text-[16px] lg:text-[18px] leading-175 text-gray-100">依客戶製程需求，量身打造耐用、安全且高效率的槽體系統。</h6>
+                                        <div>
+                                            <h6 class="text-[16px] lg:text-[18px] leading-175 text-gray-100 overflow-hidden">
+                                                <div class="ani-item">依客戶製程需求，量身打造耐用、安全且高效率的槽體系統。</div>
+                                            </h6>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -320,10 +331,12 @@
                                 <div class="hidden lg:block w-[580px]"></div>
                                 <div class="flex-1">
                                     <div class="lg:pt-10 lg:min-h-[300px] lg:max-w-[520px] lg:mx-auto">
-                                        <div class="ani-item text-[40px] lg:text-[64px] leading-125 lg:leading-100 font-semibold gradient-1" style="font-family: 'Inter';">
-                                            EQUIPMENT TANK DESIGN
+                                        <div class="text-[40px] lg:text-[64px] leading-125 lg:leading-100 font-semibold overflow-hidden" style="font-family: 'Inter';">
+                                            <div class="ani-item gradient-1">EQUIPMENT TANK DESIGN</div>
                                         </div>
-                                        <h2 class="ani-item text-[24px] lg:text-[32px] leading-150 font-medium text-white mt-5">設備槽體設計</h2>
+                                        <h2 class="text-[24px] lg:text-[32px] leading-150 font-medium text-white mt-5 overflow-hidden">
+                                            <div class="ani-item">設備槽體設計</div>
+                                        </h2>
                                     </div>
 
                                     <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-[80px] mt-10">
@@ -343,7 +356,11 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <h6 class="ani-item text-[16px] lg:text-[18px] leading-175 text-gray-100">依客戶製程需求，量身打造耐用、安全且高效率的槽體系統。</h6>
+                                        <div>
+                                            <h6 class="text-[16px] lg:text-[18px] leading-175 text-gray-100 overflow-hidden">
+                                                <div class="ani-item">依客戶製程需求，量身打造耐用、安全且高效率的槽體系統。</div>
+                                            </h6>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -358,10 +375,12 @@
                                 <div class="hidden lg:block w-[580px]"></div>
                                 <div class="flex-1">
                                     <div class="lg:pt-10 lg:min-h-[300px] lg:max-w-[520px] lg:mx-auto">
-                                        <div class="ani-item text-[40px] lg:text-[64px] leading-125 lg:leading-100 font-semibold gradient-1" style="font-family: 'Inter';">
-                                            PIPELINE OPTIMIZATION
+                                        <div class="text-[40px] lg:text-[64px] leading-125 lg:leading-100 font-semibold overflow-hidden" style="font-family: 'Inter';">
+                                            <div class="ani-item gradient-1">PIPELINE OPTIMIZATION</div>
                                         </div>
-                                        <h2 class="ani-item text-[24px] lg:text-[32px] leading-150 font-medium text-white mt-5">PIPE管路優化</h2>
+                                        <h2 class="text-[24px] lg:text-[32px] leading-150 font-medium text-white mt-5 overflow-hidden">
+                                            <div class="ani-item">PIPE管路優化</div>
+                                        </h2>
                                     </div>
 
                                     <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-[80px] mt-10">
@@ -381,7 +400,11 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <h6 class="ani-item text-[16px] lg:text-[18px] leading-175 text-gray-100">改善流體動線，提升管路配置效率，降低能源與維護成本。</h6>
+                                        <div>
+                                            <h6 class="text-[16px] lg:text-[18px] leading-175 text-gray-100 overflow-hidden">
+                                                <div class="ani-item">改善流體動線，提升管路配置效率，降低能源與維護成本。</div>
+                                            </h6>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -396,10 +419,12 @@
                                 <div class="hidden lg:block w-[580px]"></div>
                                 <div class="flex-1">
                                     <div class="lg:pt-10 lg:min-h-[300px] lg:max-w-[520px] lg:mx-auto">
-                                        <div class="ani-item text-[40px] lg:text-[64px] leading-125 lg:leading-100 font-semibold gradient-1" style="font-family: 'Inter';">
-                                            PLANT ENGINEERING
+                                        <div class="text-[40px] lg:text-[64px] leading-125 lg:leading-100 font-semibold overflow-hidden" style="font-family: 'Inter';">
+                                            <div class="ani-item gradient-1">PLANT ENGINEERING</div>
                                         </div>
-                                        <h2 class="ani-item text-[24px] lg:text-[32px] leading-150 font-medium text-white mt-5">廠務端工程</h2>
+                                        <h2 class="text-[24px] lg:text-[32px] leading-150 font-medium text-white mt-5 overflow-hidden">
+                                            <div class="ani-item">廠務端工程</div>
+                                        </h2>
                                     </div>
 
                                     <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-[80px] mt-10">
@@ -419,7 +444,11 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <h6 class="ani-item text-[16px] lg:text-[18px] leading-175 text-gray-100">專精於二次純水系統、廢液回收處理以及化學工酸系統工程，確保廠區運作安全與合規。</h6>
+                                        <div>
+                                            <h6 class="text-[16px] lg:text-[18px] leading-175 text-gray-100 overflow-hidden">
+                                                <div class="ani-item">專精於二次純水系統、廢液回收處理以及化學工酸系統工程，確保廠區運作安全與合規。</div>
+                                            </h6>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -434,10 +463,12 @@
                                 <div class="hidden lg:block w-[580px]"></div>
                                 <div class="flex-1">
                                     <div class="lg:pt-10 lg:min-h-[300px] lg:max-w-[520px] lg:mx-auto">
-                                        <div class="ani-item text-[40px] lg:text-[64px] leading-125 lg:leading-100 font-semibold gradient-1" style="font-family: 'Inter';">
-                                            EQUIPMENT SYSTEM SOLUTIONS
+                                        <div class="text-[40px] lg:text-[64px] leading-125 lg:leading-100 font-semibold overflow-hidden" style="font-family: 'Inter';">
+                                            <div class="ani-item gradient-1">EQUIPMENT SYSTEM SOLUTIONS</div>
                                         </div>
-                                        <h2 class="ani-item text-[24px] lg:text-[32px] leading-150 font-medium text-white mt-5">設備端系統供應</h2>
+                                        <h2 class="text-[24px] lg:text-[32px] leading-150 font-medium text-white mt-5 overflow-hidden">
+                                            <div class="ani-item">設備端系統供應</div>
+                                        </h2>
                                     </div>
 
                                     <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-[80px] mt-10">
@@ -457,7 +488,11 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <h6 class="ani-item text-[16px] lg:text-[18px] leading-175 text-gray-100">完整提供設備系統解決方案，支援多元製程需求。</h6>
+                                        <div>
+                                            <h6 class="text-[16px] lg:text-[18px] leading-175 text-gray-100 overflow-hidden">
+                                                <div class="ani-item">完整提供設備系統解決方案，支援多元製程需求。</div>
+                                            </h6>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -472,10 +507,12 @@
                                 <div class="hidden lg:block w-[580px]"></div>
                                 <div class="flex-1">
                                     <div class="lg:pt-10 lg:min-h-[300px] lg:max-w-[520px] lg:mx-auto">
-                                        <div class="ani-item text-[40px] lg:text-[64px] leading-125 lg:leading-100 font-semibold gradient-1" style="font-family: 'Inter';">
-                                            CUSTOM COMPONENTS
+                                        <div class="text-[40px] lg:text-[64px] leading-125 lg:leading-100 font-semibold overflow-hidden" style="font-family: 'Inter';">
+                                            <div class="ani-item gradient-1">CUSTOM COMPONENTS</div>
                                         </div>
-                                        <h2 class="ani-item text-[24px] lg:text-[32px] leading-150 font-medium text-white mt-5">客製化零組件加工</h2>
+                                        <h2 class="text-[24px] lg:text-[32px] leading-150 font-medium text-white mt-5 overflow-hidden">
+                                            <div class="ani-item">客製化零組件加工</div>
+                                        </h2>
                                     </div>
 
                                     <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-[80px] mt-10">
@@ -495,7 +532,11 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <h6 class="ani-item text-[16px] lg:text-[18px] leading-175 text-gray-100">依據特殊製程條件，設計並製造專屬零件，滿足高精度與耐用性要求。</h6>
+                                        <div>
+                                            <h6 class="text-[16px] lg:text-[18px] leading-175 text-gray-100 overflow-hidden">
+                                                <div class="ani-item">依據特殊製程條件，設計並製造專屬零件，滿足高精度與耐用性要求。</div>
+                                            </h6>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -708,28 +749,28 @@
                                             <div class="tetx-[16px] leading-175 text-white mb-1">姓名*</div>
                                             <input type="text" placeholder="請輸入姓名" required class="w-full outline-none rounded-[28px] border border-primary-300 border-opacity-20 px-3 py-[10px] text-[16px] leading-175 h-[48px] text-primary-300 focus:text-white" style="background: #030A11E5; backdrop-filter: blur(20px);">
                                         </div>
-    
+
                                         <div class="mb-7 form-field">
                                             <div class="tetx-[16px] leading-175 text-white mb-1">電話*</div>
                                             <input type="text" placeholder="請輸入電話號碼" required class="w-full outline-none rounded-[28px] border border-primary-300 border-opacity-20 px-3 py-[10px] text-[16px] leading-175 h-[48px] text-primary-300 focus:text-white" style="background: #030A11E5; backdrop-filter: blur(20px);">
                                         </div>
                                     </div>
-    
+
                                     <div class="mb-7 form-field">
                                         <div class="tetx-[16px] leading-175 text-white mb-1">公司名稱</div>
                                         <input type="text" placeholder="請輸入公司名稱" class="w-full outline-none rounded-[28px] border border-primary-300 border-opacity-20 px-3 py-[10px] text-[16px] leading-175 h-[48px] text-primary-300 focus:text-white" style="background: #030A11E5; backdrop-filter: blur(20px);">
                                     </div>
-    
+
                                     <div class="mb-7 form-field">
                                         <div class="tetx-[16px] leading-175 text-white mb-1">E-mail*</div>
                                         <input type="email" placeholder="請輸入E-mail" required class="w-full outline-none rounded-[28px] border border-primary-300 border-opacity-20 px-3 py-[10px] text-[16px] leading-175 h-[48px] text-primary-300 focus:text-white" style="background: #030A11E5; backdrop-filter: blur(20px);">
                                     </div>
-    
+
                                     <div class="mb-7 form-field">
                                         <div class="tetx-[16px] leading-175 text-white mb-1">訊息*</div>
                                         <textarea placeholder="請輸入訊息" required rows="5" class="w-full outline-none rounded-[28px] border border-primary-300 border-opacity-20 px-3 py-[10px] text-[16px] leading-175 text-primary-300 focus:text-white" style="background: #030A11E5; backdrop-filter: blur(20px);"></textarea>
                                     </div>
-    
+
                                     <button type="submit" class="rounded-full overflow-hidden gradient-btn-1 cursor-pointer relative block w-full">
                                         <div class="relative text-[16px] leading-175 font-medium text-white p-[10px] text-center h-[48px]">送出訊息</div>
                                     </button>
