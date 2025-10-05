@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Contact Form Submission</title>
+    <style>
+        /* Reset styles for email clients */
+        body, table, td, p, a, li, blockquote {
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+        }
+        table, td {
+            mso-table-lspace: 0pt;
+            mso-table-rspace: 0pt;
+        }
+        img {
+            -ms-interpolation-mode: bicubic;
+        }
+    </style>
+</head>
+<body style="margin: 0; padding: 0; background-color: #f4f4f4; font-family: Arial, sans-serif;">
+    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="background-color: #f4f4f4;">
+        <tr>
+            <td align="center" style="padding: 20px 0;">
+                <!-- Main container -->
+                <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="600" style="background-color: #ffffff; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                    
+                    <!-- Header -->
+                    <tr>
+                        <td style="background-color: #1e1e1e; padding: 30px; text-align: center; border-radius: 8px 8px 0 0;">
+                            <h1 style="margin: 0; color: #ffffff; font-size: 24px; font-weight: bold;">
+                                New Contact Form Submission
+                            </h1>
+                        </td>
+                    </tr>
+                    
+                    <!-- Content -->
+                    <tr>
+                        <td style="padding: 40px 30px;">
+                            <p style="margin: 0 0 20px 0; color: #374151; font-size: 16px; line-height: 1.5;">
+                                You have received a new message through your contact form:
+                            </p>
+                            
+                            <!-- Contact Details Table -->
+                            <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: 20px 0;">
+                                <tr>
+                                    <td style="padding: 15px; background-color: #f9fafb; border-left: 4px solid #ed1c29;">
+                                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                                            <tr>
+                                                <td style="padding: 8px 0; border-bottom: 1px solid #e5e7eb;">
+                                                    <strong style="color: #374151; font-size: 14px;">Name:</strong>
+                                                    <span style="color: #6b7280; font-size: 14px; margin-left: 10px;">[[name]]</span>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                            
+                            <!-- Message Section -->
+                            <div style="margin: 30px 0;">
+                                <h3 style="margin: 0 0 15px 0; color: #374151; font-size: 18px; font-weight: 600;">
+                                    Message:
+                                </h3>
+                                <div style="background-color: #f9fafb; padding: 20px; border-left: 4px solid #ed1c29;">
+                                    <p style="margin: 0; color: #374151; font-size: 15px; line-height: 1.6;">
+                                        [[message]]
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <!-- Timestamp -->
+                            <p style="margin: 30px 0 0 0; color: #9ca3af; font-size: 14px; text-align: center;">
+                                Received on [[date]]
+                            </p>
+                        </td>
+                    </tr>
+                    
+                    <!-- Footer -->
+                    <tr>
+                        <td style="background-color: #f9fafb; padding: 20px 30px; text-align: center; border-radius: 0 0 8px 8px; border-top: 1px solid #e5e7eb;">
+                            <p style="margin: 0; color: #6b7280; font-size: 14px;">
+                                This email was automatically generated from your website's contact form.
+                            </p>
+                            <p style="margin: 10px 0 0 0; color: #9ca3af; font-size: 12px;">
+                                Please do not reply to this email. Contact the sender directly using the information provided above.
+                            </p>
+                        </td>
+                    </tr>
+                    
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

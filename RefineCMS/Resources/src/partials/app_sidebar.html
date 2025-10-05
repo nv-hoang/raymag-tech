@@ -1,0 +1,376 @@
+<ui-group :data="{open: false}" v-slot="sidebar" @sidebar="(state) => state.open = true">
+    <div class="sidebar-panel fixed top-0 left-0 z-50 bg-white border-r border-gray-200 w-[250px] h-[100dvh] transition-transform duration-300 -translate-x-[250px] xl:translate-x-0" :style="sidebar.open ? 'translate: 0px;':''">
+        <header class="flex flex-row h-[65px] items-center justify-between pl-6 pr-3 pt-3">
+            <a href="/"><img src="assets/img/logo.svg"></a>
+            <div class="cursor-pointer text-[20px] xl:hidden" @click="sidebar.open = false">
+                <left-outlined></left-outlined>
+            </div>
+        </header>
+        <perfect-scrollbar style="height: calc(100dvh - 65px);">
+            <div class="pt-3 pb-6 text-[13px] flex flex-col space-y-1.5">
+                <div class="relative flex px-3 text-primary-500">
+                    <a href="/dashboard.html" class="group min-w-0 flex-1 rounded-md px-3 py-2 font-medium outline-none transition-colors ease-in-out">
+                        <div class="flex min-w-0 items-center justify-between gap-2 tracking-wide">
+                            <div class="flex min-w-0 items-center gap-3">
+                                <dashboard-outlined class="text-[20px]"></dashboard-outlined>
+                                <span class="truncate">Dashboard</span>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-1 top-1 w-1 bg-primary-500 left-0 rounded-r-full"></div>
+                    </a>
+                </div>
+
+                <ui-group :data="{open: false}" v-slot="state" class="relative break-words flex flex-1 flex-col px-3">
+                    <button @click="state.open = !state.open" class="group cursor-pointer flex flex-1 items-center justify-between rounded-lg px-3 py-2 font-medium outline-none transition-colors duration-300 ease-in-out text-gray-800 hover:bg-gray-100 hover:text-gray-950 focus:bg-gray-100 focus:text-gray-950" type="button">
+                        <div class="flex min-w-0 items-center gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><!-- Icon from Huge Icons by Hugeicons - undefined -->
+                                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m3 21l5-5m5.259 2.871c-3.744-.85-7.28-4.386-8.13-8.13c-.135-.592-.202-.888-.007-1.369c.194-.48.433-.63.909-.927c1.076-.672 2.242-.886 3.451-.78c1.697.151 2.546.226 2.97.005c.423-.22.71-.736 1.286-1.767l.728-1.307c.48-.86.72-1.291 1.285-1.494s.905-.08 1.585.166a5.63 5.63 0 0 1 3.396 3.396c.246.68.369 1.02.166 1.585c-.203.564-.633.804-1.494 1.285l-1.337.745c-1.03.574-1.544.862-1.765 1.289c-.22.428-.14 1.258.02 2.918c.118 1.22-.085 2.394-.766 3.484c-.298.476-.447.714-.928.909c-.48.194-.777.127-1.37-.008" color="currentColor" />
+                            </svg>
+                            <span class="truncate">Posts</span>
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="size-4 transition-transform shrink-0" :class="state.open ? 'rotate-90':''">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5"></path>
+                        </svg>
+                    </button>
+                    <ui-collapse :open="state.open">
+                        <div class="relative break-words">
+                            <div class="flex flex-col px-3 py-1 border-l-2 border-gray-200 ml-5">
+                                <div class="relative flex">
+                                    <a href="/" class="group min-w-0 flex-1 rounded-md px-2 py-2 font-medium outline-none transition-colors ease-in-out text-gray-800 hover:bg-gray-100 hover:text-gray-950 focus:bg-gray-100 focus:text-gray-950">
+                                        <div class="flex min-w-0 items-center justify-between gap-2.5">
+                                            <div class="flex min-w-0 items-center gap-3">
+                                                <div class="opacity-50 transition-all size-2 rounded-full border border-current"></div>
+                                                <span class="truncate">All Posts</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="relative flex">
+                                    <a href="" class="group min-w-0 flex-1 rounded-md px-2 py-2 font-medium outline-none transition-colors ease-in-out text-gray-800 hover:bg-gray-100 hover:text-gray-950 focus:bg-gray-100 focus:text-gray-950">
+                                        <div class="flex min-w-0 items-center justify-between gap-2.5">
+                                            <div class="flex min-w-0 items-center gap-3">
+                                                <span class="truncate">Add New Post</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="relative flex">
+                                    <a href="" class="group min-w-0 flex-1 rounded-md px-2 py-2 font-medium outline-none transition-colors ease-in-out text-gray-800 hover:bg-gray-100 hover:text-gray-950 focus:bg-gray-100 focus:text-gray-950">
+                                        <div class="flex min-w-0 items-center justify-between gap-2.5">
+                                            <div class="flex min-w-0 items-center gap-3">
+                                                <div class="opacity-50 transition-all size-2 rounded-full border border-current"></div>
+                                                <span class="truncate">Categories</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="relative flex">
+                                    <a href="" class="group min-w-0 flex-1 rounded-md px-2 py-2 font-medium outline-none transition-colors ease-in-out text-gray-800 hover:bg-gray-100 hover:text-gray-950 focus:bg-gray-100 focus:text-gray-950">
+                                        <div class="flex min-w-0 items-center justify-between gap-2.5">
+                                            <div class="flex min-w-0 items-center gap-3">
+                                                <div class="opacity-50 transition-all size-2 rounded-full border border-current"></div>
+                                                <span class="truncate">Tags</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </ui-collapse>
+                </ui-group>
+
+                <div class="relative flex px-3">
+                    <a href="" class="group min-w-0 flex-1 rounded-md px-3 py-2 font-medium outline-none transition-colors ease-in-out text-gray-800 hover:bg-gray-100 hover:text-gray-950 focus:bg-gray-100 focus:text-gray-950">
+                        <div data-menu-active="false" class="flex min-w-0 items-center justify-between gap-2 tracking-wide">
+                            <div class="flex min-w-0 items-center gap-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><!-- Icon from Huge Icons by Hugeicons - undefined -->
+                                    <path fill="currentColor" fill-rule="evenodd" d="M14 2.813c3.97 0 5.97 0 7.36 1.39s1.39 3.38 1.39 7.36v2c0 3.97 0 5.97-1.39 7.36s-3.39 1.39-7.36 1.39h-4c-3.97 0-5.97 0-7.36-1.39s-1.39-3.38-1.39-7.36v-2c0-3.97 0-5.97 1.39-7.36s3.39-1.39 7.36-1.39zM3.7 5.263c-.95.95-.95 2.74-.95 6.3h-.01v2c0 1.44.01 2.59.07 3.51l2.78-3.12c.69-.79 2.04-.83 2.78-.08l1.63 1.63l4.13-4.13c.73-.73 2.05-.71 2.77.06l4.33 4.72c.02-.74.02-1.59.02-2.59v-2c0-3.56 0-5.35-.95-6.3s-2.74-.95-6.3-.95h-4c-3.56 0-5.35 0-6.3.95m6.3 15.55h4v-.01c3.56 0 5.35 0 6.3-.95c.4-.39.63-.95.76-1.71l-.11-.08l-5.15-5.62c-.16-.17-.45-.18-.61-.02l-4.66 4.66c-.28.28-.78.28-1.06 0l-2.16-2.16a.414.414 0 0 0-.59.02l-3.57 4.02c.13.36.31.66.55.9c.95.95 2.74.95 6.3.95m.75-11.75c0 1.24-1.01 2.25-2.25 2.25s-2.25-1.01-2.25-2.25s1.01-2.25 2.25-2.25s2.25 1.01 2.25 2.25m-1.5 0c0-.41-.34-.75-.75-.75s-.75.34-.75.75s.34.75.75.75s.75-.34.75-.75" color="currentColor" />
+                                </svg>
+                                <span class="truncate">Media</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <ui-group :data="{open: false}" v-slot="state" class="relative break-words flex flex-1 flex-col px-3">
+                    <button @click="state.open = !state.open" class="group cursor-pointer flex flex-1 items-center justify-between rounded-lg px-3 py-2 font-medium outline-none transition-colors duration-300 ease-in-out text-gray-800 hover:bg-gray-100 hover:text-gray-950 focus:bg-gray-100 focus:text-gray-950" type="button">
+                        <div class="flex min-w-0 items-center gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><!-- Icon from Huge Icons by Hugeicons - undefined -->
+                                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m18.965 3.964l-1.48-1.479c-.19-.19-.284-.284-.396-.35a1 1 0 0 0-.248-.102C16.715 2 16.58 2 16.314 2c-1.228 0-1.842 0-2.3.26a2 2 0 0 0-.754.753c-.26.46-.26 1.073-.26 2.3V6.5c0 1.404 0 2.107.337 2.611a2 2 0 0 0 .552.552C14.393 10 15.096 10 16.5 10s2.107 0 2.611-.337a2 2 0 0 0 .552-.552C20 8.607 20 7.896 20 6.475c0-.634 0-.95-.09-1.24a2 2 0 0 0-.14-.337c-.141-.269-.363-.49-.805-.934m0 12.001l-1.48-1.48c-.19-.19-.284-.284-.396-.35a1 1 0 0 0-.248-.102C16.715 14 16.58 14 16.314 14c-1.228 0-1.842 0-2.3.26a2 2 0 0 0-.754.753c-.26.46-.26 1.073-.26 2.3V18.5c0 1.404 0 2.107.337 2.611c.146.218.334.406.552.552c.504.337 1.207.337 2.611.337s2.107 0 2.611-.337c.218-.146.406-.334.552-.552c.337-.504.337-1.215.337-2.636c0-.634 0-.95-.09-1.24a2 2 0 0 0-.14-.337c-.141-.269-.363-.49-.805-.934M10 6H4m0 0V2m0 4v6c0 2.828 0 4.243.879 5.121C5.757 18 7.172 18 10 18" color="currentColor" />
+                            </svg>
+                            <span class="truncate">Pages</span>
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="size-4 transition-transform shrink-0" :class="state.open ? 'rotate-90':''">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5"></path>
+                        </svg>
+                    </button>
+                    <ui-collapse :open="state.open">
+                        <div class="relative break-words">
+                            <div class="flex flex-col px-3 py-1 border-l-2 border-primary-500 ml-5">
+                                <div class="relative flex">
+                                    <a href="" class="group min-w-0 flex-1 rounded-md px-3 py-2 font-medium outline-none transition-colors ease-in-out text-gray-800 hover:bg-gray-100 hover:text-gray-950 focus:bg-gray-100 focus:text-gray-950">
+                                        <div class="flex min-w-0 items-center justify-between gap-2.5">
+                                            <div class="flex min-w-0 items-center gap-3">
+                                                <div class="opacity-50 transition-all size-2 rounded-full border border-current"></div>
+                                                <span class="truncate">All Pages</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="relative flex">
+                                    <a href="" class="group min-w-0 flex-1 rounded-md px-3 py-2 font-medium outline-none transition-colors ease-in-out text-gray-800 hover:bg-gray-100 hover:text-gray-950 focus:bg-gray-100 focus:text-gray-950">
+                                        <div class="flex min-w-0 items-center justify-between gap-2.5">
+                                            <div class="flex min-w-0 items-center gap-3">
+                                                <div class="opacity-50 transition-all size-2 rounded-full border border-current"></div>
+                                                <span class="truncate">Add New Page</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </ui-collapse>
+                </ui-group>
+
+                <ui-group :data="{open: false}" v-slot="state" class="relative break-words flex flex-1 flex-col px-3">
+                    <button @click="state.open = !state.open" class="group cursor-pointer flex flex-1 items-center justify-between rounded-lg px-3 py-2 font-medium outline-none transition-colors duration-300 ease-in-out text-gray-800 hover:bg-gray-100 hover:text-gray-950 focus:bg-gray-100 focus:text-gray-950" type="button">
+                        <div class="flex min-w-0 items-center gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><!-- Icon from Huge Icons by Hugeicons - undefined -->
+                                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 21.5c-4.478 0-6.718 0-8.109-1.391S2.5 16.479 2.5 12c0-4.478 0-6.718 1.391-8.109S7.521 2.5 12 2.5c4.478 0 6.718 0 8.109 1.391S21.5 7.521 21.5 12m-19-3h19m-19 4h14m-14 4H12m0 4.5V9m6.601 10.683l2.23-2.23c.311-.31.467-.466.55-.634a1.14 1.14 0 0 0 0-1.015c-.083-.168-.239-.323-.55-.635c-.312-.311-.467-.467-.635-.55a1.14 1.14 0 0 0-1.015 0c-.168.083-.323.239-.635.55l-2.43 2.43c-.713.714-1.07 1.07-1.29 1.507a3 3 0 0 0-.173.418c-.153.464-.153.968-.153 1.976l.655-.094c.996-.142 1.495-.213 1.937-.434s.798-.577 1.51-1.289" color="currentColor" />
+                            </svg>
+                            <span class="truncate">Forms</span>
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="size-4 transition-transform shrink-0" :class="state.open ? 'rotate-90':''">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5"></path>
+                        </svg>
+                    </button>
+                    <ui-collapse :open="state.open">
+                        <div class="relative break-words">
+                            <div class="flex flex-col space-y-1 px-3 py-1.5">
+                                <div class="relative flex">
+                                    <a href="" class="group min-w-0 flex-1 rounded-md px-3 py-2 font-medium outline-none transition-colors ease-in-out text-gray-800 hover:bg-gray-100 hover:text-gray-950 focus:bg-gray-100 focus:text-gray-950">
+                                        <div class="flex min-w-0 items-center justify-between gap-2.5">
+                                            <div class="flex min-w-0 items-center gap-3">
+                                                <div class="opacity-50 transition-all size-2 rounded-full border border-current"></div>
+                                                <span class="truncate">All Forms</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="relative flex">
+                                    <a href="" class="group min-w-0 flex-1 rounded-md px-3 py-2 font-medium outline-none transition-colors ease-in-out text-gray-800 hover:bg-gray-100 hover:text-gray-950 focus:bg-gray-100 focus:text-gray-950">
+                                        <div class="flex min-w-0 items-center justify-between gap-2.5">
+                                            <div class="flex min-w-0 items-center gap-3">
+                                                <div class="opacity-50 transition-all size-2 rounded-full border border-current"></div>
+                                                <span class="truncate">Add New Form</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="relative flex">
+                                    <a href="" class="group min-w-0 flex-1 rounded-md px-3 py-2 font-medium outline-none transition-colors ease-in-out text-gray-800 hover:bg-gray-100 hover:text-gray-950 focus:bg-gray-100 focus:text-gray-950">
+                                        <div class="flex min-w-0 items-center justify-between gap-2.5">
+                                            <div class="flex min-w-0 items-center gap-3">
+                                                <div class="opacity-50 transition-all size-2 rounded-full border border-current"></div>
+                                                <span class="truncate">Entries</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="relative flex">
+                                    <a href="" class="group min-w-0 flex-1 rounded-md px-3 py-2 font-medium outline-none transition-colors ease-in-out text-gray-800 hover:bg-gray-100 hover:text-gray-950 focus:bg-gray-100 focus:text-gray-950">
+                                        <div class="flex min-w-0 items-center justify-between gap-2.5">
+                                            <div class="flex min-w-0 items-center gap-3">
+                                                <div class="opacity-50 transition-all size-2 rounded-full border border-current"></div>
+                                                <span class="truncate">Settings</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="relative flex">
+                                    <a href="" class="group min-w-0 flex-1 rounded-md px-3 py-2 font-medium outline-none transition-colors ease-in-out text-gray-800 hover:bg-gray-100 hover:text-gray-950 focus:bg-gray-100 focus:text-gray-950">
+                                        <div class="flex min-w-0 items-center justify-between gap-2.5">
+                                            <div class="flex min-w-0 items-center gap-3">
+                                                <div class="opacity-50 transition-all size-2 rounded-full border border-current"></div>
+                                                <span class="truncate">Tools</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </ui-collapse>
+                </ui-group>
+
+                <ui-group :data="{open: false}" v-slot="state" class="relative break-words flex flex-1 flex-col px-3">
+                    <button @click="state.open = !state.open" class="group cursor-pointer flex flex-1 items-center justify-between rounded-lg px-3 py-2 font-medium outline-none transition-colors duration-300 ease-in-out text-gray-800 hover:bg-gray-100 hover:text-gray-950 focus:bg-gray-100 focus:text-gray-950" type="button">
+                        <div class="flex min-w-0 items-center gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><!-- Icon from Huge Icons by Hugeicons - undefined -->
+                                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 7a4 4 0 1 1-8 0a4 4 0 0 1 8 0m2 4a4 4 0 0 0 0-8m-4 11H7a5 5 0 0 0-5 5a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2a5 5 0 0 0-5-5m6 0a5 5 0 0 1 5 5a2 2 0 0 1-2 2h-1.5" color="currentColor" />
+                            </svg>
+                            <span class="truncate">Users</span>
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="size-4 transition-transform shrink-0" :class="state.open ? 'rotate-90':''">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5"></path>
+                        </svg>
+                    </button>
+                    <ui-collapse :open="state.open">
+                        <div class="relative break-words">
+                            <div class="flex flex-col space-y-1 px-3 py-1.5">
+                                <div class="relative flex">
+                                    <a href="" class="group min-w-0 flex-1">
+                                        <div class="rounded-md px-3 py-2 font-medium outline-none transition-colors ease-in-out text-gray-800 hover:bg-gray-100 hover:text-gray-950 focus:bg-gray-100 focus:text-gray-950">
+                                            <div class="flex min-w-0 items-center justify-between gap-2.5">
+                                                <div class="flex min-w-0 items-center gap-3">
+                                                    <div class="opacity-50 transition-all size-2 rounded-full border border-current"></div>
+                                                    <span class="truncate">All Users</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="relative flex">
+                                    <a href="" class="group min-w-0 flex-1 rounded-md px-3 py-2 font-medium outline-none transition-colors ease-in-out text-gray-800 hover:bg-gray-100 hover:text-gray-950 focus:bg-gray-100 focus:text-gray-950">
+                                        <div class="flex min-w-0 items-center justify-between gap-2.5">
+                                            <div class="flex min-w-0 items-center gap-3">
+                                                <div class="opacity-50 transition-all size-2 rounded-full border border-current"></div>
+                                                <span class="truncate">Add New User</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="relative flex">
+                                    <a href="" class="group min-w-0 flex-1 rounded-md px-3 py-2 font-medium outline-none transition-colors ease-in-out text-gray-800 hover:bg-gray-100 hover:text-gray-950 focus:bg-gray-100 focus:text-gray-950">
+                                        <div class="flex min-w-0 items-center justify-between gap-2.5">
+                                            <div class="flex min-w-0 items-center gap-3">
+                                                <div class="opacity-50 transition-all size-2 rounded-full border border-current"></div>
+                                                <span class="truncate">Roles</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="relative flex">
+                                    <a href="" class="group min-w-0 flex-1 rounded-md px-3 py-2 font-medium outline-none transition-colors ease-in-out text-gray-800 hover:bg-gray-100 hover:text-gray-950 focus:bg-gray-100 focus:text-gray-950">
+                                        <div class="flex min-w-0 items-center justify-between gap-2.5">
+                                            <div class="flex min-w-0 items-center gap-3">
+                                                <div class="opacity-50 transition-all size-2 rounded-full border border-current"></div>
+                                                <span class="truncate">Profile</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </ui-collapse>
+                </ui-group>
+
+                <ui-group :data="{open: false}" v-slot="state" class="relative break-words flex flex-1 flex-col px-3">
+                    <button @click="state.open = !state.open" class="group cursor-pointer flex flex-1 items-center justify-between rounded-lg px-3 py-2 font-medium outline-none transition-colors duration-300 ease-in-out text-gray-800 hover:bg-gray-100 hover:text-gray-950 focus:bg-gray-100 focus:text-gray-950" type="button">
+                        <div class="flex min-w-0 items-center gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><!-- Icon from Huge Icons by Hugeicons - undefined -->
+                                <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" color="currentColor">
+                                    <path d="m13 11l5-5m1 1l-2-2l2.5-1.5l1 1zM4.025 8.975a3.5 3.5 0 0 1-.79-3.74l1.422 1.422h2v-2L5.235 3.235a3.5 3.5 0 0 1 4.529 4.53l6.47 6.471a3.5 3.5 0 0 1 4.53 4.529l-1.421-1.422h-2v2l1.422 1.422a3.5 3.5 0 0 1-4.53-4.528L7.763 9.765a3.5 3.5 0 0 1-3.738-.79" />
+                                    <path d="m12.203 14.5l-5.604 5.604a1.35 1.35 0 0 1-1.911 0l-.792-.792a1.35 1.35 0 0 1 0-1.911L9.5 11.797" />
+                                </g>
+                            </svg>
+                            <span class="truncate">Tools</span>
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="size-4 transition-transform shrink-0" :class="state.open ? 'rotate-90':''">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5"></path>
+                        </svg>
+                    </button>
+                    <ui-collapse :open="state.open">
+                        <div class="relative break-words">
+                            <div class="flex flex-col space-y-1 px-3 py-1.5">
+                                <div class="relative flex">
+                                    <a href="" class="group min-w-0 flex-1 rounded-md px-3 py-2 font-medium outline-none transition-colors ease-in-out text-gray-800 hover:bg-gray-100 hover:text-gray-950 focus:bg-gray-100 focus:text-gray-950">
+                                        <div class="flex min-w-0 items-center justify-between gap-2.5">
+                                            <div class="flex min-w-0 items-center gap-3">
+                                                <div class="opacity-50 transition-all size-2 rounded-full border border-current"></div>
+                                                <span class="truncate">Backup</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </ui-collapse>
+                </ui-group>
+
+                <ui-group :data="{open: false}" v-slot="state" class="relative break-words flex flex-1 flex-col px-3">
+                    <button @click="state.open = !state.open" class="group cursor-pointer flex flex-1 items-center justify-between rounded-lg px-3 py-2 font-medium outline-none transition-colors duration-300 ease-in-out text-gray-800 hover:bg-gray-100 hover:text-gray-950 focus:bg-gray-100 focus:text-gray-950" type="button">
+                        <div class="flex min-w-0 items-center gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><!-- Icon from Huge Icons by Hugeicons - undefined -->
+                                <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" color="currentColor">
+                                    <path d="M2.5 12c0-4.478 0-6.718 1.391-8.109S7.521 2.5 12 2.5c4.478 0 6.718 0 8.109 1.391S21.5 7.521 21.5 12c0 4.478 0 6.718-1.391 8.109S16.479 21.5 12 21.5c-4.478 0-6.718 0-8.109-1.391S2.5 16.479 2.5 12" />
+                                    <path d="M10 15.5a1.5 1.5 0 1 1-3 0a1.5 1.5 0 0 1 3 0m7-7a1.5 1.5 0 1 0-3 0a1.5 1.5 0 0 0 3 0M8.5 14V7m7 3v7" />
+                                </g>
+                            </svg>
+                            <span class="truncate">Settings</span>
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="size-4 transition-transform shrink-0" :class="state.open ? 'rotate-90':''">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5"></path>
+                        </svg>
+                    </button>
+                    <ui-collapse :open="state.open">
+                        <div class="relative break-words">
+                            <div class="flex flex-col space-y-1 px-3 py-1.5">
+                                <div class="relative flex">
+                                    <a href="" class="group min-w-0 flex-1 rounded-md px-3 py-2 font-medium outline-none transition-colors ease-in-out text-gray-800 hover:bg-gray-100 hover:text-gray-950 focus:bg-gray-100 focus:text-gray-950">
+                                        <div class="flex min-w-0 items-center justify-between gap-2.5">
+                                            <div class="flex min-w-0 items-center gap-3">
+                                                <div class="opacity-50 transition-all size-2 rounded-full border border-current"></div>
+                                                <span class="truncate">General</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="relative flex">
+                                    <a href="" class="group min-w-0 flex-1 rounded-md px-3 py-2 font-medium outline-none transition-colors ease-in-out text-gray-800 hover:bg-gray-100 hover:text-gray-950 focus:bg-gray-100 focus:text-gray-950">
+                                        <div class="flex min-w-0 items-center justify-between gap-2.5">
+                                            <div class="flex min-w-0 items-center gap-3">
+                                                <div class="opacity-50 transition-all size-2 rounded-full border border-current"></div>
+                                                <span class="truncate">Menus</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="relative flex">
+                                    <a href="" class="group min-w-0 flex-1 rounded-md px-3 py-2 font-medium outline-none transition-colors ease-in-out text-gray-800 hover:bg-gray-100 hover:text-gray-950 focus:bg-gray-100 focus:text-gray-950">
+                                        <div class="flex min-w-0 items-center justify-between gap-2.5">
+                                            <div class="flex min-w-0 items-center gap-3">
+                                                <div class="opacity-50 transition-all size-2 rounded-full border border-current"></div>
+                                                <span class="truncate">Theme Options</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="relative flex">
+                                    <a href="" class="group min-w-0 flex-1 rounded-md px-3 py-2 font-medium outline-none transition-colors ease-in-out text-gray-800 hover:bg-gray-100 hover:text-gray-950 focus:bg-gray-100 focus:text-gray-950">
+                                        <div class="flex min-w-0 items-center justify-between gap-2.5">
+                                            <div class="flex min-w-0 items-center gap-3">
+                                                <div class="opacity-50 transition-all size-2 rounded-full border border-current"></div>
+                                                <span class="truncate">Languages</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="relative flex">
+                                    <a href="" class="group min-w-0 flex-1 rounded-md px-3 py-2 font-medium outline-none transition-colors ease-in-out text-gray-800 hover:bg-gray-100 hover:text-gray-950 focus:bg-gray-100 focus:text-gray-950">
+                                        <div class="flex min-w-0 items-center justify-between gap-2.5">
+                                            <div class="flex min-w-0 items-center gap-3">
+                                                <div class="opacity-50 transition-all size-2 rounded-full border border-current"></div>
+                                                <span class="truncate">Mail SMTP</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </ui-collapse>
+                </ui-group>
+            </div>
+        </perfect-scrollbar>
+    </div>
+    <div @click="sidebar.open = false" v-show="sidebar.open" style="display: none;" class="xl:hidden fixed inset-0 z-20 bg-gray-900/50 backdrop-blur transition-opacity"></div>
+</ui-group>

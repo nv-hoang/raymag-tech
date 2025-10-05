@@ -1,0 +1,30 @@
+{{> header }}
+
+{{> app_header }}
+<main class="main-content xl:pl-[250px]">
+    <div class="pt-4 pb-5 px-4 md:px-6 2xl:px-[48px]">
+        <form method="post">
+            <div class="space-y-4">
+                <div class="transition-content flex items-center justify-between gap-4">
+                    <div class="min-w-0">
+                        <h2 class="truncate text-[24px] font-medium tracking-wide text-gray-800">Category</h2>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-2">
+                    <a-button type="primary" href="#">Add New</a-button>
+                    <a-button html-type="submit" name="SubmitAction" value="save">Save Changes</a-button>
+                </div>
+
+                <ui-tree>
+                    <textarea>
+                        [{"Name":"vue.draggable","Id":1,"Children":[{"Name":"vue.draggable 2","Id":11,"Children":[]},{"Name":"draggable 2","Id":22,"Children":[]}]},{"Name":"draggable","Id":2,"Children":[]},{"Name":"component","Id":3,"Children":[]},{"Name":"for","Id":4,"Children":[]},{"Name":"vue.js 2.0","Id":5,"Children":[]},{"Name":"based","Id":6,"Children":[]},{"Name":"on","Id":7,"Children":[]},{"Name":"Sortablejs","Id":8,"Children":[]}]
+                    </textarea>
+                </ui-tree>
+            </div>
+        </form>
+    </div>
+</main>
+{{> app_sidebar }}
+
+{{> footer }}

@@ -1,0 +1,15 @@
+﻿@using RefineCMS.Models;
+@using RefineCMS.Providers;
+@{
+    Layout = "_Admin";
+
+    ModelProvider<Post> _postProvider = appFactory.Create<ModelProvider<Post>>();
+    ModelProvider<PostMeta> _postMetaProvider = appFactory.Create<ModelProvider<PostMeta>>();
+
+    ModelProvider<Term> _termProvider = appFactory.Create<ModelProvider<Term>>();
+    ModelProvider<TermMeta> _termMetaProvider = appFactory.Create<ModelProvider<TermMeta>>();
+    ModelProvider<TermRelationship> _termRelationshipProvider = appFactory.Create<ModelProvider<TermRelationship>>();
+    ModelProvider<User> _userProvider = appFactory.Create<ModelProvider<User>>();
+}
+
+<div class="text-2xl font-semibold text-gray-800 mb-4">@output.Trans("Welcome back"), @(page.User!.DisplayName)</div>

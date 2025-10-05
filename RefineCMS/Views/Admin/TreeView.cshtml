@@ -1,0 +1,38 @@
+﻿@using RefineCMS.Common.UI
+@{
+    Layout = "_Admin";
+    TreeUI treeUI = (TreeUI)ViewData["TreeUI"]!;
+}
+
+<form id="@treeUI.Name" name="@treeUI.Name" method="post">
+    @Html.AntiForgeryToken()
+
+    <div class="space-y-4">
+        <div class="transition-content flex items-center justify-between gap-4">
+            <div class="min-w-0">
+                <h2 class="truncate text-[24px] font-medium tracking-wide text-gray-800">@ViewData["Title"]</h2>
+            </div>
+        </div>
+
+        @await Html.PartialAsync("/Views/Admin/Message.cshtml")
+
+        <div class="flex items-center gap-2">
+            @if (treeUI.AddNew != null)
+            {
+                @Html.Raw(treeUI.AddNew.Render())
+            }
+
+            @foreach (var btn in treeUI.Actions)
+            {
+                @Html.Raw(btn.Render())
+            }
+        </div>
+
+
+        <div>
+            <ui-tree edit-link="@treeUI.EditLink">
+                <textarea style="display: none;">@Html.Raw(JsonConvert.SerializeObject(treeUI.GetData()))</textarea>
+            </ui-tree>
+        </div>
+    </div>
+</form>

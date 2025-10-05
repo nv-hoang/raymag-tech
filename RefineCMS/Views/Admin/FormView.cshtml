@@ -1,0 +1,33 @@
+﻿@using RefineCMS.Common.UI
+@{
+    Layout = "_Admin";
+    FormUI formUI = (FormUI)ViewData["FormUI"]!;
+}
+
+<div class="mx-auto space-y-4 pb-[40px]" style="max-width: 1000px;">
+    <div class="transition-content mb-4">
+        <div class="min-w-0">
+            <h2 class="truncate text-[24px] font-medium tracking-wide text-gray-800 text-center">@ViewData["Title"]</h2>
+        </div>
+    </div>
+
+    @await Html.PartialAsync("/Views/Admin/Message.cshtml")
+
+    <ui-form id="@formUI.Name" name="@formUI.Name" v-slot="formdata" method="post">
+        @Html.AntiForgeryToken()
+
+        <textarea name="FormData" style="display: none;">@Html.Raw(JsonConvert.SerializeObject(formUI.GetData()))</textarea>
+
+        @foreach (var field in formUI.Fields)
+        {
+            @Html.Raw(field.Render())
+        }
+
+        <field-actions back-url="@formUI.BackUrl">
+            @foreach (var btn in formUI.Actions)
+            {
+                @Html.Raw(btn.Render())
+            }
+        </field-actions>
+    </ui-form>
+</div>

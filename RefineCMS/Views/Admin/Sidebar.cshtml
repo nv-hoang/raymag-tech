@@ -1,0 +1,92 @@
+﻿@using RefineCMS.Common.UI
+@{
+    var sidebarUI = new Sidebar(Url, appFactory);
+    List<SidebarMenu> menus = sidebarUI.GetUserMenus(page.User);
+    menus.InsertRange(0, [
+        sidebarUI.CreateMenu(
+            label: "Dashboard",
+            route: "Dashboard",
+            icon: "Dashboard",
+            useStrict: true
+        )
+    ]);
+}
+
+
+<ui-group :data="{open: false}" v-slot="sidebar" @@sidebar="(state) => state.open = true">
+    <div class="sidebar-panel fixed top-0 left-0 z-50 bg-white border-r border-gray-200 w-[250px] h-[100dvh] transition-transform duration-300 -translate-x-[250px] xl:translate-x-0" :style="sidebar.open ? 'translate: 0px;':''">
+        <header class="flex flex-row h-[65px] items-center justify-between pl-6 pr-3 pt-3">
+            <a href="@Url.Action("Index", "Dashboard")"><img src="@output.Logo("sidebar")"></a>
+            <div class="cursor-pointer text-[20px] xl:hidden" @@click="sidebar.open = false">
+                <left-outlined></left-outlined>
+            </div>
+        </header>
+
+        <perfect-scrollbar style="height: calc(100dvh - 65px);">
+            <div class="pt-3 pb-6 text-[13px] flex flex-col space-y-1.5">
+                @foreach (var menu in menus)
+                {
+                    @if (!menu.Hidden)
+                    {
+                        var isActive = menu.IsActive(Context.Request.Path);
+
+                        @if (menu.Childrens.Count == 0)
+                        {
+                            <div class="relative flex px-3 @(isActive ? "text-primary-500":"")">
+                                <a href="@menu.Link" class="group min-w-0 flex-1">
+                                    <div class="@(isActive ? "rounded-lg px-3 py-2 font-medium outline-none transition-colors ease-in-out" : "rounded-lg px-3 py-2 font-medium outline-none transition-colors duration-300 ease-in-out text-gray-800 hover:bg-gray-100 hover:text-gray-950 focus:bg-gray-100 focus:text-gray-950")">
+                                        <div class="flex min-w-0 items-center justify-between gap-2 tracking-wide">
+                                            <div class="flex min-w-0 text-left gap-3">
+                                                @await Html.PartialAsync($"/Views/Admin/Icons/{menu.Icon}.cshtml")
+                                                <span>@menu.Label</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    @if (isActive)
+                                    {
+                                        <div class="absolute bottom-1 top-1 w-1 bg-primary-500 left-0 rounded-r-full"></div>
+                                    }
+                                </a>
+                            </div>
+                        }
+                        else
+                        {
+                            <ui-group :data="{open: @(isActive ? "true":"false")}" v-slot="state" class="relative break-words flex flex-1 flex-col px-3">
+                                <button @@click="state.open = !state.open" class="group cursor-pointer flex flex-1 items-center justify-between rounded-lg px-3 py-2 font-medium outline-none transition-colors duration-300 ease-in-out text-gray-800 hover:bg-gray-100 hover:text-gray-950 focus:bg-gray-100 focus:text-gray-950" type="button">
+                                    <div class="flex min-w-0 text-left gap-3">
+                                        @await Html.PartialAsync($"/Views/Admin/Icons/{menu.Icon}.cshtml")
+                                        <span>@menu.Label</span>
+                                    </div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="size-4 transition-transform shrink-0" :class="state.open ? 'rotate-90':''">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5"></path>
+                                    </svg>
+                                </button>
+                                <ui-collapse :open="state.open">
+                                    <div class="relative break-words">
+                                        <div class="flex flex-col px-3 py-1 border-l-2 border-gray-200 ml-5 border-gray-200">
+                                            @foreach (var subMenu in menu.Childrens)
+                                            {
+                                                <div class="relative flex">
+                                                    <a href="@subMenu.Link" class="group min-w-0 flex-1">
+                                                        <div class="@(subMenu.IsActive(Context.Request.Path) ? "rounded-md px-2 py-2 font-medium outline-none transition-colors ease-in-out text-primary-500":"rounded-md px-2 py-2 font-medium outline-none transition-colors ease-in-out text-gray-800 hover:bg-gray-100 hover:text-gray-950 focus:bg-gray-100 focus:text-gray-950")">
+                                                            <div class="flex min-w-0 items-center justify-between gap-2.5">
+                                                                <div class="flex min-w-0 text-left gap-3">
+                                                                    <span>@subMenu.Label</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            }
+                                        </div>
+                                    </div>
+                                </ui-collapse>
+                            </ui-group>
+                        }
+                    }
+                }
+            </div>
+        </perfect-scrollbar>
+    </div>
+    <div @@click="sidebar.open = false" v-show="sidebar.open" style="display: none;" class="xl:hidden fixed inset-0 z-20 bg-gray-900/50 backdrop-blur transition-opacity"></div>
+</ui-group>

@@ -1,0 +1,21 @@
+<ui-group :data="{page: ''}" v-slot="state">
+    <ui-modal-button label="New page" :width="1200" :disabled="state.page == ''" @ok="console.log(1)">
+        <div class="flex justify-items-stretch gap-3" style="min-height: 400px;">
+            <div class="flex-1">
+                <div class="columns-1 md:columns-2 lg:columns-3">
+                    <div @click="state.page = 'home'" :class="state.page == 'home' ? 'text-primary-500':'hover:text-primary-500'" class="cursor-pointer flex items-center gap-2 mb-2">
+                        <span>1. Home page</span>
+                        <check-outlined v-show="state.page == 'home'"></check-outlined>
+                    </div>
+                </div>
+            </div>
+            <div class="hidden md:block border-l border-gray-200 pl-3" style="width: 35%;">
+                <div class="mb-2">Page preview</div>
+
+                <div class="overflow-auto" style="height: calc(100% - 30px);">
+                    <img src="" style="width: 100%;">
+                </div>
+            </div>
+        </div>
+    </ui-modal-button>
+</ui-group>

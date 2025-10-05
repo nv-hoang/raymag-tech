@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html lang="@ViewData["Lang"]">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>@ViewData["Title"]</title>
+
+    <style>
+        [v-cloak] {
+            display: none;
+        }
+    </style>
+
+    <script>
+        window.MaxUploadSize = "@(cfg.MaxUploadSizeInMB)mb";
+    </script>
+
+    <script type="module" crossorigin src="@output.AssetUrl("main.js")"></script>
+    <link rel="stylesheet" crossorigin href="@output.AssetUrl("main.css")">
+</head>
+<body>
+    <div id="app" v-cloak>
+        @await Html.PartialAsync("/Views/Admin/Header.cshtml")
+        <main class="main-content xl:pl-[250px]">
+            <div class="pt-4 pb-5 px-4 md:px-6 2xl:px-[48px]">
+                @RenderBody()
+            </div>
+        </main>
+        @await Html.PartialAsync("/Views/Admin/Sidebar.cshtml")
+    </div> <!-- end of #app -->
+</body>
+</html>

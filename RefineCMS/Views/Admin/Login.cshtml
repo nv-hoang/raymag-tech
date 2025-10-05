@@ -1,0 +1,69 @@
+﻿@{
+    Layout = "_Auth";
+}
+
+<div class="space-y-5">
+    <div class="text-center">
+        <img src="@output.Logo("login")" class="mx-auto">
+        <div class="mt-8">
+            <h2 class="text-2xl font-semibold text-gray-600">@output.Trans("Welcome Back")</h2>
+            <p class="text-gray-400">@output.Trans("Please log in to continue")</p>
+        </div>
+    </div>
+
+    @await Html.PartialAsync("/Views/Admin/Message.cshtml")
+
+    <div class="relative break-words card rounded-lg border border-gray-200 p-5 lg:p-7">
+        <form action="@Url.Action("Login", "Login")" method="POST">
+            @Html.AntiForgeryToken()
+
+            <div class="space-y-4">
+                <div class="input-root">
+                    <label class="input-label">@output.Trans("Username")</label>
+                    <div class="input-wrapper relative mt-1.5">
+                        <a-input autocomplete="username" name="username" value="@ViewData["Username"]" size="large" required></a-input>
+                    </div>
+                </div>
+                <div class="input-root">
+                    <label class="input-label">@output.Trans("Password")</label>
+                    <div class="input-wrapper relative mt-1.5">
+                        <a-input-password autocomplete="current-password" name="password" size="large" required></a-input-password>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between space-x-2" style="display: none;">
+                    <a-checkbox>@output.Trans("Remember me")</a-checkbox>
+
+                    <a href="#" class="text-xs text-gray-400 transition-colors hover:text-gray-800 focus:text-gray-800">@output.Trans("Forgot Password?")</a>
+                </div>
+            </div>
+
+            <div class="mt-[30px]">
+                <a-button type="primary" html-type="submit" size="large" block>@output.Trans("Log In")</a-button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="mt-8 flex items-center justify-between">
+    <a href="@output.Url("/")" class="flex items-center gap-2 text-[13px] text-gray-400 transition-colors hover:text-gray-800 focus:text-gray-800">
+        <arrow-left-outlined class="text-[14px]"></arrow-left-outlined>
+        <span>@output.Trans("Back to Home")</span>
+    </a>
+
+    <div>
+        <a-dropdown>
+            <div class="flex items-center gap-2 rounded-full border border-gray-200 p-2 pr-4 text-gray-500 cursor-pointer text-[13px]">
+                <global-outlined class="text-[14px]"></global-outlined>
+                @output.GetLanguage()
+            </div>
+            <template #overlay>
+                <a-menu @@click="(lang) => emitter.emit('lang', lang.key)">
+                    @foreach (var lang in output.GetLanguages())
+                    {
+                        <a-menu-item key="@lang.Key">@lang.Value</a-menu-item>
+                    }
+                </a-menu>
+            </template>
+        </a-dropdown>
+    </div>
+</div>

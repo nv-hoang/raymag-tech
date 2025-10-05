@@ -1,0 +1,8 @@
+﻿@using RefineCMS.Models;
+@using RefineCMS.Providers;
+@{ 
+    ModelProvider<Post> _postProvider = appFactory.Create<ModelProvider<Post>>();
+    ModelProvider<PostMeta> _postMetaProvider = appFactory.Create<ModelProvider<PostMeta>>();
+    ModelProvider<TermRelationship> _termRelationshipProvider = appFactory.Create<ModelProvider<TermRelationship>>();
+}
+

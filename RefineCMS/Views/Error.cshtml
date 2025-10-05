@@ -1,0 +1,15 @@
+﻿@{
+    ViewData["Title"] = output.Trans("Page Not Found");
+}
+
+<main class="min-h-[100dvh] grid w-full grow grid-cols-1 place-items-center">
+    <div class="text-center p-4">
+        <div class="mb-8">
+            <h1 class="text-6xl font-bold text-primary-600">404</h1>
+            <p class="text-2xl mt-4 font-semibold text-gray-800">@output.Trans("Page Not Found")</p>
+            <p class="text-gray-600 mt-2">@output.Trans("Sorry, the page you're looking for doesn't exist or has been moved.")</p>
+        </div>
+
+        <a-button type="primary" href="@output.Url("/")">@output.Trans("Back to Home")</a-button>
+    </div>
+</main>

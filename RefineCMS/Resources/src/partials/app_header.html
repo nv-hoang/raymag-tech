@@ -1,0 +1,54 @@
+<header class="app-header sticky top-0 z-20 flex h-[65px] items-center gap-4 border-b border-gray-200 bg-white px-4 md:px-6 2xl:px-[48px] xl:ml-[250px]">
+    <div class="contents xl:hidden cursor-pointer text-[20px] text-primary-500" @click="emitter.emit('sidebar')">
+        <menu-outlined></menu-outlined>
+    </div>
+    <div class="flex items-center gap-6 md:gap-8 flex-1">
+        <a href="/" class="cursor-pointer font-medium py-2 hover:text-primary-500 transition-colors flex flex-row gap-2 items-center">
+            <home-outlined class="text-[18px] lg:text-[16px]"></home-outlined>
+            <span class="hidden md:inline-block">Visit Site</span>
+        </a>
+
+        <a href="/" class="cursor-pointer font-medium py-2 hover:text-primary-500 transition-colors flex flex-row gap-2 items-center">
+            <book-outlined class="text-[18px] lg:text-[16px]"></book-outlined>
+            <span class="hidden md:inline-block">Docs</span>
+        </a>
+
+        <a-dropdown>
+            <div class="cursor-pointer font-medium py-2 hover:text-primary-500 transition-colors flex flex-row gap-2 items-center">
+                <global-outlined class="text-[18px] lg:text-[16px]"></global-outlined>
+                <span class="hidden md:inline-block">English</span>
+            </div>
+            <template #overlay>
+                <a-menu>
+                    <a-menu-item>English</a-menu-item>
+                    <a-menu-item>繁體中文</a-menu-item>
+                    <a-menu-item>简体中文</a-menu-item>
+                </a-menu>
+            </template>
+        </a-dropdown>
+
+        <a-dropdown class="ml-auto">
+            <div class="flex items-center gap-2 rounded-full border border-gray-200 p-[3px] cursor-pointer">
+                <div class="flex items-center justify-center w-[30px] h-[30px] rounded-full bg-gray-300 text-white">
+                    <user-outlined></user-outlined>
+                </div>
+                <div class="hidden md:block pr-4">Henry Curtis</div>
+            </div>
+            <template #overlay>
+                <a-menu>
+                    <a-menu-item>
+                        <user-outlined></user-outlined>
+                        <span>Edit Profile</span>
+                    </a-menu-item>
+                    <a-menu-divider></a-menu-divider>
+                    <a-menu-item>
+                        <a href="auth_login.html" style="color: var(--color-red-500);">
+                            <logout-outlined></logout-outlined>
+                            <span>Log out</span>
+                        </a>
+                    </a-menu-item>
+                </a-menu>
+            </template>
+        </a-dropdown>
+    </div>
+</header>

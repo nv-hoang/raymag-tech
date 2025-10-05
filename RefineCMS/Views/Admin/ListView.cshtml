@@ -1,0 +1,57 @@
+﻿@using RefineCMS.Common.UI
+@{
+    Layout = "_Admin";
+    TableUI tableUI = (TableUI)ViewData["TableUI"]!;
+}
+
+<div class="space-y-4">
+    <div class="transition-content flex items-center justify-between gap-4">
+        <div class="min-w-0">
+            <h2 class="truncate text-[24px] font-medium tracking-wide text-gray-800">@ViewData["Title"]</h2>
+        </div>
+        <div class="flex flex-row gap-x-2 gap-y-1 flex-wrap">
+            @if (tableUI.AddNew != null)
+            {
+                if (tableUI.AddNew.Template != null)
+                {
+                    @await Html.PartialAsync(tableUI.AddNew.Template)
+                }
+                else
+                {
+                    @Html.Raw(tableUI.AddNew.Render())
+                }
+            }
+        </div>
+    </div>
+
+    @await Html.PartialAsync("/Views/Admin/Message.cshtml")
+
+    <div>
+        <div class="flex flex-col md:flex-row flex-wrap gap-4">
+            <ui-group :data="{search: ''}" v-slot="search" class="md:w-[200px]">
+                <a-input-search v-model:value="search.search" @@search="(v) => emitter.emit('@tableUI.Name-search', v)" placeholder="@output.Trans("Search")"></a-input-search>
+            </ui-group>
+
+            @if (tableUI.Filters.Count > 0)
+            {
+                <ui-group :data="{ @Html.Raw(string.Join(", ", tableUI.Filters.Select(x => $"{x.Name}: ''"))) }" v-slot="filter" class="flex flex-wrap gap-2">
+                    @foreach (var filter in tableUI.Filters)
+                    {
+                        @Html.Raw(filter.Output())
+                    }
+
+                    <a-button @@click="emitter.emit('@tableUI.Name-filter', filter)">@output.Trans("Filter")</a-button>
+                </ui-group>
+            }
+        </div>
+
+        <div class="mt-3">
+            <ui-table name="@tableUI.Name" apiuri="@tableUI.Api" downloadfiles="@tableUI.DownloadFiles">
+                @foreach (var col in tableUI.Columns)
+                {
+                    @Html.Raw(col.Output())
+                }
+            </ui-table>
+        </div>
+    </div>
+</div>

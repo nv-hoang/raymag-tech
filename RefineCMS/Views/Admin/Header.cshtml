@@ -1,0 +1,54 @@
+﻿<header class="app-header sticky top-0 z-20 flex h-[65px] items-center gap-4 border-b border-gray-200 bg-white px-4 md:px-6 2xl:px-[48px] xl:ml-[250px]">
+    <div class="contents xl:hidden cursor-pointer text-[20px] text-primary-500" @@click="emitter.emit('sidebar')">
+        <menu-outlined></menu-outlined>
+    </div>
+    <div class="flex items-center gap-6 md:gap-8 flex-1">
+        <a href="@output.Url("/")" target="_blank" class="cursor-pointer font-medium py-2 hover:text-primary-500 transition-colors flex flex-row gap-2 items-center">
+            <home-outlined class="text-[18px] lg:text-[16px]"></home-outlined>
+            <span class="hidden md:inline-block">@output.Trans("Visit Site")</span>
+        </a>
+
+        <div class="flex-1"></div>
+
+        <a-dropdown>
+            <div class="cursor-pointer font-medium py-2 hover:text-primary-500 transition-colors flex flex-row gap-2 items-center">
+                <global-outlined class="text-[18px] lg:text-[16px]"></global-outlined>
+                <span class="hidden md:inline-block">@output.GetLanguage()</span>
+            </div>
+            <template #overlay>
+                <a-menu @@click="(lang) => emitter.emit('lang', lang.key)">
+                    @foreach (var lang in output.GetLanguages())
+                    {
+                        <a-menu-item key="@lang.Key">@lang.Value</a-menu-item>
+                    }
+                </a-menu>
+            </template>
+        </a-dropdown>
+
+        <a-dropdown>
+            <div class="flex items-center gap-2 rounded-full border border-gray-200 p-[3px] cursor-pointer">
+                <div class="flex items-center justify-center w-[30px] h-[30px] rounded-full bg-gray-300 text-white">
+                    <user-outlined></user-outlined>
+                </div>
+                <div class="hidden md:block pr-4">@Html.Raw(page.User?.DisplayName)</div>
+            </div>
+            <template #overlay>
+                <a-menu>
+                    <a-menu-item>
+                        <a href="@Url.Action("Index", "UserProfile")">
+                            <user-outlined></user-outlined>
+                            <span>@output.Trans("Edit Profile")</span>
+                        </a>
+                    </a-menu-item>
+                    <a-menu-divider></a-menu-divider>
+                    <a-menu-item>
+                        <a href="@Url.Action("Index", "Logout")" style="color: var(--color-red-500);">
+                            <logout-outlined></logout-outlined>
+                            <span>@output.Trans("Log out")</span>
+                        </a>
+                    </a-menu-item>
+                </a-menu>
+            </template>
+        </a-dropdown>
+    </div>
+</header>

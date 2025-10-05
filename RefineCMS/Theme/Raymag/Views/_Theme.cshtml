@@ -1,0 +1,45 @@
+﻿@{
+    ViewData["Title"] = output.CustomField("Info.PostTitle", true);
+    ViewData["SEO_Description"] = output.CustomField("Info.PostExcerpt", true);
+    ViewData["SEO_Image"] = output.CustomField("Info.Thumbnail");
+}
+
+<!DOCTYPE html>
+<html lang="@ViewData["Lang"]">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>@ViewData["Title"]</title>
+
+    <meta name="description" content="@output.Inline(ViewData["SEO_Description"]?.ToString())" />
+    <meta property="og:title" content="@ViewData["Title"]" />
+    <meta property="og:description" content="@output.Inline(ViewData["SEO_Description"]?.ToString())" />
+    <meta property="og:image" content="@output.Url(ViewData["SEO_Image"]?.ToString() ?? "")" />
+    <meta property="og:type" content="website" />
+
+    <!-- icons -->
+    <link rel="shortcut icon" sizes="16x16" href="@output.Url(output.ThemeOption("Info.Favicon"))">
+    <link rel="apple-touch-icon" sizes="16x16" href="@output.Url(output.ThemeOption("Info.Favicon"))">
+    <script type="module" crossorigin src="@output.ThemeAssetUrl("main.js")"></script>
+    <link rel="stylesheet" crossorigin href="@output.ThemeAssetUrl("main.css")">
+
+    @Html.Raw(output.ThemeOption("Scripts.Head"))
+</head>
+<body>
+    @Html.Raw(output.ThemeOption("Scripts.Body"))
+    @await Html.PartialAsync("./Header.cshtml")
+
+    <div class="fixed-container mx-auto relative"></div>
+    <div id="smooth-wrapper">
+        <div id="smooth-content">
+            <div class="overflow-hidden">
+                <div class="h-[56px] xl:h-[90px]"></div>
+                @RenderBody()
+
+                @await Html.PartialAsync("./Footer.cshtml")
+            </div> <!-- end of container 1920px -->
+        </div> <!-- end of smooth-content -->
+    </div> <!-- end of smooth-wrapper -->
+</body>
+</html>

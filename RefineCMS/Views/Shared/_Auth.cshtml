@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html lang="@ViewData["Lang"]">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>@ViewData["Title"]</title>
+
+    <style>
+        [v-cloak] {
+          display: none;
+        }
+    </style>
+
+    <script type="module" crossorigin src="@output.AssetUrl("main.js")"></script>
+    <link rel="stylesheet" crossorigin href="@output.AssetUrl("main.css")">
+</head>
+<body>
+    <div id="app" v-cloak>
+        <main class="min-h-[100dvh] grid w-full grow grid-cols-1 place-items-center">
+            <div class="w-full max-w-[26rem] p-4 sm:px-5 pb-[90px]">
+                @RenderBody()
+            </div>
+        </main>
+    </div> <!-- end of #app -->
+</body>
+</html>

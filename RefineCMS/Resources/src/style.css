@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap');
+@import "tailwindcss";
+
+body {
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 0.875rem;
+  color: #374151;
+}
+
+@theme {
+  --color-body: #374151;
+  --color-primary-500: #0895DA;
+  --colors-gray-150: 235 237 240;
+}
+
+.ant-btn-link *{
+  text-decoration: underline !important;
+}
+
+.ant-btn-link:not(.ant-btn-dangerous) *{
+  color: var(--color-primary-500) !important;
+}
+
+.anticon {
+  vertical-align: 0px !important;
+}
+
+.ant-dropdown-menu-title-content .anticon {
+  margin-right: 6px;
+}
+
+.ant-dropdown-menu {
+  min-width: 150px;
+}
+
+.ant-tabs-top>.ant-tabs-nav::before {
+  border-bottom: 2px solid rgb(var(--colors-gray-150));
+}
+
+th.ant-table-cell {
+  background: var(--color-gray-100) !important;
+  border-radius: 0px !important;
+  border-top: 2px solid var(--color-gray-400) !important;
+  border-bottom: 1px solid var(--color-gray-200) !important;
+}
+
+th.ant-table-cell::before {
+  display: none !important;
+}
+
+.ant-table-cell:not(:first-child) {
+  border-left: 1px solid var(--color-gray-200);
+}
+
+.ant-table-wrapper .ant-table:not(.ant-table-bordered) .ant-table-tbody>tr:not(:first-child)>td {
+  border-top: 1px solid var(--color-gray-200) !important;
+}
+
+.field-layout-row:not(:first-child) {
+  border-top: 0px !important;
+}
+
+.ant-switch.ant-switch-checked {
+  background: var(--color-primary-500) !important;
+}
+
+.hover-item .item {
+  display: none;
+}
+
+.hover-item:hover .item {
+  display: initial;
+}
+
+.hover-item .item-reverse {
+  display: initial;
+}
+
+.hover-item:hover .item-reverse {
+  display: none;
+}
+
+.field-group:not(:last-child) {
+  margin-bottom: 24px;
+}
+
+.ant-form-item {
+  margin-bottom: 0px !important;
+}
+.ant-form-item-explain-error {
+  font-size: 12px !important;
+}
+
+.ant-alert-success .ant-alert-message{
+  color: #49ad19;
+}
+
+.ant-alert-error .ant-alert-message{
+  color: #e14244;
+}
+
+.ant-table-row .ant-table-cell a:hover {
+  color: var(--color-primary-500) !important;
+  text-decoration: underline !important;
+}
+
+.-translate-x-\[250px\] {
+  translate: -250px var(--tw-translate-y);
+}
+@media (width >= 80rem) {
+  .xl\:translate-x-0 {   
+    translate: 0px var(--tw-translate-y);
+  }
+}
+
+.vuefinder .vuefinder__toolbar svg.md\:w-8 {
+  width: 24px !important;
+}
+
+.vuefinder .vuefinder__toolbar svg.md\:h-8 {
+  height: 24px !important;
+}
+
+.vuefinder .vuefinder__explorer__selector-area {
+  min-height: 90dvh;
+}
+
+.vf-btn-primary,
+.vf-btn-primary:hover {
+  background-color: var(--color-primary-500) !important;
+}
+
+.vf-btn:focus,
+.vf-btn:hover {
+  box-shadow: none !important;
+}
+
+@media (min-width: 768px) {
+    .md\:grid-span-2 {
+        grid-row: span 2;
+    }
+}

@@ -1,0 +1,87 @@
+<ui-form name="myform" v-slot="formdata" method="post">
+  <textarea name="FormData" style="display: none;"></textarea>
+
+  <field-group name="group" label="Field Group">
+    <field-select-search name="selectSearch" label="selectSearch" apiuri="posts">
+      <div value="1"><b>Hoang</b></div>
+      <div value="2">Nguyen</div>
+    </field-select-search>
+
+    <field-mask name="mask" label="Mask" mask="###-###-####" placeholder="###-###-####"></field-mask>
+    <field-email name="email" label="Email"></field-email>
+    <field-number name="number" label="Number"></field-number>
+    <field-password name="password" label="Password"></field-password>
+    <field-password name="password2" label="Password2" show-button></field-password>
+    <field-range name="range" label="Range" :min="0" :max="100" tip-formatter="{0}%"></field-range>
+    <field-text name="text" label="Text" required></field-text>
+    <field-textarea name="textarea" label="Textarea"></field-textarea>
+
+    <field-select name="Category" label="Category" fdefault="0">
+      <a-select-option value="50" alt="Corporate"> Corporate</a-select-option>
+      <a-select-option value="51" alt="Events"> Events</a-select-option>
+      <a-select-option value="52" alt="Products"> Products</a-select-option>
+      <a-select-option value="0">(None)</a-select-option>
+    </field-select>
+    
+    <field-lang-group name="langgroup" label="Lang Group">
+      <field-text name="en" label="EN"></field-text>
+      <field-text name="tw" label="TW"></field-text>
+      <field-text name="cn" label="CN"></field-text>
+    </field-lang-group>
+
+    <field-checkbox name="checkbox" label="Checkbox">
+      <a-checkbox value="A">A</a-checkbox>
+      <a-checkbox value="B">B</a-checkbox>
+    </field-checkbox>
+
+    <field-radio name="radio" label="Radio Button">
+      <a-radio value="A">A</a-radio>
+      <a-radio value="B">B</a-radio>
+    </field-radio>
+
+    <field-select name="select" label="Select" :showif="getVal(formdata, 'group.radio') == 'A'">
+      <a-select-option value="jack">Jack</a-select-option>
+      <a-select-option value="lucy">Lucy</a-select-option>
+      <a-select-option value="Yiminghe">yiminghe</a-select-option>
+    </field-select>
+
+    <field-select name="select2" label="Select2">
+      <a-select-option value="jack">Jack</a-select-option>
+      <a-select-option value="lucy">Lucy</a-select-option>
+      <a-select-option value="Yiminghe">yiminghe</a-select-option>
+    </field-select>
+
+    <field-select name="MultipleSelect" label="MultipleSelect" multiple>
+      <a-select-option value="jack">Jack</a-select-option>
+      <a-select-option value="lucy">Lucy</a-select-option>
+      <a-select-option value="Yiminghe">yiminghe</a-select-option>
+    </field-select>
+
+    <field-yesno name="yesno" label="True/False"></field-yesno>
+    <field-file name="file" label="File"></field-file>
+    <field-gallery name="gallery" label="Gallery"></field-gallery>
+    <field-editor name="editor" label="Editor"></field-editor>
+    <field-color name="color" label="Color Picker"></field-color>
+    <field-date name="date" label="Date Picker"></field-date>
+    <field-time name="time" label="Time Picker"></field-time>
+
+    <field-row-group name="rowgroup" label="Row Group">
+      <field-text name="text" label="Text"></field-text>
+      <field-number name="number" label="Number"></field-number>
+    </field-row-group>
+
+    <field-repeater name="repeater" label="Repeater" layouts="row">
+      <field-text name="text" label="Text" fdefault="Hoang"></field-text>
+      <field-number name="number" label="Number"></field-number>
+      <field-row-group name="rowgroup" label="Row Group">
+        <field-text name="text" label="Text"></field-text>
+        <field-number name="number" label="Number"></field-number>
+      </field-row-group>
+    </field-repeater>
+  </field-group>
+
+  <field-actions back-url="/">
+    <a-button type="primary" html-type="submit" name="SubmitAction" value="save">Save Changes</a-button>
+    <field-delete-action></field-delete-action>
+  </field-actions>
+</ui-form>

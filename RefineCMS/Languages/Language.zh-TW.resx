@@ -1,0 +1,1954 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="lang_en" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="lang_zh-CN" xml:space="preserve">
+    <value>簡體中文</value>
+  </data>
+  <data name="Please log in to continue" xml:space="preserve">
+    <value>請登入以繼續</value>
+  </data>
+  <data name="Welcome Back" xml:space="preserve">
+    <value>歡迎回來</value>
+  </data>
+  <data name="lang_zh-TW" xml:space="preserve">
+    <value>繁體中文</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>密碼</value>
+  </data>
+  <data name="Remember me" xml:space="preserve">
+    <value>記住帳號</value>
+  </data>
+  <data name="Forgot Password?" xml:space="preserve">
+    <value>忘記密碼？</value>
+  </data>
+  <data name="Log In" xml:space="preserve">
+    <value>登入</value>
+  </data>
+  <data name="Username or password is incorrect." xml:space="preserve">
+    <value>使用者名稱或密碼不正確。</value>
+  </data>
+  <data name="Username" xml:space="preserve">
+    <value>使用者名稱</value>
+  </data>
+  <data name="Back to Home" xml:space="preserve">
+    <value>回首頁</value>
+  </data>
+  <data name="Log out" xml:space="preserve">
+    <value>登出</value>
+  </data>
+  <data name="Edit Profile" xml:space="preserve">
+    <value>編輯個人資料</value>
+  </data>
+  <data name="Visit Site" xml:space="preserve">
+    <value>造訪網站</value>
+  </data>
+  <data name="Invalid request, please check again." xml:space="preserve">
+    <value>Invalid request, please check again.</value>
+  </data>
+  <data name="User Information" xml:space="preserve">
+    <value>使用者資訊</value>
+  </data>
+  <data name="Fullname" xml:space="preserve">
+    <value>全名</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>電子郵件</value>
+  </data>
+  <data name="The username already exists." xml:space="preserve">
+    <value>The username already exists.</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>地位</value>
+  </data>
+  <data name="Enable" xml:space="preserve">
+    <value>使能夠</value>
+  </data>
+  <data name="Disable" xml:space="preserve">
+    <value>停用</value>
+  </data>
+  <data name="Add New" xml:space="preserve">
+    <value>新增</value>
+  </data>
+  <data name="Added successfully!" xml:space="preserve">
+    <value>Added successfully!</value>
+  </data>
+  <data name="Change password" xml:space="preserve">
+    <value>更改密碼</value>
+  </data>
+  <data name="Re-enter new password" xml:space="preserve">
+    <value>重新輸入新密碼</value>
+  </data>
+  <data name="Passwords do not match." xml:space="preserve">
+    <value>Passwords do not match.</value>
+  </data>
+  <data name="Save Changes" xml:space="preserve">
+    <value>儲存變更</value>
+  </data>
+  <data name="Saved successfully!" xml:space="preserve">
+    <value>儲存成功！</value>
+  </data>
+  <data name="Deleted successfully!" xml:space="preserve">
+    <value>Deleted successfully!</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>刪除</value>
+  </data>
+  <data name="Filter" xml:space="preserve">
+    <value>篩選</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>搜尋</value>
+  </data>
+  <data name="Dashboard" xml:space="preserve">
+    <value>儀表板</value>
+  </data>
+  <data name="Users" xml:space="preserve">
+    <value>使用者</value>
+  </data>
+  <data name="Add User" xml:space="preserve">
+    <value>Add User</value>
+  </data>
+  <data name="Edit User" xml:space="preserve">
+    <value>編輯使用者</value>
+  </data>
+  <data name="Add Post" xml:space="preserve">
+    <value>Add Post</value>
+  </data>
+  <data name="Edit Post" xml:space="preserve">
+    <value>編輯貼文</value>
+  </data>
+  <data name="Folder already exists." xml:space="preserve">
+    <value>Folder already exists.</value>
+  </data>
+  <data name="File does not exists" xml:space="preserve">
+    <value>File does not exists</value>
+  </data>
+  <data name="Date Created" xml:space="preserve">
+    <value>建立日期</value>
+  </data>
+  <data name="Last Modified" xml:space="preserve">
+    <value>上次修改</value>
+  </data>
+  <data name="Author" xml:space="preserve">
+    <value>作者</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>標題</value>
+  </data>
+  <data name="Publish" xml:space="preserve">
+    <value>發布</value>
+  </data>
+  <data name="Draft" xml:space="preserve">
+    <value>草稿</value>
+  </data>
+  <data name="Excerpt" xml:space="preserve">
+    <value>摘抄</value>
+  </data>
+  <data name="Content" xml:space="preserve">
+    <value>內容</value>
+  </data>
+  <data name="Featured image" xml:space="preserve">
+    <value>特色圖片</value>
+  </data>
+  <data name="Preview" xml:space="preserve">
+    <value>預覽</value>
+  </data>
+  <data name="Page Not Found" xml:space="preserve">
+    <value>頁面未找到</value>
+  </data>
+  <data name="Sorry, the page you're looking for doesn't exist or has been moved." xml:space="preserve">
+    <value>抱歉，您要尋找的頁面不存在或已被移動。</value>
+  </data>
+  <data name="General" xml:space="preserve">
+    <value>一般的</value>
+  </data>
+  <data name="Back" xml:space="preserve">
+    <value>後退</value>
+  </data>
+  <data name="Looking for a specific product?" xml:space="preserve">
+    <value>正在尋找特定產品？</value>
+  </data>
+  <data name="Search by part number or keyword" xml:space="preserve">
+    <value>請輸入產品品號搜尋</value>
+  </data>
+  <data name="Read More" xml:space="preserve">
+    <value>閱讀更多</value>
+  </data>
+  <data name="View Products" xml:space="preserve">
+    <value>查看產品</value>
+  </data>
+  <data name="Read Less" xml:space="preserve">
+    <value>閱讀更少</value>
+  </data>
+  <data name="Discover more" xml:space="preserve">
+    <value>查看完整大事紀</value>
+  </data>
+  <data name="Branch Office" xml:space="preserve">
+    <value>分公司</value>
+  </data>
+  <data name="R&amp;D Center" xml:space="preserve">
+    <value>研發中心</value>
+  </data>
+  <data name="R&amp;D" xml:space="preserve">
+    <value>研發</value>
+  </data>
+  <data name="Real Time Stock Quote" xml:space="preserve">
+    <value>即時股票報價</value>
+  </data>
+  <data name="Address" xml:space="preserve">
+    <value>地址</value>
+  </data>
+  <data name="Tel" xml:space="preserve">
+    <value>電話</value>
+  </data>
+  <data name="Fax" xml:space="preserve">
+    <value>傳真</value>
+  </data>
+  <data name="Web" xml:space="preserve">
+    <value>網路</value>
+  </data>
+  <data name="Latest News" xml:space="preserve">
+    <value>最新消息</value>
+  </data>
+  <data name="Filter by" xml:space="preserve">
+    <value>篩選條件</value>
+  </data>
+  <data name="View all" xml:space="preserve">
+    <value>看全部</value>
+  </data>
+  <data name="Publications" xml:space="preserve">
+    <value>出版品</value>
+  </data>
+  <data name="News" xml:space="preserve">
+    <value>訊息</value>
+  </data>
+  <data name="Offices and Sites" xml:space="preserve">
+    <value>辦公室和站點</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>首頁</value>
+  </data>
+  <data name="All Status" xml:space="preserve">
+    <value>所有狀態</value>
+  </data>
+  <data name="Month" xml:space="preserve">
+    <value>月份</value>
+  </data>
+  <data name="Net Revenue" xml:space="preserve">
+    <value>當月營收（仟元）</value>
+  </data>
+  <data name="YoY Change" xml:space="preserve">
+    <value>年度增（減）比率</value>
+  </data>
+  <data name="Revenue&lt;br&gt;Summary" xml:space="preserve">
+    <value>營收摘要</value>
+  </data>
+  <data name="Series" xml:space="preserve">
+    <value>系列</value>
+  </data>
+  <data name="Category" xml:space="preserve">
+    <value>類別</value>
+  </data>
+  <data name="Subcategory" xml:space="preserve">
+    <value>子分類</value>
+  </data>
+  <data name="2D Drawing" xml:space="preserve">
+    <value>2D 圖紙</value>
+  </data>
+  <data name="Series Catalogue" xml:space="preserve">
+    <value>產品型錄</value>
+  </data>
+  <data name="Datasheet" xml:space="preserve">
+    <value>Datasheet</value>
+  </data>
+  <data name="Material" xml:space="preserve">
+    <value>材質</value>
+  </data>
+  <data name="Rows" xml:space="preserve">
+    <value>排數</value>
+  </data>
+  <data name="Number of Positions" xml:space="preserve">
+    <value>孔數</value>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>類型</value>
+  </data>
+  <data name="Sealed / Unsealed" xml:space="preserve">
+    <value>密封/未密封</value>
+  </data>
+  <data name="Operating Temperature" xml:space="preserve">
+    <value>工作溫度</value>
+  </data>
+  <data name="Packaging" xml:space="preserve">
+    <value>包裝方式</value>
+  </data>
+  <data name="Flammability Rating" xml:space="preserve">
+    <value>阻燃等級</value>
+  </data>
+  <data name="Ingress Protection (IP)" xml:space="preserve">
+    <value>防護等級（IP）</value>
+  </data>
+  <data name="Air Tightness" xml:space="preserve">
+    <value>氣密性</value>
+  </data>
+  <data name="Old Part Number" xml:space="preserve">
+    <value>舊品號</value>
+  </data>
+  <data name="Impedance" xml:space="preserve">
+    <value>阻抗</value>
+  </data>
+  <data name="Frequency Range" xml:space="preserve">
+    <value>頻率範圍</value>
+  </data>
+  <data name="Cable Type" xml:space="preserve">
+    <value>線束類型</value>
+  </data>
+  <data name="Interface" xml:space="preserve">
+    <value>介面</value>
+  </data>
+  <data name="Vibration" xml:space="preserve">
+    <value>抗振性能</value>
+  </data>
+  <data name="Male" xml:space="preserve">
+    <value>公</value>
+  </data>
+  <data name="Female" xml:space="preserve">
+    <value>母</value>
+  </data>
+  <data name="Added to your list" xml:space="preserve">
+    <value>已新增到您的列表</value>
+  </data>
+  <data name="Remove" xml:space="preserve">
+    <value>移除清單</value>
+  </data>
+  <data name="Login Setting" xml:space="preserve">
+    <value>登入設定</value>
+  </data>
+  <data name="Posts" xml:space="preserve">
+    <value>貼文</value>
+  </data>
+  <data name="Products" xml:space="preserve">
+    <value>連接器產品</value>
+  </data>
+  <data name="Pages" xml:space="preserve">
+    <value>頁面</value>
+  </data>
+  <data name="Main Menu" xml:space="preserve">
+    <value>主選單</value>
+  </data>
+  <data name="Top Menu" xml:space="preserve">
+    <value>頂部選單</value>
+  </data>
+  <data name="Footer menu" xml:space="preserve">
+    <value>頁尾選單</value>
+  </data>
+  <data name="Bottom Menu" xml:space="preserve">
+    <value>底部選單</value>
+  </data>
+  <data name="Image" xml:space="preserve">
+    <value>影像</value>
+  </data>
+  <data name="Date" xml:space="preserve">
+    <value>日期</value>
+  </data>
+  <data name="Categories" xml:space="preserve">
+    <value>類別</value>
+  </data>
+  <data name="Add Category" xml:space="preserve">
+    <value>新增類別</value>
+  </data>
+  <data name="Edit Category" xml:space="preserve">
+    <value>編輯分類</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>姓名</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>描述</value>
+  </data>
+  <data name="Parent" xml:space="preserve">
+    <value>父母</value>
+  </data>
+  <data name="All Categories" xml:space="preserve">
+    <value>所有類別</value>
+  </data>
+  <data name="Pages &amp; Menus" xml:space="preserve">
+    <value>頁面和選單</value>
+  </data>
+  <data name="Banners" xml:space="preserve">
+    <value>橫幅</value>
+  </data>
+  <data name="Pricing" xml:space="preserve">
+    <value>定價</value>
+  </data>
+  <data name="HF Coding" xml:space="preserve">
+    <value>高頻編碼</value>
+  </data>
+  <data name="Filter Options" xml:space="preserve">
+    <value>篩選選項</value>
+  </data>
+  <data name="History" xml:space="preserve">
+    <value>歷史</value>
+  </data>
+  <data name="Years" xml:space="preserve">
+    <value>年</value>
+  </data>
+  <data name="Quality Policy" xml:space="preserve">
+    <value>品質方針</value>
+  </data>
+  <data name="Download Files" xml:space="preserve">
+    <value>下載文件</value>
+  </data>
+  <data name="Corporate Governance" xml:space="preserve">
+    <value>公司治理</value>
+  </data>
+  <data name="Financials" xml:space="preserve">
+    <value>財務</value>
+  </data>
+  <data name="Conferences And Meetings" xml:space="preserve">
+    <value>會議</value>
+  </data>
+  <data name="Contact Form" xml:space="preserve">
+    <value>聯絡表格</value>
+  </data>
+  <data name="Options" xml:space="preserve">
+    <value>選項</value>
+  </data>
+  <data name="Theme Options" xml:space="preserve">
+    <value>主題選項</value>
+  </data>
+  <data name="Search Option" xml:space="preserve">
+    <value>搜尋選項</value>
+  </data>
+  <data name="Template" xml:space="preserve">
+    <value>範本</value>
+  </data>
+  <data name="New Page" xml:space="preserve">
+    <value>新頁面</value>
+  </data>
+  <data name="Edit Page" xml:space="preserve">
+    <value>編輯頁面</value>
+  </data>
+  <data name="Add Page" xml:space="preserve">
+    <value>新增頁面</value>
+  </data>
+  <data name="Page Header" xml:space="preserve">
+    <value>頁眉</value>
+  </data>
+  <data name="Background Image" xml:space="preserve">
+    <value>背景影像</value>
+  </data>
+  <data name="Background Image (on Mobile)" xml:space="preserve">
+    <value>背景圖片（行動裝置上）</value>
+  </data>
+  <data name="Follow Us" xml:space="preserve">
+    <value>關注我們</value>
+  </data>
+  <data name="Part Number" xml:space="preserve">
+    <value>產品品號</value>
+  </data>
+  <data name="View Product" xml:space="preserve">
+    <value>查看產品</value>
+  </data>
+  <data name="Spec" xml:space="preserve">
+    <value>規格</value>
+  </data>
+  <data name="View Series" xml:space="preserve">
+    <value>查看系列</value>
+  </data>
+  <data name="Page" xml:space="preserve">
+    <value>頁</value>
+  </data>
+  <data name="Url" xml:space="preserve">
+    <value>網址</value>
+  </data>
+  <data name="First Name" xml:space="preserve">
+    <value>名字</value>
+  </data>
+  <data name="Last Name" xml:space="preserve">
+    <value>姓氏</value>
+  </data>
+  <data name="E-mail" xml:space="preserve">
+    <value>E-mail</value>
+  </data>
+  <data name="Phone Number" xml:space="preserve">
+    <value>電話號碼</value>
+  </data>
+  <data name="Country / Region" xml:space="preserve">
+    <value>國家 / 區域</value>
+  </data>
+  <data name="Company" xml:space="preserve">
+    <value>公司名稱</value>
+  </data>
+  <data name="Job Title" xml:space="preserve">
+    <value>職位</value>
+  </data>
+  <data name="Type of Inquiry" xml:space="preserve">
+    <value>詢問類型</value>
+  </data>
+  <data name="Message" xml:space="preserve">
+    <value>訊息</value>
+  </data>
+  <data name="Agreements" xml:space="preserve">
+    <value>協定</value>
+  </data>
+  <data name="I agree that Hulane collects and stores my data to process this inquiry." xml:space="preserve">
+    <value>我同意胡連收集並保存我的資料，以便回覆與管理本次詢問。</value>
+  </data>
+  <data name="I would like to receive updates about Hulane's products and events." xml:space="preserve">
+    <value>我希望獲得胡連產品與活動的最新資訊.</value>
+  </data>
+  <data name="Product List" xml:space="preserve">
+    <value>產品列表</value>
+  </data>
+  <data name="Select Country / Region" xml:space="preserve">
+    <value>國家 / 區域</value>
+  </data>
+  <data name="Your Message" xml:space="preserve">
+    <value>留下您的訊息</value>
+  </data>
+  <data name="Type your message here" xml:space="preserve">
+    <value>請留下您的詢問訊息後送出</value>
+  </data>
+  <data name="Submit Inquiry" xml:space="preserve">
+    <value>提交表單</value>
+  </data>
+  <data name="View All Publications" xml:space="preserve">
+    <value>查看所有出版物</value>
+  </data>
+  <data name="Link copied to clipboard!" xml:space="preserve">
+    <value>連結已複製到剪貼簿！</value>
+  </data>
+  <data name="View My List" xml:space="preserve">
+    <value>查看 My List</value>
+  </data>
+  <data name="All Category" xml:space="preserve">
+    <value>所有類別</value>
+  </data>
+  <data name="Apply Filters" xml:space="preserve">
+    <value>套用篩選條件</value>
+  </data>
+  <data name="Clear All" xml:space="preserve">
+    <value>重置</value>
+  </data>
+  <data name="Showing" xml:space="preserve">
+    <value>搜尋結果</value>
+  </data>
+  <data name="Results" xml:space="preserve">
+    <value>筆資料</value>
+  </data>
+  <data name="Sort by" xml:space="preserve">
+    <value>排列依據</value>
+  </data>
+  <data name="Product Number" xml:space="preserve">
+    <value>產品品號</value>
+  </data>
+  <data name="Relevancy" xml:space="preserve">
+    <value>相關性</value>
+  </data>
+  <data name="Add to List" xml:space="preserve">
+    <value>加入 My List</value>
+  </data>
+  <data name="Jan" xml:space="preserve">
+    <value>一月</value>
+  </data>
+  <data name="Feb" xml:space="preserve">
+    <value>二月</value>
+  </data>
+  <data name="Mar" xml:space="preserve">
+    <value>三月</value>
+  </data>
+  <data name="Apr" xml:space="preserve">
+    <value>四月</value>
+  </data>
+  <data name="May" xml:space="preserve">
+    <value>五月</value>
+  </data>
+  <data name="Jun" xml:space="preserve">
+    <value>六月</value>
+  </data>
+  <data name="Jul" xml:space="preserve">
+    <value>七月</value>
+  </data>
+  <data name="Aug" xml:space="preserve">
+    <value>八月</value>
+  </data>
+  <data name="Sep" xml:space="preserve">
+    <value>九月</value>
+  </data>
+  <data name="Oct" xml:space="preserve">
+    <value>十月</value>
+  </data>
+  <data name="Nov" xml:space="preserve">
+    <value>十一月</value>
+  </data>
+  <data name="Dec" xml:space="preserve">
+    <value>十二月</value>
+  </data>
+  <data name="Total" xml:space="preserve">
+    <value>總計</value>
+  </data>
+  <data name="3D Drawing" xml:space="preserve">
+    <value>3D 圖紙</value>
+  </data>
+  <data name="Plate Thickness" xml:space="preserve">
+    <value>板厚</value>
+  </data>
+  <data name="Hole Size" xml:space="preserve">
+    <value>孔徑</value>
+  </data>
+  <data name="Color" xml:space="preserve">
+    <value>顏色</value>
+  </data>
+  <data name="Length" xml:space="preserve">
+    <value>長度</value>
+  </data>
+  <data name="Width" xml:space="preserve">
+    <value>寬度</value>
+  </data>
+  <data name="Height" xml:space="preserve">
+    <value>高度</value>
+  </data>
+  <data name="USD" xml:space="preserve">
+    <value>美元</value>
+  </data>
+  <data name="Unit Price" xml:space="preserve">
+    <value>單價</value>
+  </data>
+  <data name="Compatible Parts" xml:space="preserve">
+    <value>配對產品</value>
+  </data>
+  <data name="Applications" xml:space="preserve">
+    <value>產品應用</value>
+  </data>
+  <data name="Features" xml:space="preserve">
+    <value>產品優勢</value>
+  </data>
+  <data name="Operating Temperature" xml:space="preserve">
+    <value>工作溫度</value>
+  </data>
+  <data name="Max Current Capacity" xml:space="preserve">
+    <value>最大電流容量</value>
+  </data>
+  <data name="Working Voltage" xml:space="preserve">
+    <value>工作電壓</value>
+  </data>
+  <data name="IP Class" xml:space="preserve">
+    <value>防護等級（IP）</value>
+  </data>
+  <data name="Shielding" xml:space="preserve">
+    <value>屏蔽性能</value>
+  </data>
+  <data name="Variations" xml:space="preserve">
+    <value>系列產品</value>
+  </data>
+  <data name="Sealed" xml:space="preserve">
+    <value>密封</value>
+  </data>
+  <data name="Unsealed" xml:space="preserve">
+    <value>未密封</value>
+  </data>
+  <data name="Mechanical Coding" xml:space="preserve">
+    <value>編碼版本</value>
+  </data>
+  <data name="Coding" xml:space="preserve">
+    <value>編碼</value>
+  </data>
+  <data name="RAL" xml:space="preserve">
+    <value>編號</value>
+  </data>
+  <data name="Soldering" xml:space="preserve">
+    <value>焊接方式</value>
+  </data>
+  <data name="Gender" xml:space="preserve">
+    <value>公母</value>
+  </data>
+  <data name="Sealed/Unsealed" xml:space="preserve">
+    <value>密封／非密封</value>
+  </data>
+  <data name="Applicable Wire Size" xml:space="preserve">
+    <value>適用線徑</value>
+  </data>
+  <data name="TAB" xml:space="preserve">
+    <value>端片尺寸</value>
+  </data>
+  <data name="Thickness" xml:space="preserve">
+    <value>厚度</value>
+  </data>
+  <data name="Applicable Current" xml:space="preserve">
+    <value>適用電流</value>
+  </data>
+  <data name="Plating" xml:space="preserve">
+    <value>鍍層</value>
+  </data>
+  <data name="Carrier Type" xml:space="preserve">
+    <value>載帶形式</value>
+  </data>
+  <data name="Depth" xml:space="preserve">
+    <value>深度</value>
+  </data>
+  <data name="Pitch" xml:space="preserve">
+    <value>間距</value>
+  </data>
+  <data name="Hybrid" xml:space="preserve">
+    <value>混合型</value>
+  </data>
+  <data name="Clip Hole Diameter" xml:space="preserve">
+    <value>孔徑</value>
+  </data>
+  <data name="Sheet Metal Thickness" xml:space="preserve">
+    <value>板厚</value>
+  </data>
+  <data name="Packaging Type" xml:space="preserve">
+    <value>包裝方式</value>
+  </data>
+  <data name="Vibration Grade" xml:space="preserve">
+    <value>抗振等級</value>
+  </data>
+  <data name="Insulator O.D" xml:space="preserve">
+    <value>絕緣體外徑</value>
+  </data>
+  <data name="Length 1" xml:space="preserve">
+    <value>長度 1</value>
+  </data>
+  <data name="Length 2" xml:space="preserve">
+    <value>長度 2</value>
+  </data>
+  <data name="Width 1" xml:space="preserve">
+    <value>寬度 1</value>
+  </data>
+  <data name="Width 2" xml:space="preserve">
+    <value>寬度 2</value>
+  </data>
+  <data name="Depth 1" xml:space="preserve">
+    <value>深度 1</value>
+  </data>
+  <data name="Depth 2" xml:space="preserve">
+    <value>深度 2</value>
+  </data>
+  <data name="Taxonomy Type" xml:space="preserve">
+    <value>分類類型</value>
+  </data>
+  <data name="Order" xml:space="preserve">
+    <value>命令</value>
+  </data>
+  <data name="Post Type" xml:space="preserve">
+    <value>貼文類型</value>
+  </data>
+  <data name="Hierarchical" xml:space="preserve">
+    <value>分層</value>
+  </data>
+  <data name="Public" xml:space="preserve">
+    <value>民眾</value>
+  </data>
+  <data name="Taxonomy Types" xml:space="preserve">
+    <value>分類類型</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>是的</value>
+  </data>
+  <data name="PluralName" xml:space="preserve">
+    <value>複數名稱</value>
+  </data>
+  <data name="Add Taxonomy Type" xml:space="preserve">
+    <value>新增分類類型</value>
+  </data>
+  <data name="Edit Taxonomy Type" xml:space="preserve">
+    <value>編輯分類法類型</value>
+  </data>
+  <data name="Site Title" xml:space="preserve">
+    <value>網站標題</value>
+  </data>
+  <data name="Logo" xml:space="preserve">
+    <value>標識</value>
+  </data>
+  <data name="Favicon" xml:space="preserve">
+    <value>網站圖示</value>
+  </data>
+  <data name="Footer" xml:space="preserve">
+    <value>頁尾</value>
+  </data>
+  <data name="Icon" xml:space="preserve">
+    <value>圖示</value>
+  </data>
+  <data name="Link" xml:space="preserve">
+    <value>關聯</value>
+  </data>
+  <data name="Slogan" xml:space="preserve">
+    <value>口號</value>
+  </data>
+  <data name="Copyright" xml:space="preserve">
+    <value>版權</value>
+  </data>
+  <data name="Scripts" xml:space="preserve">
+    <value>腳本</value>
+  </data>
+  <data name="Head Scripts" xml:space="preserve">
+    <value>頭部腳本</value>
+  </data>
+  <data name="Body Scripts" xml:space="preserve">
+    <value>身體腳本</value>
+  </data>
+  <data name="Mail SMTP" xml:space="preserve">
+    <value>郵件 SMTP</value>
+  </data>
+  <data name="SMTP Setting" xml:space="preserve">
+    <value>SMTP 設定</value>
+  </data>
+  <data name="Subject" xml:space="preserve">
+    <value>主題</value>
+  </data>
+  <data name="SMTP Host" xml:space="preserve">
+    <value>SMTP 主機</value>
+  </data>
+  <data name="Encryption" xml:space="preserve">
+    <value>加密</value>
+  </data>
+  <data name="SSL" xml:space="preserve">
+    <value>SSL</value>
+  </data>
+  <data name="TLS" xml:space="preserve">
+    <value>TLS</value>
+  </data>
+  <data name="Port" xml:space="preserve">
+    <value>Port</value>
+  </data>
+  <data name="SMTP Username" xml:space="preserve">
+    <value>SMTP 使用者名稱</value>
+  </data>
+  <data name="SMTP Password" xml:space="preserve">
+    <value>SMTP 密碼</value>
+  </data>
+  <data name="Code" xml:space="preserve">
+    <value>程式碼</value>
+  </data>
+  <data name="Quick links" xml:space="preserve">
+    <value>快速連結</value>
+  </data>
+  <data name="Group Title" xml:space="preserve">
+    <value>團體名稱</value>
+  </data>
+  <data name="Page Links" xml:space="preserve">
+    <value>頁面連結</value>
+  </data>
+  <data name="All Country / Region" xml:space="preserve">
+    <value>所有國家 / 區域</value>
+  </data>
+  <data name="All Type of Inquiry" xml:space="preserve">
+    <value>所有類型的詢問</value>
+  </data>
+  <data name="All Pages" xml:space="preserve">
+    <value>所有頁面</value>
+  </data>
+  <data name="Inquiries &amp; Support" xml:space="preserve">
+    <value>諮詢與支持</value>
+  </data>
+  <data name="My List" xml:space="preserve">
+    <value>我的列表</value>
+  </data>
+  <data name="Edit Contact Form" xml:space="preserve">
+    <value>編輯聯絡表格</value>
+  </data>
+  <data name="All Years" xml:space="preserve">
+    <value>所有年份</value>
+  </data>
+  <data name="Year" xml:space="preserve">
+    <value>年</value>
+  </data>
+  <data name="Conferences And Meetings Files" xml:space="preserve">
+    <value>會議文件</value>
+  </data>
+  <data name="File" xml:space="preserve">
+    <value>文件</value>
+  </data>
+  <data name="Edit File" xml:space="preserve">
+    <value>編輯文件</value>
+  </data>
+  <data name="Add File" xml:space="preserve">
+    <value>新增文件</value>
+  </data>
+  <data name="Add Year" xml:space="preserve">
+    <value>新增年份</value>
+  </data>
+  <data name="Edit Year" xml:space="preserve">
+    <value>編輯年份</value>
+  </data>
+  <data name="Financial Files" xml:space="preserve">
+    <value>財務文件</value>
+  </data>
+  <data name="Corporate Governance Files" xml:space="preserve">
+    <value>公司治理文件</value>
+  </data>
+  <data name="Quality Policy Files" xml:space="preserve">
+    <value>品質政策文件</value>
+  </data>
+  <data name="Featured" xml:space="preserve">
+    <value>精選</value>
+  </data>
+  <data name="Add History" xml:space="preserve">
+    <value>新增歷史記錄</value>
+  </data>
+  <data name="Add Publication" xml:space="preserve">
+    <value>添加出版物</value>
+  </data>
+  <data name="Edit Publication" xml:space="preserve">
+    <value>編輯出版品</value>
+  </data>
+  <data name="Add Product" xml:space="preserve">
+    <value>添加產品</value>
+  </data>
+  <data name="New Product" xml:space="preserve">
+    <value>新產品</value>
+  </data>
+  <data name="Download File" xml:space="preserve">
+    <value>下載文件</value>
+  </data>
+  <data name="Specifications" xml:space="preserve">
+    <value>規格</value>
+  </data>
+  <data name="List Series" xml:space="preserve">
+    <value>清單系列</value>
+  </data>
+  <data name="List Products" xml:space="preserve">
+    <value>列出產品</value>
+  </data>
+  <data name="Display on Filter" xml:space="preserve">
+    <value>顯示在過濾器上</value>
+  </data>
+  <data name="Edit Product" xml:space="preserve">
+    <value>編輯產品</value>
+  </data>
+  <data name="Intro" xml:space="preserve">
+    <value>簡介</value>
+  </data>
+  <data name="Items" xml:space="preserve">
+    <value>專案</value>
+  </data>
+  <data name="Male Image" xml:space="preserve">
+    <value>公</value>
+  </data>
+  <data name="Female Image" xml:space="preserve">
+    <value>母</value>
+  </data>
+  <data name="List of Sealed / Unsealed" xml:space="preserve">
+    <value>密封/未密封清單</value>
+  </data>
+  <data name="Variations - Mechanical Coding" xml:space="preserve">
+    <value>變化 - 機械編碼</value>
+  </data>
+  <data name="Image 1" xml:space="preserve">
+    <value>圖片 1</value>
+  </data>
+  <data name="Image 2" xml:space="preserve">
+    <value>圖片 2</value>
+  </data>
+  <data name="Add Pricing" xml:space="preserve">
+    <value>添加定價</value>
+  </data>
+  <data name="Count" xml:space="preserve">
+    <value>數數</value>
+  </data>
+  <data name="Display on page" xml:space="preserve">
+    <value>頁面顯示</value>
+  </data>
+  <data name="Price" xml:space="preserve">
+    <value>價格</value>
+  </data>
+  <data name="Price (USD)" xml:space="preserve">
+    <value>價格（美元）</value>
+  </data>
+  <data name="Note" xml:space="preserve">
+    <value>筆記</value>
+  </data>
+  <data name="Edit Pricing" xml:space="preserve">
+    <value>編輯定價</value>
+  </data>
+  <data name="Add HF Coding" xml:space="preserve">
+    <value>添加 HF 編碼</value>
+  </data>
+  <data name="Color Name" xml:space="preserve">
+    <value>顏色名稱</value>
+  </data>
+  <data name="Edit HF Coding" xml:space="preserve">
+    <value>編輯 HF 編碼</value>
+  </data>
+  <data name="Add Filter" xml:space="preserve">
+    <value>新增過濾器</value>
+  </data>
+  <data name="Display on category" xml:space="preserve">
+    <value>按類別顯示</value>
+  </data>
+  <data name="Edit Filter" xml:space="preserve">
+    <value>編輯過濾器</value>
+  </data>
+  <data name="Add Banner" xml:space="preserve">
+    <value>新增橫幅</value>
+  </data>
+  <data name="Button Link" xml:space="preserve">
+    <value>按鈕連結</value>
+  </data>
+  <data name="Label" xml:space="preserve">
+    <value>標籤</value>
+  </data>
+  <data name="Edit Banner" xml:space="preserve">
+    <value>編輯橫幅</value>
+  </data>
+  <data name="Add Bottom Menu" xml:space="preserve">
+    <value>新增底部選單</value>
+  </data>
+  <data name="Menu Type" xml:space="preserve">
+    <value>選單類型</value>
+  </data>
+  <data name="Post" xml:space="preserve">
+    <value>郵政</value>
+  </data>
+  <data name="Edit Bottom Menu" xml:space="preserve">
+    <value>編輯底部選單</value>
+  </data>
+  <data name="Add Footer Menu" xml:space="preserve">
+    <value>新增頁尾選單</value>
+  </data>
+  <data name="Edit Footer Menu" xml:space="preserve">
+    <value>編輯頁尾選單</value>
+  </data>
+  <data name="Add Top Menu" xml:space="preserve">
+    <value>新增頂部選單</value>
+  </data>
+  <data name="Edit Top Menu" xml:space="preserve">
+    <value>編輯頂部選單</value>
+  </data>
+  <data name="Add Main Menu" xml:space="preserve">
+    <value>新增主選單</value>
+  </data>
+  <data name="Edit Main Menu" xml:space="preserve">
+    <value>編輯主選單</value>
+  </data>
+  <data name="Slider" xml:space="preserve">
+    <value>滑桿</value>
+  </data>
+  <data name="Bound for Excellence" xml:space="preserve">
+    <value>追求卓越</value>
+  </data>
+  <data name="Latest Innovations" xml:space="preserve">
+    <value>最新創新</value>
+  </data>
+  <data name="Featured Blocks" xml:space="preserve">
+    <value>特色區塊</value>
+  </data>
+  <data name="Bottom Blocks" xml:space="preserve">
+    <value>底部塊</value>
+  </data>
+  <data name="Investors" xml:space="preserve">
+    <value>投資者</value>
+  </data>
+  <data name="Icon Image" xml:space="preserve">
+    <value>圖示圖像</value>
+  </data>
+  <data name="Production" xml:space="preserve">
+    <value>生產</value>
+  </data>
+  <data name="Value Chain" xml:space="preserve">
+    <value>價值鏈</value>
+  </data>
+  <data name="Community" xml:space="preserve">
+    <value>社群</value>
+  </data>
+  <data name="ESG Report" xml:space="preserve">
+    <value>ESG報告</value>
+  </data>
+  <data name="Primary Button Link" xml:space="preserve">
+    <value>主要按鈕連結</value>
+  </data>
+  <data name="Second Button Link" xml:space="preserve">
+    <value>第二個按鈕連結</value>
+  </data>
+  <data name="Key Milestones in Hulane" xml:space="preserve">
+    <value>胡蘭的重要里程碑</value>
+  </data>
+  <data name="Global Footprint" xml:space="preserve">
+    <value>全球足跡</value>
+  </data>
+  <data name="Numbers" xml:space="preserve">
+    <value>數位</value>
+  </data>
+  <data name="Office Name" xml:space="preserve">
+    <value>辦公室名稱</value>
+  </data>
+  <data name="Office Type" xml:space="preserve">
+    <value>辦公室類型</value>
+  </data>
+  <data name="Location" xml:space="preserve">
+    <value>地點</value>
+  </data>
+  <data name="Leadership Block" xml:space="preserve">
+    <value>領導力板塊</value>
+  </data>
+  <data name="Quality Policy Block" xml:space="preserve">
+    <value>品質政策區塊</value>
+  </data>
+  <data name="We are a team bound for excellence" xml:space="preserve">
+    <value>我們是一支追求卓越的團隊</value>
+  </data>
+  <data name="Learning &amp; Professional Development" xml:space="preserve">
+    <value>學習與專業發展</value>
+  </data>
+  <data name="Life at Hulane" xml:space="preserve">
+    <value>在胡蘭的生活</value>
+  </data>
+  <data name="Photo" xml:space="preserve">
+    <value>照片</value>
+  </data>
+  <data name="Hulane Associate Inc" xml:space="preserve">
+    <value>Hulane Associate公司</value>
+  </data>
+  <data name="Stock Quote" xml:space="preserve">
+    <value>股票報價</value>
+  </data>
+  <data name="Contact Info" xml:space="preserve">
+    <value>聯絡資訊</value>
+  </data>
+  <data name="Info" xml:space="preserve">
+    <value>資訊</value>
+  </data>
+  <data name="Contact" xml:space="preserve">
+    <value>接觸</value>
+  </data>
+  <data name="Headquarters" xml:space="preserve">
+    <value>總部</value>
+  </data>
+  <data name="Region Name" xml:space="preserve">
+    <value>區域名稱</value>
+  </data>
+  <data name="Contact Name" xml:space="preserve">
+    <value>聯絡人姓名</value>
+  </data>
+  <data name="Product Category" xml:space="preserve">
+    <value>產品類別</value>
+  </data>
+  <data name="Display SubCategory" xml:space="preserve">
+    <value>顯示子類別</value>
+  </data>
+  <data name="Display Filter" xml:space="preserve">
+    <value>顯示過濾器</value>
+  </data>
+  <data name="Solution" xml:space="preserve">
+    <value>解決方案</value>
+  </data>
+  <data name="Comprehensive R&amp;D Process to Manufacturing" xml:space="preserve">
+    <value>全面的研發流程到製造</value>
+  </data>
+  <data name="SubTitle" xml:space="preserve">
+    <value>字幕</value>
+  </data>
+  <data name="Top Managers" xml:space="preserve">
+    <value>高階管理人員</value>
+  </data>
+  <data name="Position" xml:space="preserve">
+    <value>位置</value>
+  </data>
+  <data name="SeniorManagers" xml:space="preserve">
+    <value>高階經理</value>
+  </data>
+  <data name="Logos" xml:space="preserve">
+    <value>標誌</value>
+  </data>
+  <data name="Environmental Policy" xml:space="preserve">
+    <value>環境政策</value>
+  </data>
+  <data name="Our Approach" xml:space="preserve">
+    <value>我們的方法</value>
+  </data>
+  <data name="Locations" xml:space="preserve">
+    <value>位置</value>
+  </data>
+  <data name="Image (Hover)" xml:space="preserve">
+    <value>圖像（懸停）</value>
+  </data>
+  <data name="Internships" xml:space="preserve">
+    <value>實習</value>
+  </data>
+  <data name="Current Year Report" xml:space="preserve">
+    <value>本年度報告</value>
+  </data>
+  <data name="Monthly Sales Report" xml:space="preserve">
+    <value>月度銷售報告</value>
+  </data>
+  <data name="Revenue Summary" xml:space="preserve">
+    <value>營收摘要</value>
+  </data>
+  <data name="Product List (No Items)" xml:space="preserve">
+    <value>產品清單（無商品）</value>
+  </data>
+  <data name="Investor FAQ" xml:space="preserve">
+    <value>投資人常見問題解答</value>
+  </data>
+  <data name="Question" xml:space="preserve">
+    <value>問題</value>
+  </data>
+  <data name="Answer" xml:space="preserve">
+    <value>回答</value>
+  </data>
+  <data name="Sitemap" xml:space="preserve">
+    <value>網站地圖</value>
+  </data>
+  <data name="Slug" xml:space="preserve">
+    <value>URL</value>
+  </data>
+  <data name="About" xml:space="preserve">
+    <value>關於胡連</value>
+  </data>
+  <data name="Careers" xml:space="preserve">
+    <value>人才招募</value>
+  </data>
+  <data name="User Role" xml:space="preserve">
+    <value>使用者角色</value>
+  </data>
+  <data name="Roles" xml:space="preserve">
+    <value>角色</value>
+  </data>
+  <data name="Permissions" xml:space="preserve">
+    <value>權限</value>
+  </data>
+  <data name="Role" xml:space="preserve">
+    <value>角色</value>
+  </data>
+  <data name="Add User Role" xml:space="preserve">
+    <value>新增使用者角色</value>
+  </data>
+  <data name="Edit User Role" xml:space="preserve">
+    <value>編輯使用者角色</value>
+  </data>
+  <data name="View All News" xml:space="preserve">
+    <value>查看全部</value>
+  </data>
+  <data name="View" xml:space="preserve">
+    <value>看法</value>
+  </data>
+  <data name="Type2" xml:space="preserve">
+    <value>角度類型</value>
+  </data>
+  <data name="product_filters_note" xml:space="preserve">
+    <value>選擇一個產品組以查看篩選選項。&lt;br&gt;
+您的搜尋結果將會刷新。</value>
+  </data>
+  <data name="Pin on top" xml:space="preserve">
+    <value>Pin 位於頂部</value>
+  </data>
+  <data name="Afghanistan" xml:space="preserve">
+    <value>阿富汗</value>
+  </data>
+  <data name="Albania" xml:space="preserve">
+    <value>阿爾巴尼亞</value>
+  </data>
+  <data name="Algeria" xml:space="preserve">
+    <value>阿爾及利亞</value>
+  </data>
+  <data name="Andorra" xml:space="preserve">
+    <value>安道爾</value>
+  </data>
+  <data name="Angola" xml:space="preserve">
+    <value>安哥拉</value>
+  </data>
+  <data name="Antigua and Deps" xml:space="preserve">
+    <value>安地卡及巴布達</value>
+  </data>
+  <data name="Argentina" xml:space="preserve">
+    <value>阿根廷</value>
+  </data>
+  <data name="Armenia" xml:space="preserve">
+    <value>亞美尼亞</value>
+  </data>
+  <data name="Australia" xml:space="preserve">
+    <value>澳大利亞</value>
+  </data>
+  <data name="Austria" xml:space="preserve">
+    <value>奧地利</value>
+  </data>
+  <data name="Azerbaijan" xml:space="preserve">
+    <value>亞塞拜然</value>
+  </data>
+  <data name="Bahamas" xml:space="preserve">
+    <value>巴哈馬</value>
+  </data>
+  <data name="Bahrain" xml:space="preserve">
+    <value>巴林</value>
+  </data>
+  <data name="Bangladesh" xml:space="preserve">
+    <value>孟加拉</value>
+  </data>
+  <data name="Barbados" xml:space="preserve">
+    <value>巴貝多</value>
+  </data>
+  <data name="Belarus" xml:space="preserve">
+    <value>白俄羅斯</value>
+  </data>
+  <data name="Belgium" xml:space="preserve">
+    <value>比利時</value>
+  </data>
+  <data name="Belize" xml:space="preserve">
+    <value>貝里斯</value>
+  </data>
+  <data name="Benin" xml:space="preserve">
+    <value>貝南</value>
+  </data>
+  <data name="Bhutan" xml:space="preserve">
+    <value>不丹</value>
+  </data>
+  <data name="Bolivia" xml:space="preserve">
+    <value>玻利維亞</value>
+  </data>
+  <data name="Bosnia Herzegovina" xml:space="preserve">
+    <value>波士尼亞與赫塞哥維納</value>
+  </data>
+  <data name="Botswana" xml:space="preserve">
+    <value>波札那</value>
+  </data>
+  <data name="Brazil" xml:space="preserve">
+    <value>巴西</value>
+  </data>
+  <data name="Brunei" xml:space="preserve">
+    <value>汶萊</value>
+  </data>
+  <data name="Bulgaria" xml:space="preserve">
+    <value>保加利亞</value>
+  </data>
+  <data name="Burkina" xml:space="preserve">
+    <value>布吉納法索</value>
+  </data>
+  <data name="Burundi" xml:space="preserve">
+    <value>蒲隆地</value>
+  </data>
+  <data name="Cambodia" xml:space="preserve">
+    <value>柬埔寨</value>
+  </data>
+  <data name="Cameroon" xml:space="preserve">
+    <value>喀麥隆</value>
+  </data>
+  <data name="Canada" xml:space="preserve">
+    <value>加拿大</value>
+  </data>
+  <data name="Cape Verde" xml:space="preserve">
+    <value>維德角</value>
+  </data>
+  <data name="Central African Rep" xml:space="preserve">
+    <value>中非共和國</value>
+  </data>
+  <data name="Chad" xml:space="preserve">
+    <value>查德</value>
+  </data>
+  <data name="Chile" xml:space="preserve">
+    <value>智利</value>
+  </data>
+  <data name="China" xml:space="preserve">
+    <value>中國</value>
+  </data>
+  <data name="Colombia" xml:space="preserve">
+    <value>哥倫比亞</value>
+  </data>
+  <data name="Comoros" xml:space="preserve">
+    <value>葛摩</value>
+  </data>
+  <data name="Congo" xml:space="preserve">
+    <value>剛果</value>
+  </data>
+  <data name="Congo_Democratic Rep" xml:space="preserve">
+    <value>剛果民主共和國</value>
+  </data>
+  <data name="Costa Rica" xml:space="preserve">
+    <value>哥斯大黎加</value>
+  </data>
+  <data name="Croatia" xml:space="preserve">
+    <value>克羅埃西亞</value>
+  </data>
+  <data name="Cuba" xml:space="preserve">
+    <value>古巴</value>
+  </data>
+  <data name="Cyprus" xml:space="preserve">
+    <value>賽普勒斯</value>
+  </data>
+  <data name="Czech Republic" xml:space="preserve">
+    <value>捷克共和國</value>
+  </data>
+  <data name="Denmark" xml:space="preserve">
+    <value>丹麥</value>
+  </data>
+  <data name="Djibouti" xml:space="preserve">
+    <value>吉布地</value>
+  </data>
+  <data name="Dominica" xml:space="preserve">
+    <value>多米尼克</value>
+  </data>
+  <data name="Dominican Republic" xml:space="preserve">
+    <value>多明尼加共和國</value>
+  </data>
+  <data name="East Timor" xml:space="preserve">
+    <value>東帝汶</value>
+  </data>
+  <data name="Ecuador" xml:space="preserve">
+    <value>厄瓜多</value>
+  </data>
+  <data name="Egypt" xml:space="preserve">
+    <value>埃及</value>
+  </data>
+  <data name="El Salvador" xml:space="preserve">
+    <value>薩爾瓦多</value>
+  </data>
+  <data name="Equatorial Guinea" xml:space="preserve">
+    <value>赤道幾內亞</value>
+  </data>
+  <data name="Eritrea" xml:space="preserve">
+    <value>厄利垂亞</value>
+  </data>
+  <data name="Estonia" xml:space="preserve">
+    <value>愛沙尼亞</value>
+  </data>
+  <data name="Ethiopia" xml:space="preserve">
+    <value>衣索比亞</value>
+  </data>
+  <data name="Fiji" xml:space="preserve">
+    <value>斐濟</value>
+  </data>
+  <data name="Finland" xml:space="preserve">
+    <value>芬蘭</value>
+  </data>
+  <data name="France" xml:space="preserve">
+    <value>法國</value>
+  </data>
+  <data name="Gabon" xml:space="preserve">
+    <value>加彭</value>
+  </data>
+  <data name="Gambia" xml:space="preserve">
+    <value>甘比亞</value>
+  </data>
+  <data name="Georgia" xml:space="preserve">
+    <value>喬治亞</value>
+  </data>
+  <data name="Germany" xml:space="preserve">
+    <value>德國</value>
+  </data>
+  <data name="Ghana" xml:space="preserve">
+    <value>迦納</value>
+  </data>
+  <data name="Greece" xml:space="preserve">
+    <value>希臘</value>
+  </data>
+  <data name="Grenada" xml:space="preserve">
+    <value>格瑞那達</value>
+  </data>
+  <data name="Guatemala" xml:space="preserve">
+    <value>瓜地馬拉</value>
+  </data>
+  <data name="Guinea" xml:space="preserve">
+    <value>幾內亞</value>
+  </data>
+  <data name="Guinea_Bissau" xml:space="preserve">
+    <value>幾內亞比索</value>
+  </data>
+  <data name="Guyana" xml:space="preserve">
+    <value>蓋亞那</value>
+  </data>
+  <data name="Haiti" xml:space="preserve">
+    <value>海地</value>
+  </data>
+  <data name="Honduras" xml:space="preserve">
+    <value>宏都拉斯</value>
+  </data>
+  <data name="Hungary" xml:space="preserve">
+    <value>匈牙利</value>
+  </data>
+  <data name="Iceland" xml:space="preserve">
+    <value>冰島</value>
+  </data>
+  <data name="India" xml:space="preserve">
+    <value>印度</value>
+  </data>
+  <data name="Indonesia" xml:space="preserve">
+    <value>印尼</value>
+  </data>
+  <data name="Iran" xml:space="preserve">
+    <value>伊朗</value>
+  </data>
+  <data name="Iraq" xml:space="preserve">
+    <value>伊拉克</value>
+  </data>
+  <data name="Ireland_Republic" xml:space="preserve">
+    <value>愛爾蘭</value>
+  </data>
+  <data name="Israel" xml:space="preserve">
+    <value>以色列</value>
+  </data>
+  <data name="Italy" xml:space="preserve">
+    <value>義大利</value>
+  </data>
+  <data name="Ivory Coast" xml:space="preserve">
+    <value>象牙海岸</value>
+  </data>
+  <data name="Jamaica" xml:space="preserve">
+    <value>牙買加</value>
+  </data>
+  <data name="Japan" xml:space="preserve">
+    <value>日本</value>
+  </data>
+  <data name="Jordan" xml:space="preserve">
+    <value>約旦</value>
+  </data>
+  <data name="Kazakhstan" xml:space="preserve">
+    <value>哈薩克</value>
+  </data>
+  <data name="Kenya" xml:space="preserve">
+    <value>肯亞</value>
+  </data>
+  <data name="Kiribati" xml:space="preserve">
+    <value>吉里巴斯</value>
+  </data>
+  <data name="Korea North" xml:space="preserve">
+    <value>北韓</value>
+  </data>
+  <data name="Korea South" xml:space="preserve">
+    <value>南韓</value>
+  </data>
+  <data name="Kosovo" xml:space="preserve">
+    <value>科索沃</value>
+  </data>
+  <data name="Kuwait" xml:space="preserve">
+    <value>科威特</value>
+  </data>
+  <data name="Kyrgyzstan" xml:space="preserve">
+    <value>吉爾吉斯</value>
+  </data>
+  <data name="Laos" xml:space="preserve">
+    <value>寮國</value>
+  </data>
+  <data name="Latvia" xml:space="preserve">
+    <value>拉脫維亞</value>
+  </data>
+  <data name="Lebanon" xml:space="preserve">
+    <value>黎巴嫩</value>
+  </data>
+  <data name="Lesotho" xml:space="preserve">
+    <value>賴索托</value>
+  </data>
+  <data name="Liberia" xml:space="preserve">
+    <value>賴比瑞亞</value>
+  </data>
+  <data name="Libya" xml:space="preserve">
+    <value>利比亞</value>
+  </data>
+  <data name="Liechtenstein" xml:space="preserve">
+    <value>列支敦斯登</value>
+  </data>
+  <data name="Lithuania" xml:space="preserve">
+    <value>立陶宛</value>
+  </data>
+  <data name="Luxembourg" xml:space="preserve">
+    <value>盧森堡</value>
+  </data>
+  <data name="Macedonia" xml:space="preserve">
+    <value>馬其頓</value>
+  </data>
+  <data name="Madagascar" xml:space="preserve">
+    <value>馬達加斯加</value>
+  </data>
+  <data name="Malawi" xml:space="preserve">
+    <value>馬拉威</value>
+  </data>
+  <data name="Malaysia" xml:space="preserve">
+    <value>馬來西亞</value>
+  </data>
+  <data name="Maldives" xml:space="preserve">
+    <value>馬爾地夫</value>
+  </data>
+  <data name="Mali" xml:space="preserve">
+    <value>馬利</value>
+  </data>
+  <data name="Malta" xml:space="preserve">
+    <value>馬爾他</value>
+  </data>
+  <data name="Marshall Islands" xml:space="preserve">
+    <value>馬紹爾群島</value>
+  </data>
+  <data name="Mauritania" xml:space="preserve">
+    <value>茅利塔尼亞</value>
+  </data>
+  <data name="Mauritius" xml:space="preserve">
+    <value>模里西斯</value>
+  </data>
+  <data name="Mexico" xml:space="preserve">
+    <value>墨西哥</value>
+  </data>
+  <data name="Micronesia" xml:space="preserve">
+    <value>密克羅尼西亞</value>
+  </data>
+  <data name="Moldova" xml:space="preserve">
+    <value>摩爾多瓦</value>
+  </data>
+  <data name="Monaco" xml:space="preserve">
+    <value>摩納哥</value>
+  </data>
+  <data name="Mongolia" xml:space="preserve">
+    <value>蒙古</value>
+  </data>
+  <data name="Montenegro" xml:space="preserve">
+    <value>蒙特內哥羅</value>
+  </data>
+  <data name="Morocco" xml:space="preserve">
+    <value>摩洛哥</value>
+  </data>
+  <data name="Mozambique" xml:space="preserve">
+    <value>莫三比克</value>
+  </data>
+  <data name="Myanmar_Burma" xml:space="preserve">
+    <value>緬甸</value>
+  </data>
+  <data name="Namibia" xml:space="preserve">
+    <value>納米比亞</value>
+  </data>
+  <data name="Nauru" xml:space="preserve">
+    <value>諾魯</value>
+  </data>
+  <data name="Nepal" xml:space="preserve">
+    <value>尼泊爾</value>
+  </data>
+  <data name="Netherlands" xml:space="preserve">
+    <value>荷蘭</value>
+  </data>
+  <data name="New Zealand" xml:space="preserve">
+    <value>紐西蘭</value>
+  </data>
+  <data name="Nicaragua" xml:space="preserve">
+    <value>尼加拉瓜</value>
+  </data>
+  <data name="Niger" xml:space="preserve">
+    <value>尼日</value>
+  </data>
+  <data name="Nigeria" xml:space="preserve">
+    <value>奈及利亞</value>
+  </data>
+  <data name="Norway" xml:space="preserve">
+    <value>挪威</value>
+  </data>
+  <data name="Oman" xml:space="preserve">
+    <value>阿曼</value>
+  </data>
+  <data name="Pakistan" xml:space="preserve">
+    <value>巴基斯坦</value>
+  </data>
+  <data name="Palau" xml:space="preserve">
+    <value>帛琉</value>
+  </data>
+  <data name="Panama" xml:space="preserve">
+    <value>巴拿馬</value>
+  </data>
+  <data name="Papua New Guinea" xml:space="preserve">
+    <value>巴布亞紐幾內亞</value>
+  </data>
+  <data name="Paraguay" xml:space="preserve">
+    <value>巴拉圭</value>
+  </data>
+  <data name="Peru" xml:space="preserve">
+    <value>秘魯</value>
+  </data>
+  <data name="Philippines" xml:space="preserve">
+    <value>菲律賓</value>
+  </data>
+  <data name="Poland" xml:space="preserve">
+    <value>波蘭</value>
+  </data>
+  <data name="Portugal" xml:space="preserve">
+    <value>葡萄牙</value>
+  </data>
+  <data name="Qatar" xml:space="preserve">
+    <value>卡達</value>
+  </data>
+  <data name="Romania" xml:space="preserve">
+    <value>羅馬尼亞</value>
+  </data>
+  <data name="Russian Federation" xml:space="preserve">
+    <value>俄羅斯</value>
+  </data>
+  <data name="Rwanda" xml:space="preserve">
+    <value>盧安達</value>
+  </data>
+  <data name="St Kitts and Nevis" xml:space="preserve">
+    <value>聖克里斯多福及尼維斯</value>
+  </data>
+  <data name="St Lucia" xml:space="preserve">
+    <value>聖露西亞</value>
+  </data>
+  <data name="Saint Vincent and the Grenadines" xml:space="preserve">
+    <value>聖文森及格瑞那丁</value>
+  </data>
+  <data name="Samoa" xml:space="preserve">
+    <value>薩摩亞</value>
+  </data>
+  <data name="San Marino" xml:space="preserve">
+    <value>聖馬利諾</value>
+  </data>
+  <data name="Sao Tome and Principe" xml:space="preserve">
+    <value>聖多美普林西比</value>
+  </data>
+  <data name="Saudi Arabia" xml:space="preserve">
+    <value>沙烏地阿拉伯</value>
+  </data>
+  <data name="Senegal" xml:space="preserve">
+    <value>塞內加爾</value>
+  </data>
+  <data name="Serbia" xml:space="preserve">
+    <value>塞爾維亞</value>
+  </data>
+  <data name="Seychelles" xml:space="preserve">
+    <value>塞席爾</value>
+  </data>
+  <data name="Sierra Leone" xml:space="preserve">
+    <value>獅子山</value>
+  </data>
+  <data name="Singapore" xml:space="preserve">
+    <value>新加坡</value>
+  </data>
+  <data name="Slovakia" xml:space="preserve">
+    <value>斯洛伐克</value>
+  </data>
+  <data name="Slovenia" xml:space="preserve">
+    <value>斯洛維尼亞</value>
+  </data>
+  <data name="Solomon Islands" xml:space="preserve">
+    <value>索羅門群島</value>
+  </data>
+  <data name="Somalia" xml:space="preserve">
+    <value>索馬利亞</value>
+  </data>
+  <data name="South Africa" xml:space="preserve">
+    <value>南非</value>
+  </data>
+  <data name="South Sudan" xml:space="preserve">
+    <value>南蘇丹</value>
+  </data>
+  <data name="Spain" xml:space="preserve">
+    <value>西班牙</value>
+  </data>
+  <data name="Sri Lanka" xml:space="preserve">
+    <value>斯里蘭卡</value>
+  </data>
+  <data name="Sudan" xml:space="preserve">
+    <value>蘇丹</value>
+  </data>
+  <data name="Suriname" xml:space="preserve">
+    <value>蘇利南</value>
+  </data>
+  <data name="Swaziland" xml:space="preserve">
+    <value>史瓦帝尼</value>
+  </data>
+  <data name="Sweden" xml:space="preserve">
+    <value>瑞典</value>
+  </data>
+  <data name="Switzerland" xml:space="preserve">
+    <value>瑞士</value>
+  </data>
+  <data name="Syria" xml:space="preserve">
+    <value>敘利亞</value>
+  </data>
+  <data name="Taiwan" xml:space="preserve">
+    <value>台灣</value>
+  </data>
+  <data name="Tajikistan" xml:space="preserve">
+    <value>塔吉克</value>
+  </data>
+  <data name="Tanzania" xml:space="preserve">
+    <value>坦尚尼亞</value>
+  </data>
+  <data name="Thailand" xml:space="preserve">
+    <value>泰國</value>
+  </data>
+  <data name="Togo" xml:space="preserve">
+    <value>多哥</value>
+  </data>
+  <data name="Tonga" xml:space="preserve">
+    <value>東加</value>
+  </data>
+  <data name="Trinidad and Tobago" xml:space="preserve">
+    <value>千里達及托巴哥</value>
+  </data>
+  <data name="Tunisia" xml:space="preserve">
+    <value>突尼西亞</value>
+  </data>
+  <data name="Turkey" xml:space="preserve">
+    <value>土耳其</value>
+  </data>
+  <data name="Turkmenistan" xml:space="preserve">
+    <value>土庫曼</value>
+  </data>
+  <data name="Tuvalu" xml:space="preserve">
+    <value>吐瓦魯</value>
+  </data>
+  <data name="Uganda" xml:space="preserve">
+    <value>烏干達</value>
+  </data>
+  <data name="Ukraine" xml:space="preserve">
+    <value>烏克蘭</value>
+  </data>
+  <data name="United Arab Emirates" xml:space="preserve">
+    <value>阿拉伯聯合大公國</value>
+  </data>
+  <data name="United Kingdom" xml:space="preserve">
+    <value>英國</value>
+  </data>
+  <data name="United States" xml:space="preserve">
+    <value>美國</value>
+  </data>
+  <data name="Uruguay" xml:space="preserve">
+    <value>烏拉圭</value>
+  </data>
+  <data name="Uzbekistan" xml:space="preserve">
+    <value>烏茲別克</value>
+  </data>
+  <data name="Vanuatu" xml:space="preserve">
+    <value>萬那杜</value>
+  </data>
+  <data name="Vatican City" xml:space="preserve">
+    <value>梵蒂岡</value>
+  </data>
+  <data name="Venezuela" xml:space="preserve">
+    <value>委內瑞拉</value>
+  </data>
+  <data name="Vietnam" xml:space="preserve">
+    <value>越南</value>
+  </data>
+  <data name="Yemen" xml:space="preserve">
+    <value>葉門</value>
+  </data>
+  <data name="Zambia" xml:space="preserve">
+    <value>尚比亞</value>
+  </data>
+  <data name="Zimbabwe" xml:space="preserve">
+    <value>辛巴威</value>
+  </data>
+  <data name="Thank you for your inquiry. Our representatives will contact you shortly." xml:space="preserve">
+    <value>感謝您的來訊，我們將會盡快與您聯繫。</value>
+  </data>
+  <data name="Please agree to data collection to submit the form." xml:space="preserve">
+    <value>請同意我們蒐集並處理您的資料，以提交詢問表單。</value>
+  </data>
+  <data name="This field is required." xml:space="preserve">
+    <value>此欄位為必填項。</value>
+  </data>
+</root>

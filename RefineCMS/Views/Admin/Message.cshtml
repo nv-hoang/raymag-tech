@@ -1,0 +1,19 @@
+﻿@{ 
+    var MessageSuccess = TempData["MessageSuccess"];
+    var MessageError = TempData["MessageError"];
+}
+
+
+@if (MessageSuccess != null)
+{
+    <div>
+        <a-alert message="@MessageSuccess" type="success" show-icon closable></a-alert>
+    </div>
+}
+
+@if (MessageError != null)
+{
+    <div>
+        <a-alert message="@MessageError" type="error" show-icon closable></a-alert>
+    </div>
+}

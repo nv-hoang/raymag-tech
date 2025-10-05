@@ -1,0 +1,30 @@
+﻿@{
+    Dictionary<string, string> list = [];
+    list = hook.ApplyFilters("Theme_Pages", list);
+}
+
+
+<ui-group :data="{page: 'home'}" v-slot="state">
+    <ui-modal-button label="@output.Trans("New Page")" :width="800" :disabled="state.page == ''" @@ok="(e) => (e.view.location.href='@output.Url("admin/pages/add/")'+state.page)">
+        <div class="flex justify-items-stretch gap-3">
+            <div class="flex-1">
+                <br />
+                <div class="columns-1">
+                    @foreach(var page in list)
+                    {
+                        <div @@click="state.page = '@(page.Key)'" :class="state.page == '@(page.Key)' ? 'text-primary-500':'hover:text-primary-500'" class="cursor-pointer flex items-center gap-2 mb-2">
+                            <span>@(page.Value)</span>
+                            <check-outlined v-show="state.page == '@(page.Key)'"></check-outlined>
+                        </div>
+                    }
+                </div>
+            </div>
+            <div class="hidden md:block border-l border-gray-200 pl-3" style="width: 60%;">
+                <div class="mb-2">@output.Trans("Preview")</div>
+                <div class="overflow-auto" style="height: 400px;">
+                    <img v-if="state.page != ''" :src="'@output.Url($"theme/{cfg.Theme}/docs/pages/")' + state.page + '.png'" style="width: 100%;">
+                </div>
+            </div>
+        </div>
+    </ui-modal-button>
+</ui-group>

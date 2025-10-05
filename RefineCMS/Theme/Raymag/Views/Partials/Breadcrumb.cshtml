@@ -1,0 +1,26 @@
+﻿@{ 
+    var breadcrumbs = ViewData["Breadcrumbs"] as List<List<string>>;
+}
+
+
+<div class="ani-item hidden lg:flex items-center gap-x-3 gap-y-1 flex-wrap mb-[48px]">
+    <a href="@output.Url("/")" class="text-[12px] font-light leading-120 text-grey-500 hover:text-primary-500 transition-colors">@output.Trans("Home")</a>
+
+    @if (breadcrumbs != null)
+    {
+        foreach (var breadcrumb in breadcrumbs)
+        {
+            <svg width="5" height="8" viewBox="0 0 5 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 7L4 4L1 1" stroke="#A2A2A2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <a href="@breadcrumb[0]" class="text-[12px] font-light leading-120 text-grey-500 hover:text-primary-500 transition-colors">@breadcrumb[1]</a>
+        }
+    }
+    else
+    {
+        <svg width="5" height="8" viewBox="0 0 5 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 7L4 4L1 1" stroke="#A2A2A2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+        <a href class="text-[12px] font-light leading-120 text-grey-500 hover:text-primary-500 transition-colors">@output.CustomField("Info.PostTitle", true)</a>
+    }
+</div>

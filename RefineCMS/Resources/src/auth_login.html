@@ -1,0 +1,76 @@
+{{> header }}
+
+<main class="min-h-[100dvh] grid w-full grow grid-cols-1 place-items-center">
+    <div class="w-full max-w-[26rem] p-4 sm:px-5 pb-[90px]">
+        <div class="space-y-5">
+            <div class="text-center">
+                <img src="assets/img/logo.svg" class="mx-auto">
+                <div class="mt-8">
+                    <h2 class="text-2xl font-semibold text-gray-600">Welcome Back</h2>
+                    <p class="text-gray-400">Please log in to continue</p>
+                </div>
+            </div>
+
+            <a-alert message="Error Text" type="error"></a-alert>
+            <a-alert message="Very long warning text warning text text text text text text text" type="error" show-icon closable></a-alert>
+            <a-alert message="Very long warning text warning text text text text text text text" type="success" show-icon closable></a-alert>
+
+            <div class="relative break-words card rounded-lg border border-gray-200 mt-5 p-5 lg:p-7">
+                <a-form @submit="console.log(1)">
+                    <div class="space-y-4">
+                        <div class="input-root">
+                            <label class="input-label">Username</label>
+                            <div class="input-wrapper relative mt-1.5">
+                                <a-input autocomplete="username" name="username" size="large"></a-input>
+                            </div>
+                        </div>
+                        <div class="input-root">
+                            <label class="input-label">Password</label>
+                            <div class="input-wrapper relative mt-1.5">
+                                <a-input-password autocomplete="current-password" size="large"></a-input-password>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between space-x-2">
+                            <a-checkbox>Remember me</a-checkbox>
+    
+                            <a href="auth_forgot_password.html"
+                                class="text-xs text-gray-400 transition-colors hover:text-gray-800 focus:text-gray-800">Forgot
+                                Password?</a>
+                        </div>
+                    </div>
+    
+                    <div class="mt-[30px]">
+                        <a-button type="primary" html-type="submit" size="large" block>Log In</a-button>
+                    </div>
+                </a-form>
+            </div>
+        </div>
+
+        <div class="mt-8 flex items-center justify-between">
+            <a href="/"
+                class="flex items-center gap-2 text-[13px] text-gray-400 transition-colors hover:text-gray-800 focus:text-gray-800">
+                <arrow-left-outlined class="text-[14px]"></arrow-left-outlined>
+                <span>Back to home</span>
+            </a>
+
+            <div>
+                <a-dropdown>
+                    <div
+                        class="flex items-center gap-2 rounded-full border border-gray-200 p-2 pr-4 text-gray-500 cursor-pointer text-[13px]">
+                        <global-outlined class="text-[14px]"></global-outlined>
+                        English
+                    </div>
+                    <template #overlay>
+                        <a-menu @click="(lang) => emitter.emit('lang', lang.key)">
+                            <a-menu-item key="en">English</a-menu-item>
+                            <a-menu-item key="tw">繁體中文</a-menu-item>
+                            <a-menu-item key="cn">简体中文</a-menu-item>
+                        </a-menu>
+                    </template>
+                </a-dropdown>
+            </div>
+        </div>
+    </div>
+</main>
+
+{{> footer }}
