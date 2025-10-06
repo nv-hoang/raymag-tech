@@ -217,9 +217,9 @@ public class Output(IServiceProvider _serviceProvider)
         }
     }
 
-    public List<KeyValuePair<string, string>> GetLanguages()
+    public List<KeyValuePair<string, string>> GetLanguages(bool All = true)
     {
-        return _cfg.Languages.Select(x => new KeyValuePair<string, string>(x.Key, Trans($"lang_{x.Value}"))).ToList();
+        return _cfg.Languages.Where(x => All ? true : (x.Value != _page.Language)).Select(x => new KeyValuePair<string, string>(x.Key, Trans($"lang_{x.Value}"))).ToList();
     }
 
     public string GetLanguage()

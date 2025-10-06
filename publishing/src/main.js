@@ -29,6 +29,35 @@ function start() {
         }
     }));
 
+    Alpine.data('frmdata', () => ({
+        action: '',
+        formdata: {},
+        loading: false,
+        errors: {},
+        success: false,
+        init() {
+            this.action = this.$el.dataset.action;
+            this.formdata = JSON.parse(atob(this.$el.dataset.formfields));
+        },
+        dosubmit() {
+            if(this.loading) return;
+            this.loading = true;
+            this.errors = {};
+            
+            axios.post(this.action, {
+                FormData: JSON.stringify(this.formdata),
+                SubmitAction: "send",
+            }).then(res => {
+                this.loading = false;
+                if(res.data.status == "Success") {
+                    this.success = true;
+                } else if(res.data.errors) {
+                    this.errors = res.data.errors;
+                }
+            });
+        },
+    }));
+
     Alpine.start();
 }
 

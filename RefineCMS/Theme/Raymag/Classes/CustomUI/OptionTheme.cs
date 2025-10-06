@@ -56,9 +56,11 @@ public class OptionTheme(Output _output) : IFilterHook<FormUI>
                         Name = "Fax",
                         Label = _("Fax")
                     },
-                    new Textarea {
+                    new LangGroup {
                         Name = "Address",
-                        Label = _("Address")
+                        Label = _("Address"),
+                        Field = new Text {},
+                        Languages = Languages
                     },
                     new Text {
                         Name = "Email",

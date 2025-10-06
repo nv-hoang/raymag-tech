@@ -17,7 +17,6 @@ public class ContactForm(Output _output) : FormUI
                 new Text {
                     Name = "ActionUrl",
                     Label = _output.Trans("Url"),
-                    Required = true,
                 },
                 new Text {
                     Name = "FullName",
@@ -27,11 +26,11 @@ public class ContactForm(Output _output) : FormUI
                 new Text {
                     Name = "Phone",
                     Label = _output.Trans("Phone Number"),
+                    Required = true,
                 },
                 new Text {
                     Name = "Company",
                     Label = _output.Trans("Company"),
-                    Required = true,
                 },
                 new Email {
                     Name = "Email",

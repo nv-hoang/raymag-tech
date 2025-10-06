@@ -10,11 +10,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <title>@ViewData["Title"]</title>
+    <title>@Html.Raw(ViewData["Title"])</title>
 
-    <meta name="description" content="@output.Inline(ViewData["SEO_Description"]?.ToString())" />
-    <meta property="og:title" content="@ViewData["Title"]" />
-    <meta property="og:description" content="@output.Inline(ViewData["SEO_Description"]?.ToString())" />
+    <meta name="description" content="@Html.Raw(output.Inline(ViewData["SEO_Description"]?.ToString()))" />
+    <meta property="og:title" content="@Html.Raw(ViewData["Title"])" />
+    <meta property="og:description" content="@Html.Raw(output.Inline(ViewData["SEO_Description"]?.ToString()))" />
     <meta property="og:image" content="@output.Url(ViewData["SEO_Image"]?.ToString() ?? "")" />
     <meta property="og:type" content="website" />
 
@@ -26,7 +26,7 @@
 
     @Html.Raw(output.ThemeOption("Scripts.Head"))
 </head>
-<body>
+<body style="background-color: #030A11; color: #fff; overflow-x: hidden;">
     @Html.Raw(output.ThemeOption("Scripts.Body"))
     @await Html.PartialAsync("./Header.cshtml")
 
@@ -34,7 +34,7 @@
     <div id="smooth-wrapper">
         <div id="smooth-content">
             <div class="overflow-hidden">
-                <div class="h-[56px] xl:h-[90px]"></div>
+                <div class="h-[50px] lg:h-[66px] 2xl:h-[68px]"></div>
                 @RenderBody()
 
                 @await Html.PartialAsync("./Footer.cshtml")

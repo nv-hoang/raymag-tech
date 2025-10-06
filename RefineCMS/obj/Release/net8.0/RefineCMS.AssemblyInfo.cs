@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RefineCMS")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3b1c594a94be7c027ea8e6628695b05f2f79ee71")]
 [assembly: System.Reflection.AssemblyProductAttribute("RefineCMS")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RefineCMS")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -17,341 +17,157 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = RefineCMS
 build_property.RootNamespace = RefineCMS
-build_property.ProjectDir = D:\refinelab\RefineCMS\
+build_property.ProjectDir = D:\refinelab\raymag-tech\RefineCMS\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\refinelab\RefineCMS
+build_property.MSBuildProjectDirectory = D:\refinelab\raymag-tech\RefineCMS
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 8.0
 build_property.EnableCodeStyleSeverity = 
 
-[D:/refinelab/RefineCMS/Theme/Hulane/Views/Admin/Dashboard.cshtml]
-build_metadata.AdditionalFiles.TargetPath = VGhlbWVcSHVsYW5lXFZpZXdzXEFkbWluXERhc2hib2FyZC5jc2h0bWw=
+[D:/refinelab/raymag-tech/RefineCMS/Theme/Raymag/Views/Admin/Dashboard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = VGhlbWVcUmF5bWFnXFZpZXdzXEFkbWluXERhc2hib2FyZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/refinelab/RefineCMS/Theme/Hulane/Views/Footer.cshtml]
-build_metadata.AdditionalFiles.TargetPath = VGhlbWVcSHVsYW5lXFZpZXdzXEZvb3Rlci5jc2h0bWw=
+[D:/refinelab/raymag-tech/RefineCMS/Theme/Raymag/Views/Footer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = VGhlbWVcUmF5bWFnXFZpZXdzXEZvb3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/refinelab/RefineCMS/Theme/Hulane/Views/Header.cshtml]
-build_metadata.AdditionalFiles.TargetPath = VGhlbWVcSHVsYW5lXFZpZXdzXEhlYWRlci5jc2h0bWw=
+[D:/refinelab/raymag-tech/RefineCMS/Theme/Raymag/Views/Header.cshtml]
+build_metadata.AdditionalFiles.TargetPath = VGhlbWVcUmF5bWFnXFZpZXdzXEhlYWRlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/refinelab/RefineCMS/Theme/Hulane/Views/Page_10LvLandingPage.cshtml]
-build_metadata.AdditionalFiles.TargetPath = VGhlbWVcSHVsYW5lXFZpZXdzXFBhZ2VfMTBMdkxhbmRpbmdQYWdlLmNzaHRtbA==
+[D:/refinelab/raymag-tech/RefineCMS/Theme/Raymag/Views/Page_Home.cshtml]
+build_metadata.AdditionalFiles.TargetPath = VGhlbWVcUmF5bWFnXFZpZXdzXFBhZ2VfSG9tZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/refinelab/RefineCMS/Theme/Hulane/Views/Page_15HvLandingPage.cshtml]
-build_metadata.AdditionalFiles.TargetPath = VGhlbWVcSHVsYW5lXFZpZXdzXFBhZ2VfMTVIdkxhbmRpbmdQYWdlLmNzaHRtbA==
+[D:/refinelab/raymag-tech/RefineCMS/Theme/Raymag/Views/Partials/ContactForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = VGhlbWVcUmF5bWFnXFZpZXdzXFBhcnRpYWxzXENvbnRhY3RGb3JtLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/refinelab/RefineCMS/Theme/Hulane/Views/Page_17HfLandingPage.cshtml]
-build_metadata.AdditionalFiles.TargetPath = VGhlbWVcSHVsYW5lXFZpZXdzXFBhZ2VfMTdIZkxhbmRpbmdQYWdlLmNzaHRtbA==
+[D:/refinelab/raymag-tech/RefineCMS/Theme/Raymag/Views/_Theme.cshtml]
+build_metadata.AdditionalFiles.TargetPath = VGhlbWVcUmF5bWFnXFZpZXdzXF9UaGVtZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/refinelab/RefineCMS/Theme/Hulane/Views/Page_20HeadersLandingPage.cshtml]
-build_metadata.AdditionalFiles.TargetPath = VGhlbWVcSHVsYW5lXFZpZXdzXFBhZ2VfMjBIZWFkZXJzTGFuZGluZ1BhZ2UuY3NodG1s
+[D:/refinelab/raymag-tech/RefineCMS/Theme/Raymag/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = VGhlbWVcUmF5bWFnXFZpZXdzXF9WaWV3SW1wb3J0cy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/refinelab/RefineCMS/Theme/Hulane/Views/Page_22ElectricVehicleSystems.cshtml]
-build_metadata.AdditionalFiles.TargetPath = VGhlbWVcSHVsYW5lXFZpZXdzXFBhZ2VfMjJFbGVjdHJpY1ZlaGljbGVTeXN0ZW1zLmNzaHRtbA==
+[D:/refinelab/raymag-tech/RefineCMS/Theme/Raymag/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = VGhlbWVcUmF5bWFnXFZpZXdzXF9WaWV3U3RhcnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/refinelab/RefineCMS/Theme/Hulane/Views/Page_23AdasAndInfotainment.cshtml]
-build_metadata.AdditionalFiles.TargetPath = VGhlbWVcSHVsYW5lXFZpZXdzXFBhZ2VfMjNBZGFzQW5kSW5mb3RhaW5tZW50LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/refinelab/RefineCMS/Theme/Hulane/Views/Page_24PinHeaderCustomization.cshtml]
-build_metadata.AdditionalFiles.TargetPath = VGhlbWVcSHVsYW5lXFZpZXdzXFBhZ2VfMjRQaW5IZWFkZXJDdXN0b21pemF0aW9uLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/refinelab/RefineCMS/Theme/Hulane/Views/Page_25AutomotiveElectricalBox.cshtml]
-build_metadata.AdditionalFiles.TargetPath = VGhlbWVcSHVsYW5lXFZpZXdzXFBhZ2VfMjVBdXRvbW90aXZlRWxlY3RyaWNhbEJveC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/refinelab/RefineCMS/Theme/Hulane/Views/Page_26MiniaturizationAndHybridConnectors.cshtml]
-build_metadata.AdditionalFiles.TargetPath = VGhlbWVcSHVsYW5lXFZpZXdzXFBhZ2VfMjZNaW5pYXR1cml6YXRpb25BbmRIeWJyaWRDb25uZWN0b3JzLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/refinelab/RefineCMS/Theme/Hulane/Views/Page_27IntegratedWiringHarness.cshtml]
-build_metadata.AdditionalFiles.TargetPath = VGhlbWVcSHVsYW5lXFZpZXdzXFBhZ2VfMjdJbnRlZ3JhdGVkV2lyaW5nSGFybmVzcy5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/refinelab/RefineCMS/Theme/Hulane/Views/Page_28Rnd.cshtml]
-build_metadata.AdditionalFiles.TargetPath = VGhlbWVcSHVsYW5lXFZpZXdzXFBhZ2VfMjhSbmQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/refinelab/RefineCMS/Theme/Hulane/Views/Page_29History.cshtml]
-build_metadata.AdditionalFiles.TargetPath = VGhlbWVcSHVsYW5lXFZpZXdzXFBhZ2VfMjlIaXN0b3J5LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/refinelab/RefineCMS/Theme/Hulane/Views/Page_2ProductSearch.cshtml]
-build_metadata.AdditionalFiles.TargetPath = VGhlbWVcSHVsYW5lXFZpZXdzXFBhZ2VfMlByb2R1Y3RTZWFyY2guY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/refinelab/RefineCMS/Theme/Hulane/Views/Page_2ProductSearchResults.cshtml]
-build_metadata.AdditionalFiles.TargetPath = VGhlbWVcSHVsYW5lXFZpZXdzXFBhZ2VfMlByb2R1Y3RTZWFyY2hSZXN1bHRzLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/refinelab/RefineCMS/Theme/Hulane/Views/Page_30Leadership.cshtml]
-build_metadata.AdditionalFiles.TargetPath = VGhlbWVcSHVsYW5lXFZpZXdzXFBhZ2VfMzBMZWFkZXJzaGlwLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/refinelab/RefineCMS/Theme/Hulane/Views/Page_31QualityPolicy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = VGhlbWVcSHVsYW5lXFZpZXdzXFBhZ2VfMzFRdWFsaXR5UG9saWN5LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/refinelab/RefineCMS/Theme/Hulane/Views/Page_32JobOpportunities.cshtml]
-build_metadata.AdditionalFiles.TargetPath = VGhlbWVcSHVsYW5lXFZpZXdzXFBhZ2VfMzJKb2JPcHBvcnR1bml0aWVzLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/refinelab/RefineCMS/Theme/Hulane/Views/Page_33CorporateGovernance.cshtml]
-build_metadata.AdditionalFiles.TargetPath = VGhlbWVcSHVsYW5lXFZpZXdzXFBhZ2VfMzNDb3Jwb3JhdGVHb3Zlcm5hbmNlLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/refinelab/RefineCMS/Theme/Hulane/Views/Page_34Financials.cshtml]
-build_metadata.AdditionalFiles.TargetPath = VGhlbWVcSHVsYW5lXFZpZXdzXFBhZ2VfMzRGaW5hbmNpYWxzLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/refinelab/RefineCMS/Theme/Hulane/Views/Page_36ConferencesAndMeetings.cshtml]
-build_metadata.AdditionalFiles.TargetPath = VGhlbWVcSHVsYW5lXFZpZXdzXFBhZ2VfMzZDb25mZXJlbmNlc0FuZE1lZXRpbmdzLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/refinelab/RefineCMS/Theme/Hulane/Views/Page_37Publications.cshtml]
-build_metadata.AdditionalFiles.TargetPath = VGhlbWVcSHVsYW5lXFZpZXdzXFBhZ2VfMzdQdWJsaWNhdGlvbnMuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/refinelab/RefineCMS/Theme/Hulane/Views/Page_38InquiriesAndSupport.cshtml]
-build_metadata.AdditionalFiles.TargetPath = VGhlbWVcSHVsYW5lXFZpZXdzXFBhZ2VfMzhJbnF1aXJpZXNBbmRTdXBwb3J0LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/refinelab/RefineCMS/Theme/Hulane/Views/Page_39MyList.cshtml]
-build_metadata.AdditionalFiles.TargetPath = VGhlbWVcSHVsYW5lXFZpZXdzXFBhZ2VfMzlNeUxpc3QuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/refinelab/RefineCMS/Theme/Hulane/Views/Page_3Solutions.cshtml]
-build_metadata.AdditionalFiles.TargetPath = VGhlbWVcSHVsYW5lXFZpZXdzXFBhZ2VfM1NvbHV0aW9ucy5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/refinelab/RefineCMS/Theme/Hulane/Views/Page_41InvestorFaq.cshtml]
-build_metadata.AdditionalFiles.TargetPath = VGhlbWVcSHVsYW5lXFZpZXdzXFBhZ2VfNDFJbnZlc3RvckZhcS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/refinelab/RefineCMS/Theme/Hulane/Views/Page_42PrivacyPolicy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = VGhlbWVcSHVsYW5lXFZpZXdzXFBhZ2VfNDJQcml2YWN5UG9saWN5LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/refinelab/RefineCMS/Theme/Hulane/Views/Page_43TermsOfService.cshtml]
-build_metadata.AdditionalFiles.TargetPath = VGhlbWVcSHVsYW5lXFZpZXdzXFBhZ2VfNDNUZXJtc09mU2VydmljZS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/refinelab/RefineCMS/Theme/Hulane/Views/Page_44Sitemap.cshtml]
-build_metadata.AdditionalFiles.TargetPath = VGhlbWVcSHVsYW5lXFZpZXdzXFBhZ2VfNDRTaXRlbWFwLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/refinelab/RefineCMS/Theme/Hulane/Views/Page_45CookiesPolicy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = VGhlbWVcSHVsYW5lXFZpZXdzXFBhZ2VfNDVDb29raWVzUG9saWN5LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/refinelab/RefineCMS/Theme/Hulane/Views/Page_4Sustainability.cshtml]
-build_metadata.AdditionalFiles.TargetPath = VGhlbWVcSHVsYW5lXFZpZXdzXFBhZ2VfNFN1c3RhaW5hYmlsaXR5LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/refinelab/RefineCMS/Theme/Hulane/Views/Page_5HulaneProfile.cshtml]
-build_metadata.AdditionalFiles.TargetPath = VGhlbWVcSHVsYW5lXFZpZXdzXFBhZ2VfNUh1bGFuZVByb2ZpbGUuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/refinelab/RefineCMS/Theme/Hulane/Views/Page_6CareersAtHulane.cshtml]
-build_metadata.AdditionalFiles.TargetPath = VGhlbWVcSHVsYW5lXFZpZXdzXFBhZ2VfNkNhcmVlcnNBdEh1bGFuZS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/refinelab/RefineCMS/Theme/Hulane/Views/Page_7Investors.cshtml]
-build_metadata.AdditionalFiles.TargetPath = VGhlbWVcSHVsYW5lXFZpZXdzXFBhZ2VfN0ludmVzdG9ycy5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/refinelab/RefineCMS/Theme/Hulane/Views/Page_8News.cshtml]
-build_metadata.AdditionalFiles.TargetPath = VGhlbWVcSHVsYW5lXFZpZXdzXFBhZ2VfOE5ld3MuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/refinelab/RefineCMS/Theme/Hulane/Views/Page_9ContactUs.cshtml]
-build_metadata.AdditionalFiles.TargetPath = VGhlbWVcSHVsYW5lXFZpZXdzXFBhZ2VfOUNvbnRhY3RVcy5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/refinelab/RefineCMS/Theme/Hulane/Views/Page_Home.cshtml]
-build_metadata.AdditionalFiles.TargetPath = VGhlbWVcSHVsYW5lXFZpZXdzXFBhZ2VfSG9tZS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/refinelab/RefineCMS/Theme/Hulane/Views/Partials/Breadcrumb.cshtml]
-build_metadata.AdditionalFiles.TargetPath = VGhlbWVcSHVsYW5lXFZpZXdzXFBhcnRpYWxzXEJyZWFkY3J1bWIuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/refinelab/RefineCMS/Theme/Hulane/Views/Partials/ContactForm.cshtml]
-build_metadata.AdditionalFiles.TargetPath = VGhlbWVcSHVsYW5lXFZpZXdzXFBhcnRpYWxzXENvbnRhY3RGb3JtLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/refinelab/RefineCMS/Theme/Hulane/Views/Partials/NewProductModal.cshtml]
-build_metadata.AdditionalFiles.TargetPath = VGhlbWVcSHVsYW5lXFZpZXdzXFBhcnRpYWxzXE5ld1Byb2R1Y3RNb2RhbC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/refinelab/RefineCMS/Theme/Hulane/Views/Post.cshtml]
-build_metadata.AdditionalFiles.TargetPath = VGhlbWVcSHVsYW5lXFZpZXdzXFBvc3QuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/refinelab/RefineCMS/Theme/Hulane/Views/ProductLandingPage.cshtml]
-build_metadata.AdditionalFiles.TargetPath = VGhlbWVcSHVsYW5lXFZpZXdzXFByb2R1Y3RMYW5kaW5nUGFnZS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/refinelab/RefineCMS/Theme/Hulane/Views/Product_11LvTerminal.cshtml]
-build_metadata.AdditionalFiles.TargetPath = VGhlbWVcSHVsYW5lXFZpZXdzXFByb2R1Y3RfMTFMdlRlcm1pbmFsLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/refinelab/RefineCMS/Theme/Hulane/Views/Product_12LvHousing.cshtml]
-build_metadata.AdditionalFiles.TargetPath = VGhlbWVcSHVsYW5lXFZpZXdzXFByb2R1Y3RfMTJMdkhvdXNpbmcuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/refinelab/RefineCMS/Theme/Hulane/Views/Product_13LvRubberSeal.cshtml]
-build_metadata.AdditionalFiles.TargetPath = VGhlbWVcSHVsYW5lXFZpZXdzXFByb2R1Y3RfMTNMdlJ1YmJlclNlYWwuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/refinelab/RefineCMS/Theme/Hulane/Views/Product_14LvClips.cshtml]
-build_metadata.AdditionalFiles.TargetPath = VGhlbWVcSHVsYW5lXFZpZXdzXFByb2R1Y3RfMTRMdkNsaXBzLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/refinelab/RefineCMS/Theme/Hulane/Views/Product_16HighVoltage.cshtml]
-build_metadata.AdditionalFiles.TargetPath = VGhlbWVcSHVsYW5lXFZpZXdzXFByb2R1Y3RfMTZIaWdoVm9sdGFnZS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/refinelab/RefineCMS/Theme/Hulane/Views/Product_18HighFrequency.cshtml]
-build_metadata.AdditionalFiles.TargetPath = VGhlbWVcSHVsYW5lXFZpZXdzXFByb2R1Y3RfMThIaWdoRnJlcXVlbmN5LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/refinelab/RefineCMS/Theme/Hulane/Views/Product_21Headers.cshtml]
-build_metadata.AdditionalFiles.TargetPath = VGhlbWVcSHVsYW5lXFZpZXdzXFByb2R1Y3RfMjFIZWFkZXJzLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/refinelab/RefineCMS/Theme/Hulane/Views/_Theme.cshtml]
-build_metadata.AdditionalFiles.TargetPath = VGhlbWVcSHVsYW5lXFZpZXdzXF9UaGVtZS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/refinelab/RefineCMS/Theme/Hulane/Views/_ViewImports.cshtml]
-build_metadata.AdditionalFiles.TargetPath = VGhlbWVcSHVsYW5lXFZpZXdzXF9WaWV3SW1wb3J0cy5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/refinelab/RefineCMS/Theme/Hulane/Views/_ViewStart.cshtml]
-build_metadata.AdditionalFiles.TargetPath = VGhlbWVcSHVsYW5lXFZpZXdzXF9WaWV3U3RhcnQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/refinelab/RefineCMS/Views/Admin/Dashboard.cshtml]
+[D:/refinelab/raymag-tech/RefineCMS/Views/Admin/Dashboard.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRGFzaGJvYXJkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/refinelab/RefineCMS/Views/Admin/FormView.cshtml]
+[D:/refinelab/raymag-tech/RefineCMS/Views/Admin/FormView.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRm9ybVZpZXcuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/refinelab/RefineCMS/Views/Admin/Header.cshtml]
+[D:/refinelab/raymag-tech/RefineCMS/Views/Admin/Header.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSGVhZGVyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/refinelab/RefineCMS/Views/Admin/Icons/Block.cshtml]
+[D:/refinelab/raymag-tech/RefineCMS/Views/Admin/Icons/Block.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSWNvbnNcQmxvY2suY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/refinelab/RefineCMS/Views/Admin/Icons/Bookmark.cshtml]
+[D:/refinelab/raymag-tech/RefineCMS/Views/Admin/Icons/Bookmark.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSWNvbnNcQm9va21hcmsuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/refinelab/RefineCMS/Views/Admin/Icons/Dashboard.cshtml]
+[D:/refinelab/raymag-tech/RefineCMS/Views/Admin/Icons/Dashboard.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSWNvbnNcRGFzaGJvYXJkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/refinelab/RefineCMS/Views/Admin/Icons/File.cshtml]
+[D:/refinelab/raymag-tech/RefineCMS/Views/Admin/Icons/File.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSWNvbnNcRmlsZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/refinelab/RefineCMS/Views/Admin/Icons/FileDownload.cshtml]
+[D:/refinelab/raymag-tech/RefineCMS/Views/Admin/Icons/FileDownload.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSWNvbnNcRmlsZURvd25sb2FkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/refinelab/RefineCMS/Views/Admin/Icons/Filevalid.cshtml]
+[D:/refinelab/raymag-tech/RefineCMS/Views/Admin/Icons/Filevalid.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSWNvbnNcRmlsZXZhbGlkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/refinelab/RefineCMS/Views/Admin/Icons/Forms.cshtml]
+[D:/refinelab/raymag-tech/RefineCMS/Views/Admin/Icons/Forms.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSWNvbnNcRm9ybXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/refinelab/RefineCMS/Views/Admin/Icons/Options.cshtml]
+[D:/refinelab/raymag-tech/RefineCMS/Views/Admin/Icons/Options.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSWNvbnNcT3B0aW9ucy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/refinelab/RefineCMS/Views/Admin/Icons/Pages.cshtml]
+[D:/refinelab/raymag-tech/RefineCMS/Views/Admin/Icons/Pages.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSWNvbnNcUGFnZXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/refinelab/RefineCMS/Views/Admin/Icons/Posts.cshtml]
+[D:/refinelab/raymag-tech/RefineCMS/Views/Admin/Icons/Posts.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSWNvbnNcUG9zdHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/refinelab/RefineCMS/Views/Admin/Icons/Users.cshtml]
+[D:/refinelab/raymag-tech/RefineCMS/Views/Admin/Icons/Users.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSWNvbnNcVXNlcnMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/refinelab/RefineCMS/Views/Admin/Index.cshtml]
+[D:/refinelab/raymag-tech/RefineCMS/Views/Admin/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/refinelab/RefineCMS/Views/Admin/ListView.cshtml]
+[D:/refinelab/raymag-tech/RefineCMS/Views/Admin/ListView.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTGlzdFZpZXcuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/refinelab/RefineCMS/Views/Admin/Login.cshtml]
+[D:/refinelab/raymag-tech/RefineCMS/Views/Admin/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTG9naW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/refinelab/RefineCMS/Views/Admin/Message.cshtml]
+[D:/refinelab/raymag-tech/RefineCMS/Views/Admin/Message.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTWVzc2FnZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/refinelab/RefineCMS/Views/Admin/NewPageModal.cshtml]
+[D:/refinelab/raymag-tech/RefineCMS/Views/Admin/NewPageModal.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTmV3UGFnZU1vZGFsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/refinelab/RefineCMS/Views/Admin/Sidebar.cshtml]
+[D:/refinelab/raymag-tech/RefineCMS/Views/Admin/Sidebar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cU2lkZWJhci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/refinelab/RefineCMS/Views/Admin/TreeView.cshtml]
+[D:/refinelab/raymag-tech/RefineCMS/Views/Admin/TreeView.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cVHJlZVZpZXcuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/refinelab/RefineCMS/Views/Error.cshtml]
+[D:/refinelab/raymag-tech/RefineCMS/Views/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/refinelab/RefineCMS/Views/Index.cshtml]
+[D:/refinelab/raymag-tech/RefineCMS/Views/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/refinelab/RefineCMS/Views/Shared/_Admin.cshtml]
+[D:/refinelab/raymag-tech/RefineCMS/Views/Shared/_Admin.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9BZG1pbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/refinelab/RefineCMS/Views/Shared/_Auth.cshtml]
+[D:/refinelab/raymag-tech/RefineCMS/Views/Shared/_Auth.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9BdXRoLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/refinelab/RefineCMS/Views/Shared/_Layout.cshtml]
+[D:/refinelab/raymag-tech/RefineCMS/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/refinelab/RefineCMS/Views/_ViewImports.cshtml]
+[D:/refinelab/raymag-tech/RefineCMS/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/refinelab/RefineCMS/Views/_ViewStart.cshtml]
+[D:/refinelab/raymag-tech/RefineCMS/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

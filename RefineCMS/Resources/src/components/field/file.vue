@@ -4,7 +4,7 @@
       <div v-if="fvalue" style="padding-right: 16px;">
         <div class="inline-block relative mb-2 uploadfile-preview">
           <div v-if="isImage(fvalue)">
-            <img :src="fvalue" style="max-width: 100%;">
+            <img :src="fvalue" style="max-width: 100%; background-color: #ddd;">
           </div>
           <a v-else :href="fvalue" target="_blank" class="flex gap-1 border border-gray-200 rounded-[6px] px-2 py-1 pr-5">
             <FileOutlined></FileOutlined>

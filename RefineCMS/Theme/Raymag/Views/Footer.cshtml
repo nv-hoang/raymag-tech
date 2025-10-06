@@ -1,1 +1,96 @@
-﻿
+﻿@{
+    var breadcrumbs = ViewData["Breadcrumbs"] as List<List<string>>;
+}
+
+<!-- Breadcrumb -->
+<div class="border-t border-primary-300 border-opacity-20">
+    <div class="px-3 lg:px-10">
+        <div class="mx-auto max-w-[1600px]">
+            <div class="flex items-end flex-wrap gap-x-3 py-3">
+                <a href="@output.Url("/")" class="text-[16px] leading-175 text-gray-100 transition-colors hover:text-primary-300">@Html.Raw(output.Trans("Home"))</a>
+                @if (breadcrumbs != null)
+                {
+                    foreach (var breadcrumb in breadcrumbs)
+                    {
+                        <svg width="6" height="28" viewBox="0 0 6 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5.34091 7.81818L1.59091 21.75H0.363636L4.11364 7.81818H5.34091Z" fill="#A0CDE4" />
+                        </svg>
+                        <a href="@breadcrumb[0]" class="text-[16px] leading-175 text-gray-100 transition-colors hover:text-primary-300">@Html.Raw(breadcrumb[1])</a>
+                    }
+                }
+                else if (!"home".Equals(PropertyGetter.GetValue<string>(page.PostInstance!, "PostTemplate")))
+                {
+                    <svg width="6" height="28" viewBox="0 0 6 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5.34091 7.81818L1.59091 21.75H0.363636L4.11364 7.81818H5.34091Z" fill="#A0CDE4" />
+                    </svg>
+                    <a class="text-[16px] leading-175 text-gray-100 transition-colors hover:text-primary-300">@Html.Raw(output.CustomField("Info.PostTitle", true))</a>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Footer -->
+<div class="border-t border-primary-300 border-opacity-20">
+    <div class="px-3 lg:px-10">
+        <div class="mx-auto max-w-[1600px] py-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                <div class="lg:flex flex-col justify-between">
+                    <div>
+                        <img src="@output.ThemeOption("Info.Logo", true)" class="h-[48px]">
+                    </div>
+                    <div class="hidden lg:block">
+                        <div class="text-[16px] leading-175 text-gray-500">@Html.Raw(output.ThemeOption("Footer.Copyright", true))</div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                    <div class="flex flex-col gap-3">
+                        @if (!string.IsNullOrEmpty(output.ThemeOption("ContactInfo.Phone")))
+                        {
+                            <div class="flex items-start gap-[10px]">
+                                <img src="@output.ThemeAssetUrl("img/icon-contact-2.svg")">
+                                <a href="tel:+@output.ThemeOption("ContactInfo.Phone")" class="text-[16px] leading-175 text-gray-100 hover:text-primary-300 transition-colors">@output.ThemeOption("ContactInfo.Phone")</a>
+                            </div>
+                        }
+
+                        @if (!string.IsNullOrEmpty(output.ThemeOption("ContactInfo.Fax")))
+                        {
+                            <div class="flex items-start gap-[10px]">
+                                <img src="@output.ThemeAssetUrl("img/icon-contact-3.svg")">
+                                <a href="fax:+@output.ThemeOption("ContactInfo.Fax")" class="text-[16px] leading-175 text-gray-100 hover:text-primary-300 transition-colors">@output.ThemeOption("ContactInfo.Fax")</a>
+                            </div>
+                        }
+
+                        @if (!string.IsNullOrEmpty(output.ThemeOption("ContactInfo.Address", true)))
+                        {
+                            <div class="flex items-start gap-[10px]">
+                                <img src="@output.ThemeAssetUrl("img/icon-contact-1.svg")">
+                                <a href="https://www.google.com/maps?q=@Html.Raw(output.ThemeOption("ContactInfo.Address", true))" target="_blank" class="text-[16px] leading-175 text-gray-100 hover:text-primary-300 transition-colors">@Html.Raw(output.ThemeOption("ContactInfo.Address", true))</a>
+                            </div>
+                        }
+
+                        @if (!string.IsNullOrEmpty(output.ThemeOption("ContactInfo.Email")))
+                        {
+                            <div class="flex items-start gap-[10px]">
+                                <img src="@output.ThemeAssetUrl("img/icon-contact-4.svg")">
+                                <a href="mailto:@output.ThemeOption("ContactInfo.Email")" class="text-[16px] leading-175 text-gray-100 hover:text-primary-300 transition-colors">@output.ThemeOption("ContactInfo.Email")</a>
+                            </div>
+                        }
+
+                    </div>
+
+                    <div class="flex flex-col gap-3">
+                        @foreach (var menu in output.GetTermTree("footer-menu"))
+                        {
+                            <a href="@output.GetMenuLink(menu)" class="text-[16px] leading-175 text-gray-100 hover:text-primary-300 transition-colors">@Html.Raw(menu["Name"])</a>
+                        }
+                    </div>
+                </div>
+
+                <div class="lg:hidden text-[16px] leading-175 text-gray-500">@Html.Raw(output.ThemeOption("Footer.Copyright", true))</div>
+            </div>
+        </div>
+    </div>
+</div>

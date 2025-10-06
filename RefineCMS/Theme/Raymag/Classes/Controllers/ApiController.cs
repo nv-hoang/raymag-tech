@@ -29,71 +29,24 @@ public class ApiController(AppFactory _appFactory) : BaseController(_appFactory)
         {
             var post = _postProvider.Add(new Post
             {
-                PostTitle = string.Join(" ", [form.Find("Info.FirstName")?.GetValue<string>() ?? "", form.Find("Info.LastName")?.GetValue<string>() ?? ""]),
+                PostTitle = form.Find("Info.FullName")?.GetValue<string>() ?? "",
                 PostType = "contact-form",
             });
 
             form.SaveModelData(post.Id, _postMetaProvider);
 
             // Send Mail =======================================================
-            var country = form.Find("Info.Country");
-            if (country != null)
-            {
-                foreach (var item in _output.ThemeOption("Countries.ListOfCountries", false, "contact-form").Split("\n"))
-                {
-                    if (item.Equals(country.GetValue<string>()))
-                    {
-                        country.SetValue(_output.Trans(item));
-                    }
-                }
-            }
-
-            var contactType = form.Find("Info.TypeOfInquiry");
-            var toEmail = "";
-            if (contactType != null)
-            {
-                foreach (var item in _output.ThemeOptionArray("TypeOfInquiry.Items", "contact-form"))
-                {
-                    if (_output.MetaValue("Code", item.Value).Equals(contactType.GetValue<string>()))
-                    {
-                        contactType.SetValue(_output.MetaValue("Name", item.Value, true));
-                        toEmail = _output.MetaValue("ContactEmail", item.Value);
-                    }
-                }
-            }
-
-            var pageTemplate = form.Find("Info.PageTemplate");
-            if (pageTemplate != null)
-            {
-                var fieldValue = pageTemplate.GetValue<string>();
-                if (fieldValue != "39_my_list")
-                {
-                    form.Find("ProductList")!.Hidden = true;
-                }
-
-                // =====================================================
-                Dictionary<string, string> pages = new()
-                {
-                    ["38_inquiries_and_support"] = _output.Trans("Inquiries & Support"),
-                    ["39_my_list"] = _output.Trans("My List"),
-                };
-                if (pages.TryGetValue(fieldValue!, out var template))
-                {
-                    pageTemplate.SetValue(template);
-                }
-            }
+            var toEmail = _output.ThemeOption("ContactInfo.Email");
 
             if (!string.IsNullOrEmpty(toEmail))
             {
                 var mailer = new EmailProvider(_output);
-                var subject = $"[Contact] {contactType!.GetValue<string>()!}";
+                var subject = "Contact";
 
                 form.HideFields([
                     "Info.ActionUrl",
-                    "Info.TypeOfInquiry",
-                    "Info.Agree",
                 ]);
-                var message = mailer.GetMailContent(subject, form, "wwwroot/theme/Hulane/EmailTemplate.html");
+                var message = mailer.GetMailContent(subject, form, "wwwroot/theme/Raymag/EmailTemplate.html");
 
                 mailer.Send(subject, message, [toEmail]);
             }

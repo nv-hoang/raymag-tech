@@ -197,10 +197,10 @@ D:\refinelab\RefineCMS\bin\Debug\net8.0\MimeKit.dll
 D:\refinelab\RefineCMS\bin\Debug\net8.0\System.Security.Cryptography.Pkcs.dll
 D:\refinelab\RefineCMS\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll
 D:\refinelab\raymag-tech\RefineCMS\bin\Debug\net8.0\appsettings.Development.json
-D:\refinelab\raymag-tech\RefineCMS\bin\Debug\net8.0\Resources\package.json
-D:\refinelab\raymag-tech\RefineCMS\bin\Debug\net8.0\RefineCMS.staticwebassets.endpoints.json
 D:\refinelab\raymag-tech\RefineCMS\bin\Debug\net8.0\appsettings.json
+D:\refinelab\raymag-tech\RefineCMS\bin\Debug\net8.0\Resources\package.json
 D:\refinelab\raymag-tech\RefineCMS\bin\Debug\net8.0\RefineCMS.staticwebassets.runtime.json
+D:\refinelab\raymag-tech\RefineCMS\bin\Debug\net8.0\RefineCMS.staticwebassets.endpoints.json
 D:\refinelab\raymag-tech\RefineCMS\bin\Debug\net8.0\RefineCMS.exe
 D:\refinelab\raymag-tech\RefineCMS\bin\Debug\net8.0\RefineCMS.deps.json
 D:\refinelab\raymag-tech\RefineCMS\bin\Debug\net8.0\RefineCMS.runtimeconfig.json
@@ -388,10 +388,10 @@ D:\refinelab\raymag-tech\RefineCMS\obj\Debug\net8.0\staticwebassets.build.json
 D:\refinelab\raymag-tech\RefineCMS\obj\Debug\net8.0\staticwebassets.build.json.cache
 D:\refinelab\raymag-tech\RefineCMS\obj\Debug\net8.0\staticwebassets.development.json
 D:\refinelab\raymag-tech\RefineCMS\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+D:\refinelab\raymag-tech\RefineCMS\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 D:\refinelab\raymag-tech\RefineCMS\obj\Debug\net8.0\RefineCMS.csproj.Up2Date
 D:\refinelab\raymag-tech\RefineCMS\obj\Debug\net8.0\RefineCMS.dll
 D:\refinelab\raymag-tech\RefineCMS\obj\Debug\net8.0\refint\RefineCMS.dll
 D:\refinelab\raymag-tech\RefineCMS\obj\Debug\net8.0\RefineCMS.pdb
 D:\refinelab\raymag-tech\RefineCMS\obj\Debug\net8.0\RefineCMS.genruntimeconfig.cache
 D:\refinelab\raymag-tech\RefineCMS\obj\Debug\net8.0\ref\RefineCMS.dll
-D:\refinelab\raymag-tech\RefineCMS\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

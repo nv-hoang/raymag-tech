@@ -1,8 +1,458 @@
 ﻿@using RefineCMS.Models;
 @using RefineCMS.Providers;
-@{ 
+@{
     ModelProvider<Post> _postProvider = appFactory.Create<ModelProvider<Post>>();
     ModelProvider<PostMeta> _postMetaProvider = appFactory.Create<ModelProvider<PostMeta>>();
     ModelProvider<TermRelationship> _termRelationshipProvider = appFactory.Create<ModelProvider<TermRelationship>>();
+
+    ViewData["PageLoading"] = true;
 }
 
+
+<div data-ani="fadeUp" data-delay="2" data-target=".ani-item" data-sequence="true">
+    <div data-ani="textfadeLeft2" data-delay="2.4" data-target=".ani-item-2" data-sequence="true">
+        <div data-ani="fadeUp" data-delay="3" data-target=".ani-item-3" class="relative" data-sequence="true">
+            <div class="absolute inset-0 pointer-events-none">
+                @Html.Raw(output.CustomField("KV.BackgroundScript"))
+            </div>
+
+            <div class="relative z-10">
+                <div class="max-w-[1440px] mx-auto px-3 lg:px-10 pt-[120px] lg:pt-[238px] pb-[170px] lg:pb-[224px]">
+                    <div style="font-family: 'Inter';">
+                        @{
+                            var kvTitle = output.CustomField("KV.Title", true, true).Split("<br>", 2);
+                        }
+
+                        <div class="ani-item gradient-1 text-[40px] leading-125 font-semibold lg:text-[88px] lg:leading-100">@Html.Raw(kvTitle[0])</div>
+                        <div class="ani-item-2 text-[40px] leading-125 font-semibold text-white lg:text-[88px] lg:leading-100">@Html.Raw(kvTitle.Length > 1 ? kvTitle[1] : "")</div>
+                    </div>
+                    <div class="text-[20px] lg:text-[24px] leading-150 font-medium text-gray-100 mt-[100px] text-right">
+                        <div class="ani-item-3">
+                            <h3>
+                                @Html.Raw(output.CustomField("KV.Desc", true, true))
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="max-w-[1024px] mx-auto px-3 lg:px-10 text-center py-[100px]">
+    <div data-ani="textfadeLeft2" data-delay="0.4" data-target=".ani-item" data-sequence="true">
+        <div data-ani="fadeUp" data-delay="0.8" data-target=".ani-item-2" data-sequence="true">
+            <div class="relative">
+                <div class="inline-block text-[64px] lg:text-[100px] leading-100 font-semibold" style="font-family: 'Inter';">
+                    <div class="ani-item" data-classes="gradient-2">@Html.Raw(output.CustomField("Products.BGTitle"))</div>
+                </div>
+                <h1 class="ani-item-2 text-[32px] lg:text-[40px] leading-150 2xl:leading-125 font-medium text-white -mt-10">@Html.Raw(output.CustomField("Products.Title", true))</h1>
+            </div>
+            <h6 class="ani-item-2 text-[16px] lg:text-[18px] leading-175 text-gray-100 mt-5">@Html.Raw(output.CustomField("Products.Desc", true, true))</h6>
+
+            @if (!string.IsNullOrEmpty(output.CustomField("Products.ButtonLink.Link")))
+            {
+                <div class="mt-10 ani-item-2">
+                    <a href="@output.CustomField("Products.ButtonLink.Link")" data-fancybox class="inline-block rounded-full overflow-hidden gradient-btn-1 cursor-pointer relative">
+                        <div class="inline-flex items-center gap-x-[10px] px-10 py-[10px] relative">
+                            <div class="text-[16px] leading-175 font-medium text-white">@Html.Raw(output.CustomField("Products.ButtonLink.Label", true))</div>
+                            <img src="@output.ThemeAssetUrl("img/icon-arrow.svg")">
+                        </div>
+                    </a>
+                </div>
+            }
+
+        </div>
+    </div>
+</div>
+
+<div class="max-w-[1920px] mx-auto px-3 lg:px-10 py-[100px]">
+    <div data-ani="fadeUp" data-delay="0.4" data-target=".ani-item">
+        <h2 class="ani-item text-center text-[24px] lg:text-[32px] leading-150 font-medium text-primary-300">@Html.Raw(output.CustomField("MPC.Title", true))</h2>
+        <div class="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-4 gap-5 mt-10">
+            @{
+                var items = output.CustomFieldArray("MPC.MPCItems");
+            }
+
+            @if (items.ContainsKey("0"))
+            {
+                <div class="ani-item card-1 p-10 lg:py-[70px] 2xl:py-[56px] lg:grid-colspan-2">
+                    <div class="flex flex-col gap-10 items-center lg:flex-row">
+                        <img src="@output.MetaValue("ItemImage", items["0"])" class="w-[120px] lg:w-[220px]">
+                        <div class="flex-1">
+                            <h3 class="text-[20px] lg:text-[24px] leading-150 font-medium text-white">@Html.Raw(output.MetaValue("ItemTitle", items["0"], true))</h3>
+                            <p class="text-[16px] leading-175 text-gray-100 mt-3">@Html.Raw(output.MetaValue("ItemDesc", items["0"], true, true))</p>
+                        </div>
+                    </div>
+                </div>
+            }
+
+            @if (items.ContainsKey("1"))
+            {
+                <div class="ani-item card-1 p-10">
+                    <div class="flex flex-col gap-10 lg:gap-7 items-center lg:items-start">
+                        <img src="@output.MetaValue("ItemImage", items["1"])" class="w-[120px]">
+                        <div class="flex-1">
+                            <h3 class="text-[20px] lg:text-[24px] leading-150 font-medium text-white">@Html.Raw(output.MetaValue("ItemTitle", items["1"], true))</h3>
+                            <p class="text-[16px] leading-175 text-gray-100 mt-3">@Html.Raw(output.MetaValue("ItemDesc", items["1"], true, true))</p>
+                        </div>
+                    </div>
+                </div>
+            }
+
+            @if (items.ContainsKey("2"))
+            {
+                <div class="ani-item card-1 p-10">
+                    <div class="flex flex-col gap-10 lg:gap-7 items-center lg:items-start">
+                        <img src="@output.MetaValue("ItemImage", items["2"])" class="w-[120px]">
+                        <div class="flex-1">
+                            <h3 class="text-[20px] lg:text-[24px] leading-150 font-medium text-white">@Html.Raw(output.MetaValue("ItemTitle", items["2"], true))</h3>
+                            <p class="text-[16px] leading-175 text-gray-100 mt-3">@Html.Raw(output.MetaValue("ItemDesc", items["2"], true, true))</p>
+                        </div>
+                    </div>
+                </div>
+            }
+
+            @if (items.ContainsKey("3"))
+            {
+                <div class="ani-item card-1 p-10">
+                    <div class="flex flex-col gap-10 lg:gap-7 items-center lg:items-start">
+                        <img src="@output.MetaValue("ItemImage", items["3"])" class="w-[120px]">
+                        <div class="flex-1">
+                            <h3 class="text-[20px] lg:text-[24px] leading-150 font-medium text-white">@Html.Raw(output.MetaValue("ItemTitle", items["3"], true))</h3>
+                            <p class="text-[16px] leading-175 text-gray-100 mt-3">@Html.Raw(output.MetaValue("ItemDesc", items["3"], true, true))</p>
+                        </div>
+                    </div>
+                </div>
+            }
+
+            @if (items.ContainsKey("4"))
+            {
+                <div class="ani-item card-1 p-10">
+                    <div class="flex flex-col gap-10 lg:gap-7 items-center lg:items-start">
+                        <img src="@output.MetaValue("ItemImage", items["4"])" class="w-[120px]">
+                        <div class="flex-1">
+                            <h3 class="text-[20px] lg:text-[24px] leading-150 font-medium text-white">@Html.Raw(output.MetaValue("ItemTitle", items["4"], true))</h3>
+                            <p class="text-[16px] leading-175 text-gray-100 mt-3">@Html.Raw(output.MetaValue("ItemDesc", items["4"], true, true))</p>
+                        </div>
+                    </div>
+                </div>
+            }
+
+            @if (items.ContainsKey("5"))
+            {
+                <div class="ani-item card-1 p-10 lg:py-[66px] 2xl:py-[56px] lg:grid-colspan-2">
+                    <div class="flex flex-col gap-10 items-center lg:flex-row">
+                        <img src="@output.MetaValue("ItemImage", items["5"])" class="w-[120px] lg:w-[220px]">
+                        <div class="flex-1">
+                            <h3 class="text-[20px] lg:text-[24px] leading-150 font-medium text-white">@Html.Raw(output.MetaValue("ItemTitle", items["5"], true))</h3>
+                            <p class="text-[16px] leading-175 text-gray-100 mt-3">@Html.Raw(output.MetaValue("ItemDesc", items["5"], true, true))</p>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+<div class="max-w-[1440px] mx-auto py-[100px] px-3 lg:px-10">
+    <div data-ani="textfadeLeft2" data-delay="0.4" data-target=".ani-item" data-sequence="true">
+        <div data-ani="fadeUp" data-delay="0.8" data-target=".ani-item-2" data-sequence="true">
+            <div class="relative">
+                <div class="inline-block text-[64px] lg:text-[100px] leading-100 font-semibold" style="font-family: 'Inter';">
+                    <div class="ani-item" data-classes="gradient-2">@Html.Raw(output.CustomField("Service.BGTitle"))</div>
+                </div>
+                <h1 class="ani-item-2 text-[32px] lg:text-[40px] leading-150 2xl:leading-125 font-medium text-white -mt-10">@Html.Raw(output.CustomField("Service.Title", true))</h1>
+            </div>
+            <h6 class="ani-item-2 text-[16px] lg:text-[18px] leading-175 text-gray-100 mt-5">@Html.Raw(output.CustomField("Service.Desc", true, true))</h6>
+        </div>
+    </div>
+
+    <div class="relative mt-[80px]">
+        <div x-init="$dispatch('initswiper')" id="service-swiper" data-effect-speed="600" data-loop="true" data-effect="fade" data-next=".service-swiper-next" data-prev=".service-swiper-prev" data-index=".service-swiper-index" data-total=".service-swiper-total" class="relative swiper-ani">
+            <div>
+                <!-- swiper-wrapper -->
+                @foreach (var item in output.CustomFieldArray("Service.SliderItems"))
+                {
+                    <div class="swiper-slide swiper-slide-@item.Key">
+                        <div data-ani="fadeUp" data-delay="0.4" data-target=".ani-item">
+                            <div class="relative">
+                                <div class="lg:flex lg:min-h-[720px] gap-[80px] relative">
+                                    <div class="hidden lg:block w-[580px]"></div>
+                                    <div class="flex-1">
+                                        <div class="lg:pt-10 lg:min-h-[300px] lg:max-w-[520px] lg:mx-auto">
+                                            <div class="text-[40px] lg:text-[64px] leading-125 lg:leading-100 font-semibold overflow-hidden" style="font-family: 'Inter';">
+                                                <div class="ani-item gradient-1">@Html.Raw(output.MetaValue("SliderTitle", item.Value, true, true))</div>
+                                            </div>
+                                            <h2 class="text-[24px] lg:text-[32px] leading-150 font-medium text-white mt-5 overflow-hidden">
+                                                <div class="ani-item">@Html.Raw(output.MetaValue("SliderSubTitle", item.Value, true))</div>
+                                            </h2>
+                                        </div>
+
+                                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-[80px] mt-10">
+                                            <div class="grid lg:block grid-cols-2 gap-3 lg:order-1">
+                                                <div class="lg:absolute lg:w-[580px] lg:max-w-[50%] lg:h-[720px] lg:top-0 lg:left-0">
+                                                    <div data-ani="boxX" data-delay="0.4">
+                                                        <div class="inline-flex rounded-[20px] overflow-hidden">
+                                                            <img src="@output.MetaValue("SliderImage1", item.Value)" class="w-full h-full object-cover">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="pt-10 lg:pt-0">
+                                                    <div data-ani="boxX" data-delay="0.4">
+                                                        <div class="inline-flex rounded-[20px] overflow-hidden">
+                                                            <img src="@output.MetaValue("SliderImage2", item.Value)" class="w-full h-full object-cover">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <h6 class="text-[16px] lg:text-[18px] leading-175 text-gray-100 overflow-hidden">
+                                                    <div class="ani-item">@Html.Raw(output.MetaValue("SliderDesc", item.Value, true, true))</div>
+                                                </h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+
+            </div>
+        </div>
+
+        <div class="mt-10 lg:mt-0 lg:absolute z-10 lg:left-[660px] lg:bottom-10">
+            <div class="flex items-center justify-center gap-5 lg:justify-start">
+                <div class="service-swiper-prev inline-block rounded-full overflow-hidden gradient-btn-1 cursor-pointer relative">
+                    <div class="size-[48px] flex items-center justify-center">
+                        <img src="@output.ThemeAssetUrl("img/icon-arrow.svg")" class="relative rotate-180">
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-2 text-[16px] leading-175 text-gray-100">
+                    <div class="service-swiper-index"></div>
+                    <div>/</div>
+                    <div class="service-swiper-total"></div>
+                </div>
+
+                <div class="service-swiper-next inline-block rounded-full overflow-hidden gradient-btn-1 cursor-pointer relative">
+                    <div class="size-[48px] flex items-center justify-center">
+                        <img src="@output.ThemeAssetUrl("img/icon-arrow.svg")" class="relative">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="max-w-[1920px] mx-auto py-[100px] px-3 lg:px-10">
+    <div data-ani="fadeUp" data-delay="1.2" data-target=".ani-item" class="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-4 gap-5">
+        <div class="lg:grid-colspan-2 pb-[60px] 2xl:p-10">
+            <div data-ani="textfadeLeft2" data-delay="0.4" data-target=".ani-item-2" data-sequence="true">
+                <div data-ani="fadeUp" data-delay="0.8" data-target=".ani-item-3" data-sequence="true">
+                    <div class="relative">
+                        <div class="inline-block text-[64px] lg:text-[100px] leading-100 font-semibold" style="font-family: 'Inter';">
+                            <div class="ani-item-2" data-classes="gradient-2">@Html.Raw(output.CustomField("Equipment.BGTitle"))</div>
+                        </div>
+                        <h1 class="ani-item-3 text-[32px] lg:text-[40px] leading-150 2xl:leading-125 font-medium text-white -mt-10">@Html.Raw(output.CustomField("Equipment.Title", true))</h1>
+                    </div>
+                    <h6 class="ani-item-3 text-[16px] lg:text-[18px] leading-175 text-gray-100 mt-5">@Html.Raw(output.CustomField("Equipment.Desc", true, true))</h6>
+                </div>
+            </div>
+        </div>
+
+        @{
+            items = output.CustomFieldArray("Equipment.Items");
+        }
+
+        @if (items.ContainsKey("0"))
+        {
+            <div class="lg:grid-colspan-2">
+                <div class="ani-item relative h-[445px] overflow-hidden rounded-[28px]">
+                    <img src="@output.MetaValue("ItemImage", items["0"])" class="absolute inset-0 w-full h-full object-cover">
+                    <div class="absolute inset-0 w-full h-full bg-black bg-opacity-20"></div>
+                    <div class="absolute bottom-0 left-0 w-full z-10 p-5">
+                        <h3 class="text-[20px] lg:text-[24px] leading-150 font-medium text-white">@Html.Raw(output.MetaValue("ItemTitle", items["0"], true))</h3>
+                        <div class="text-[16px] leading-175 text-gray-100 mt-3">@Html.Raw(output.MetaValue("ItemDesc", items["0"], true))</div>
+                    </div>
+                </div>
+            </div>
+        }
+
+        @if (items.ContainsKey("1"))
+        {
+            <div class="lg:grid-colspan-2">
+                <div class="ani-item relative h-[445px] overflow-hidden rounded-[28px]">
+                    <img src="@output.MetaValue("ItemImage", items["1"])" class="absolute inset-0 w-full h-full object-cover">
+                    <div class="absolute inset-0 w-full h-full bg-black bg-opacity-20"></div>
+                    <div class="absolute bottom-0 left-0 w-full z-10 p-5">
+                        <h3 class="text-[20px] lg:text-[24px] leading-150 font-medium text-white">@Html.Raw(output.MetaValue("ItemTitle", items["1"], true))</h3>
+                        <div class="text-[16px] leading-175 text-gray-100 mt-3">@Html.Raw(output.MetaValue("ItemDesc", items["1"], true))</div>
+                    </div>
+                </div>
+            </div>
+        }
+
+        @if (items.ContainsKey("2"))
+        {
+            <div>
+                <div class="ani-item relative h-[445px] overflow-hidden rounded-[28px]">
+                    <img src="@output.MetaValue("ItemImage", items["2"])" class="absolute inset-0 w-full h-full object-cover">
+                    <div class="absolute inset-0 w-full h-full bg-black bg-opacity-20"></div>
+                    <div class="absolute bottom-0 left-0 w-full z-10 p-5">
+                        <h3 class="text-[20px] lg:text-[24px] leading-150 font-medium text-white">@Html.Raw(output.MetaValue("ItemTitle", items["2"], true))</h3>
+                        <div class="text-[16px] leading-175 text-gray-100 mt-3">@Html.Raw(output.MetaValue("ItemDesc", items["2"], true))</div>
+                    </div>
+                </div>
+            </div>
+        }
+
+        @if (items.ContainsKey("3"))
+        {
+            <div>
+                <div class="ani-item relative h-[445px] overflow-hidden rounded-[28px]">
+                    <img src="@output.MetaValue("ItemImage", items["3"])" class="absolute inset-0 w-full h-full object-cover">
+                    <div class="absolute inset-0 w-full h-full bg-black bg-opacity-20"></div>
+                    <div class="absolute bottom-0 left-0 w-full z-10 p-5">
+                        <h3 class="text-[20px] lg:text-[24px] leading-150 font-medium text-white">@Html.Raw(output.MetaValue("ItemTitle", items["3"], true))</h3>
+                        <div class="text-[16px] leading-175 text-gray-100 mt-3">@Html.Raw(output.MetaValue("ItemDesc", items["3"], true))</div>
+                    </div>
+                </div>
+            </div>
+        }
+
+    </div>
+</div>
+
+<div class="relative overflow-hidden">
+    <img src="@output.ThemeAssetUrl("img/bg-home-contact.webp")" class="absolute inset-0 w-full h-full object-cover pointer-events-none">
+    <div class="relative z-10">
+        <div class="max-w-[1024px] mx-auto py-[100px] px-3 lg:px-10">
+            <div class="text-center">
+                <div data-ani="textfadeLeft2" data-delay="0.4" data-target=".ani-item" data-sequence="true">
+                    <div data-ani="fadeUp" data-delay="0.8" data-target=".ani-item-2" data-sequence="true">
+                        <div class="relative">
+                            <div class="inline-block text-[64px] lg:text-[100px] leading-100 font-semibold" style="font-family: 'Inter';">
+                                <div class="ani-item" data-classes="gradient-2">NEWS</div>
+                            </div>
+                            <h1 class="ani-item-2 text-[32px] lg:text-[40px] leading-150 2xl:leading-125 font-medium text-white -mt-10">最新消息</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div data-ani="fadeUp" data-delay="1" data-target=".ani-item" class="mt-[80px]">
+                <div class="ani-item">
+                    <a href="#" class="flex flex-col lg:flex-row gap-3 lg:gap-10 hover-scale">
+                        <div class="lg:w-[320px]">
+                            <div class="inline-block w-full h-[210px] lg:h-[200px] overflow-hidden rounded-[8px]">
+                                <img src="@output.ThemeAssetUrl("img/pic-home-news-1.webp")" class="w-full h-full object-cover transition-transform">
+                            </div>
+                        </div>
+                        <div class="flex-1 px-3 lg:p-3">
+                            <div class="text-[16px] leading-175 text-primary-300 text-right">January 1, 2025</div>
+                            <h3 class="text-[20px] lg:text-[24px] leading-150 font-medium text-white mt-3">全方位金屬表面處理技術</h3>
+                            <p class="text-[16px] leading-175 text-gray-100 mt-3">透過創新的製程與專業技術，提供金屬材料耐蝕性、強度與外觀品質的全方位解決方案，滿足多元產業的應用需求。</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="ani-item mt-7 pt-7 border-t border-primary-300 border-opacity-20">
+                    <a href="#" class="flex flex-col lg:flex-row gap-3 lg:gap-10 hover-scale">
+                        <div class="lg:w-[320px]">
+                            <div class="inline-block w-full h-[210px] lg:h-[200px] overflow-hidden rounded-[8px]">
+                                <img src="@output.ThemeAssetUrl("img/pic-home-news-2.webp")" class="w-full h-full object-cover transition-transform">
+                            </div>
+                        </div>
+                        <div class="flex-1 px-3 lg:p-3">
+                            <div class="text-[16px] leading-175 text-primary-300 text-right">January 1, 2025</div>
+                            <h3 class="text-[20px] lg:text-[24px] leading-150 font-medium text-white mt-3">全方位金屬表面處理技術</h3>
+                            <p class="text-[16px] leading-175 text-gray-100 mt-3">透過創新的製程與專業技術，提供金屬材料耐蝕性、強度與外觀品質的全方位解決方案，滿足多元產業的應用需求。</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="ani-item mt-7 pt-7 border-t border-primary-300 border-opacity-20">
+                    <a href="#" class="flex flex-col lg:flex-row gap-3 lg:gap-10 hover-scale">
+                        <div class="lg:w-[320px]">
+                            <div class="inline-block w-full h-[210px] lg:h-[200px] overflow-hidden rounded-[8px]">
+                                <img src="@output.ThemeAssetUrl("img/pic-home-news-3.webp")" class="w-full h-full object-cover transition-transform">
+                            </div>
+                        </div>
+                        <div class="flex-1 px-3 lg:p-3">
+                            <div class="text-[16px] leading-175 text-primary-300 text-right">January 1, 2025</div>
+                            <h3 class="text-[20px] lg:text-[24px] leading-150 font-medium text-white mt-3">全方位金屬表面處理技術</h3>
+                            <p class="text-[16px] leading-175 text-gray-100 mt-3">透過創新的製程與專業技術，提供金屬材料耐蝕性、強度與外觀品質的全方位解決方案，滿足多元產業的應用需求。</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="max-w-[1440px] mx-auto py-[100px]">
+            <div data-ani="textfadeLeft2" data-delay="0.4" data-target=".ani-item" data-sequence="true">
+                <div data-ani="fadeUp" data-delay="0.8" data-target=".ani-item-2" data-sequence="true">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-[80px]">
+                        <div class="px-3 lg:px-10">
+                            <div>
+                                <div class="relative">
+                                    <div class="inline-block text-[64px] lg:text-[100px] leading-100 font-semibold" style="font-family: 'Inter';">
+                                        <div class="ani-item" data-classes="gradient-2">@Html.Raw(output.CustomField("Contact.BGTitle"))</div>
+                                    </div>
+                                    <h1 class="ani-item-2 text-[32px] lg:text-[40px] leading-150 2xl:leading-125 font-medium text-white -mt-10">@Html.Raw(output.CustomField("Contact.Title", true))</h1>
+                                </div>
+                                <h6 class="ani-item-2 text-[16px] lg:text-[18px] leading-175 text-gray-100 mt-5">@Html.Raw(output.CustomField("Contact.Desc", true, true))</h6>
+                            </div>
+
+                            <div class="ani-item-2 mt-[60px]">
+                                <img src="@output.ThemeOption("Info.Logo", true)" class="h-[48px]">
+                                <h5 class="text-[16px] lg:text-[18px] leading-175 font-medium text-white mt-5">@Html.Raw(output.ToBr(output.ThemeOption("ContactInfo.Contact", true)))</h5>
+
+                                <div class="flex flex-col gap-3 mt-5">
+                                    @if (!string.IsNullOrEmpty(output.ThemeOption("ContactInfo.Phone")))
+                                    {
+                                        <div class="flex items-start gap-[10px]">
+                                            <img src="@output.ThemeAssetUrl("img/icon-contact-2.svg")">
+                                            <a href="tel:+@output.ThemeOption("ContactInfo.Phone")" class="text-[16px] leading-175 text-gray-100 hover:text-primary-300 transition-colors">@output.ThemeOption("ContactInfo.Phone")</a>
+                                        </div>
+                                    }
+
+                                    @if (!string.IsNullOrEmpty(output.ThemeOption("ContactInfo.Fax")))
+                                    {
+                                        <div class="flex items-start gap-[10px]">
+                                            <img src="@output.ThemeAssetUrl("img/icon-contact-3.svg")">
+                                            <a href="fax:+@output.ThemeOption("ContactInfo.Fax")" class="text-[16px] leading-175 text-gray-100 hover:text-primary-300 transition-colors">@output.ThemeOption("ContactInfo.Fax")</a>
+                                        </div>
+                                    }
+
+                                    @if (!string.IsNullOrEmpty(output.ThemeOption("ContactInfo.Address", true)))
+                                    {
+                                        <div class="flex items-start gap-[10px]">
+                                            <img src="@output.ThemeAssetUrl("img/icon-contact-1.svg")">
+                                            <a href="https://www.google.com/maps?q=@Html.Raw(output.ThemeOption("ContactInfo.Address", true))" target="_blank" class="text-[16px] leading-175 text-gray-100 hover:text-primary-300 transition-colors">@Html.Raw(output.ThemeOption("ContactInfo.Address", true))</a>
+                                        </div>
+                                    }
+
+                                    @if (!string.IsNullOrEmpty(output.ThemeOption("ContactInfo.Email")))
+                                    {
+                                        <div class="flex items-start gap-[10px]">
+                                            <img src="@output.ThemeAssetUrl("img/icon-contact-4.svg")">
+                                            <a href="mailto:@output.ThemeOption("ContactInfo.Email")" class="text-[16px] leading-175 text-gray-100 hover:text-primary-300 transition-colors">@output.ThemeOption("ContactInfo.Email")</a>
+                                        </div>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="px-3 lg:px-10">
+                            <div class="ani-item-2">
+                                @await Html.PartialAsync("./Partials/ContactForm.cshtml")
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
