@@ -1,0 +1,30 @@
+services:
+  mariadb:
+    image: bitnami/mariadb
+    restart: always
+    networks:
+      - app-network
+    environment:
+      - MARIADB_USER=wordpress
+      - MARIADB_DATABASE=wordpress
+      - ALLOW_EMPTY_PASSWORD=yes
+    volumes:
+      - ./mariadb:/bitnami/mariadb
+    ports:
+      - 3306:3306
+
+  wordpress:
+    image: "webdevops/php-apache:8.2"
+    restart: always
+    networks:
+      - app-network
+    ports:
+      - "80:80"
+    volumes:
+      - ./wordpress:/app
+    depends_on:
+      - mariadb
+      
+networks:
+  app-network:
+    driver: bridge
