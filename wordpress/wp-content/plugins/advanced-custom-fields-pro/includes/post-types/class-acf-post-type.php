@@ -73,7 +73,6 @@ if ( ! class_exists( 'ACF_Post_Type' ) ) {
 			parent::__construct();
 
 			add_action( 'acf/init', array( $this, 'register_post_types' ), 6 );
-			add_filter( 'enter_title_here', array( $this, 'enter_title_here' ), 10, 2 );
 		}
 
 		/**
@@ -138,27 +137,6 @@ if ( ! class_exists( 'ACF_Post_Type' ) ) {
 					$store->set( $post_type['key'], $store_value );
 				}
 			}
-		}
-
-		/**
-		 * Filters the "Add title" text for ACF post types.
-		 *
-		 * @since 6.2.1
-		 *
-		 * @param string  $default The default text.
-		 * @param WP_Post $post    The WP_Post object.
-		 * @return string
-		 */
-		public function enter_title_here( $default, $post ) {
-			$post_types = $this->get_posts( array( 'active' => true ) );
-
-			foreach ( $post_types as $post_type ) {
-				if ( $post->post_type === $post_type['post_type'] && ! empty( $post_type['enter_title_here'] ) ) {
-					return (string) $post_type['enter_title_here'];
-				}
-			}
-
-			return $default;
 		}
 
 		/**
@@ -233,7 +211,7 @@ if ( ! class_exists( 'ACF_Post_Type' ) ) {
 				'rename_capabilities'      => false,
 				'singular_capability_name' => 'post',
 				'plural_capability_name'   => 'posts',
-				'supports'                 => array( 'title', 'editor', 'thumbnail', 'custom-fields' ),
+				'supports'                 => array( 'title', 'editor', 'thumbnail' ),
 				'taxonomies'               => array(),
 				'has_archive'              => false,
 				'has_archive_slug'         => '',
@@ -249,7 +227,6 @@ if ( ! class_exists( 'ACF_Post_Type' ) ) {
 				'can_export'               => true,
 				'delete_with_user'         => false,
 				'register_meta_box_cb'     => '',
-				'enter_title_here'         => '',
 			);
 		}
 
@@ -312,14 +289,10 @@ if ( ! class_exists( 'ACF_Post_Type' ) ) {
 		 *
 		 * @since 6.1
 		 *
-		 * @return boolean validity status
+		 * @return bool validity status
 		 */
 		public function ajax_validate_values() {
-			if ( empty( $_POST['acf_post_type']['post_type'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Missing -- Verified elsewhere.
-				return false;
-			}
-
-			$post_type_key = acf_sanitize_request_args( wp_unslash( $_POST['acf_post_type']['post_type'] ) ); // phpcs:ignore WordPress.Security.NonceVerification.Missing -- Verified elsewhere.
+			$post_type_key = acf_sanitize_request_args( $_POST['acf_post_type']['post_type'] ); // phpcs:ignore WordPress.Security.NonceVerification.Missing -- Verified elsewhere.
 			$post_type_key = is_string( $post_type_key ) ? $post_type_key : '';
 			$valid         = true;
 
@@ -340,18 +313,17 @@ if ( ! class_exists( 'ACF_Post_Type' ) ) {
 				acf_add_internal_post_type_validation_error( 'post_type', $message );
 			} else {
 				// Check if this post key exists in the ACF store for registered post types, excluding those which failed registration.
-				$store   = acf_get_store( $this->store );
-				$post_id = (int) acf_maybe_get_POST( 'post_id', 0 );
-
+				$store      = acf_get_store( $this->store );
+				$post_id    = (int) acf_sanitize_request_args( $_POST['post_id'] ); // phpcs:ignore WordPress.Security.NonceVerification.Missing -- Verified elsewhere.
 				$matches    = array_filter(
 					$store->get_data(),
-					function ( $item ) use ( $post_type_key ) {
+					function( $item ) use ( $post_type_key ) {
 						return $item['post_type'] === $post_type_key && empty( $item['not_registered'] );
 					}
 				);
 				$duplicates = array_filter(
 					$matches,
-					function ( $item ) use ( $post_id ) {
+					function( $item ) use ( $post_id ) {
 						return $item['ID'] !== $post_id;
 					}
 				);
@@ -382,19 +354,17 @@ if ( ! class_exists( 'ACF_Post_Type' ) ) {
 		 *
 		 * @since 6.1
 		 *
-		 * @param  array   $post          The main ACF post type settings array.
-		 * @param  boolean $escape_labels Determines if the label values should be escaped.
+		 * @param array $post The main ACF post type settings array.
 		 * @return array
 		 */
-		public function get_post_type_args( $post, $escape_labels = true ) {
+		public function get_post_type_args( $post ) {
 			$args = array();
 
 			// Make sure any provided labels are escaped strings and not empty.
 			$labels = array_filter( $post['labels'] );
 			$labels = array_map( 'strval', $labels );
-			if ( $escape_labels ) {
-				$labels = array_map( 'esc_html', $labels );
-			}
+			$labels = array_map( 'esc_html', $labels );
+
 			if ( ! empty( $labels ) ) {
 				$args['labels'] = $labels;
 			}
@@ -481,21 +451,10 @@ if ( ! class_exists( 'ACF_Post_Type' ) ) {
 				$args['menu_position'] = $menu_position;
 			}
 
-			// Set the default for the icon.
-			$args['menu_icon'] = 'dashicons-admin-post';
-
-			// Override that default if a value is provided.
-			if ( ! empty( $post['menu_icon'] ) ) {
-				if ( is_string( $post['menu_icon'] ) ) {
-					$args['menu_icon'] = $post['menu_icon'];
-				}
-				if ( is_array( $post['menu_icon'] ) ) {
-					if ( $post['menu_icon']['type'] === 'media_library' ) {
-						$args['menu_icon'] = wp_get_attachment_image_url( $post['menu_icon']['value'] );
-					} else {
-						$args['menu_icon'] = $post['menu_icon']['value'];
-					}
-				}
+			// WordPress defaults to the same icon as the posts icon.
+			$menu_icon = (string) $post['menu_icon'];
+			if ( ! empty( $menu_icon ) ) {
+				$args['menu_icon'] = $menu_icon;
 			}
 
 			// WordPress defaults to "post" for `$args['capability_type']`, but can also take an array.
@@ -518,6 +477,7 @@ if ( ! class_exists( 'ACF_Post_Type' ) ) {
 			}
 
 			// TODO: We don't handle the `capabilities` arg at the moment, but may in the future.
+
 			// WordPress defaults to the "title" and "editor" supports, but none can be provided by passing false (WP 3.5+).
 			$supports = is_array( $post['supports'] ) ? $post['supports'] : array();
 			$supports = array_unique( array_filter( array_map( 'strval', $supports ) ) );
@@ -528,9 +488,9 @@ if ( ! class_exists( 'ACF_Post_Type' ) ) {
 				$args['supports'] = $supports;
 			}
 
-			// Handle register meta box callbacks safely
+			// Handle register meta box callbacks if set from an import.
 			if ( ! empty( $post['register_meta_box_cb'] ) ) {
-				$args['register_meta_box_cb'] = array( $this, 'build_safe_context_for_metabox_cb' );
+				$args['register_meta_box_cb'] = (string) $post['register_meta_box_cb'];
 			}
 
 			// WordPress doesn't register any default taxonomies.
@@ -620,59 +580,6 @@ if ( ! class_exists( 'ACF_Post_Type' ) ) {
 		}
 
 		/**
-		 * Ensure the metabox being called does not perform any unsafe operations.
-		 *
-		 * @since 6.3.8
-		 *
-		 * @param WP_Post $post The post being rendered.
-		 * @return mixed The callback result.
-		 */
-		public function build_safe_context_for_metabox_cb( $post ) {
-			$post_types = $this->get_posts();
-			$this_post  = array_filter(
-				$post_types,
-				function ( $post_type ) use ( $post ) {
-					return $post_type['post_type'] === $post->post_type;
-				}
-			);
-			if ( empty( $this_post ) || ! is_array( $this_post ) ) {
-				// Unable to find the ACF post type. Don't do anything.
-				return;
-			}
-			$acf_post_type = array_shift( $this_post );
-			$original_cb   = isset( $acf_post_type['register_meta_box_cb'] ) ? $acf_post_type['register_meta_box_cb'] : false;
-
-			// Prevent access to any wp_ prefixed functions in a callback.
-			if ( apply_filters( 'acf/post_type/prevent_access_to_wp_functions_in_meta_box_cb', true ) && substr( strtolower( $original_cb ), 0, 3 ) === 'wp_' ) {
-				// Don't execute register meta box callbacks if an internal wp function by default.
-				return;
-			}
-
-			$unset     = array( '_POST', '_GET', '_REQUEST', '_COOKIE', '_SESSION', '_FILES', '_ENV', '_SERVER' );
-			$originals = array();
-
-			foreach ( $unset as $var ) {
-				if ( isset( $GLOBALS[ $var ] ) ) {
-					$originals[ $var ] = $GLOBALS[ $var ];
-					$GLOBALS[ $var ]   = array(); //phpcs:ignore -- used for building a safe context
-				}
-			}
-
-			$return = false;
-			if ( is_callable( $original_cb ) ) {
-				$return = call_user_func( $original_cb, $post );
-			}
-
-			foreach ( $unset as $var ) {
-				if ( isset( $originals[ $var ] ) ) {
-					$GLOBALS[ $var ] = $originals[ $var ]; //phpcs:ignore -- used for restoring the original context
-				}
-			}
-
-			return $return;
-		}
-
-		/**
 		 * Returns a string that can be used to create a post type in PHP.
 		 *
 		 * @since 6.1
@@ -690,13 +597,7 @@ if ( ! class_exists( 'ACF_Post_Type' ) ) {
 
 			// Validate and prepare the post for export.
 			$post = $this->validate_post( $post );
-			$args = $this->get_post_type_args( $post, false );
-
-			// Restore original metabox callback.
-			if ( ! empty( $args['register_meta_box_cb'] ) && ! empty( $post['register_meta_box_cb'] ) ) {
-				$args['register_meta_box_cb'] = (string) $post['register_meta_box_cb'];
-			}
-
+			$args = $this->get_post_type_args( $post );
 			$code = var_export( $args, true ); // phpcs:ignore WordPress.PHP.DevelopmentFunctions -- Used for PHP export.
 
 			if ( ! $code ) {
@@ -774,30 +675,6 @@ if ( ! class_exists( 'ACF_Post_Type' ) ) {
 		}
 
 		/**
-		 * Prepares an ACF post type for import.
-		 *
-		 * @since 6.3.10
-		 *
-		 * @param array $post The ACF post array.
-		 * @return array
-		 */
-		public function prepare_post_for_import( $post ) {
-			if ( ! acf_get_setting( 'enable_meta_box_cb_edit' ) && ! empty( $post['register_meta_box_cb'] ) ) {
-				$post['register_meta_box_cb'] = '';
-
-				if ( ! empty( $post['ID'] ) ) {
-					$existing_post = $this->get_post( $post['ID'] );
-
-					if ( is_array( $existing_post ) ) {
-						$post['register_meta_box_cb'] = ! empty( $existing_post['register_meta_box_cb'] ) ? (string) $existing_post['register_meta_box_cb'] : '';
-					}
-				}
-			}
-
-			return parent::prepare_post_for_import( $post );
-		}
-
-		/**
 		 * Imports a post type from CPTUI.
 		 *
 		 * @since 6.1
@@ -867,6 +744,7 @@ if ( ! class_exists( 'ACF_Post_Type' ) ) {
 			}
 
 			// TODO: Investigate CPTUI usage of with_feeds, pages settings.
+
 			// ACF handles capability type differently.
 			if ( isset( $args['capability_type'] ) ) {
 				if ( 'post' !== trim( $args['capability_type'] ) ) {
@@ -909,6 +787,11 @@ if ( ! class_exists( 'ACF_Post_Type' ) ) {
 				unset( $args['query_var_slug'] );
 			}
 
+			// ACF doesn't support custom "Enter title here" text.
+			if ( isset( $args['enter_title_here'] ) ) {
+				unset( $args['enter_title_here'] );
+			}
+
 			$acf_args = wp_parse_args( $args, $acf_args );
 
 			// ACF doesn't yet handle custom supports, so we're tacking onto the regular supports.
@@ -943,6 +826,7 @@ if ( ! class_exists( 'ACF_Post_Type' ) ) {
 			// Import the post normally.
 			return $this->import_post( $acf_args );
 		}
+
 	}
 
 }

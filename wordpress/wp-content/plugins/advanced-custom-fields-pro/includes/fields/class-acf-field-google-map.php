@@ -1,19 +1,23 @@
 <?php
 
 if ( ! class_exists( 'acf_field_google_map' ) ) :
+	#[AllowDynamicProperties]
 	class acf_field_google_map extends acf_field {
 
 
-		/**
-		 * This function will setup the field type data
-		 *
-		 * @type    function
-		 * @date    5/03/2014
-		 * @since   5.0.0
-		 *
-		 * @param   n/a
-		 * @return  n/a
-		 */
+		/*
+		*  __construct
+		*
+		*  This function will setup the field type data
+		*
+		*  @type    function
+		*  @date    5/03/2014
+		*  @since   5.0.0
+		*
+		*  @param   n/a
+		*  @return  n/a
+		*/
+
 		function initialize() {
 
 			// vars
@@ -38,16 +42,19 @@ if ( ! class_exists( 'acf_field_google_map' ) ) :
 		}
 
 
-		/**
-		 * description
-		 *
-		 * @type    function
-		 * @date    16/12/2015
-		 * @since   5.3.2
-		 *
-		 * @param   $post_id (int)
-		 * @return  $post_id (int)
-		 */
+		 /*
+		*  input_admin_enqueue_scripts
+		*
+		*  description
+		*
+		*  @type    function
+		*  @date    16/12/2015
+		*  @since   5.3.2
+		*
+		*  @param   $post_id (int)
+		*  @return  $post_id (int)
+		*/
+
 		function input_admin_enqueue_scripts() {
 
 			// localize
@@ -95,15 +102,18 @@ if ( ! class_exists( 'acf_field_google_map' ) ) :
 		}
 
 
-		/**
-		 * Create the HTML interface for your field
-		 *
-		 * @param   $field - an array holding all the field's data
-		 *
-		 * @type    action
-		 * @since   3.6
-		 * @date    23/01/13
-		 */
+		/*
+		*  render_field()
+		*
+		*  Create the HTML interface for your field
+		*
+		*  @param   $field - an array holding all the field's data
+		*
+		*  @type    action
+		*  @since   3.6
+		*  @date    23/01/13
+		*/
+
 		function render_field( $field ) {
 
 			// Apply defaults.
@@ -132,7 +142,7 @@ if ( ! class_exists( 'acf_field_google_map' ) ) :
 
 			?>
 <div <?php echo acf_esc_attrs( $attrs ); ?>>
-
+	
 			<?php
 			acf_hidden_input(
 				array(
@@ -141,37 +151,41 @@ if ( ! class_exists( 'acf_field_google_map' ) ) :
 				)
 			);
 			?>
-
+	
 	<div class="title">
-
+		
 		<div class="acf-actions -hover">
-			<a href="#" data-name="search" class="acf-icon -search grey" title="<?php esc_attr_e( 'Search', 'acf' ); ?>"></a>
-			<a href="#" data-name="clear" class="acf-icon -cancel grey" title="<?php esc_attr_e( 'Clear location', 'acf' ); ?>"></a>
-			<a href="#" data-name="locate" class="acf-icon -location grey" title="<?php esc_attr_e( 'Find current location', 'acf' ); ?>"></a>
+			<a href="#" data-name="search" class="acf-icon -search grey" title="<?php _e( 'Search', 'acf' ); ?>"></a>
+			<a href="#" data-name="clear" class="acf-icon -cancel grey" title="<?php _e( 'Clear location', 'acf' ); ?>"></a>
+			<a href="#" data-name="locate" class="acf-icon -location grey" title="<?php _e( 'Find current location', 'acf' ); ?>"></a>
 		</div>
-
-		<input class="search" type="text" placeholder="<?php esc_attr_e( 'Search for address...', 'acf' ); ?>" value="<?php echo esc_attr( $search ); ?>" />
+		
+		<input class="search" type="text" placeholder="<?php _e( 'Search for address...', 'acf' ); ?>" value="<?php echo esc_attr( $search ); ?>" />
 		<i class="acf-loading"></i>
-
+				
 	</div>
-
+	
 	<div class="canvas" style="<?php echo esc_attr( 'height: ' . $field['height'] . 'px' ); ?>"></div>
-
+	
 </div>
 			<?php
+
 		}
 
 
-		/**
-		 * Create extra options for your field. This is rendered when editing a field.
-		 * The value of $field['name'] can be used (like bellow) to save extra data to the $field
-		 *
-		 * @type    action
-		 * @since   3.6
-		 * @date    23/01/13
-		 *
-		 * @param   $field  - an array holding all the field's data
-		 */
+		/*
+		*  render_field_settings()
+		*
+		*  Create extra options for your field. This is rendered when editing a field.
+		*  The value of $field['name'] can be used (like bellow) to save extra data to the $field
+		*
+		*  @type    action
+		*  @since   3.6
+		*  @date    23/01/13
+		*
+		*  @param   $field  - an array holding all the field's data
+		*/
+
 		function render_field_settings( $field ) {
 
 			// center_lat
@@ -225,6 +239,7 @@ if ( ! class_exists( 'acf_field_google_map' ) ) :
 					'placeholder'  => $this->default_values['height'],
 				)
 			);
+
 		}
 
 		/**
@@ -235,9 +250,9 @@ if ( ! class_exists( 'acf_field_google_map' ) ) :
 		 * @date    16/10/19
 		 * @since   5.8.1
 		 *
-		 * @param   mixed $value   The value loaded from the database.
+		 * @param   mixed $value The value loaded from the database.
 		 * @param   mixed $post_id The post ID where the value is saved.
-		 * @param   array $field   The field settings array.
+		 * @param   array $field The field settings array.
 		 * @return  (array|false)
 		 */
 		function load_value( $value, $post_id, $field ) {
@@ -259,19 +274,21 @@ if ( ! class_exists( 'acf_field_google_map' ) ) :
 		}
 
 
-		/**
-		 * This filter is appied to the $value before it is updated in the db
-		 *
-		 * @type    filter
-		 * @since   3.6
-		 * @date    23/01/13
-		 *
-		 * @param   $value - the value which will be saved in the database
-		 * @param   $post_id - the post_id of which the value will be saved
-		 * @param   $field - the field array holding all the field options
-		 *
-		 * @return  $value - the modified value
-		 */
+		/*
+		*  update_value()
+		*
+		*  This filter is appied to the $value before it is updated in the db
+		*
+		*  @type    filter
+		*  @since   3.6
+		*  @date    23/01/13
+		*
+		*  @param   $value - the value which will be saved in the database
+		*  @param   $post_id - the $post_id of which the value will be saved
+		*  @param   $field - the field array holding all the field options
+		*
+		*  @return  $value - the modified value
+		*/
 		function update_value( $value, $post_id, $field ) {
 
 			// decode JSON string.
@@ -351,9 +368,9 @@ if ( ! class_exists( 'acf_field_google_map' ) ) :
 		/**
 		 * Apply basic formatting to prepare the value for default REST output.
 		 *
-		 * @param mixed          $value
-		 * @param string|integer $post_id
-		 * @param array          $field
+		 * @param mixed      $value
+		 * @param string|int $post_id
+		 * @param array      $field
 		 * @return mixed
 		 */
 		public function format_value_for_rest( $value, $post_id, array $field ) {
@@ -368,6 +385,7 @@ if ( ! class_exists( 'acf_field_google_map' ) ) :
 
 	// initialize
 	acf_register_field_type( 'acf_field_google_map' );
+
 endif; // class_exists check
 
 ?>

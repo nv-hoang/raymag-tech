@@ -7,7 +7,7 @@ if ( ! class_exists( 'acf_field_repeater' ) ) :
 		/**
 		 * If we're currently rendering fields.
 		 *
-		 * @var boolean
+		 * @var bool
 		 */
 		public $is_rendering = false;
 
@@ -28,12 +28,11 @@ if ( ! class_exists( 'acf_field_repeater' ) ) :
 			$this->name          = 'repeater';
 			$this->label         = __( 'Repeater', 'acf' );
 			$this->category      = 'layout';
-			$this->description   = __( 'Provides a solution for repeating content such as slides, team members, and call-to-action tiles, by acting as a parent to a set of subfields which can be repeated again and again.', 'acf' );
+			$this->description   = __( 'Allows you to select and display existing fields. It does not duplicate any fields in the database, but loads and displays the selected fields at run-time. The Clone field can either replace itself with the selected fields or display the selected fields as a group of subfields.', 'acf' );
 			$this->preview_image = acf_get_url() . '/assets/images/field-type-previews/field-preview-repeater.png';
 			$this->doc_url       = acf_add_url_utm_tags( 'https://www.advancedcustomfields.com/resources/repeater/', 'docs', 'field-type-selection' );
 			$this->tutorial_url  = acf_add_url_utm_tags( 'https://www.advancedcustomfields.com/resources/repeater/how-to-use-the-repeater-field/', 'docs', 'field-type-selection' );
 			$this->pro           = true;
-			$this->supports      = array( 'bindings' => false );
 			$this->defaults      = array(
 				'sub_fields'    => array(),
 				'min'           => 0,
@@ -88,7 +87,7 @@ if ( ! class_exists( 'acf_field_repeater' ) ) :
 
 			if ( $sub_fields ) {
 				$field['sub_fields'] = array_map(
-					function ( $sub_field ) use ( $field ) {
+					function( $sub_field ) use ( $field ) {
 						$sub_field['parent_repeater'] = $field['key'];
 						return $sub_field;
 					},
@@ -135,10 +134,8 @@ if ( ! class_exists( 'acf_field_repeater' ) ) :
 		 * @param array $field An array holding all the field's data.
 		 */
 		public function render_field( $field ) {
-			$_field              = $field;
 			$field['orig_name']  = $this->get_field_name_from_input_name( $field['name'] );
-			$_field['name']      = $field['orig_name'];
-			$field['total_rows'] = (int) acf_get_metadata_by_field( $this->post_id, $_field );
+			$field['total_rows'] = (int) acf_get_metadata( $this->post_id, $field['orig_name'] );
 			$table               = new ACF_Repeater_Table( $field );
 			$table->render();
 		}
@@ -162,7 +159,7 @@ if ( ! class_exists( 'acf_field_repeater' ) ) :
 			?>
 			<div class="acf-field acf-field-setting-sub_fields" data-setting="repeater" data-name="sub_fields">
 				<div class="acf-label">
-					<label><?php esc_html_e( 'Sub Fields', 'acf' ); ?></label>
+					<label><?php _e( 'Sub Fields', 'acf' ); ?></label>
 					<p class="description"></p>		
 				</div>
 				<div class="acf-input acf-input-sub">
@@ -306,10 +303,11 @@ if ( ! class_exists( 'acf_field_repeater' ) ) :
 		 * Filters the field $value after it is loaded from the database.
 		 *
 		 * @since   3.6
+		 * @date    23/01/13
 		 *
-		 * @param mixed $value   The value found in the database.
-		 * @param mixed $post_id The $post_id from which the value was loaded.
-		 * @param array $field   The field array holding all the field options.
+		 * @param mixed $value    The value found in the database.
+		 * @param mixed $post_id  The $post_id from which the value was loaded.
+		 * @param array $field    The field array holding all the field options.
 		 * @return array $value
 		 */
 		public function load_value( $value, $post_id, $field ) {
@@ -321,7 +319,6 @@ if ( ! class_exists( 'acf_field_repeater' ) ) :
 			$value  = (int) $value;
 			$rows   = array();
 			$offset = 0;
-			$paged  = isset( $_POST['paged'] ) ? intval( $_POST['paged'] ) : 1; // phpcs:ignore WordPress.Security.NonceVerification.Missing -- Verified elsewhere.
 
 			// Ensure pagination is disabled inside blocks.
 			if ( acf_get_data( 'acf_inside_rest_call' ) || doing_action( 'wp_ajax_acf/ajax/fetch-block' ) ) {
@@ -336,7 +333,7 @@ if ( ! class_exists( 'acf_field_repeater' ) ) :
 				}
 
 				if ( doing_action( 'wp_ajax_acf/ajax/query_repeater' ) ) {
-					$offset = ( $paged - 1 ) * $rows_per_page; // phpcs:ignore WordPress.Security.NonceVerification.Missing -- Verified elsewhere.
+					$offset = ( intval( $_POST['paged'] ) - 1 ) * $rows_per_page; // phpcs:ignore WordPress.Security.NonceVerification.Missing -- Verified elsewhere.
 					$value  = min( $value, $offset + $rows_per_page );
 				} else {
 					$value = min( $value, $rows_per_page );
@@ -365,18 +362,19 @@ if ( ! class_exists( 'acf_field_repeater' ) ) :
 		}
 
 		/**
-		 * This filter is appied to the $value after it is loaded from the db and before it is returned to the template
+		 * This filter is applied to the $value after it is loaded from the db,
+		 * and before it is returned to the template.
 		 *
-		 * @type  filter
 		 * @since 3.6
+		 * @date  23/01/13
 		 *
-		 * @param mixed   $value       The value which was loaded from the database.
-		 * @param mixed   $post_id     The $post_id from which the value was loaded.
-		 * @param array   $field       The field array holding all the field options.
-		 * @param boolean $escape_html Should the field return a HTML safe formatted value.
-		 * @return array  $value The modified value.
+		 * @param mixed $value   The value which was loaded from the database.
+		 * @param mixed $post_id The $post_id from which the value was loaded.
+		 * @param array $field   The field array holding all the field options.
+		 *
+		 * @return array $value The modified value.
 		 */
-		public function format_value( $value, $post_id, $field, $escape_html = false ) {
+		function format_value( $value, $post_id, $field ) {
 			// bail early if no value
 			if ( empty( $value ) ) {
 				return false;
@@ -413,7 +411,7 @@ if ( ! class_exists( 'acf_field_repeater' ) ) :
 					$sub_field['name'] = "{$field['name']}_{$i}_{$sub_field['name']}";
 
 					// format value
-					$sub_value = acf_format_value( $sub_value, $post_id, $sub_field, $escape_html );
+					$sub_value = acf_format_value( $sub_value, $post_id, $sub_field );
 
 					// append to $row
 					$value[ $i ][ $sub_field['_name'] ] = $sub_value;
@@ -429,11 +427,12 @@ if ( ! class_exists( 'acf_field_repeater' ) ) :
 		 * @date  11/02/2014
 		 * @since 5.0.0
 		 *
-		 * @param  boolean $valid If the field is valid.
-		 * @param  mixed   $value The value to validate.
-		 * @param  array   $field The main field array.
-		 * @param  string  $input The input element's name attribute.
-		 * @return boolean
+		 * @param bool   $valid  If the field is valid.
+		 * @param mixed  $value  The value to validate.
+		 * @param array  $field  The main field array.
+		 * @param string $input  The input element's name attribute.
+		 *
+		 * @return bool
 		 */
 		function validate_value( $valid, $value, $field, $input ) {
 			// vars
@@ -512,10 +511,10 @@ if ( ! class_exists( 'acf_field_repeater' ) ) :
 		 * @date    15/2/17
 		 * @since   5.5.8
 		 *
-		 * @param   array   $row
-		 * @param   integer $i
-		 * @param   array   $field
-		 * @param   mixed   $post_id
+		 * @param   array $row
+		 * @param   int   $i
+		 * @param   array $field
+		 * @param   mixed $post_id
 		 * @return  boolean
 		 */
 		function update_row( $row, $i, $field, $post_id ) {
@@ -557,9 +556,9 @@ if ( ! class_exists( 'acf_field_repeater' ) ) :
 		 * @date    15/2/17
 		 * @since   5.5.8
 		 *
-		 * @param   integer $i
-		 * @param   array   $field
-		 * @param   mixed   $post_id
+		 * @param   int   $i
+		 * @param   array $field
+		 * @param   mixed $post_id
 		 * @return  boolean
 		 */
 		function delete_row( $i, $field, $post_id ) {
@@ -585,12 +584,13 @@ if ( ! class_exists( 'acf_field_repeater' ) ) :
 		 * @since   3.6
 		 * @date    23/01/13
 		 *
-		 * @param  mixed $value   The value which will be saved in the database.
-		 * @param  mixed $post_id The $post_id of which the value will be saved.
-		 * @param  array $field   The field array holding all the field options.
+		 * @param mixed $value   The value which will be saved in the database.
+		 * @param array $field   The field array holding all the field options.
+		 * @param mixed $post_id The $post_id of which the value will be saved.
+		 *
 		 * @return mixed $value
 		 */
-		public function update_value( $value, $post_id, $field ) {
+		function update_value( $value, $post_id, $field ) {
 			// Bail early if no sub fields.
 			if ( empty( $field['sub_fields'] ) ) {
 				return $value;
@@ -605,7 +605,7 @@ if ( ! class_exists( 'acf_field_repeater' ) ) :
 			}
 
 			$new_value = 0;
-			$old_value = (int) acf_get_metadata_by_field( $post_id, $field );
+			$old_value = (int) acf_get_metadata( $post_id, $field['name'] );
 
 			if ( ! empty( $field['pagination'] ) && did_action( 'acf/save_post' ) && ! isset( $_POST['_acf_form'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Missing -- Value not used.
 				$old_rows       = acf_get_value( $post_id, $field );
@@ -703,7 +703,7 @@ if ( ! class_exists( 'acf_field_repeater' ) ) :
 					}
 
 					$this->update_row( $row, $new_row_num, $field, $post_id );
-					++$new_row_num;
+					$new_row_num++;
 				}
 
 				// Calculate the total number of rows that will be saved after this update.
@@ -712,7 +712,7 @@ if ( ! class_exists( 'acf_field_repeater' ) ) :
 				$i = -1;
 
 				foreach ( $value as $row ) {
-					++$i;
+					$i++;
 
 					// Bail early if no row.
 					if ( ! is_array( $row ) ) {
@@ -720,7 +720,7 @@ if ( ! class_exists( 'acf_field_repeater' ) ) :
 					}
 
 					$this->update_row( $row, $i, $field, $post_id );
-					++$new_value;
+					$new_value++;
 				}
 			}
 
@@ -766,14 +766,14 @@ if ( ! class_exists( 'acf_field_repeater' ) ) :
 		 * @date    1/07/2015
 		 * @since   5.2.3
 		 *
-		 * @param integer $post_id The post ID to delete the value from.
-		 * @param string  $key     The meta name/key (unused).
-		 * @param array   $field   The main field array.
+		 * @param int    $post_id The post ID to delete the value from.
+		 * @param string $key     The meta name/key (unused).
+		 * @param array  $field   The main field array.
 		 * @return void
 		 */
 		function delete_value( $post_id, $key, $field ) {
 			// Get the old value from the database.
-			$old_value = (int) acf_get_metadata_by_field( $post_id, $field );
+			$old_value = (int) acf_get_metadata( $post_id, $field['name'] );
 
 			// Bail early if no rows or no subfields.
 			if ( ! $old_value || empty( $field['sub_fields'] ) ) {
@@ -789,11 +789,13 @@ if ( ! class_exists( 'acf_field_repeater' ) ) :
 		 * This filter is applied to the $field before it is saved to the database.
 		 *
 		 * @since 3.6
+		 * @date  23/01/13
 		 *
-		 * @param  array $field The field array holding all the field options.
+		 * @param array $field The field array holding all the field options.
+		 *
 		 * @return array
 		 */
-		public function update_field( $field ) {
+		function update_field( $field ) {
 			unset( $field['sub_fields'] );
 			return $field;
 		}
@@ -900,10 +902,11 @@ if ( ! class_exists( 'acf_field_repeater' ) ) :
 		/**
 		 * Additional validation for the repeater field when submitted via REST.
 		 *
-		 * @param  boolean $valid The current validity booleean
-		 * @param  integer $value The value of the field
-		 * @param  array   $field The field array
-		 * @return boolean|WP
+		 * @param bool  $valid
+		 * @param int   $value
+		 * @param array $field
+		 *
+		 * @return bool|WP_Error
 		 */
 		public function validate_rest_value( $valid, $value, $field ) {
 			if ( ! is_array( $value ) && is_null( $value ) ) {
@@ -955,9 +958,9 @@ if ( ! class_exists( 'acf_field_repeater' ) ) :
 		/**
 		 * Apply basic formatting to prepare the value for default REST output.
 		 *
-		 * @param mixed          $value
-		 * @param integer|string $post_id
-		 * @param array          $field
+		 * @param mixed      $value
+		 * @param int|string $post_id
+		 * @param array      $field
 		 * @return array|mixed
 		 */
 		public function format_value_for_rest( $value, $post_id, array $field ) {
@@ -991,8 +994,9 @@ if ( ! class_exists( 'acf_field_repeater' ) ) :
 		 * Takes the provided input name and turns it into a field name that
 		 * works with repeater fields that are subfields of other fields.
 		 *
-		 * @param  string $input_name The name attribute used in the repeater.
-		 * @return string|boolean
+		 * @param string $input_name The name attribute used in the repeater.
+		 *
+		 * @return string|bool
 		 */
 		public function get_field_name_from_input_name( $input_name ) {
 			$parts = array();
@@ -1037,22 +1041,20 @@ if ( ! class_exists( 'acf_field_repeater' ) ) :
 		 * @return void|WP_Error
 		 */
 		public function ajax_get_rows() {
+			if ( ! acf_verify_ajax() ) {
+				$error = array( 'error' => __( 'Invalid nonce.', 'acf' ) );
+				wp_send_json_error( $error, 401 );
+			}
+
 			$args = acf_request_args(
 				array(
 					'field_name'    => '',
 					'field_key'     => '',
-					'field_prefix'  => '',
 					'post_id'       => 0,
 					'rows_per_page' => 0,
 					'refresh'       => false,
-					'nonce'         => '',
 				)
 			);
-
-			if ( ! acf_verify_ajax( $args['nonce'], $args['field_key'], true ) ) {
-				$error = array( 'error' => __( 'Invalid nonce.', 'acf' ) );
-				wp_send_json_error( $error, 401 );
-			}
 
 			if ( '' === $args['field_name'] || '' === $args['field_key'] ) {
 				$error = array( 'error' => __( 'Invalid field key or name.', 'acf' ) );
@@ -1081,11 +1083,10 @@ if ( ! class_exists( 'acf_field_repeater' ) ) :
 			}
 
 			/**
-			 * We have to swap out the field name and prefix with the ones sent via JS,
+			 * We have to swap out the field name with the one sent via JS,
 			 * as the repeater could be inside a subfield.
 			 */
-			$field['name']   = $args['field_name'];
-			$field['prefix'] = $args['field_prefix'];
+			$field['name'] = $args['field_name'];
 
 			$field['value']   = acf_get_value( $post_id, $field );
 			$field            = acf_prepare_field( $field );
@@ -1093,13 +1094,15 @@ if ( ! class_exists( 'acf_field_repeater' ) ) :
 			$response['rows'] = $repeater_table->rows( true );
 
 			if ( $args['refresh'] ) {
-				$response['total_rows'] = (int) acf_get_metadata_by_field( $post_id, $field );
+				$response['total_rows'] = (int) acf_get_metadata( $post_id, $args['field_name'] );
 			}
 
 			wp_send_json_success( $response );
 		}
+
 	}
 
 	// initialize
 	acf_register_field_type( 'acf_field_repeater' );
 endif; // class_exists check
+
