@@ -2,16 +2,23 @@
 
 require_once(__DIR__ . '/init.php');
 
-function hide_update_notifications()
+function skip_plugin_update($transient)
 {
     global $wp_version;
-    return (object) array('last_checked' => time(), 'version_checked' => $wp_version);
+    $excluded = [
+        'advanced-custom-fields-pro',
+        'wpforms',
+    ];
+
+    if (isset($transient->response)) {
+        $transient->response = array_filter($transient->response, fn($plugin) => !in_array($plugin->slug, $excluded));
+        if (empty($transient->response)) {
+            return (object) array('last_checked' => time(), 'version_checked' => $wp_version);
+        }
+    }
+    return $transient;
 }
-if (defined('HIDE_UPDATE_NOTIFICATIONS') && HIDE_UPDATE_NOTIFICATIONS) {
-    add_filter('pre_site_transient_update_core', 'hide_update_notifications'); //hide updates for WordPress itself
-    add_filter('pre_site_transient_update_plugins', 'hide_update_notifications'); //hide updates for all plugins
-    add_filter('pre_site_transient_update_themes', 'hide_update_notifications'); //hide updates for all themes
-}
+add_filter('site_transient_update_plugins', 'skip_plugin_update');
 
 // function wpdocs_theme_add_editor_styles()
 // {

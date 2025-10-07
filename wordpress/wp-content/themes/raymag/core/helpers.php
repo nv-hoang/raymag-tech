@@ -8,21 +8,58 @@
  * @package 
  */
 
-function get_theme_option($key, $default = '')
+function get_theme_languages($exclude_current = false)
 {
+    if (class_exists('pll_the_languages')) {
+        $languages = array_values(pll_the_languages(['raw' => 1]));
+        if ($exclude_current) {
+            $languages = array_filter($languages, fn($lang) => !$lang['current_lang']);
+        }
+        return $languages;
+    }
+    return [];
+}
+
+function get_current_lang($key = null)
+{
+    $current_language = array_filter(get_theme_languages(), fn($lang) => $lang['current_lang']);
+    if (empty($current_language)) {
+        $current_language = [
+            [
+                'slug' => 'tw',
+                'name' => '',
+                'url' => ''
+            ]
+        ];
+    }
+    $lang = end($current_language);
+    return $key ? $lang[$key] : $lang;
+}
+
+function get_theme_option($key, $lang = false, $default = '')
+{
+    if ($lang) $key .= '.' . get_current_lang('slug');
     $field = get_field(str_replace('.', '_', $key), 'option');
     return empty($field) ? $default : $field;
 }
 
-function the_theme_option($key, $default = '')
+function the_theme_option($key, $lang = false, $default = '')
 {
-    echo get_theme_option($key, $default);
+    echo get_theme_option($key, $lang, $default);
+}
+
+function isHtml($string)
+{
+    return $string !== strip_tags($string);
 }
 
 function get_custom_field($key, $default = '', $post_id = false)
 {
     $field = get_field(str_replace('.', '_', $key), $post_id);
-    return empty($field) ? $default : $field;
+    if (empty($field)) {
+        $field = $default;
+    }
+    return is_string($field) && !isHtml($field) ? nl2br($field) : $field;
 }
 
 function the_custom_field($key, $default = '', $post_id = false)
@@ -35,9 +72,9 @@ function get_value($value, $key, $default = '')
     $keys = explode('.', $key, 2);
     if (!empty($value) && isset($value[$keys[0]])) {
         if (count($keys) >= 2) return get_value($value[$keys[0]], $keys[1]);
-        return $value[$key];
+        if (!empty($value[$key])) return is_string($value[$key]) && !isHtml($value[$key]) ? nl2br($value[$key]) : $value[$key];
     }
-    return $default;
+    return is_string($default) && !isHtml($default) ? nl2br($default) : $default;
 }
 
 function the_value($value, $key, $default = '')
@@ -51,6 +88,8 @@ function menu_to_tree(array &$elements, $parentId = 0)
     foreach ($elements as &$element) {
         if ($element->menu_item_parent == $parentId) {
             $element->childrens = menu_to_tree($elements, $element->ID);
+            $element->menu_desc = get_custom_field('menu_desc', '', $element->ID);
+            $element->is_mega_menu = get_custom_field('is_mega_menu', false, $element->ID);
             $branch[$element->ID] = $element;
             unset($element);
         }
@@ -67,6 +106,7 @@ function get_wp_menu($menu_name = null)
             return menu_to_tree($menu_items);
         } else return [];
     } else {
+        $menu_name .= '-' . get_current_lang('slug');
         $menu_items = wp_get_nav_menu_items($menu_name);
         if ($menu_items === false) return [];
         return menu_to_tree($menu_items);
@@ -76,7 +116,7 @@ function get_wp_menu($menu_name = null)
 function get_theme_asset_url($path)
 {
     $path = ltrim($path, '/');
-    return get_template_directory_uri() . "/styles/dist/{$path}";
+    return get_template_directory_uri() . "/styles/dist/{$path}?ver=" . _S_VERSION;
 }
 
 function the_theme_asset_url($path)
@@ -104,7 +144,8 @@ function get_template_page($template_name)
         'numberposts' => 1
     ));
     wp_reset_query();
-    return $pages === false ? null : $pages[0];
+    if ($pages === false) return null;
+    return end($pages);
 }
 
 function get_template_page_title($template_name)
@@ -118,15 +159,15 @@ function the_template_page_title($template_name)
     echo get_template_page_title($template_name);
 }
 
-function get_template_page_url($template_name)
+function get_template_page_url($template_name, $default = '')
 {
     $page = get_template_page($template_name);
-    return $page ? get_page_link($page->ID) : home_url('/');
+    return $page ? get_page_link($page->ID) : $default;
 }
 
 function the_template_page_url($template_name)
 {
-    echo get_template_page_url($template_name);
+    echo get_template_page_url($template_name, home_url('/'));
 }
 
 function get_textarea_custom_field($key, $separator = '<br />')
@@ -188,4 +229,40 @@ function dd($data)
     var_dump($data);
     echo '</pre>';
     die();
+}
+
+function trans($single, $plural = null, $number = null)
+{
+    if ($plural === null) {
+        return __($single, _LANG_DOMAIN);
+    }
+    return _n($single, $plural, $number, _LANG_DOMAIN);
+}
+
+function the_trans($single, $plural = null, $number = null)
+{
+    echo trans($single, $plural, $number);
+}
+
+function the_paginate($paged, $max_num_pages, $params = [], $use_pagenum_link = false)
+{
+    // paginate
+    $total = $max_num_pages;
+    $len = 3;
+    $offset = floor($len / 2);
+    $start = max($paged - $offset, 1);
+    $end = min(min($paged + $offset, $total) + max($offset - ($paged - $start), 0), $total);
+    $start = max($start - max($offset - ($end - $paged), 0), 1);
+
+    $nav_link = function ($p) use ($params, $use_pagenum_link) {
+        if ($use_pagenum_link) {
+            $url = get_pagenum_link($p, true);
+            if (empty($params)) return $url;
+            return $url . (strpos($url, '?') === false ? '?' : '&') . http_build_query($params);
+        }
+        $params['cpage'] = $p;
+        return '?' . http_build_query($params);
+    };
+
+    include locate_template('template-parts/layout-paginate.php');
 }

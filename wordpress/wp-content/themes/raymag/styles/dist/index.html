@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    
+    <title>RAYMAG TECHNOLOGY INC.</title>
+    <meta name="description" content="">
+    
+    <meta property="og:title" content="RAYMAG TECHNOLOGY INC.">
+    <meta property="og:description" content="全方位金屬表面處理技術，科技工程整合方案，表面處理設備整合方案">
+    <meta property="og:image" content="https://raymag-tech.insiderhub.net/assets/img/og-img.png">
+
+    <meta name="robots" content="noindex">
+
+    <!-- icons -->
+    <link rel="shortcut icon" sizes="16x16" href="assets/img/favicon.png">
+    <link rel="apple-touch-icon" sizes="16x16" href="assets/img/favicon.png">
+  <script type="module" crossorigin src="/assets/main.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/main.css">
+</head>
+
+<body style="background-color: #030A11; color: #fff; overflow-x: hidden;">
+    <div id="ploading" style="pointer-events: none !important;">
+        <div style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: #030A11; z-index: 9999; display: flex; align-items: center; justify-content: center; transform-origin: top center;">
+            <div class="ani-item-1" style="display: inline-flex; opacity: 0;">
+                <div style="overflow: hidden; width: 65px; height: 58px;">
+                    <img src="assets/img/logo-raymag.svg" style="width: 199px; height: 58px; max-width: initial !important;">
+                </div>
+                <div class="ani-item-2" style="overflow: hidden; width: 0px; height: 58px; position: relative;">
+                    <img src="assets/img/logo-raymag.svg" style="width: 199px; height: 58px; max-width: initial !important; position: absolute; top: 0; right: 0;">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="fixed top-0 left-0 z-50 w-full" x-data="{ menu: false }">
+        <div id="header-wrap">
+            <!-- Main menu-->
+            <div class="lg:px-5" style="background: #030A11E5; backdrop-filter: blur(20px);">
+                <div class="flex items-center h-[50px] lg:h-[66px] 2xl:h-[68px]">
+                    <a href="/" class="mr-auto p-3 lg:px-5 lg:py-4 inline-block">
+                        <img src="assets/img/logo-raymag.svg" class="h-[26px] xl:h-[34px]" alt="Logo">
+                    </a>
+    
+                    <div class="hidden 2xl:flex items-center">
+                        <a href="#" class="text-[16px] leading-175 text-white transition-colors hover:text-primary-300 p-5">關於銳鎂</a>
+                        <a href="#" class="text-[16px] leading-175 text-white transition-colors hover:text-primary-300 p-5">全方位表面處理技術</a>
+                        <a href="#" class="text-[16px] leading-175 text-white transition-colors hover:text-primary-300 p-5">科技工程整合方案</a>
+                        <a href="#" class="text-[16px] leading-175 text-white transition-colors hover:text-primary-300 p-5">表面處理設備</a>
+                        <a href="#" class="text-[16px] leading-175 text-white transition-colors hover:text-primary-300 p-5">最新消息</a>
+                        <a href="#" class="text-[16px] leading-175 text-white transition-colors hover:text-primary-300 p-5">聯絡我們</a>
+    
+                        <div class="menu-dropdown relative">
+                            <div class="flex items-center gap-x-[10px] cursor-pointer text-white transition-colors hover:text-primary-300 p-5 h-[50px] lg:h-[66px] 2xl:h-[68px]">
+                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_502_4016)">
+                                        <path d="M9 0.275024C13.8186 0.275024 17.7254 4.18113 17.7256 8.99963C17.7256 13.8183 13.8187 17.7252 9 17.7252C4.18149 17.725 0.275391 13.8182 0.275391 8.99963C0.275601 4.18126 4.18162 0.275235 9 0.275024ZM3.16992 13.6754C4.04366 14.7636 5.21527 15.6004 6.56152 16.0651C6.46125 15.9639 6.35873 15.8588 6.25781 15.7467C5.76033 15.1939 5.26865 14.5075 4.85645 13.6754H3.16992ZM13.1445 13.6754C12.7323 14.5076 12.2407 15.1939 11.7432 15.7467C11.6421 15.859 11.5389 15.9637 11.4385 16.0651C12.7851 15.6005 13.9572 14.7638 14.8311 13.6754H13.1445ZM9.625 15.985C9.97582 15.7279 10.3948 15.375 10.8135 14.9098C11.1249 14.5638 11.4373 14.1543 11.7236 13.6754H9.625V15.985ZM6.27734 13.6754C6.56362 14.1542 6.87521 14.5639 7.18652 14.9098C7.60488 15.3746 8.02435 15.727 8.375 15.984V13.6754H6.27734ZM14.165 9.62463C14.112 10.675 13.9258 11.605 13.6562 12.4254H15.6436C16.0835 11.5739 16.3643 10.6278 16.4473 9.62463H14.165ZM9.625 12.4254H12.3301C12.6346 11.6325 12.8512 10.705 12.9121 9.62463H9.625V12.4254ZM5.08789 9.62463C5.14884 10.705 5.36639 11.6325 5.6709 12.4254H8.375V9.62463H5.08789ZM1.55371 9.62463C1.63673 10.6278 1.91744 11.5739 2.35742 12.4254H4.34473C4.07515 11.605 3.88893 10.675 3.83594 9.62463H1.55371ZM13.6562 5.57483C13.9257 6.39497 14.112 7.32463 14.165 8.37463H16.4473C16.3642 7.37184 16.0834 6.42611 15.6436 5.57483H13.6562ZM9.625 8.37463H12.9121C12.8511 7.29469 12.6345 6.36748 12.3301 5.57483H9.625V8.37463ZM5.6709 5.57483C5.3665 6.36751 5.14889 7.29464 5.08789 8.37463H8.375V5.57483H5.6709ZM2.35742 5.57483C1.91759 6.42612 1.6368 7.37181 1.55371 8.37463H3.83594C3.88898 7.32461 4.07525 6.39499 4.34473 5.57483H2.35742ZM11.4395 1.93323C11.54 2.03473 11.6419 2.14106 11.7432 2.25354C12.2407 2.80635 12.7323 3.4926 13.1445 4.32483H14.8311C13.9572 3.23643 12.786 2.39788 11.4395 1.93323ZM9.625 4.32483H11.7246C11.4382 3.84566 11.125 3.43661 10.8135 3.09045C10.3946 2.62502 9.97592 2.27139 9.625 2.01428V4.32483ZM8.375 2.01526C8.02428 2.27231 7.60503 2.62545 7.18652 3.09045C6.87512 3.43651 6.5627 3.84588 6.27637 4.32483H8.375V2.01526ZM6.56055 1.93323C5.21438 2.39791 4.04359 3.23667 3.16992 4.32483H4.85645C5.26867 3.49264 5.7603 2.80633 6.25781 2.25354C6.35889 2.14123 6.46011 2.03459 6.56055 1.93323Z" fill="currentColor" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_502_4016">
+                                            <rect width="18" height="18" fill="currentColor" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <div class="text-[16px] leading-175">繁體中文</div>
+                                <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M3.67063 6.8272C3.70733 6.88049 3.75644 6.92407 3.81372 6.95417C3.871 6.98427 3.93474 7 3.99946 7C4.06417 7 4.12791 6.98427 4.1852 6.95417C4.24248 6.92407 4.29158 6.88049 4.32828 6.8272L7.92857 1.62756C7.97024 1.56758 7.99468 1.49734 7.99922 1.42445C8.00377 1.35157 7.98826 1.27883 7.95436 1.21414C7.92047 1.14946 7.86949 1.09529 7.80697 1.05754C7.74445 1.01979 7.67278 0.999885 7.59974 1H0.399176C0.326308 1.0003 0.2549 1.02046 0.192632 1.0583C0.130364 1.09615 0.079592 1.15025 0.0457757 1.21478C0.0119594 1.27932 -0.00362155 1.35185 0.000708374 1.42458C0.0050383 1.49731 0.0291153 1.56749 0.0703501 1.62756L3.67063 6.8272Z" fill="currentColor" />
+                                </svg>
+                            </div>
+                            <ul class="absolute z-10 w-max pointer-events-none" style="max-height: 0px;">
+                                <div class="pointer-events-auto w-[150px]" style="background: #030A11E5; backdrop-filter: blur(20px);">
+                                    <div class="flex flex-col">
+                                        <a href="#" class="text-[16px] text-white hover:text-primary-300 transition-colors leading-175 p-5 text-center">English</a>
+                                    </div>
+                                </div>
+                            </ul>
+                        </div>
+                    </div>
+    
+                    <div class="2xl:hidden p-3 lg:p-5 cursor-pointer" @click="menu = !menu">
+                        <div class="hamburger-menu-icon size-[26px] relative" :class="menu ? 'active':''">
+                            <div class="w-[26px] h-[2px] bg-white transition-all duration-500 origin-center absolute left-0"></div>
+                            <div class="w-[26px] h-[2px] bg-white transition-all duration-500 origin-center absolute left-0"></div>
+                            <div class="w-[26px] h-[2px] bg-white transition-all duration-500 origin-center absolute left-0"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Mobile menu -->
+        <div class="2xl:hidden relative overflow-auto transition-all h-0 duration-500" x-bind:style="menu ? 'height: calc(100dvh - 50px); background: #030A11E5;backdrop-filter: blur(20px);' : 'background: #030A11E5;backdrop-filter: blur(20px);'">
+            <div class="pb-4 flex flex-col">
+                <a href="#" class="text-[16px] leading-175 text-white transition-colors hover:text-primary-300 px-3 lg:px-10 py-5">關於銳鎂</a>
+                <a href="#" class="text-[16px] leading-175 text-white transition-colors hover:text-primary-300 px-3 lg:px-10 py-5">全方位表面處理技術</a>
+                <a href="#" class="text-[16px] leading-175 text-white transition-colors hover:text-primary-300 px-3 lg:px-10 py-5">科技工程整合方案</a>
+                <a href="#" class="text-[16px] leading-175 text-white transition-colors hover:text-primary-300 px-3 lg:px-10 py-5">表面處理設備</a>
+                <a href="#" class="text-[16px] leading-175 text-white transition-colors hover:text-primary-300 px-3 lg:px-10 py-5">最新消息</a>
+                <a href="#" class="text-[16px] leading-175 text-white transition-colors hover:text-primary-300 px-3 lg:px-10 py-5">聯絡我們</a>
+    
+                <div x-data="{openx: false}" @click="openx = !openx">
+                    <div class="text-[16px] leading-175 px-3 lg:px-10 py-5 cursor-pointer flex items-center gap-x-[10px] transition-colors hover:text-primary-300" x-bind:class="openx ? 'text-primary-300':'text-white'">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_502_4016)">
+                                <path d="M9 0.275024C13.8186 0.275024 17.7254 4.18113 17.7256 8.99963C17.7256 13.8183 13.8187 17.7252 9 17.7252C4.18149 17.725 0.275391 13.8182 0.275391 8.99963C0.275601 4.18126 4.18162 0.275235 9 0.275024ZM3.16992 13.6754C4.04366 14.7636 5.21527 15.6004 6.56152 16.0651C6.46125 15.9639 6.35873 15.8588 6.25781 15.7467C5.76033 15.1939 5.26865 14.5075 4.85645 13.6754H3.16992ZM13.1445 13.6754C12.7323 14.5076 12.2407 15.1939 11.7432 15.7467C11.6421 15.859 11.5389 15.9637 11.4385 16.0651C12.7851 15.6005 13.9572 14.7638 14.8311 13.6754H13.1445ZM9.625 15.985C9.97582 15.7279 10.3948 15.375 10.8135 14.9098C11.1249 14.5638 11.4373 14.1543 11.7236 13.6754H9.625V15.985ZM6.27734 13.6754C6.56362 14.1542 6.87521 14.5639 7.18652 14.9098C7.60488 15.3746 8.02435 15.727 8.375 15.984V13.6754H6.27734ZM14.165 9.62463C14.112 10.675 13.9258 11.605 13.6562 12.4254H15.6436C16.0835 11.5739 16.3643 10.6278 16.4473 9.62463H14.165ZM9.625 12.4254H12.3301C12.6346 11.6325 12.8512 10.705 12.9121 9.62463H9.625V12.4254ZM5.08789 9.62463C5.14884 10.705 5.36639 11.6325 5.6709 12.4254H8.375V9.62463H5.08789ZM1.55371 9.62463C1.63673 10.6278 1.91744 11.5739 2.35742 12.4254H4.34473C4.07515 11.605 3.88893 10.675 3.83594 9.62463H1.55371ZM13.6562 5.57483C13.9257 6.39497 14.112 7.32463 14.165 8.37463H16.4473C16.3642 7.37184 16.0834 6.42611 15.6436 5.57483H13.6562ZM9.625 8.37463H12.9121C12.8511 7.29469 12.6345 6.36748 12.3301 5.57483H9.625V8.37463ZM5.6709 5.57483C5.3665 6.36751 5.14889 7.29464 5.08789 8.37463H8.375V5.57483H5.6709ZM2.35742 5.57483C1.91759 6.42612 1.6368 7.37181 1.55371 8.37463H3.83594C3.88898 7.32461 4.07525 6.39499 4.34473 5.57483H2.35742ZM11.4395 1.93323C11.54 2.03473 11.6419 2.14106 11.7432 2.25354C12.2407 2.80635 12.7323 3.4926 13.1445 4.32483H14.8311C13.9572 3.23643 12.786 2.39788 11.4395 1.93323ZM9.625 4.32483H11.7246C11.4382 3.84566 11.125 3.43661 10.8135 3.09045C10.3946 2.62502 9.97592 2.27139 9.625 2.01428V4.32483ZM8.375 2.01526C8.02428 2.27231 7.60503 2.62545 7.18652 3.09045C6.87512 3.43651 6.5627 3.84588 6.27637 4.32483H8.375V2.01526ZM6.56055 1.93323C5.21438 2.39791 4.04359 3.23667 3.16992 4.32483H4.85645C5.26867 3.49264 5.7603 2.80633 6.25781 2.25354C6.35889 2.14123 6.46011 2.03459 6.56055 1.93323Z" fill="currentColor" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_502_4016">
+                                    <rect width="18" height="18" fill="currentColor" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                        <div class="text-[16px] leading-175">繁體中文</div>
+                        <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3.67063 6.8272C3.70733 6.88049 3.75644 6.92407 3.81372 6.95417C3.871 6.98427 3.93474 7 3.99946 7C4.06417 7 4.12791 6.98427 4.1852 6.95417C4.24248 6.92407 4.29158 6.88049 4.32828 6.8272L7.92857 1.62756C7.97024 1.56758 7.99468 1.49734 7.99922 1.42445C8.00377 1.35157 7.98826 1.27883 7.95436 1.21414C7.92047 1.14946 7.86949 1.09529 7.80697 1.05754C7.74445 1.01979 7.67278 0.999885 7.59974 1H0.399176C0.326308 1.0003 0.2549 1.02046 0.192632 1.0583C0.130364 1.09615 0.079592 1.15025 0.0457757 1.21478C0.0119594 1.27932 -0.00362155 1.35185 0.000708374 1.42458C0.0050383 1.49731 0.0291153 1.56749 0.0703501 1.62756L3.67063 6.8272Z" fill="currentColor" />
+                        </svg>
+                    </div>
+                    <div class="relative overflow-hidden transition-all max-h-0 duration-300" x-bind:style="openx ? 'max-height: ' + ($el.scrollHeight) + 'px' : ''">
+                        <div class="flex flex-col">
+                            <a href="#" class="text-[16px] leading-175 text-white transition-colors hover:text-primary-300 py-5 pl-10 lg:pl-[68px] pr-3 lg:pr-10">English</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="fixed z-30 bottom-3 right-3 lg:bottom-5 lg:right-10 toggle-scrolling">
+        <div class="flex flex-col gap-5">
+            <a href="#" class="rounded-full overflow-hidden gradient-btn-1 cursor-pointer relative w-full">
+                <div class="size-[48px] flex items-center justify-center relative">
+                    <img src="assets/img/icon-float-line.svg" alt="">
+                </div>
+            </a>
+    
+            <a href="tel:+07-621-4500" class="rounded-full overflow-hidden gradient-btn-1 cursor-pointer relative w-full">
+                <div class="size-[48px] flex items-center justify-center relative">
+                    <img src="assets/img/icon-float-phone.svg" alt="">
+                </div>
+            </a>
+        </div>
+    </div>    <div class="fixed-container mx-auto relative"></div>
+    <div id="smooth-wrapper">
+        <div id="smooth-content">
+            <div class="overflow-hidden">
+                <div class="h-[50px] lg:h-[66px] 2xl:h-[68px]"></div>
+            
+<div data-ani="fadeUp" data-delay="2" data-target=".ani-item" data-sequence="true">
+    <div data-ani="textfadeLeft2" data-delay="2.4" data-target=".ani-item-2" data-sequence="true">
+        <div data-ani="fadeUp" data-delay="3" data-target=".ani-item-3" class="relative" data-sequence="true">
+            <div class="absolute inset-0 pointer-events-none">
+                <script type="module" src="https://unpkg.com/@splinetool/viewer@1.10.64/build/spline-viewer.js"></script>
+                <spline-viewer url="https://prod.spline.design/f5fKu4hcHUxS3-KG/scene.splinecode"></spline-viewer>
+            </div>
+
+            <div class="relative z-10">
+                <div class="max-w-[1440px] mx-auto px-3 lg:px-10 pt-[120px] lg:pt-[238px] pb-[170px] lg:pb-[224px]">
+                    <div style="font-family: 'Inter';">
+                        <div class="ani-item gradient-1 text-[40px] leading-125 font-semibold lg:text-[88px] lg:leading-100">RAYMAG</div>
+                        <div class="ani-item-2 text-[40px] leading-125 font-semibold text-white lg:text-[88px] lg:leading-100">TECHNOLOGY<br>INC.</div>
+                    </div>
+                    <div class="text-[20px] lg:text-[24px] leading-150 font-medium text-gray-100 mt-[100px] text-right">
+                        <div class="ani-item-3">
+                            <h3>全方位金屬表面處理技術<br>
+                                科技工程整合方案<br>
+                                表面處理設備整合方案</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="max-w-[1024px] mx-auto px-3 lg:px-10 text-center py-[100px]">
+    <div data-ani="textfadeLeft2" data-delay="0.4" data-target=".ani-item" data-sequence="true">
+        <div data-ani="fadeUp" data-delay="0.8" data-target=".ani-item-2" data-sequence="true">
+            <div class="relative">
+                <div class="inline-block text-[64px] lg:text-[100px] leading-100 font-semibold" style="font-family: 'Inter';">
+                    <div class="ani-item" data-classes="gradient-2">PRODUCTS</div>
+                </div>
+                <h1 class="ani-item-2 text-[32px] lg:text-[40px] leading-150 2xl:leading-125 font-medium text-white -mt-10">輕金屬產品加工介紹</h1>
+            </div>
+            <h6 class="ani-item-2 text-[16px] lg:text-[18px] leading-175 text-gray-100 mt-5">MPC 技術（簡稱 Multi-layer Plasma Coating），是一種合金硬質氧化膜技術，主要應用於輕金屬的表面處理，包括鋁材、鎂合金、鈦合金等。MPC 技術可在鋁/鎂/鈦合金表面生成氧化膜，一次解決「耐磨、耐腐、絕緣、抗熱衝擊、外觀著色、低摩擦/耐介質」六大痛點，為航太、醫療、3C 與工業零件帶來更長壽命與更高可靠度。</h6>
+
+            <div class="mt-10 ani-item-2">
+                <a href="https://www.youtube.com/watch?v=IeftlhfsrYg" data-fancybox class="inline-block rounded-full overflow-hidden gradient-btn-1 cursor-pointer relative">
+                    <div class="inline-flex items-center gap-x-[10px] px-10 py-[10px] relative">
+                        <div class="text-[16px] leading-175 font-medium text-white">觀看 實際金屬表面生成影像</div>
+                        <img src="assets/img/icon-arrow.svg">
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="max-w-[1920px] mx-auto px-3 lg:px-10 py-[100px]">
+    <div data-ani="fadeUp" data-delay="0.4" data-target=".ani-item">
+        <h2 class="ani-item text-center text-[24px] lg:text-[32px] leading-150 font-medium text-primary-300">MPC 六大解决痛點</h2>
+        <div class="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-4 gap-5 mt-10">
+            <div class="ani-item card-1 p-10 lg:py-[70px] 2xl:py-[56px] lg:grid-colspan-2">
+                <div class="flex flex-col gap-10 items-center lg:flex-row">
+                    <img src="assets/img/pic-home-mpc-1.webp" class="w-[120px] lg:w-[220px]">
+                    <div class="flex-1">
+                        <h3 class="text-[20px] lg:text-[24px] leading-150 font-medium text-white">超硬耐磨 (增硬)</h3>
+                        <p class="text-[16px] leading-175 text-gray-100 mt-3">金屬-陶瓷複合結構，大幅提升表面硬度與耐磨性，延長零件壽命並降低保養成本</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ani-item card-1 p-10">
+                <div class="flex flex-col gap-10 lg:gap-7 items-center lg:items-start">
+                    <img src="assets/img/pic-home-mpc-2.webp" class="w-[120px]">
+                    <div class="flex-1">
+                        <h3 class="text-[20px] lg:text-[24px] leading-150 font-medium text-white">長效防腐蝕</h3>
+                        <p class="text-[16px] leading-175 text-gray-100 mt-3">高緻密膜層提供優異防護，鹽霧測試可達傳統塗裝 3 倍以上，適用於嚴苛環境</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ani-item card-1 p-10">
+                <div class="flex flex-col gap-10 lg:gap-7 items-center lg:items-start">
+                    <img src="assets/img/pic-home-mpc-3.webp" class="w-[120px]">
+                    <div class="flex-1">
+                        <h3 class="text-[20px] lg:text-[24px] leading-150 font-medium text-white">高絕緣防護</h3>
+                        <p class="text-[16px] leading-175 text-gray-100 mt-3">具高電阻與耐壓特性，降低擊穿風險，廣泛應用於電池殼、匯流排與絕緣件</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ani-item card-1 p-10">
+                <div class="flex flex-col gap-10 lg:gap-7 items-center lg:items-start">
+                    <img src="assets/img/pic-home-mpc-4.webp" class="w-[120px]">
+                    <div class="flex-1">
+                        <h3 class="text-[20px] lg:text-[24px] leading-150 font-medium text-white">熱防護/抗熱衝擊</h3>
+                        <p class="text-[16px] leading-175 text-gray-100 mt-3">低導熱與抗熱震，能承受高溫與溫差循環，適合用於葉片、噴管及散熱隔熱結構</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ani-item card-1 p-10">
+                <div class="flex flex-col gap-10 lg:gap-7 items-center lg:items-start">
+                    <img src="assets/img/pic-home-mpc-5.webp" class="w-[120px]">
+                    <div class="flex-1">
+                        <h3 class="text-[20px] lg:text-[24px] leading-150 font-medium text-white">原位著色與外觀光學</h3>
+                        <p class="text-[16px] leading-175 text-gray-100 mt-3">處理過程可直接生成白、黑、灰等穩定色膜，兼具外觀質感、耐候性與輻射管理</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ani-item card-1 p-10 lg:py-[66px] 2xl:py-[56px] lg:grid-colspan-2">
+                <div class="flex flex-col gap-10 items-center lg:flex-row">
+                    <img src="assets/img/pic-home-mpc-6.webp" class="w-[120px] lg:w-[220px]">
+                    <div class="flex-1">
+                        <h3 class="text-[20px] lg:text-[24px] leading-150 font-medium text-white">低摩擦/耐腐介質薄膜 (複合覆膜)</h3>
+                        <p class="text-[16px] leading-175 text-gray-100 mt-3">在基層加覆功能薄膜，兼具低摩擦與耐腐蝕，提升泵浦、閥件與運動零件效能</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="max-w-[1440px] mx-auto py-[100px] px-3 lg:px-10">
+    <div data-ani="textfadeLeft2" data-delay="0.4" data-target=".ani-item" data-sequence="true">
+        <div data-ani="fadeUp" data-delay="0.8" data-target=".ani-item-2" data-sequence="true">
+            <div class="relative">
+                <div class="inline-block text-[64px] lg:text-[100px] leading-100 font-semibold" style="font-family: 'Inter';">
+                    <div class="ani-item" data-classes="gradient-2">SERVICE</div>
+                </div>
+                <h1 class="ani-item-2 text-[32px] lg:text-[40px] leading-150 2xl:leading-125 font-medium text-white -mt-10">科技工程整合方案</h1>
+            </div>
+            <h6 class="ani-item-2 text-[16px] lg:text-[18px] leading-175 text-gray-100 mt-5">我們提供全方位的工程整合服務，協助客戶提升設備效能與生產效率，內容涵蓋：</h6>
+        </div>
+    </div>
+
+    <div class="relative mt-[80px]">
+        <div x-init="$dispatch('initswiper')" id="service-swiper" data-effect-speed="600" data-loop="true" data-effect="fade" data-next=".service-swiper-next" data-prev=".service-swiper-prev" data-index=".service-swiper-index" data-total=".service-swiper-total" class="relative swiper-ani">
+            <div> <!-- swiper-wrapper -->
+                <div class="swiper-slide swiper-slide-0">
+                    <div data-ani="fadeUp" data-delay="0.4" data-target=".ani-item">
+                        <div class="relative">
+                            <div class="lg:flex lg:min-h-[720px] gap-[80px] relative">
+                                <div class="hidden lg:block w-[580px]"></div>
+                                <div class="flex-1">
+                                    <div class="lg:pt-10 lg:min-h-[300px] lg:max-w-[520px] lg:mx-auto">
+                                        <div class="text-[40px] lg:text-[64px] leading-125 lg:leading-100 font-semibold overflow-hidden" style="font-family: 'Inter';">
+                                            <div class="ani-item gradient-1">EQUIPMENT MODULE RETROFIT</div>
+                                        </div>
+                                        <h2 class="text-[24px] lg:text-[32px] leading-150 font-medium text-white mt-5 overflow-hidden">
+                                            <div class="ani-item">設備模組改造</div>
+                                        </h2>
+                                    </div>
+
+                                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-[80px] mt-10">
+                                        <div class="grid lg:block grid-cols-2 gap-3 lg:order-1">
+                                            <div class="lg:absolute lg:w-[580px] lg:max-w-[50%] lg:h-[720px] lg:top-0 lg:left-0">
+                                                <div data-ani="boxX" data-delay="0.4">
+                                                    <div class="inline-flex rounded-[20px] overflow-hidden">
+                                                        <img src="assets/img/pic-home-service-1-1.webp" class="w-full h-full object-cover">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="pt-10 lg:pt-0">
+                                                <div data-ani="boxX" data-delay="0.4">
+                                                    <div class="inline-flex rounded-[20px] overflow-hidden">
+                                                        <img src="assets/img/pic-home-service-2-1.webp" class="w-full h-full object-cover">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <h6 class="text-[16px] lg:text-[18px] leading-175 text-gray-100 overflow-hidden">
+                                                <div class="ani-item">依客戶製程需求，量身打造耐用、安全且高效率的槽體系統。</div>
+                                            </h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide swiper-slide-1">
+                    <div data-ani="fadeUp" data-delay="0.4" data-target=".ani-item">
+                        <div class="relative">
+                            <div class="lg:flex lg:min-h-[720px] gap-[80px] relative">
+                                <div class="hidden lg:block w-[580px]"></div>
+                                <div class="flex-1">
+                                    <div class="lg:pt-10 lg:min-h-[300px] lg:max-w-[520px] lg:mx-auto">
+                                        <div class="text-[40px] lg:text-[64px] leading-125 lg:leading-100 font-semibold overflow-hidden" style="font-family: 'Inter';">
+                                            <div class="ani-item gradient-1">EQUIPMENT TANK DESIGN</div>
+                                        </div>
+                                        <h2 class="text-[24px] lg:text-[32px] leading-150 font-medium text-white mt-5 overflow-hidden">
+                                            <div class="ani-item">設備槽體設計</div>
+                                        </h2>
+                                    </div>
+
+                                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-[80px] mt-10">
+                                        <div class="grid lg:block grid-cols-2 gap-3 lg:order-1">
+                                            <div class="lg:absolute lg:w-[580px] lg:max-w-[50%] lg:h-[720px] lg:top-0 lg:left-0">
+                                                <div data-ani="boxX" data-delay="0.4">
+                                                    <div class="inline-flex rounded-[20px] overflow-hidden">
+                                                        <img src="assets/img/pic-home-service-1-2.webp" class="w-full h-full object-cover">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="pt-10 lg:pt-0">
+                                                <div data-ani="boxX" data-delay="0.4">
+                                                    <div class="inline-flex rounded-[20px] overflow-hidden">
+                                                        <img src="assets/img/pic-home-service-2-2.webp" class="w-full h-full object-cover">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <h6 class="text-[16px] lg:text-[18px] leading-175 text-gray-100 overflow-hidden">
+                                                <div class="ani-item">依客戶製程需求，量身打造耐用、安全且高效率的槽體系統。</div>
+                                            </h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide swiper-slide-2">
+                    <div data-ani="fadeUp" data-delay="0.4" data-target=".ani-item">
+                        <div class="relative">
+                            <div class="lg:flex lg:min-h-[720px] gap-[80px] relative">
+                                <div class="hidden lg:block w-[580px]"></div>
+                                <div class="flex-1">
+                                    <div class="lg:pt-10 lg:min-h-[300px] lg:max-w-[520px] lg:mx-auto">
+                                        <div class="text-[40px] lg:text-[64px] leading-125 lg:leading-100 font-semibold overflow-hidden" style="font-family: 'Inter';">
+                                            <div class="ani-item gradient-1">PIPELINE OPTIMIZATION</div>
+                                        </div>
+                                        <h2 class="text-[24px] lg:text-[32px] leading-150 font-medium text-white mt-5 overflow-hidden">
+                                            <div class="ani-item">PIPE管路優化</div>
+                                        </h2>
+                                    </div>
+
+                                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-[80px] mt-10">
+                                        <div class="grid lg:block grid-cols-2 gap-3 lg:order-1">
+                                            <div class="lg:absolute lg:w-[580px] lg:max-w-[50%] lg:h-[720px] lg:top-0 lg:left-0">
+                                                <div data-ani="boxX" data-delay="0.4">
+                                                    <div class="inline-flex rounded-[20px] overflow-hidden">
+                                                        <img src="assets/img/pic-home-service-1-3.webp" class="w-full h-full object-cover">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="pt-10 lg:pt-0">
+                                                <div data-ani="boxX" data-delay="0.4">
+                                                    <div class="inline-flex rounded-[20px] overflow-hidden">
+                                                        <img src="assets/img/pic-home-service-2-3.webp" class="w-full h-full object-cover">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <h6 class="text-[16px] lg:text-[18px] leading-175 text-gray-100 overflow-hidden">
+                                                <div class="ani-item">改善流體動線，提升管路配置效率，降低能源與維護成本。</div>
+                                            </h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide swiper-slide-3">
+                    <div data-ani="fadeUp" data-delay="0.4" data-target=".ani-item">
+                        <div class="relative">
+                            <div class="lg:flex lg:min-h-[720px] gap-[80px] relative">
+                                <div class="hidden lg:block w-[580px]"></div>
+                                <div class="flex-1">
+                                    <div class="lg:pt-10 lg:min-h-[300px] lg:max-w-[520px] lg:mx-auto">
+                                        <div class="text-[40px] lg:text-[64px] leading-125 lg:leading-100 font-semibold overflow-hidden" style="font-family: 'Inter';">
+                                            <div class="ani-item gradient-1">PLANT ENGINEERING</div>
+                                        </div>
+                                        <h2 class="text-[24px] lg:text-[32px] leading-150 font-medium text-white mt-5 overflow-hidden">
+                                            <div class="ani-item">廠務端工程</div>
+                                        </h2>
+                                    </div>
+
+                                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-[80px] mt-10">
+                                        <div class="grid lg:block grid-cols-2 gap-3 lg:order-1">
+                                            <div class="lg:absolute lg:w-[580px] lg:max-w-[50%] lg:h-[720px] lg:top-0 lg:left-0">
+                                                <div data-ani="boxX" data-delay="0.4">
+                                                    <div class="inline-flex rounded-[20px] overflow-hidden">
+                                                        <img src="assets/img/pic-home-service-1-4.webp" class="w-full h-full object-cover">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="pt-10 lg:pt-0">
+                                                <div data-ani="boxX" data-delay="0.4">
+                                                    <div class="inline-flex rounded-[20px] overflow-hidden">
+                                                        <img src="assets/img/pic-home-service-2-4.webp" class="w-full h-full object-cover">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <h6 class="text-[16px] lg:text-[18px] leading-175 text-gray-100 overflow-hidden">
+                                                <div class="ani-item">專精於二次純水系統、廢液回收處理以及化學工酸系統工程，確保廠區運作安全與合規。</div>
+                                            </h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide swiper-slide-4">
+                    <div data-ani="fadeUp" data-delay="0.4" data-target=".ani-item">
+                        <div class="relative">
+                            <div class="lg:flex lg:min-h-[720px] gap-[80px] relative">
+                                <div class="hidden lg:block w-[580px]"></div>
+                                <div class="flex-1">
+                                    <div class="lg:pt-10 lg:min-h-[300px] lg:max-w-[520px] lg:mx-auto">
+                                        <div class="text-[40px] lg:text-[64px] leading-125 lg:leading-100 font-semibold overflow-hidden" style="font-family: 'Inter';">
+                                            <div class="ani-item gradient-1">EQUIPMENT SYSTEM SOLUTIONS</div>
+                                        </div>
+                                        <h2 class="text-[24px] lg:text-[32px] leading-150 font-medium text-white mt-5 overflow-hidden">
+                                            <div class="ani-item">設備端系統供應</div>
+                                        </h2>
+                                    </div>
+
+                                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-[80px] mt-10">
+                                        <div class="grid lg:block grid-cols-2 gap-3 lg:order-1">
+                                            <div class="lg:absolute lg:w-[580px] lg:max-w-[50%] lg:h-[720px] lg:top-0 lg:left-0">
+                                                <div data-ani="boxX" data-delay="0.4">
+                                                    <div class="inline-flex rounded-[20px] overflow-hidden">
+                                                        <img src="assets/img/pic-home-service-1-5.webp" class="w-full h-full object-cover">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="pt-10 lg:pt-0">
+                                                <div data-ani="boxX" data-delay="0.4">
+                                                    <div class="inline-flex rounded-[20px] overflow-hidden">
+                                                        <img src="assets/img/pic-home-service-2-5.webp" class="w-full h-full object-cover">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <h6 class="text-[16px] lg:text-[18px] leading-175 text-gray-100 overflow-hidden">
+                                                <div class="ani-item">完整提供設備系統解決方案，支援多元製程需求。</div>
+                                            </h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide swiper-slide-5">
+                    <div data-ani="fadeUp" data-delay="0.4" data-target=".ani-item">
+                        <div class="relative">
+                            <div class="lg:flex lg:min-h-[720px] gap-[80px] relative">
+                                <div class="hidden lg:block w-[580px]"></div>
+                                <div class="flex-1">
+                                    <div class="lg:pt-10 lg:min-h-[300px] lg:max-w-[520px] lg:mx-auto">
+                                        <div class="text-[40px] lg:text-[64px] leading-125 lg:leading-100 font-semibold overflow-hidden" style="font-family: 'Inter';">
+                                            <div class="ani-item gradient-1">CUSTOM COMPONENTS</div>
+                                        </div>
+                                        <h2 class="text-[24px] lg:text-[32px] leading-150 font-medium text-white mt-5 overflow-hidden">
+                                            <div class="ani-item">客製化零組件加工</div>
+                                        </h2>
+                                    </div>
+
+                                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-[80px] mt-10">
+                                        <div class="grid lg:block grid-cols-2 gap-3 lg:order-1">
+                                            <div class="lg:absolute lg:w-[580px] lg:max-w-[50%] lg:h-[720px] lg:top-0 lg:left-0">
+                                                <div data-ani="boxX" data-delay="0.4">
+                                                    <div class="inline-flex rounded-[20px] overflow-hidden">
+                                                        <img src="assets/img/pic-home-service-1-6.webp" class="w-full h-full object-cover">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="pt-10 lg:pt-0">
+                                                <div data-ani="boxX" data-delay="0.4">
+                                                    <div class="inline-flex rounded-[20px] overflow-hidden">
+                                                        <img src="assets/img/pic-home-service-2-6.webp" class="w-full h-full object-cover">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <h6 class="text-[16px] lg:text-[18px] leading-175 text-gray-100 overflow-hidden">
+                                                <div class="ani-item">依據特殊製程條件，設計並製造專屬零件，滿足高精度與耐用性要求。</div>
+                                            </h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-10 lg:mt-0 lg:absolute z-10 lg:left-[660px] lg:bottom-10">
+            <div class="flex items-center justify-center gap-5 lg:justify-start">
+                <div class="service-swiper-prev inline-block rounded-full overflow-hidden gradient-btn-1 cursor-pointer relative">
+                    <div class="size-[48px] flex items-center justify-center">
+                        <img src="assets/img/icon-arrow.svg" class="relative rotate-180">
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-2 text-[16px] leading-175 text-gray-100">
+                    <div class="service-swiper-index"></div>
+                    <div>/</div>
+                    <div class="service-swiper-total"></div>
+                </div>
+
+                <div class="service-swiper-next inline-block rounded-full overflow-hidden gradient-btn-1 cursor-pointer relative">
+                    <div class="size-[48px] flex items-center justify-center">
+                        <img src="assets/img/icon-arrow.svg" class="relative">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="max-w-[1920px] mx-auto py-[100px] px-3 lg:px-10">
+    <div data-ani="fadeUp" data-delay="1.2" data-target=".ani-item" class="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-4 gap-5">
+        <div class="lg:grid-colspan-2 pb-[60px] 2xl:p-10">
+            <div data-ani="textfadeLeft2" data-delay="0.4" data-target=".ani-item-2" data-sequence="true">
+                <div data-ani="fadeUp" data-delay="0.8" data-target=".ani-item-3" data-sequence="true">
+                    <div class="relative">
+                        <div class="inline-block text-[64px] lg:text-[100px] leading-100 font-semibold" style="font-family: 'Inter';">
+                            <div class="ani-item-2" data-classes="gradient-2">EQUIPMENT</div>
+                        </div>
+                        <h1 class="ani-item-3 text-[32px] lg:text-[40px] leading-150 2xl:leading-125 font-medium text-white -mt-10">表面處理設備買賣</h1>
+                    </div>
+                    <h6 class="ani-item-3 text-[16px] lg:text-[18px] leading-175 text-gray-100 mt-5">我們提供多元化的表面處理設備銷售與採購服務，協助客戶快速取得最適合的設備，內容包含：</h6>
+                </div>
+            </div>
+        </div>
+
+        <div class="lg:grid-colspan-2">
+            <div class="ani-item relative h-[445px] overflow-hidden rounded-[28px]">
+                <img src="assets/img/pic-home-equipment-1.webp" class="absolute inset-0 w-full h-full object-cover">
+                <div class="absolute inset-0 w-full h-full bg-black bg-opacity-20"></div>
+                <div class="absolute bottom-0 left-0 w-full z-10 p-5">
+                    <h3 class="text-[20px] lg:text-[24px] leading-150 font-medium text-white">各式表面處理設備銷售</h3>
+                    <div class="text-[16px] leading-175 text-gray-100 mt-3">涵蓋陽極處理、電鍍、塗裝、微弧氧化 (MAO/PEO) 等設備，滿足不同產業需求。</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="lg:grid-colspan-2">
+            <div class="ani-item relative h-[445px] overflow-hidden rounded-[28px]">
+                <img src="assets/img/pic-home-equipment-2.webp" class="absolute inset-0 w-full h-full object-cover">
+                <div class="absolute inset-0 w-full h-full bg-black bg-opacity-20"></div>
+                <div class="absolute bottom-0 left-0 w-full z-10 p-5">
+                    <h3 class="text-[20px] lg:text-[24px] leading-150 font-medium text-white">設備採購與轉售</h3>
+                    <div class="text-[16px] leading-175 text-gray-100 mt-3">協助客戶評估、採購與汰換表面處理設備，降低投資成本並提升產能效益。</div>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <div class="ani-item relative h-[445px] overflow-hidden rounded-[28px]">
+                <img src="assets/img/pic-home-equipment-3.webp" class="absolute inset-0 w-full h-full object-cover">
+                <div class="absolute inset-0 w-full h-full bg-black bg-opacity-20"></div>
+                <div class="absolute bottom-0 left-0 w-full z-10 p-5">
+                    <h3 class="text-[20px] lg:text-[24px] leading-150 font-medium text-white">設備驗收與技術支援</h3>
+                    <div class="text-[16px] leading-175 text-gray-100 mt-3">確保設備安裝、調試及後續操作皆符合品質與安全標準。</div>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <div class="ani-item relative h-[445px] overflow-hidden rounded-[28px]">
+                <img src="assets/img/pic-home-equipment-4.webp" class="absolute inset-0 w-full h-full object-cover">
+                <div class="absolute inset-0 w-full h-full bg-black bg-opacity-20"></div>
+                <div class="absolute bottom-0 left-0 w-full z-10 p-5">
+                    <h3 class="text-[20px] lg:text-[24px] leading-150 font-medium text-white">客製化設備方案</h3>
+                    <div class="text-[16px] leading-175 text-gray-100 mt-3">依據製程條件與產能規模，規劃與設計專屬表面處理系統。</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="relative overflow-hidden">
+    <img src="assets/img/bg-home-contact.webp" class="absolute inset-0 w-full h-full object-cover pointer-events-none">
+    <div class="relative z-10">
+        <div class="max-w-[1024px] mx-auto py-[100px] px-3 lg:px-10">
+            <div class="text-center">
+                <div data-ani="textfadeLeft2" data-delay="0.4" data-target=".ani-item" data-sequence="true">
+                    <div data-ani="fadeUp" data-delay="0.8" data-target=".ani-item-2" data-sequence="true">
+                        <div class="relative">
+                            <div class="inline-block text-[64px] lg:text-[100px] leading-100 font-semibold" style="font-family: 'Inter';">
+                                <div class="ani-item" data-classes="gradient-2">NEWS</div>
+                            </div>
+                            <h1 class="ani-item-2 text-[32px] lg:text-[40px] leading-150 2xl:leading-125 font-medium text-white -mt-10">最新消息</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div data-ani="fadeUp" data-delay="1" data-target=".ani-item" class="mt-[80px]">
+                <div class="ani-item">
+                    <a href="#" class="flex flex-col lg:flex-row gap-3 lg:gap-10 hover-scale">
+                        <div class="lg:w-[320px]">
+                            <div class="inline-block w-full h-[210px] lg:h-[200px] overflow-hidden rounded-[8px]">
+                                <img src="assets/img/pic-home-news-1.webp" class="w-full h-full object-cover transition-transform">
+                            </div>
+                        </div>
+                        <div class="flex-1 px-3 lg:p-3">
+                            <div class="text-[16px] leading-175 text-primary-300 text-right">January 1, 2025</div>
+                            <h3 class="text-[20px] lg:text-[24px] leading-150 font-medium text-white mt-3">全方位金屬表面處理技術</h3>
+                            <p class="text-[16px] leading-175 text-gray-100 mt-3">透過創新的製程與專業技術，提供金屬材料耐蝕性、強度與外觀品質的全方位解決方案，滿足多元產業的應用需求。</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="ani-item mt-7 pt-7 border-t border-primary-300 border-opacity-20">
+                    <a href="#" class="flex flex-col lg:flex-row gap-3 lg:gap-10 hover-scale">
+                        <div class="lg:w-[320px]">
+                            <div class="inline-block w-full h-[210px] lg:h-[200px] overflow-hidden rounded-[8px]">
+                                <img src="assets/img/pic-home-news-2.webp" class="w-full h-full object-cover transition-transform">
+                            </div>
+                        </div>
+                        <div class="flex-1 px-3 lg:p-3">
+                            <div class="text-[16px] leading-175 text-primary-300 text-right">January 1, 2025</div>
+                            <h3 class="text-[20px] lg:text-[24px] leading-150 font-medium text-white mt-3">全方位金屬表面處理技術</h3>
+                            <p class="text-[16px] leading-175 text-gray-100 mt-3">透過創新的製程與專業技術，提供金屬材料耐蝕性、強度與外觀品質的全方位解決方案，滿足多元產業的應用需求。</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="ani-item mt-7 pt-7 border-t border-primary-300 border-opacity-20">
+                    <a href="#" class="flex flex-col lg:flex-row gap-3 lg:gap-10 hover-scale">
+                        <div class="lg:w-[320px]">
+                            <div class="inline-block w-full h-[210px] lg:h-[200px] overflow-hidden rounded-[8px]">
+                                <img src="assets/img/pic-home-news-3.webp" class="w-full h-full object-cover transition-transform">
+                            </div>
+                        </div>
+                        <div class="flex-1 px-3 lg:p-3">
+                            <div class="text-[16px] leading-175 text-primary-300 text-right">January 1, 2025</div>
+                            <h3 class="text-[20px] lg:text-[24px] leading-150 font-medium text-white mt-3">全方位金屬表面處理技術</h3>
+                            <p class="text-[16px] leading-175 text-gray-100 mt-3">透過創新的製程與專業技術，提供金屬材料耐蝕性、強度與外觀品質的全方位解決方案，滿足多元產業的應用需求。</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="max-w-[1440px] mx-auto py-[100px]">
+            <div data-ani="textfadeLeft2" data-delay="0.4" data-target=".ani-item" data-sequence="true">
+                <div data-ani="fadeUp" data-delay="0.8" data-target=".ani-item-2" data-sequence="true">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-[80px]">
+                        <div class="px-3 lg:px-10">
+                            <div>
+                                <div class="relative">
+                                    <div class="inline-block text-[64px] lg:text-[100px] leading-100 font-semibold" style="font-family: 'Inter';">
+                                        <div class="ani-item" data-classes="gradient-2">CONTACT</div>
+                                    </div>
+                                    <h1 class="ani-item-2 text-[32px] lg:text-[40px] leading-150 2xl:leading-125 font-medium text-white -mt-10">與我們聯絡</h1>
+                                </div>
+                                <h6 class="ani-item-2 text-[16px] lg:text-[18px] leading-175 text-gray-100 mt-5">請留下您的訊息，我們將盡快與您聯絡。</h6>
+                            </div>
+
+                            <div class="ani-item-2 mt-[60px]">
+                                <img src="assets/img/logo-raymag.svg" class="h-[48px]">
+                                <h5 class="text-[16px] lg:text-[18px] leading-175 font-medium text-white mt-5">銳鎂科技股份有限公司</h5>
+
+                                <div class="flex flex-col gap-3 mt-5">
+                                    <div class="flex items-start gap-[10px]">
+                                        <img src="assets/img/icon-contact-2.svg">
+                                        <a href="tel:+07-621-4500" class="text-[16px] leading-175 text-gray-100 hover:text-primary-300 transition-colors">07-621-4500</a>
+                                    </div>
+
+                                    <div class="flex items-start gap-[10px]">
+                                        <img src="assets/img/icon-contact-3.svg">
+                                        <a href="fax:+07-621-5064" class="text-[16px] leading-175 text-gray-100 hover:text-primary-300 transition-colors">07-621-5064</a>
+                                    </div>
+
+                                    <div class="flex items-start gap-[10px]">
+                                        <img src="assets/img/icon-contact-1.svg">
+                                        <a href="https://www.google.com/maps?q=高雄市岡山區岡山北路2巷55弄9號" target="_blank" class="text-[16px] leading-175 text-gray-100 hover:text-primary-300 transition-colors">高雄市岡山區岡山北路2巷55弄9號</a>
+                                    </div>
+
+                                    <div class="flex items-start gap-[10px]">
+                                        <img src="assets/img/icon-contact-4.svg">
+                                        <a href="mailto:raymagtech@gmail.com" class="text-[16px] leading-175 text-gray-100 hover:text-primary-300 transition-colors">raymagtech@gmail.com</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="px-3 lg:px-10">
+                            <div class="ani-item-2">
+                                <form action="">
+                                    <p class="text-right text-[16px] leading-175 text-primary-300 mb-7">*為必填欄位</p>
+                                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-5">
+                                        <div class="mb-7 form-field">
+                                            <div class="tetx-[16px] leading-175 text-white mb-1">姓名*</div>
+                                            <input type="text" placeholder="請輸入姓名" required class="w-full outline-none rounded-[28px] border border-primary-300 border-opacity-20 px-3 py-[10px] text-[16px] leading-175 h-[48px] text-primary-300 focus:text-white" style="background: #030A11E5; backdrop-filter: blur(20px);">
+                                        </div>
+
+                                        <div class="mb-7 form-field">
+                                            <div class="tetx-[16px] leading-175 text-white mb-1">電話*</div>
+                                            <input type="text" placeholder="請輸入電話號碼" required class="w-full outline-none rounded-[28px] border border-primary-300 border-opacity-20 px-3 py-[10px] text-[16px] leading-175 h-[48px] text-primary-300 focus:text-white" style="background: #030A11E5; backdrop-filter: blur(20px);">
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-7 form-field">
+                                        <div class="tetx-[16px] leading-175 text-white mb-1">公司名稱</div>
+                                        <input type="text" placeholder="請輸入公司名稱" class="w-full outline-none rounded-[28px] border border-primary-300 border-opacity-20 px-3 py-[10px] text-[16px] leading-175 h-[48px] text-primary-300 focus:text-white" style="background: #030A11E5; backdrop-filter: blur(20px);">
+                                    </div>
+
+                                    <div class="mb-7 form-field">
+                                        <div class="tetx-[16px] leading-175 text-white mb-1">E-mail*</div>
+                                        <input type="email" placeholder="請輸入E-mail" required class="w-full outline-none rounded-[28px] border border-primary-300 border-opacity-20 px-3 py-[10px] text-[16px] leading-175 h-[48px] text-primary-300 focus:text-white" style="background: #030A11E5; backdrop-filter: blur(20px);">
+                                    </div>
+
+                                    <div class="mb-7 form-field">
+                                        <div class="tetx-[16px] leading-175 text-white mb-1">訊息*</div>
+                                        <textarea placeholder="請輸入訊息" required rows="5" class="w-full outline-none rounded-[28px] border border-primary-300 border-opacity-20 px-3 py-[10px] text-[16px] leading-175 text-primary-300 focus:text-white" style="background: #030A11E5; backdrop-filter: blur(20px);"></textarea>
+                                    </div>
+
+                                    <button type="submit" class="rounded-full overflow-hidden gradient-btn-1 cursor-pointer relative block w-full">
+                                        <div class="relative text-[16px] leading-175 font-medium text-white p-[10px] text-center h-[48px]">送出訊息</div>
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Breadcrumb -->
+<div class="border-t border-primary-300 border-opacity-20">
+    <div class="px-3 lg:px-10">
+        <div class="mx-auto max-w-[1600px]">
+            <div class="flex items-end flex-wrap gap-x-3 py-3">
+                <a href="/" class="text-[16px] leading-175 text-gray-100 transition-colors hover:text-primary-300">首頁</a>
+                <svg width="6" height="28" viewBox="0 0 6 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.34091 7.81818L1.59091 21.75H0.363636L4.11364 7.81818H5.34091Z" fill="#A0CDE4" />
+                </svg>
+                <a href="#" class="text-[16px] leading-175 text-gray-100 transition-colors hover:text-primary-300">Level 2</a>
+                <svg width="6" height="28" viewBox="0 0 6 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.34091 7.81818L1.59091 21.75H0.363636L4.11364 7.81818H5.34091Z" fill="#A0CDE4" />
+                </svg>
+                <a href="#" class="text-[16px] leading-175 text-gray-100 transition-colors hover:text-primary-300">Level 1</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<div class="border-t border-primary-300 border-opacity-20">
+    <div class="px-3 lg:px-10">
+        <div class="mx-auto max-w-[1600px] py-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                <div class="lg:flex flex-col justify-between">
+                    <div>
+                        <img src="assets/img/logo-raymag.svg" class="h-[48px]">
+                    </div>
+                    <div class="hidden lg:block">
+                        <div class="text-[16px] leading-175 text-gray-500">© 2025 Raymag Technology Inc. All rights reserved.</div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                    <div class="flex flex-col gap-3">
+                        <div class="flex items-start gap-[10px]">
+                            <img src="assets/img/icon-contact-2.svg">
+                            <a href="tel:+07-621-4500" class="text-[16px] leading-175 text-gray-100 hover:text-primary-300 transition-colors">07-621-4500</a>
+                        </div>
+
+                        <div class="flex items-start gap-[10px]">
+                            <img src="assets/img/icon-contact-3.svg">
+                            <a href="fax:+07-621-5064" class="text-[16px] leading-175 text-gray-100 hover:text-primary-300 transition-colors">07-621-5064</a>
+                        </div>
+
+                        <div class="flex items-start gap-[10px]">
+                            <img src="assets/img/icon-contact-1.svg">
+                            <a href="https://www.google.com/maps?q=高雄市岡山區岡山北路2巷55弄9號" target="_blank" class="text-[16px] leading-175 text-gray-100 hover:text-primary-300 transition-colors">高雄市岡山區岡山北路2巷55弄9號</a>
+                        </div>
+
+                        <div class="flex items-start gap-[10px]">
+                            <img src="assets/img/icon-contact-4.svg">
+                            <a href="mailto:raymagtech@gmail.com" class="text-[16px] leading-175 text-gray-100 hover:text-primary-300 transition-colors">raymagtech@gmail.com</a>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col gap-3">
+                        <a href="#" class="text-[16px] leading-175 text-gray-100 hover:text-primary-300 transition-colors">關於銳鎂</a>
+                        <a href="#" class="text-[16px] leading-175 text-gray-100 hover:text-primary-300 transition-colors">最新消息</a>
+                        <a href="#" class="text-[16px] leading-175 text-gray-100 hover:text-primary-300 transition-colors">科技工程整合方案</a>
+                        <a href="#" class="text-[16px] leading-175 text-gray-100 hover:text-primary-300 transition-colors">全方位表面處理技術</a>
+                        <a href="#" class="text-[16px] leading-175 text-gray-100 hover:text-primary-300 transition-colors">表面處理設備</a>
+                        <a href="#" class="text-[16px] leading-175 text-gray-100 hover:text-primary-300 transition-colors">聯絡我們</a>
+                    </div>
+                </div>
+
+                <div class="lg:hidden text-[16px] leading-175 text-gray-500">© 2025 Raymag Technology Inc. All rights reserved.</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div> <!-- end of container 1920px -->
+</div> <!-- end of smooth-content -->
+</div> <!-- end of smooth-wrapper -->
+
+</body>
+
+</html>

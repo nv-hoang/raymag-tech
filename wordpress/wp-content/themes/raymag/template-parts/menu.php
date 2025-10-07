@@ -1,0 +1,134 @@
+<?php
+
+/**
+ * Template part
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
+ *
+ * @package raymag
+ */
+
+$logo = get_theme_option('general.logo');
+?>
+
+<?php if (is_front_page()) : ?>
+    <div id="ploading" style="pointer-events: none !important;">
+        <div style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: #030A11; z-index: 9999; display: flex; align-items: center; justify-content: center; transform-origin: top center;">
+            <div class="ani-item-1" style="display: inline-flex; opacity: 0;">
+                <div style="overflow: hidden; width: 65px; height: 58px;">
+                    <img src="<?php echo $logo; ?>" style="width: 199px; height: 58px; max-width: initial !important;">
+                </div>
+                <div class="ani-item-2" style="overflow: hidden; width: 0px; height: 58px; position: relative;">
+                    <img src="<?php echo $logo; ?>" style="width: 199px; height: 58px; max-width: initial !important; position: absolute; top: 0; right: 0;">
+                </div>
+            </div>
+        </div>
+    </div>
+<?php endif; ?>
+
+
+<div class="header-container fixed top-0 left-0 z-50 w-full" x-data="{ menu: false }">
+    <div id="header-wrap">
+        <!-- Main menu-->
+        <div class="lg:px-5" style="background: #030A11E5; backdrop-filter: blur(20px);">
+            <div class="flex items-center h-[50px] lg:h-[66px] 2xl:h-[68px]">
+                <a href="<?php echo esc_url(home_url('/')); ?>" class="mr-auto p-3 lg:px-5 lg:py-4 inline-block">
+                    <img src="<?php echo $logo; ?>" class="h-[26px] xl:h-[34px]" alt="Logo">
+                </a>
+
+                <div class="hidden 2xl:flex items-center">
+                    <?php foreach (get_wp_menu('main-menu') as $menu): ?>
+                        <a href="<?php echo $menu->url; ?>" <?php echo ($menu->url == '#contact' ? 'data-anime="scroll-to" data-target="#section-contact"':''); ?> class="text-[16px] leading-175 text-white transition-colors hover:text-primary-300 p-5"><?php echo $menu->title; ?></a>
+                    <?php endforeach; ?>
+
+                    <?php if (false): ?>
+                        <div class="menu-dropdown relative">
+                            <div class="flex items-center gap-x-[10px] cursor-pointer text-white transition-colors hover:text-primary-300 p-5 h-[50px] lg:h-[66px] 2xl:h-[68px]">
+                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_502_4016)">
+                                        <path d="M9 0.275024C13.8186 0.275024 17.7254 4.18113 17.7256 8.99963C17.7256 13.8183 13.8187 17.7252 9 17.7252C4.18149 17.725 0.275391 13.8182 0.275391 8.99963C0.275601 4.18126 4.18162 0.275235 9 0.275024ZM3.16992 13.6754C4.04366 14.7636 5.21527 15.6004 6.56152 16.0651C6.46125 15.9639 6.35873 15.8588 6.25781 15.7467C5.76033 15.1939 5.26865 14.5075 4.85645 13.6754H3.16992ZM13.1445 13.6754C12.7323 14.5076 12.2407 15.1939 11.7432 15.7467C11.6421 15.859 11.5389 15.9637 11.4385 16.0651C12.7851 15.6005 13.9572 14.7638 14.8311 13.6754H13.1445ZM9.625 15.985C9.97582 15.7279 10.3948 15.375 10.8135 14.9098C11.1249 14.5638 11.4373 14.1543 11.7236 13.6754H9.625V15.985ZM6.27734 13.6754C6.56362 14.1542 6.87521 14.5639 7.18652 14.9098C7.60488 15.3746 8.02435 15.727 8.375 15.984V13.6754H6.27734ZM14.165 9.62463C14.112 10.675 13.9258 11.605 13.6562 12.4254H15.6436C16.0835 11.5739 16.3643 10.6278 16.4473 9.62463H14.165ZM9.625 12.4254H12.3301C12.6346 11.6325 12.8512 10.705 12.9121 9.62463H9.625V12.4254ZM5.08789 9.62463C5.14884 10.705 5.36639 11.6325 5.6709 12.4254H8.375V9.62463H5.08789ZM1.55371 9.62463C1.63673 10.6278 1.91744 11.5739 2.35742 12.4254H4.34473C4.07515 11.605 3.88893 10.675 3.83594 9.62463H1.55371ZM13.6562 5.57483C13.9257 6.39497 14.112 7.32463 14.165 8.37463H16.4473C16.3642 7.37184 16.0834 6.42611 15.6436 5.57483H13.6562ZM9.625 8.37463H12.9121C12.8511 7.29469 12.6345 6.36748 12.3301 5.57483H9.625V8.37463ZM5.6709 5.57483C5.3665 6.36751 5.14889 7.29464 5.08789 8.37463H8.375V5.57483H5.6709ZM2.35742 5.57483C1.91759 6.42612 1.6368 7.37181 1.55371 8.37463H3.83594C3.88898 7.32461 4.07525 6.39499 4.34473 5.57483H2.35742ZM11.4395 1.93323C11.54 2.03473 11.6419 2.14106 11.7432 2.25354C12.2407 2.80635 12.7323 3.4926 13.1445 4.32483H14.8311C13.9572 3.23643 12.786 2.39788 11.4395 1.93323ZM9.625 4.32483H11.7246C11.4382 3.84566 11.125 3.43661 10.8135 3.09045C10.3946 2.62502 9.97592 2.27139 9.625 2.01428V4.32483ZM8.375 2.01526C8.02428 2.27231 7.60503 2.62545 7.18652 3.09045C6.87512 3.43651 6.5627 3.84588 6.27637 4.32483H8.375V2.01526ZM6.56055 1.93323C5.21438 2.39791 4.04359 3.23667 3.16992 4.32483H4.85645C5.26867 3.49264 5.7603 2.80633 6.25781 2.25354C6.35889 2.14123 6.46011 2.03459 6.56055 1.93323Z" fill="currentColor" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_502_4016">
+                                            <rect width="18" height="18" fill="currentColor" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <div class="text-[16px] leading-175"><?php echo get_current_lang('name'); ?></div>
+                                <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M3.67063 6.8272C3.70733 6.88049 3.75644 6.92407 3.81372 6.95417C3.871 6.98427 3.93474 7 3.99946 7C4.06417 7 4.12791 6.98427 4.1852 6.95417C4.24248 6.92407 4.29158 6.88049 4.32828 6.8272L7.92857 1.62756C7.97024 1.56758 7.99468 1.49734 7.99922 1.42445C8.00377 1.35157 7.98826 1.27883 7.95436 1.21414C7.92047 1.14946 7.86949 1.09529 7.80697 1.05754C7.74445 1.01979 7.67278 0.999885 7.59974 1H0.399176C0.326308 1.0003 0.2549 1.02046 0.192632 1.0583C0.130364 1.09615 0.079592 1.15025 0.0457757 1.21478C0.0119594 1.27932 -0.00362155 1.35185 0.000708374 1.42458C0.0050383 1.49731 0.0291153 1.56749 0.0703501 1.62756L3.67063 6.8272Z" fill="currentColor" />
+                                </svg>
+                            </div>
+                            <ul class="absolute z-10 w-max pointer-events-none" style="max-height: 0px;">
+                                <div class="pointer-events-auto w-[150px]" style="background: #030A11E5; backdrop-filter: blur(20px);">
+                                    <div class="flex flex-col">
+                                        <?php foreach (get_theme_languages(true) as $lang): ?>
+                                            <a href="<?php echo $lang['url']; ?>" class="text-[16px] text-white hover:text-primary-300 transition-colors leading-175 p-5 text-center"><?php echo $lang['name']; ?></a>
+                                        <?php endforeach; ?>
+                                    </div>
+                                </div>
+                            </ul>
+                        </div>
+                    <?php endif; ?>
+                </div>
+
+                <div class="2xl:hidden p-3 lg:p-5 cursor-pointer" @click="menu = !menu">
+                    <div class="hamburger-menu-icon size-[26px] relative" :class="menu ? 'active':''">
+                        <div class="w-[26px] h-[2px] bg-white transition-all duration-500 origin-center absolute left-0"></div>
+                        <div class="w-[26px] h-[2px] bg-white transition-all duration-500 origin-center absolute left-0"></div>
+                        <div class="w-[26px] h-[2px] bg-white transition-all duration-500 origin-center absolute left-0"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div class="2xl:hidden relative overflow-auto transition-all h-0 duration-500" x-bind:style="menu ? 'height: calc(100dvh - 50px); background: #030A11E5;backdrop-filter: blur(20px);' : 'background: #030A11E5;backdrop-filter: blur(20px);'">
+        <div class="pb-4 flex flex-col">
+            <?php foreach (get_wp_menu('main-menu') as $menu): ?>
+                <a href="<?php echo $menu->url; ?>" <?php echo ($menu->url == '#contact' ? 'data-anime="scroll-to" data-target="#section-contact"':''); ?> class="text-[16px] leading-175 text-white transition-colors hover:text-primary-300 px-3 lg:px-10 py-5"><?php echo $menu->title; ?></a>
+            <?php endforeach; ?>
+
+            <?php if (false): ?>
+                <div x-data="{openx: false}" @click="openx = !openx">
+                    <div class="text-[16px] leading-175 px-3 lg:px-10 py-5 cursor-pointer flex items-center gap-x-[10px] transition-colors hover:text-primary-300" x-bind:class="openx ? 'text-primary-300':'text-white'">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_502_4016)">
+                                <path d="M9 0.275024C13.8186 0.275024 17.7254 4.18113 17.7256 8.99963C17.7256 13.8183 13.8187 17.7252 9 17.7252C4.18149 17.725 0.275391 13.8182 0.275391 8.99963C0.275601 4.18126 4.18162 0.275235 9 0.275024ZM3.16992 13.6754C4.04366 14.7636 5.21527 15.6004 6.56152 16.0651C6.46125 15.9639 6.35873 15.8588 6.25781 15.7467C5.76033 15.1939 5.26865 14.5075 4.85645 13.6754H3.16992ZM13.1445 13.6754C12.7323 14.5076 12.2407 15.1939 11.7432 15.7467C11.6421 15.859 11.5389 15.9637 11.4385 16.0651C12.7851 15.6005 13.9572 14.7638 14.8311 13.6754H13.1445ZM9.625 15.985C9.97582 15.7279 10.3948 15.375 10.8135 14.9098C11.1249 14.5638 11.4373 14.1543 11.7236 13.6754H9.625V15.985ZM6.27734 13.6754C6.56362 14.1542 6.87521 14.5639 7.18652 14.9098C7.60488 15.3746 8.02435 15.727 8.375 15.984V13.6754H6.27734ZM14.165 9.62463C14.112 10.675 13.9258 11.605 13.6562 12.4254H15.6436C16.0835 11.5739 16.3643 10.6278 16.4473 9.62463H14.165ZM9.625 12.4254H12.3301C12.6346 11.6325 12.8512 10.705 12.9121 9.62463H9.625V12.4254ZM5.08789 9.62463C5.14884 10.705 5.36639 11.6325 5.6709 12.4254H8.375V9.62463H5.08789ZM1.55371 9.62463C1.63673 10.6278 1.91744 11.5739 2.35742 12.4254H4.34473C4.07515 11.605 3.88893 10.675 3.83594 9.62463H1.55371ZM13.6562 5.57483C13.9257 6.39497 14.112 7.32463 14.165 8.37463H16.4473C16.3642 7.37184 16.0834 6.42611 15.6436 5.57483H13.6562ZM9.625 8.37463H12.9121C12.8511 7.29469 12.6345 6.36748 12.3301 5.57483H9.625V8.37463ZM5.6709 5.57483C5.3665 6.36751 5.14889 7.29464 5.08789 8.37463H8.375V5.57483H5.6709ZM2.35742 5.57483C1.91759 6.42612 1.6368 7.37181 1.55371 8.37463H3.83594C3.88898 7.32461 4.07525 6.39499 4.34473 5.57483H2.35742ZM11.4395 1.93323C11.54 2.03473 11.6419 2.14106 11.7432 2.25354C12.2407 2.80635 12.7323 3.4926 13.1445 4.32483H14.8311C13.9572 3.23643 12.786 2.39788 11.4395 1.93323ZM9.625 4.32483H11.7246C11.4382 3.84566 11.125 3.43661 10.8135 3.09045C10.3946 2.62502 9.97592 2.27139 9.625 2.01428V4.32483ZM8.375 2.01526C8.02428 2.27231 7.60503 2.62545 7.18652 3.09045C6.87512 3.43651 6.5627 3.84588 6.27637 4.32483H8.375V2.01526ZM6.56055 1.93323C5.21438 2.39791 4.04359 3.23667 3.16992 4.32483H4.85645C5.26867 3.49264 5.7603 2.80633 6.25781 2.25354C6.35889 2.14123 6.46011 2.03459 6.56055 1.93323Z" fill="currentColor" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_502_4016">
+                                    <rect width="18" height="18" fill="currentColor" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                        <div class="text-[16px] leading-175"><?php echo get_current_lang('name'); ?></div>
+                        <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3.67063 6.8272C3.70733 6.88049 3.75644 6.92407 3.81372 6.95417C3.871 6.98427 3.93474 7 3.99946 7C4.06417 7 4.12791 6.98427 4.1852 6.95417C4.24248 6.92407 4.29158 6.88049 4.32828 6.8272L7.92857 1.62756C7.97024 1.56758 7.99468 1.49734 7.99922 1.42445C8.00377 1.35157 7.98826 1.27883 7.95436 1.21414C7.92047 1.14946 7.86949 1.09529 7.80697 1.05754C7.74445 1.01979 7.67278 0.999885 7.59974 1H0.399176C0.326308 1.0003 0.2549 1.02046 0.192632 1.0583C0.130364 1.09615 0.079592 1.15025 0.0457757 1.21478C0.0119594 1.27932 -0.00362155 1.35185 0.000708374 1.42458C0.0050383 1.49731 0.0291153 1.56749 0.0703501 1.62756L3.67063 6.8272Z" fill="currentColor" />
+                        </svg>
+                    </div>
+                    <div class="relative overflow-hidden transition-all max-h-0 duration-300" x-bind:style="openx ? 'max-height: ' + ($el.scrollHeight) + 'px' : ''">
+                        <div class="flex flex-col">
+                            <?php foreach (get_theme_languages(true) as $lang): ?>
+                                <a href="<?php echo $lang['url']; ?>" class="text-[16px] leading-175 text-white transition-colors hover:text-primary-300 py-5 pl-10 lg:pl-[68px] pr-3 lg:pr-10"><?php echo $lang['name']; ?></a>
+                            <?php endforeach; ?>
+                        </div>
+                    </div>
+                </div>
+            <?php endif; ?>
+        </div>
+    </div>
+</div>
+
+<div class="fixed z-30 bottom-3 right-3 lg:bottom-5 lg:right-10 toggle-scrolling">
+    <div class="flex flex-col gap-5">
+        <?php foreach (get_theme_option('quickmenu') as $menu): ?>
+            <a href="<?php the_value($menu, 'link'); ?>" class="rounded-full overflow-hidden gradient-btn-1 cursor-pointer relative w-full">
+                <div class="size-[48px] flex items-center justify-center relative">
+                    <img src="<?php the_value($menu, 'icon'); ?>">
+                </div>
+            </a>
+        <?php endforeach; ?>
+    </div>
+</div>

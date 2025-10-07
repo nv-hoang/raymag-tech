@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The header for our theme
  *
@@ -12,48 +13,38 @@
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
+
 <head>
-	<meta charset="<?php bloginfo( 'charset' ); ?>">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="profile" href="https://gmpg.org/xfn/11">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<?php wp_head(); ?>
+
+	<script type="module" crossorigin src="<?php the_theme_asset_url('assets/main.js'); ?>"></script>
+	<link rel="stylesheet" crossorigin href="<?php the_theme_asset_url('assets/main.css'); ?>">
+
+	<style>
+		#wpadminbar {
+			position: fixed !important;
+		}
+		body.admin-bar .header-container {
+			top: 32px !important;
+		}
+		@media screen and (max-width: 782px) {
+			body.admin-bar .header-container {
+				top: 46px !important;
+			}
+		}
+	</style>
 </head>
 
-<body <?php body_class(); ?>>
-<?php wp_body_open(); ?>
-<div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'raymag' ); ?></a>
+<body <?php body_class(); ?> style="background-color: #030A11; color: #fff; overflow-x: hidden;">
+	<?php wp_body_open(); ?>
+	<?php get_template_part('template-parts/menu'); ?>
 
-	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$raymag_description = get_bloginfo( 'description', 'display' );
-			if ( $raymag_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $raymag_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
-			<?php endif; ?>
-		</div><!-- .site-branding -->
-
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'raymag' ); ?></button>
-			<?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-				)
-			);
-			?>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
+	<div class="fixed-container mx-auto relative"></div>
+	<div id="smooth-wrapper">
+		<div id="smooth-content">
+			<div class="overflow-hidden">
+				<div class="h-[50px] lg:h-[66px] 2xl:h-[68px]"></div>
