@@ -21,7 +21,12 @@
 </head>
 
 <body style="background-color: #030A11; color: #fff; overflow-x: hidden;">
+    {{#if ploading}}
+        {{> loading }}
+    {{/if}}
+
     {{> menu }}
+    
     <div class="fixed-container mx-auto relative"></div>
     <div id="smooth-wrapper">
         <div id="smooth-content">
