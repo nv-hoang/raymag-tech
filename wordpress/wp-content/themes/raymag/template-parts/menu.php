@@ -38,7 +38,7 @@ $logo = get_theme_option('general.logo');
 
                 <div class="hidden 2xl:flex items-center">
                     <?php foreach (get_wp_menu('main-menu') as $menu): ?>
-                        <a href="<?php echo $menu->url; ?>" <?php echo ($menu->url == '#contact' ? 'data-anime="scroll-to" data-target="#section-contact"':''); ?> class="text-[16px] leading-175 text-white transition-colors hover:text-primary-300 p-5"><?php echo $menu->title; ?></a>
+                        <a href="<?php echo $menu->url; ?>" <?php echo ($menu->url == '/#contact' ? 'data-anime="scroll-to" data-target="#section-contact"  x-on:click="menu=false"':''); ?> class="text-[16px] leading-175 text-white transition-colors hover:text-primary-300 p-5"><?php echo $menu->title; ?></a>
                     <?php endforeach; ?>
 
                     <?php if (false): ?>
@@ -87,7 +87,7 @@ $logo = get_theme_option('general.logo');
     <div class="2xl:hidden relative overflow-auto transition-all h-0 duration-500" x-bind:style="menu ? 'height: calc(100dvh - 50px); background: #030A11E5;backdrop-filter: blur(20px);' : 'background: #030A11E5;backdrop-filter: blur(20px);'">
         <div class="pb-4 flex flex-col">
             <?php foreach (get_wp_menu('main-menu') as $menu): ?>
-                <a href="<?php echo $menu->url; ?>" <?php echo ($menu->url == '#contact' ? 'data-anime="scroll-to" data-target="#section-contact"':''); ?> class="text-[16px] leading-175 text-white transition-colors hover:text-primary-300 px-3 lg:px-10 py-5"><?php echo $menu->title; ?></a>
+                <a href="<?php echo $menu->url; ?>" <?php echo ($menu->url == '/#contact' ? 'data-anime="scroll-to" data-target="#section-contact" x-on:click="menu=false"':''); ?> class="text-[16px] leading-175 text-white transition-colors hover:text-primary-300 px-3 lg:px-10 py-5"><?php echo $menu->title; ?></a>
             <?php endforeach; ?>
 
             <?php if (false): ?>
