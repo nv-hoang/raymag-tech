@@ -13,6 +13,11 @@ html {
     --placeholder-color: #A0CDE4;
 }
 
+::selection {
+  background: #A0CDE4;
+  color: #030A11;
+}
+
 .no-overflow {
     overflow: initial !important;
 }
@@ -215,4 +220,174 @@ html[lang="zh-TW"] {
     transform: rotate(-45deg);
     top: 13px;
 }
+
+/* ======================================================================================================================= */
+.editor-content-style h1,
+.editor-content-style h2,
+.editor-content-style h3,
+.editor-content-style h4,
+.editor-content-style h5,
+.editor-content-style h6 {
+    margin-top: 40px;
+    margin-bottom: 8px;
+}
+
+.editor-content-style p {
+    margin-bottom: 12px;
+}
+
+.editor-content-style ul li > ul,
+.editor-content-style ul li > ol,
+.editor-content-style ol li > ul,
+.editor-content-style ol li > ol {
+    margin-top: 8px;
+}
+
+.editor-content-style figure {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.editor-content-style ul+p,
+.editor-content-style ol+p{
+    margin-top: 40px;
+}
+
+.editor-content-style h1 {
+    color: white;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 150%;
+}
+
+.editor-content-style h2 {
+    color: var(--tw-primary-300);
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 150%;
+}
+
+.editor-content-style h3 {
+    color: var(--tw-primary-300);
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 150%;
+}
+
+.editor-content-style h4 {
+    color: var(--tw-primary-300);
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 175%;
+}
+
+.editor-content-style h5 {
+    color: var(--tw-primary-300);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 175%;
+}
+
+.editor-content-style h6 {
+    color: var(--tw-primary-300);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 175%;
+}
+
+.editor-content-style img {
+    max-width: 100% !important;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.editor-content-style figcaption {
+    color: var(--tw-primary-300);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 175%;
+    margin-top: 8px;
+}
+
+.editor-content-style hr {
+    border: none;
+    border-top: 1px solid var(--tw-primary-300) !important;
+    opacity: 0.2;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.editor-content-style a {
+    color: var(--tw-primary-500);
+    font-weight: 500;
+}
+
+.editor-content-style a:hover {
+    color: var(--tw-primary-300);
+}
+
+.editor-content-style ul {
+    padding-left: 32px;
+    list-style-type: circle;
+}
+
+.editor-content-style ul li::marker {
+    color: var(--tw-primary-300);
+}
+
+.editor-content-style ul li:not(:last-child) {
+    margin-bottom: 12px;
+}
+
+.editor-content-style ol {
+    padding-left: 32px;
+    list-style-type: decimal;
+}
+
+.editor-content-style ol li:not(:last-child) {
+    margin-bottom: 12px;
+}
+
+@media (min-width: 1024px) {
+    .editor-content-style h1 {
+        font-weight: 500;
+        font-size: 40px;
+        line-height: 125%;
+    }
+
+    .editor-content-style h2 {
+        font-weight: 500;
+        font-size: 32px;
+        line-height: 150%;
+    }
+
+    .editor-content-style h3 {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 150%;
+    }
+
+    .editor-content-style h4 {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 150%;
+    }
+
+    .editor-content-style h5 {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 175%;
+    }
+
+    .editor-content-style h6 {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 175%;
+    }
+
+    .editor-content-style img {
+        border-radius: 28px;
+    }
+}
+
 /* ======================================================================================================================= */

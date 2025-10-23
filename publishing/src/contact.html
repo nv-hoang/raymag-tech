@@ -1,0 +1,55 @@
+{{> header }}
+
+<div data-ani="fadeUp" data-delay="0.4" data-target=".ani-item">
+    <div class="relative">
+        <img src="assets/img/bg-contact-heading.webp" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 w-full h-full" style="background: linear-gradient(180deg, rgba(3, 10, 17, 0.5) 0%, #030A11 100%);"></div>
+        <div class="relative z-10 max-w-[768px] mx-auto px-3 lg:px-10 text-center py-[100px] lg:py-[200px]">
+            <h1 class="ani-item text-[32px] lg:text-[40px] leading-150 2xl:leading-125 font-medium text-primary-300">聯絡我們</h1>
+        </div>
+    </div>
+
+    <div class="max-w-[768px] mx-auto px-3 lg:px-10 pb-[100px]">
+        <div class="ani-item editor-content-style text-[16px] lg:text-[18px] leading-175 text-gray-100 text-center">
+            <p>請填寫下方表單，留下您的想法或需求，我們將盡快回覆您。若希望更快取得回應，也可直接來電<a href="tel:+07-621-5064">07-621-5064</a>，我們將立即處理您的詢問，謝謝。</p>
+        </div>
+
+        <div class="ani-item mt-10">
+            <form action="thank-you.html">
+                <p class="text-right text-[16px] leading-175 text-primary-300 mb-7">*為必填欄位</p>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-5">
+                    <div class="mb-7 form-field">
+                        <div class="tetx-[16px] leading-175 text-white mb-1">姓名*</div>
+                        <input type="text" placeholder="請輸入姓名" required class="w-full outline-none rounded-[28px] border border-primary-300 border-opacity-20 px-3 py-[10px] text-[16px] leading-175 h-[48px] text-primary-300 focus:text-white" style="background: #030A11E5; backdrop-filter: blur(20px);">
+                    </div>
+
+                    <div class="mb-7 form-field">
+                        <div class="tetx-[16px] leading-175 text-white mb-1">電話*</div>
+                        <input type="text" placeholder="請輸入電話號碼" required class="w-full outline-none rounded-[28px] border border-primary-300 border-opacity-20 px-3 py-[10px] text-[16px] leading-175 h-[48px] text-primary-300 focus:text-white" style="background: #030A11E5; backdrop-filter: blur(20px);">
+                    </div>
+                </div>
+
+                <div class="mb-7 form-field">
+                    <div class="tetx-[16px] leading-175 text-white mb-1">公司名稱</div>
+                    <input type="text" placeholder="請輸入公司名稱" class="w-full outline-none rounded-[28px] border border-primary-300 border-opacity-20 px-3 py-[10px] text-[16px] leading-175 h-[48px] text-primary-300 focus:text-white" style="background: #030A11E5; backdrop-filter: blur(20px);">
+                </div>
+
+                <div class="mb-7 form-field">
+                    <div class="tetx-[16px] leading-175 text-white mb-1">E-mail*</div>
+                    <input type="email" placeholder="請輸入E-mail" required class="w-full outline-none rounded-[28px] border border-primary-300 border-opacity-20 px-3 py-[10px] text-[16px] leading-175 h-[48px] text-primary-300 focus:text-white" style="background: #030A11E5; backdrop-filter: blur(20px);">
+                </div>
+
+                <div class="mb-7 form-field">
+                    <div class="tetx-[16px] leading-175 text-white mb-1">訊息*</div>
+                    <textarea placeholder="請輸入訊息" required rows="5" class="w-full outline-none rounded-[28px] border border-primary-300 border-opacity-20 px-3 py-[10px] text-[16px] leading-175 text-primary-300 focus:text-white" style="background: #030A11E5; backdrop-filter: blur(20px);"></textarea>
+                </div>
+
+                <button type="submit" class="rounded-full overflow-hidden gradient-btn-1 cursor-pointer relative block w-full">
+                    <div class="relative text-[16px] leading-175 font-medium text-white p-[10px] text-center h-[48px]">送出訊息</div>
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+
+{{> footer }}
