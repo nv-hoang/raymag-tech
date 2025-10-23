@@ -80,7 +80,7 @@
 
 					<div class="flex flex-col gap-3">
 						<?php foreach (get_wp_menu('footer-menu') as $menu): ?>
-							<a href="<?php echo $menu->url; ?>" <?php echo ($menu->url == '#contact' ? 'data-anime="scroll-to" data-target="#section-contact"':''); ?> class="text-[16px] leading-175 text-gray-100 hover:text-primary-300 transition-colors"><?php echo $menu->title; ?></a>
+							<a href="<?php echo $menu->url; ?>" <?php echo ($menu->url == '/#contact' ? 'data-anime="scroll-to" data-target="#section-contact"':''); ?> class="text-[16px] leading-175 text-gray-100 hover:text-primary-300 transition-colors"><?php echo $menu->title; ?></a>
 						<?php endforeach; ?>
 					</div>
 				</div>

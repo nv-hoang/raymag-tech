@@ -398,7 +398,7 @@ get_header();
 
                             <div class="ani-item-2 mt-[60px]">
                                 <img src="<?php the_theme_option('general.logo'); ?>" class="h-[48px]">
-                                <h5 class="text-[16px] lg:text-[18px] leading-175 font-medium text-white mt-5"><?php the_theme_option('contactinfo.contact'); ?></h5>
+                                <h5 class="text-[16px] lg:text-[18px] leading-175 font-medium text-white mt-5"><?php the_theme_option('contactinfo.contact', true); ?></h5>
 
                                 <div class="flex flex-col gap-3 mt-5">
                                     <?php if (!empty(get_theme_option('contactinfo.phone'))): ?>
