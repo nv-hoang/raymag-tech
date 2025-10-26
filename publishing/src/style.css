@@ -336,7 +336,7 @@ html[lang="zh-TW"] {
 }
 
 .editor-content-style ul li:not(:last-child) {
-    margin-bottom: 12px;
+    margin-bottom: var(--li-mb, 12px);
 }
 
 .editor-content-style ol {

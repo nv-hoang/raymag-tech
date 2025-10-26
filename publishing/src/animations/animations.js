@@ -181,13 +181,13 @@ gsap.registerEffect({
             scale: config.scale,
             stagger: config.stagger,
             delay: config.delay,
-            opacity: 1,
+            opacity: 0,
             onComplete: config.onComplete,
         });
     },
     defaults: {
         duration: DEFAULT_DURATION,
-        scale: 0,
+        scale: 0.6,
         stagger: DEFAULT_STAGGER,
         delay: 0,
         onComplete: function () { },
@@ -490,12 +490,22 @@ gsap.registerEffect({
             $(el).css({ opacity: 0, overflow: 'hidden' });
         });
         return targets.forEach((el) => {
-            gsap.timeline({ scrollTrigger: { trigger: el, start: "top bottom", toggleActions: "play none none none" } }).from(el.querySelectorAll('img'), {
-                duration: 1,
-                opacity: 0,
-                scale: 1.2,
-                delay: config.delay
-            });
+            gsap.timeline({ scrollTrigger: { trigger: el, start: "top bottom", toggleActions: "play none none none" } })
+                .set(el.querySelectorAll('img'), {
+                    duration: 0,
+                    opacity: 0,
+                    autoAlpha: 1,
+                    scale: 1.2,
+                    delay: config.delay,
+                    onComplete: function () {
+                        gsap.to(el.querySelectorAll('img'), {
+                            duration: 1,
+                            opacity: 1,
+                            autoAlpha: 1,
+                            scale: 1,
+                        });
+                    }
+                })
             gsap.timeline({ scrollTrigger: { trigger: el, start: "top bottom", toggleActions: "play none none none" } }).to(el, {
                 duration: 1,
                 width: '100%',
@@ -671,7 +681,7 @@ function startAnimation() {
             createAnime(el, gsapAni);
         }
     });
-    
+
     $('[data-parallax-xl="lag"]').each(function (idx, el) {
         if (window.innerWidth > 1280) {
             gsap.set(el, { y: -60, opacity: 1, autoAlpha: 1 });
@@ -687,6 +697,50 @@ function startAnimation() {
 
     createScrollToAnime();
     toggleScrolling();
+
+    $(".timeline").each(function (idx, el) {
+        var elHeight = $(el).height();
+        ScrollTrigger.create({
+            trigger: el,
+            start: "top 50%",
+            end: "bottom 50%",
+            // onEnter: () => console.log("Entered!"),
+            // onLeave: () => console.log("Left!"),
+            onUpdate: self => {
+                $('.timeline-progress').height((self.progress * 100) + '%');
+
+                var line = elHeight * self.progress;
+
+                $('.timeline-item-point').each((i, point) => {
+                    var rect = point.getBoundingClientRect();
+                    var absoluteTop = rect.top - document.querySelector('.timeline').getBoundingClientRect().top;
+                    var parent = $(point).closest('.timeline-item');
+                    var info = parent.find('.timeline-item-info');
+                    var img = parent.find('.timeline-item-img');
+
+                    if (line >= absoluteTop) {
+                        if (!parent.hasClass('loaded')) {
+                            gsap.timeline().set(info, {
+                                opacity: 1,
+                                autoAlpha: 1,
+                                duration: 0,
+                                onComplete: function () {
+                                    gsap.timeline().boxX(img);
+                                    gsap.timeline().fadeUp(info);
+                                }
+                            });
+                            parent.addClass('loaded');
+                        }
+                    } else {
+                        gsap.timeline().fadeOut(img, { duration: 1 });
+                        gsap.timeline().fadeOut(info, { duration: 1 });
+                        parent.removeClass('loaded');
+                    }
+                });
+
+            }
+        });
+    });
 }
 
 export { gsap, startAnimation };
