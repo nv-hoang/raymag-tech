@@ -47,4 +47,3 @@
 	<div id="smooth-wrapper">
 		<div id="smooth-content">
 			<div class="overflow-hidden">
-				<div class="h-[50px] lg:h-[66px] 2xl:h-[68px]"></div>

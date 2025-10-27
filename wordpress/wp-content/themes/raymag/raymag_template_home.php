@@ -25,7 +25,7 @@ get_header();
             </div>
 
             <div class="relative z-10">
-                <div class="max-w-[1440px] mx-auto px-3 lg:px-10 pt-[120px] lg:pt-[238px] pb-[170px] lg:pb-[224px]">
+                <div class="max-w-[1440px] mx-auto px-3 lg:px-10 pt-[170px] lg:pt-[304px] pb-[170px] lg:pb-[224px]">
                     <div style="font-family: 'Inter';">
                         <?php
                         $title = explode('<br />', get_custom_field('home_kv.kv_title'), 2);

@@ -20,7 +20,7 @@ get_header();
     <div class="relative">
         <img src="<?php the_theme_asset_url('assets/img/bg-contact-heading.webp'); ?>" class="absolute inset-0 w-full h-full object-cover">
         <div class="absolute inset-0 w-full h-full" style="background: linear-gradient(180deg, rgba(3, 10, 17, 0.5) 0%, #030A11 100%);"></div>
-        <div class="relative z-10 max-w-[768px] mx-auto px-3 lg:px-10 text-center py-[200px]">
+        <div class="relative z-10 max-w-[768px] mx-auto px-3 lg:px-10 text-center py-[100px] lg:py-[200px]">
             <h1 class="ani-item text-[32px] lg:text-[40px] leading-150 2xl:leading-125 font-medium text-primary-300"><?php the_title(); ?></h1>
         </div>
     </div>
