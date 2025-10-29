@@ -37,9 +37,11 @@
 			}
 		}
 	</style>
+	<?php the_theme_option('scripts.headscripts'); ?>
 </head>
 
 <body <?php body_class(); ?> style="background-color: #030A11; color: #fff; overflow-x: hidden;">
+	<?php the_theme_option('scripts.bodyscripts'); ?>
 	<?php wp_body_open(); ?>
 	<?php get_template_part('template-parts/menu'); ?>
 
