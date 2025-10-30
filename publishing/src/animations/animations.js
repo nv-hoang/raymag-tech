@@ -440,7 +440,7 @@ gsap.registerEffect({
             Object.assign(el.style, {
                 position: "relative",
                 overflow: "hidden",
-                height: `${el.offsetHeight}px`,
+                height: el.offsetHeight + 'px',
             });
             const digits = el.dataset.num.toString().split('');
             var html = '';
@@ -486,7 +486,7 @@ gsap.registerEffect({
     name: "boxX",
     effect: (targets, config) => {
         targets.forEach((el) => {
-            $(el).children().first().width($(el).width());
+            $(el).children().first().width($(el).parent().width());
             $(el).width(0);
             $(el).css({ opacity: 0, overflow: 'hidden' });
         });
@@ -696,11 +696,26 @@ function startAnimation() {
         }
     });
 
+    $('[data-parallax]').each(function (idx, el) {
+        gsap.timeline().fromTo(el, {
+            y: "-30vh"
+        }, {
+            y: "30vh",
+            data: "gsap-inner",
+            scrollTrigger: {
+                trigger: $(el).parent(),
+                scrub: !0,
+                start: "top bottom"
+            },
+            ease: "none"
+        });
+    });
+
     createScrollToAnime();
     toggleScrolling();
 
     $(".timeline").each(function (idx, el) {
-        var elHeight = $(el).height();
+        // var elHeight = $(el).height();
         ScrollTrigger.create({
             trigger: el,
             start: "top 50%",
@@ -708,9 +723,10 @@ function startAnimation() {
             // onEnter: () => console.log("Entered!"),
             // onLeave: () => console.log("Left!"),
             onUpdate: self => {
-                $('.timeline-progress').height((self.progress * 100) + '%');
+                // $('.timeline-progress').height((self.progress * 100) + '%');
 
-                var line = elHeight * self.progress;
+                var line = (self.end - self.start) * self.progress;
+                $('.timeline-progress').height(line + 'px');
 
                 $('.timeline-item-point').each((i, point) => {
                     var rect = point.getBoundingClientRect();
@@ -750,18 +766,31 @@ function startAnimation() {
             autoplay: false,
             path: el.dataset.src
         });
-        var container = $(el).closest('.lottie-ani-container');
+        // var container = $(el).closest('.lottie-ani-container');
+        // ScrollTrigger.create({
+        //     trigger: container.children()[0],
+        //     start: "top top",
+        //     end: "bottom+=2000 top", // extend scroll distance
+        //     scrub: true, // smooth link between scroll & animation
+        //     pin: true, // makes it sticky
+        //     onUpdate: self => {
+        //         if (animation.totalFrames > 0) {
+        //             const frame = self.progress * animation.totalFrames;
+        //             // console.log(frame, animation.totalFrames);
+        //             if(frame < animation.totalFrames) {
+        //                 animation.goToAndStop(frame, true);
+        //             }
+        //         }
+        //     }
+        // });
         ScrollTrigger.create({
-            trigger: container.children()[0],
-            start: "top top",
-            end: "bottom+=2000 top", // extend scroll distance
-            scrub: true, // smooth link between scroll & animation
-            pin: true, // makes it sticky
+            trigger: el,
+            start: "top bottom",
+            end: "bottom 80%",
             onUpdate: self => {
                 if (animation.totalFrames > 0) {
                     const frame = self.progress * animation.totalFrames;
-                    // console.log(frame, animation.totalFrames);
-                    if(frame < animation.totalFrames) {
+                    if (frame < animation.totalFrames) {
                         animation.goToAndStop(frame, true);
                     }
                 }
