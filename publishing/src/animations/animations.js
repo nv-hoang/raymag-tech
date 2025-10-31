@@ -785,11 +785,11 @@ function startAnimation() {
         // });
         ScrollTrigger.create({
             trigger: el,
-            start: "top bottom",
-            end: "bottom 80%",
+            start: "top 50%",
+            end: "bottom 50%",
             onUpdate: self => {
                 if (animation.totalFrames > 0) {
-                    const frame = self.progress * animation.totalFrames;
+                    const frame = Math.round(self.progress * animation.totalFrames);
                     if (frame < animation.totalFrames) {
                         animation.goToAndStop(frame, true);
                     }
