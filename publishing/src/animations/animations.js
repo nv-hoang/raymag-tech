@@ -783,18 +783,23 @@ function startAnimation() {
         //         }
         //     }
         // });
-        ScrollTrigger.create({
-            trigger: el,
-            start: "top 50%",
-            end: "bottom 50%",
-            onUpdate: self => {
-                if (animation.totalFrames > 0) {
+        animation.addEventListener('data_ready', () => {
+            // console.log('✅ Lottie animation data loaded');
+            // console.log(el, animation);
+            ScrollTrigger.create({
+                trigger: el,
+                start: "top 50%",
+                end: "bottom 50%",
+                // onEnter: () => console.log("Entered!"),
+                // onLeave: () => console.log("Left!"),
+                onUpdate: (self) => {
                     const frame = Math.round(self.progress * animation.totalFrames);
-                    if (frame < animation.totalFrames) {
+                    // console.log(frame, self.progress);
+                    if (frame > 0 && frame < animation.totalFrames) {
                         animation.goToAndStop(frame, true);
                     }
                 }
-            }
+            });
         });
     });
 }
