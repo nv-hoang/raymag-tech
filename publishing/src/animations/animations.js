@@ -697,18 +697,26 @@ function startAnimation() {
     });
 
     $('[data-parallax]').each(function (idx, el) {
-        gsap.timeline().fromTo(el, {
-            y: "-30vh"
-        }, {
-            y: "30vh",
-            data: "gsap-inner",
-            scrollTrigger: {
-                trigger: $(el).parent(),
-                scrub: !0,
-                start: "top bottom"
-            },
-            ease: "none"
-        });
+        setTimeout(function () {
+            gsap.timeline().to(el, {
+                opacity: 1,
+                autoAlpha: 1,
+                duration: 1,
+                delay: 0.4
+            });
+            gsap.timeline().fromTo(el, {
+                y: "-30vh"
+            }, {
+                y: "30vh",
+                data: "gsap-inner",
+                scrollTrigger: {
+                    trigger: $(el).parent()[0],
+                    scrub: !0,
+                    start: "top bottom"
+                },
+                ease: "none",
+            });
+        }, 1000);
     });
 
     createScrollToAnime();
@@ -766,23 +774,7 @@ function startAnimation() {
             autoplay: false,
             path: el.dataset.src
         });
-        // var container = $(el).closest('.lottie-ani-container');
-        // ScrollTrigger.create({
-        //     trigger: container.children()[0],
-        //     start: "top top",
-        //     end: "bottom+=2000 top", // extend scroll distance
-        //     scrub: true, // smooth link between scroll & animation
-        //     pin: true, // makes it sticky
-        //     onUpdate: self => {
-        //         if (animation.totalFrames > 0) {
-        //             const frame = self.progress * animation.totalFrames;
-        //             // console.log(frame, animation.totalFrames);
-        //             if(frame < animation.totalFrames) {
-        //                 animation.goToAndStop(frame, true);
-        //             }
-        //         }
-        //     }
-        // });
+
         animation.addEventListener('data_ready', () => {
             // console.log('✅ Lottie animation data loaded');
             // console.log(el, animation);
