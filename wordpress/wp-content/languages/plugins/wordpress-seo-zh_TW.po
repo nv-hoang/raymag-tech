@@ -2,12 +2,12 @@
 # This file is distributed under the same license as the Plugins - Yoast SEO &#8211; Advanced SEO with real-time guidance and built-in AI - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-09-09 09:57:49+0000\n"
+"PO-Revision-Date: 2025-10-24 07:19:31+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: GlotPress/4.0.1\n"
+"X-Generator: GlotPress/4.0.3\n"
 "Language: zh_TW\n"
 "Project-Id-Version: Plugins - Yoast SEO &#8211; Advanced SEO with real-time guidance and built-in AI - Stable (latest release)\n"
 
@@ -1985,7 +1985,7 @@ msgstr "由於未知的原因，因此無法取得 %1$s 的大小。"
 #. translators: %1$s expands to the requested url
 #: admin/exceptions/class-file-size-exception.php:23
 msgid "Cannot get the size of %1$s because it is hosted externally."
-msgstr "由於將 %1$s 託管於外部，因此無法取得它的大小。"
+msgstr "由於將 %1$s 代管於外部，因此無法取得它的大小。"
 
 #. translators: %s expands to the current page number
 #: src/generators/breadcrumbs-generator.php:424
