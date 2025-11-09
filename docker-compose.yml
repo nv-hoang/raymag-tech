@@ -1,7 +1,6 @@
 services:
   mariadb:
     image: bitnami/mariadb
-    restart: always
     networks:
       - app-network
     environment:
@@ -15,7 +14,6 @@ services:
 
   wordpress:
     image: "webdevops/php-apache:8.2"
-    restart: always
     networks:
       - app-network
     ports:
