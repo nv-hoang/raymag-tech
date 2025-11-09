@@ -2,3 +2,16 @@
 [2025-10-07 14:27:36] [LOG] Found 10097 files to backup.
 [2025-10-07 14:28:09] [LOG] New backup created and its name is: BM_2025-10-07_14_27_32_E10UK7ftXjSPoHCk.zip
 [2025-10-07 14:28:09] [LOG] Process (backup) finished successfully via ajax.php
+[2025-11-09 06:34:26] [ERROR] Front End Ajax Error START
+[2025-11-09 06:34:26] [ERROR] call = scan-directory
+[2025-11-09 06:34:26] [ERROR] 0_x = Failed to fetch
+[2025-11-09 06:34:26] [ERROR] 1_x = scan-directory
+[2025-11-09 06:34:26] [ERROR] 2_folder = plugins
+[2025-11-09 06:34:26] [ERROR] 2_action = backup_migration
+[2025-11-09 06:34:26] [ERROR] 2_token = bmi
+[2025-11-09 06:34:26] [ERROR] 2_nonce = f8496c02ec
+[2025-11-09 06:34:26] [ERROR] 2_f = scan-directory
+[2025-11-09 06:34:26] [ERROR] Front End Ajax Error END
+[2025-11-09 06:35:57] [LOG] Restoring site...
+[2025-11-09 07:05:29] [LOG] Site restored...
+[2025-11-09 07:05:29] [LOG] Process (migration) finished successfully via ajax.php

@@ -1,1 +1,580 @@
-[STEP] [2025-10-07 14:27:29] Initializing restore process
+[STEP] [2025-11-09 06:35:50] Initializing restore process
+[WARN] [2025-11-09 06:35:56] PHP CLI is disabled manually, plugin will omit all PHP CLI steps.
+[SUCCESS] [2025-11-09 06:35:56] Restore process responded
+[SUCCESS] [2025-11-09 06:35:56] Locking migration process
+[STEP] [2025-11-09 06:35:56] Initializing restore process
+[INFO] [2025-11-09 06:35:56] Backup & Migration version: 1.4.9.1
+[INFO] [2025-11-09 06:35:56] Initializing custom error handler
+[INFO] [2025-11-09 06:35:56] Site which will be restored: http://localhost
+[INFO] [2025-11-09 06:35:56] PHP Version: 8.2.7
+[INFO] [2025-11-09 06:35:56] WP Version: 6.8.3
+[INFO] [2025-11-09 06:35:56] MySQL Version: 11.2.3
+[INFO] [2025-11-09 06:35:56] MySQL Max Length: 16777216
+[INFO] [2025-11-09 06:35:56] Web server: Apache/2.4.38 (Debian)
+[INFO] [2025-11-09 06:35:56] Max execution time (in seconds): 300
+[INFO] [2025-11-09 06:35:56] Memory limit (server): 512M
+[INFO] [2025-11-09 06:35:56] Memory limit (wp-config): 40M
+[INFO] [2025-11-09 06:35:56] Memory limit (wp-config admin): 512M
+[SUCCESS] [2025-11-09 06:35:56] Restore process initialized successfully.
+[STEP] [2025-11-09 06:35:56] Free space checking...
+[INFO] [2025-11-09 06:35:56] Checking if there is enough amount of free space
+[INFO] [2025-11-09 06:35:56] Requires at least 199954035 bytes. [190.69 MB]
+[INFO] [2025-11-09 06:35:56] Disk free space function is disabled by hosting.
+[INFO] [2025-11-09 06:35:56] Using dummy file to check free space (it can take some time).
+[SUCCESS] [2025-11-09 06:35:57] Confirmed, there is enough space on the device, checked: 199954035 bytes.
+[STEP] [2025-11-09 06:35:57] Making new secret key for current restore process.
+[SUCCESS] [2025-11-09 06:35:57] Secret key generated, it will be returned to you (ping).
+[INFO] [2025-11-09 06:35:59] Secret key detected successfully (pong)!
+[INFO] [2025-11-09 06:35:59] Making temporary directory
+[STEP] [2025-11-09 06:35:59] Scanning archive...
+[INFO] [2025-11-09 06:36:03] Scan found 10565 files inside the backup.
+[STEP] [2025-11-09 06:36:06] Preparing batching technique for extraction...
+[INFO] [2025-11-09 06:36:06] Files exported per batch: 300
+[INFO] [2025-11-09 06:36:06] Using ZipArchive, omiting memory limit calculations...
+[INFO] [2025-11-09 06:36:07] Extraction milestone: 300/10566 (2.85%)
+[INFO] [2025-11-09 06:36:11] Extraction milestone: 600/10566 (5.69%)
+[INFO] [2025-11-09 06:36:15] Extraction milestone: 900/10566 (8.53%)
+[INFO] [2025-11-09 06:36:19] Extraction milestone: 1200/10566 (11.37%)
+[INFO] [2025-11-09 06:36:23] Extraction milestone: 1500/10566 (14.21%)
+[INFO] [2025-11-09 06:36:26] Extraction milestone: 1800/10566 (17.05%)
+[INFO] [2025-11-09 06:36:31] Extraction milestone: 2100/10566 (19.88%)
+[INFO] [2025-11-09 06:36:35] Extraction milestone: 2400/10566 (22.72%)
+[INFO] [2025-11-09 06:36:39] Extraction milestone: 2700/10566 (25.56%)
+[INFO] [2025-11-09 06:36:43] Extraction milestone: 3000/10566 (28.40%)
+[INFO] [2025-11-09 06:36:48] Extraction milestone: 3300/10566 (31.24%)
+[INFO] [2025-11-09 06:36:52] Extraction milestone: 3600/10566 (34.08%)
+[INFO] [2025-11-09 06:36:56] Extraction milestone: 3900/10566 (36.92%)
+[INFO] [2025-11-09 06:37:00] Extraction milestone: 4200/10566 (39.76%)
+[INFO] [2025-11-09 06:37:04] Extraction milestone: 4500/10566 (42.60%)
+[INFO] [2025-11-09 06:37:08] Extraction milestone: 4800/10566 (45.44%)
+[INFO] [2025-11-09 06:37:11] Extraction milestone: 5100/10566 (48.28%)
+[INFO] [2025-11-09 06:37:15] Extraction milestone: 5400/10566 (51.12%)
+[INFO] [2025-11-09 06:37:18] Extraction milestone: 5700/10566 (53.96%)
+[INFO] [2025-11-09 06:37:23] Extraction milestone: 6000/10566 (56.80%)
+[INFO] [2025-11-09 06:37:26] Extraction milestone: 6300/10566 (59.63%)
+[INFO] [2025-11-09 06:37:30] Extraction milestone: 6600/10566 (62.47%)
+[INFO] [2025-11-09 06:37:34] Extraction milestone: 6900/10566 (65.31%)
+[INFO] [2025-11-09 06:37:37] Extraction milestone: 7200/10566 (68.15%)
+[INFO] [2025-11-09 06:37:41] Extraction milestone: 7500/10566 (70.99%)
+[INFO] [2025-11-09 06:37:44] Extraction milestone: 7800/10566 (73.83%)
+[INFO] [2025-11-09 06:37:48] Extraction milestone: 8100/10566 (76.67%)
+[INFO] [2025-11-09 06:37:52] Extraction milestone: 8400/10566 (79.51%)
+[INFO] [2025-11-09 06:37:56] Extraction milestone: 8700/10566 (82.35%)
+[INFO] [2025-11-09 06:38:00] Extraction milestone: 9000/10566 (85.19%)
+[INFO] [2025-11-09 06:38:04] Extraction milestone: 9300/10566 (88.03%)
+[INFO] [2025-11-09 06:38:09] Extraction milestone: 9600/10566 (90.87%)
+[INFO] [2025-11-09 06:38:13] Extraction milestone: 9900/10566 (93.71%)
+[INFO] [2025-11-09 06:38:17] Extraction milestone: 10200/10566 (96.55%)
+[INFO] [2025-11-09 06:38:21] Extraction milestone: 10500/10566 (99.38%)
+[INFO] [2025-11-09 06:38:25] Extraction milestone: 10566/10566 (100.00%)
+[SUCCESS] [2025-11-09 06:38:25] Files extracted...
+[STEP] [2025-11-09 06:38:28] Saving wp-config file...
+[SUCCESS] [2025-11-09 06:38:28] File wp-config saved
+[STEP] [2025-11-09 06:38:31] Getting backup manifest...
+[SUCCESS] [2025-11-09 06:38:31] Manifest loaded
+[INFO] [2025-11-09 06:38:31] Backup Migration version used for that backup: 1.4.9.1
+[STEP] [2025-11-09 06:38:31] Restoring files (this process may take a while)...
+[INFO] [2025-11-09 06:38:35] File replacement progress: 500/10500 (4%)
+[INFO] [2025-11-09 06:38:35] File replacement progress: 1000/10500 (9%)
+[INFO] [2025-11-09 06:38:36] File replacement progress: 1500/10500 (14%)
+[INFO] [2025-11-09 06:38:37] File replacement progress: 2000/10500 (19%)
+[INFO] [2025-11-09 06:38:37] File replacement progress: 2500/10500 (23%)
+[INFO] [2025-11-09 06:38:38] File replacement progress: 3000/10500 (28%)
+[INFO] [2025-11-09 06:38:39] File replacement progress: 3500/10500 (33%)
+[INFO] [2025-11-09 06:38:39] File replacement progress: 4000/10500 (38%)
+[INFO] [2025-11-09 06:38:40] File replacement progress: 4500/10500 (42%)
+[INFO] [2025-11-09 06:38:41] File replacement progress: 5000/10500 (47%)
+[INFO] [2025-11-09 06:38:42] File replacement progress: 5500/10500 (52%)
+[INFO] [2025-11-09 06:38:42] File replacement progress: 6000/10500 (57%)
+[INFO] [2025-11-09 06:38:43] File replacement progress: 6500/10500 (61%)
+[INFO] [2025-11-09 06:38:43] File replacement progress: 7000/10500 (66%)
+[INFO] [2025-11-09 06:38:44] File replacement progress: 7500/10500 (71%)
+[INFO] [2025-11-09 06:38:45] File replacement progress: 8000/10500 (76%)
+[INFO] [2025-11-09 06:38:46] File replacement progress: 8500/10500 (80%)
+[INFO] [2025-11-09 06:38:46] File replacement progress: 9000/10500 (85%)
+[INFO] [2025-11-09 06:38:47] File replacement progress: 9500/10500 (90%)
+[INFO] [2025-11-09 06:38:48] File replacement progress: 10000/10500 (95%)
+[INFO] [2025-11-09 06:38:48] File replacement progress: 10500/10500 (100%)
+[SUCCESS] [2025-11-09 06:38:48] All files restored successfully.
+[STEP] [2025-11-09 06:38:52] Validating table prefix...
+[INFO] [2025-11-09 06:38:52] Table prefix in manifest: wp_
+[INFO] [2025-11-09 06:38:52] Detected table prefix: wp_
+[INFO] [2025-11-09 06:38:52] Splitting process is disabled because v3 restore engine is enabled.
+[STEP] [2025-11-09 06:38:54] Checking the database structure...
+[INFO] [2025-11-09 06:38:54] Successfully detected backup created with v3 engine, importing...
+[STEP] [2025-11-09 06:38:54] Restoring database (using v4 engine)...
+[STEP] [2025-11-09 06:38:54] Started restoration of wp_4LT44_actionscheduler_actions 1/56 (1.79%) table
+[INFO] [2025-11-09 06:38:54] Cleaning up contents of wp_4LT44_actionscheduler_actions table.
+[INFO] [2025-11-09 06:38:54] Progress of wp_4LT44_actionscheduler_actions: 1/2 (50.00%)
+[SUCCESS] [2025-11-09 06:38:54] Table wp_4LT44_actionscheduler_actions restoration took 0.24287 seconds
+[STEP] [2025-11-09 06:38:55] Started restoration of wp_4LT44_actionscheduler_claims 2/56 (3.57%) table
+[INFO] [2025-11-09 06:38:55] Progress of wp_4LT44_actionscheduler_claims: 1/2 (50.00%)
+[INFO] [2025-11-09 06:38:56] Progress of wp_4LT44_actionscheduler_claims: 2/2 (100.00%)
+[SUCCESS] [2025-11-09 06:38:56] Table wp_4LT44_actionscheduler_claims restoration took 1.96457 seconds
+[STEP] [2025-11-09 06:38:58] Started restoration of wp_4LT44_actionscheduler_groups 3/56 (5.36%) table
+[INFO] [2025-11-09 06:38:58] Progress of wp_4LT44_actionscheduler_groups: 1/3 (33.33%)
+[INFO] [2025-11-09 06:38:59] Progress of wp_4LT44_actionscheduler_groups: 2/3 (66.67%)
+[INFO] [2025-11-09 06:39:01] Progress of wp_4LT44_actionscheduler_groups: 3/3 (100.00%)
+[SUCCESS] [2025-11-09 06:39:01] Table wp_4LT44_actionscheduler_groups restoration took 3.02420 seconds
+[STEP] [2025-11-09 06:39:02] Started restoration of wp_4LT44_actionscheduler_logs 4/56 (7.14%) table
+[INFO] [2025-11-09 06:39:02] Cleaning up contents of wp_4LT44_actionscheduler_logs table.
+[INFO] [2025-11-09 06:39:02] Progress of wp_4LT44_actionscheduler_logs: 1/2 (50.00%)
+[SUCCESS] [2025-11-09 06:39:02] Table wp_4LT44_actionscheduler_logs restoration took 0.42568 seconds
+[STEP] [2025-11-09 06:39:03] Started restoration of wp_4LT44_commentmeta 5/56 (8.93%) table
+[INFO] [2025-11-09 06:39:03] Progress of wp_4LT44_commentmeta: 1/2 (50.00%)
+[INFO] [2025-11-09 06:39:04] Progress of wp_4LT44_commentmeta: 2/2 (100.00%)
+[SUCCESS] [2025-11-09 06:39:04] Table wp_4LT44_commentmeta restoration took 1.96702 seconds
+[STEP] [2025-11-09 06:39:06] Started restoration of wp_4LT44_comments 6/56 (10.71%) table
+[INFO] [2025-11-09 06:39:06] Progress of wp_4LT44_comments: 1/3 (33.33%)
+[INFO] [2025-11-09 06:39:08] Progress of wp_4LT44_comments: 2/3 (66.67%)
+[INFO] [2025-11-09 06:39:09] Progress of wp_4LT44_comments: 3/3 (100.00%)
+[SUCCESS] [2025-11-09 06:39:09] Table wp_4LT44_comments restoration took 3.56698 seconds
+[STEP] [2025-11-09 06:39:10] Started restoration of wp_4LT44_links 7/56 (12.50%) table
+[INFO] [2025-11-09 06:39:10] Progress of wp_4LT44_links: 1/2 (50.00%)
+[INFO] [2025-11-09 06:39:12] Progress of wp_4LT44_links: 2/2 (100.00%)
+[SUCCESS] [2025-11-09 06:39:12] Table wp_4LT44_links restoration took 2.37483 seconds
+[STEP] [2025-11-09 06:39:13] Started restoration of wp_4LT44_options 8/56 (14.29%) table
+[INFO] [2025-11-09 06:39:13] Progress of wp_4LT44_options: 1/3 (33.33%)
+[INFO] [2025-11-09 06:39:15] Progress of wp_4LT44_options: 2/3 (66.67%)
+[INFO] [2025-11-09 06:39:17] Progress of wp_4LT44_options: 3/3 (100.00%)
+[SUCCESS] [2025-11-09 06:39:17] Table wp_4LT44_options restoration took 4.45654 seconds
+[STEP] [2025-11-09 06:39:18] Started restoration of wp_4LT44_postmeta 9/56 (16.07%) table
+[INFO] [2025-11-09 06:39:18] Progress of wp_4LT44_postmeta: 1/3 (33.33%)
+[INFO] [2025-11-09 06:39:20] Progress of wp_4LT44_postmeta: 2/3 (66.67%)
+[INFO] [2025-11-09 06:39:21] Progress of wp_4LT44_postmeta: 3/3 (100.00%)
+[SUCCESS] [2025-11-09 06:39:21] Table wp_4LT44_postmeta restoration took 3.40367 seconds
+[STEP] [2025-11-09 06:39:22] Started restoration of wp_4LT44_posts 10/56 (17.86%) table
+[INFO] [2025-11-09 06:39:22] Progress of wp_4LT44_posts: 1/3 (33.33%)
+[INFO] [2025-11-09 06:39:24] Progress of wp_4LT44_posts: 2/3 (66.67%)
+[INFO] [2025-11-09 06:39:25] Progress of wp_4LT44_posts: 3/3 (100.00%)
+[SUCCESS] [2025-11-09 06:39:25] Table wp_4LT44_posts restoration took 3.81762 seconds
+[STEP] [2025-11-09 06:39:27] Started restoration of wp_4LT44_term_relationships 11/56 (19.64%) table
+[INFO] [2025-11-09 06:39:27] Progress of wp_4LT44_term_relationships: 1/3 (33.33%)
+[INFO] [2025-11-09 06:39:28] Progress of wp_4LT44_term_relationships: 2/3 (66.67%)
+[INFO] [2025-11-09 06:39:30] Progress of wp_4LT44_term_relationships: 3/3 (100.00%)
+[SUCCESS] [2025-11-09 06:39:30] Table wp_4LT44_term_relationships restoration took 3.27187 seconds
+[STEP] [2025-11-09 06:39:31] Started restoration of wp_4LT44_term_taxonomy 12/56 (21.43%) table
+[INFO] [2025-11-09 06:39:31] Progress of wp_4LT44_term_taxonomy: 1/3 (33.33%)
+[INFO] [2025-11-09 06:39:33] Progress of wp_4LT44_term_taxonomy: 2/3 (66.67%)
+[INFO] [2025-11-09 06:39:34] Progress of wp_4LT44_term_taxonomy: 3/3 (100.00%)
+[SUCCESS] [2025-11-09 06:39:34] Table wp_4LT44_term_taxonomy restoration took 3.45355 seconds
+[STEP] [2025-11-09 06:39:35] Started restoration of wp_4LT44_termmeta 13/56 (23.21%) table
+[INFO] [2025-11-09 06:39:35] Progress of wp_4LT44_termmeta: 1/2 (50.00%)
+[INFO] [2025-11-09 06:39:37] Progress of wp_4LT44_termmeta: 2/2 (100.00%)
+[SUCCESS] [2025-11-09 06:39:37] Table wp_4LT44_termmeta restoration took 2.36895 seconds
+[STEP] [2025-11-09 06:39:38] Started restoration of wp_4LT44_terms 14/56 (25.00%) table
+[INFO] [2025-11-09 06:39:38] Progress of wp_4LT44_terms: 1/3 (33.33%)
+[INFO] [2025-11-09 06:39:40] Progress of wp_4LT44_terms: 2/3 (66.67%)
+[INFO] [2025-11-09 06:39:41] Progress of wp_4LT44_terms: 3/3 (100.00%)
+[SUCCESS] [2025-11-09 06:39:41] Table wp_4LT44_terms restoration took 3.82009 seconds
+[STEP] [2025-11-09 06:39:44] Started restoration of wp_4LT44_usermeta 15/56 (26.79%) table
+[INFO] [2025-11-09 06:39:44] Progress of wp_4LT44_usermeta: 1/3 (33.33%)
+[INFO] [2025-11-09 06:39:45] Progress of wp_4LT44_usermeta: 2/3 (66.67%)
+[INFO] [2025-11-09 06:39:46] Progress of wp_4LT44_usermeta: 3/3 (100.00%)
+[SUCCESS] [2025-11-09 06:39:46] Table wp_4LT44_usermeta restoration took 2.98942 seconds
+[STEP] [2025-11-09 06:39:48] Started restoration of wp_4LT44_users 16/56 (28.57%) table
+[INFO] [2025-11-09 06:39:48] Progress of wp_4LT44_users: 1/3 (33.33%)
+[INFO] [2025-11-09 06:39:49] Progress of wp_4LT44_users: 2/3 (66.67%)
+[INFO] [2025-11-09 06:39:51] Progress of wp_4LT44_users: 3/3 (100.00%)
+[SUCCESS] [2025-11-09 06:39:51] Table wp_4LT44_users restoration took 3.37507 seconds
+[STEP] [2025-11-09 06:39:52] Started restoration of wp_4LT44_yoast_indexable 17/56 (30.36%) table
+[INFO] [2025-11-09 06:39:52] Cleaning up contents of wp_4LT44_yoast_indexable table.
+[INFO] [2025-11-09 06:39:52] Progress of wp_4LT44_yoast_indexable: 1/2 (50.00%)
+[SUCCESS] [2025-11-09 06:39:52] Table wp_4LT44_yoast_indexable restoration took 0.91878 seconds
+[STEP] [2025-11-09 06:39:54] Started restoration of wp_4LT44_yoast_indexable_hierarchy 18/56 (32.14%) table
+[INFO] [2025-11-09 06:39:54] Progress of wp_4LT44_yoast_indexable_hierarchy: 1/2 (50.00%)
+[INFO] [2025-11-09 06:39:55] Progress of wp_4LT44_yoast_indexable_hierarchy: 2/2 (100.00%)
+[SUCCESS] [2025-11-09 06:39:55] Table wp_4LT44_yoast_indexable_hierarchy restoration took 1.85035 seconds
+[STEP] [2025-11-09 06:39:57] Started restoration of wp_4LT44_yoast_migrations 19/56 (33.93%) table
+[INFO] [2025-11-09 06:39:57] Progress of wp_4LT44_yoast_migrations: 1/3 (33.33%)
+[INFO] [2025-11-09 06:39:58] Progress of wp_4LT44_yoast_migrations: 2/3 (66.67%)
+[INFO] [2025-11-09 06:40:00] Progress of wp_4LT44_yoast_migrations: 3/3 (100.00%)
+[SUCCESS] [2025-11-09 06:40:00] Table wp_4LT44_yoast_migrations restoration took 3.26023 seconds
+[STEP] [2025-11-09 06:40:01] Started restoration of wp_4LT44_yoast_primary_term 20/56 (35.71%) table
+[INFO] [2025-11-09 06:40:01] Progress of wp_4LT44_yoast_primary_term: 1/2 (50.00%)
+[INFO] [2025-11-09 06:40:03] Progress of wp_4LT44_yoast_primary_term: 2/2 (100.00%)
+[SUCCESS] [2025-11-09 06:40:03] Table wp_4LT44_yoast_primary_term restoration took 2.18561 seconds
+[STEP] [2025-11-09 06:40:04] Started restoration of wp_4LT44_yoast_seo_links 21/56 (37.50%) table
+[INFO] [2025-11-09 06:40:04] Progress of wp_4LT44_yoast_seo_links: 1/2 (50.00%)
+[INFO] [2025-11-09 06:40:05] Progress of wp_4LT44_yoast_seo_links: 2/2 (100.00%)
+[SUCCESS] [2025-11-09 06:40:05] Table wp_4LT44_yoast_seo_links restoration took 1.95440 seconds
+[STEP] [2025-11-09 06:40:07] Started restoration of wp_actionscheduler_actions 22/56 (39.29%) table
+[INFO] [2025-11-09 06:40:07] Cleaning up contents of wp_actionscheduler_actions table.
+[INFO] [2025-11-09 06:40:07] Progress of wp_actionscheduler_actions: 1/2 (50.00%)
+[SUCCESS] [2025-11-09 06:40:07] Table wp_actionscheduler_actions restoration took 0.56232 seconds
+[STEP] [2025-11-09 06:40:09] Started restoration of wp_actionscheduler_claims 23/56 (41.07%) table
+[INFO] [2025-11-09 06:40:09] Progress of wp_actionscheduler_claims: 1/2 (50.00%)
+[INFO] [2025-11-09 06:40:10] Progress of wp_actionscheduler_claims: 2/2 (100.00%)
+[SUCCESS] [2025-11-09 06:40:10] Table wp_actionscheduler_claims restoration took 1.80411 seconds
+[STEP] [2025-11-09 06:40:12] Started restoration of wp_actionscheduler_groups 24/56 (42.86%) table
+[INFO] [2025-11-09 06:40:12] Progress of wp_actionscheduler_groups: 1/3 (33.33%)
+[INFO] [2025-11-09 06:40:14] Progress of wp_actionscheduler_groups: 2/3 (66.67%)
+[INFO] [2025-11-09 06:40:15] Progress of wp_actionscheduler_groups: 3/3 (100.00%)
+[SUCCESS] [2025-11-09 06:40:15] Table wp_actionscheduler_groups restoration took 3.71600 seconds
+[STEP] [2025-11-09 06:40:17] Started restoration of wp_actionscheduler_logs 25/56 (44.64%) table
+[INFO] [2025-11-09 06:40:17] Cleaning up contents of wp_actionscheduler_logs table.
+[INFO] [2025-11-09 06:40:17] Progress of wp_actionscheduler_logs: 1/2 (50.00%)
+[SUCCESS] [2025-11-09 06:40:17] Table wp_actionscheduler_logs restoration took 0.36775 seconds
+[STEP] [2025-11-09 06:40:18] Started restoration of wp_commentmeta 26/56 (46.43%) table
+[INFO] [2025-11-09 06:40:18] Progress of wp_commentmeta: 1/2 (50.00%)
+[INFO] [2025-11-09 06:40:20] Progress of wp_commentmeta: 2/2 (100.00%)
+[SUCCESS] [2025-11-09 06:40:20] Table wp_commentmeta restoration took 2.32511 seconds
+[STEP] [2025-11-09 06:40:21] Started restoration of wp_comments 27/56 (48.21%) table
+[INFO] [2025-11-09 06:40:21] Progress of wp_comments: 1/2 (50.00%)
+[INFO] [2025-11-09 06:40:23] Progress of wp_comments: 2/2 (100.00%)
+[SUCCESS] [2025-11-09 06:40:23] Table wp_comments restoration took 2.50320 seconds
+[STEP] [2025-11-09 06:40:24] Started restoration of wp_links 28/56 (50.00%) table
+[INFO] [2025-11-09 06:40:24] Progress of wp_links: 1/2 (50.00%)
+[INFO] [2025-11-09 06:40:26] Progress of wp_links: 2/2 (100.00%)
+[SUCCESS] [2025-11-09 06:40:26] Table wp_links restoration took 2.30875 seconds
+[STEP] [2025-11-09 06:40:27] Started restoration of wp_litespeed_url 29/56 (51.79%) table
+[INFO] [2025-11-09 06:40:27] Progress of wp_litespeed_url: 1/2 (50.00%)
+[INFO] [2025-11-09 06:40:29] Progress of wp_litespeed_url: 2/2 (100.00%)
+[SUCCESS] [2025-11-09 06:40:29] Table wp_litespeed_url restoration took 2.33460 seconds
+[STEP] [2025-11-09 06:40:30] Started restoration of wp_litespeed_url_file 30/56 (53.57%) table
+[INFO] [2025-11-09 06:40:30] Progress of wp_litespeed_url_file: 1/2 (50.00%)
+[INFO] [2025-11-09 06:40:32] Progress of wp_litespeed_url_file: 2/2 (100.00%)
+[SUCCESS] [2025-11-09 06:40:32] Table wp_litespeed_url_file restoration took 2.21902 seconds
+[STEP] [2025-11-09 06:40:33] Started restoration of wp_options 31/56 (55.36%) table
+[INFO] [2025-11-09 06:40:33] Progress of wp_options: 1/4 (25.00%)
+[INFO] [2025-11-09 06:40:34] Progress of wp_options: 2/4 (50.00%)
+[INFO] [2025-11-09 06:40:36] Progress of wp_options: 3/4 (75.00%)
+[INFO] [2025-11-09 06:40:37] Progress of wp_options: 4/4 (100.00%)
+[SUCCESS] [2025-11-09 06:40:37] Table wp_options restoration took 4.63384 seconds
+[STEP] [2025-11-09 06:40:38] Started restoration of wp_postmeta 32/56 (57.14%) table
+[INFO] [2025-11-09 06:40:39] Progress of wp_postmeta: 1/3 (33.33%)
+[INFO] [2025-11-09 06:40:40] Progress of wp_postmeta: 2/3 (66.67%)
+[INFO] [2025-11-09 06:40:41] Progress of wp_postmeta: 3/3 (100.00%)
+[SUCCESS] [2025-11-09 06:40:41] Table wp_postmeta restoration took 3.71856 seconds
+[STEP] [2025-11-09 06:40:43] Started restoration of wp_posts 33/56 (58.93%) table
+[INFO] [2025-11-09 06:40:43] Progress of wp_posts: 1/3 (33.33%)
+[INFO] [2025-11-09 06:40:44] Progress of wp_posts: 2/3 (66.67%)
+[INFO] [2025-11-09 06:40:45] Progress of wp_posts: 3/3 (100.00%)
+[SUCCESS] [2025-11-09 06:40:45] Table wp_posts restoration took 2.92515 seconds
+[STEP] [2025-11-09 06:40:47] Started restoration of wp_term_relationships 34/56 (60.71%) table
+[INFO] [2025-11-09 06:40:47] Progress of wp_term_relationships: 1/3 (33.33%)
+[INFO] [2025-11-09 06:40:49] Progress of wp_term_relationships: 2/3 (66.67%)
+[INFO] [2025-11-09 06:40:50] Progress of wp_term_relationships: 3/3 (100.00%)
+[SUCCESS] [2025-11-09 06:40:50] Table wp_term_relationships restoration took 3.88385 seconds
+[STEP] [2025-11-09 06:40:52] Started restoration of wp_term_taxonomy 35/56 (62.50%) table
+[INFO] [2025-11-09 06:40:52] Progress of wp_term_taxonomy: 1/3 (33.33%)
+[INFO] [2025-11-09 06:40:53] Progress of wp_term_taxonomy: 2/3 (66.67%)
+[INFO] [2025-11-09 06:40:55] Progress of wp_term_taxonomy: 3/3 (100.00%)
+[SUCCESS] [2025-11-09 06:40:55] Table wp_term_taxonomy restoration took 3.13178 seconds
+[STEP] [2025-11-09 06:40:56] Started restoration of wp_termmeta 36/56 (64.29%) table
+[INFO] [2025-11-09 06:40:56] Progress of wp_termmeta: 1/3 (33.33%)
+[INFO] [2025-11-09 06:40:57] Progress of wp_termmeta: 2/3 (66.67%)
+[INFO] [2025-11-09 06:40:59] Progress of wp_termmeta: 3/3 (100.00%)
+[SUCCESS] [2025-11-09 06:40:59] Table wp_termmeta restoration took 3.33834 seconds
+[STEP] [2025-11-09 06:41:00] Started restoration of wp_terms 37/56 (66.07%) table
+[INFO] [2025-11-09 06:41:00] Progress of wp_terms: 1/3 (33.33%)
+[INFO] [2025-11-09 06:41:02] Progress of wp_terms: 2/3 (66.67%)
+[INFO] [2025-11-09 06:41:03] Progress of wp_terms: 3/3 (100.00%)
+[SUCCESS] [2025-11-09 06:41:03] Table wp_terms restoration took 3.95056 seconds
+[STEP] [2025-11-09 06:41:05] Started restoration of wp_usermeta 38/56 (67.86%) table
+[INFO] [2025-11-09 06:41:05] Progress of wp_usermeta: 1/3 (33.33%)
+[INFO] [2025-11-09 06:41:06] Progress of wp_usermeta: 2/3 (66.67%)
+[INFO] [2025-11-09 06:41:08] Progress of wp_usermeta: 3/3 (100.00%)
+[SUCCESS] [2025-11-09 06:41:08] Table wp_usermeta restoration took 3.14524 seconds
+[STEP] [2025-11-09 06:41:09] Started restoration of wp_users 39/56 (69.64%) table
+[INFO] [2025-11-09 06:41:09] Progress of wp_users: 1/3 (33.33%)
+[INFO] [2025-11-09 06:41:11] Progress of wp_users: 2/3 (66.67%)
+[INFO] [2025-11-09 06:41:12] Progress of wp_users: 3/3 (100.00%)
+[SUCCESS] [2025-11-09 06:41:12] Table wp_users restoration took 3.54698 seconds
+[STEP] [2025-11-09 06:41:14] Started restoration of wp_wpfm_backup 40/56 (71.43%) table
+[INFO] [2025-11-09 06:41:14] Progress of wp_wpfm_backup: 1/2 (50.00%)
+[INFO] [2025-11-09 06:41:15] Progress of wp_wpfm_backup: 2/2 (100.00%)
+[SUCCESS] [2025-11-09 06:41:15] Table wp_wpfm_backup restoration took 1.70237 seconds
+[STEP] [2025-11-09 06:41:17] Started restoration of wp_wpforms_entries 41/56 (73.21%) table
+[INFO] [2025-11-09 06:41:17] Progress of wp_wpforms_entries: 1/3 (33.33%)
+[INFO] [2025-11-09 06:41:18] Progress of wp_wpforms_entries: 2/3 (66.67%)
+[INFO] [2025-11-09 06:41:20] Progress of wp_wpforms_entries: 3/3 (100.00%)
+[SUCCESS] [2025-11-09 06:41:20] Table wp_wpforms_entries restoration took 3.02532 seconds
+[STEP] [2025-11-09 06:41:21] Started restoration of wp_wpforms_entry_fields 42/56 (75.00%) table
+[INFO] [2025-11-09 06:41:21] Progress of wp_wpforms_entry_fields: 1/3 (33.33%)
+[INFO] [2025-11-09 06:41:23] Progress of wp_wpforms_entry_fields: 2/3 (66.67%)
+[INFO] [2025-11-09 06:41:24] Progress of wp_wpforms_entry_fields: 3/3 (100.00%)
+[SUCCESS] [2025-11-09 06:41:24] Table wp_wpforms_entry_fields restoration took 3.57507 seconds
+[STEP] [2025-11-09 06:41:25] Started restoration of wp_wpforms_entry_meta 43/56 (76.79%) table
+[INFO] [2025-11-09 06:41:25] Progress of wp_wpforms_entry_meta: 1/3 (33.33%)
+[INFO] [2025-11-09 06:41:27] Progress of wp_wpforms_entry_meta: 2/3 (66.67%)
+[INFO] [2025-11-09 06:41:28] Progress of wp_wpforms_entry_meta: 3/3 (100.00%)
+[SUCCESS] [2025-11-09 06:41:28] Table wp_wpforms_entry_meta restoration took 3.99788 seconds
+[STEP] [2025-11-09 06:41:30] Started restoration of wp_wpforms_file_restrictions 44/56 (78.57%) table
+[INFO] [2025-11-09 06:41:30] Progress of wp_wpforms_file_restrictions: 1/2 (50.00%)
+[INFO] [2025-11-09 06:41:31] Progress of wp_wpforms_file_restrictions: 2/2 (100.00%)
+[SUCCESS] [2025-11-09 06:41:31] Table wp_wpforms_file_restrictions restoration took 1.88184 seconds
+[STEP] [2025-11-09 06:41:33] Started restoration of wp_wpforms_logs 45/56 (80.36%) table
+[INFO] [2025-11-09 06:41:33] Progress of wp_wpforms_logs: 1/3 (33.33%)
+[INFO] [2025-11-09 06:41:34] Progress of wp_wpforms_logs: 2/3 (66.67%)
+[INFO] [2025-11-09 06:41:36] Progress of wp_wpforms_logs: 3/3 (100.00%)
+[SUCCESS] [2025-11-09 06:41:36] Table wp_wpforms_logs restoration took 3.31149 seconds
+[STEP] [2025-11-09 06:41:37] Started restoration of wp_wpforms_payment_meta 46/56 (82.14%) table
+[INFO] [2025-11-09 06:41:37] Progress of wp_wpforms_payment_meta: 1/2 (50.00%)
+[INFO] [2025-11-09 06:41:39] Progress of wp_wpforms_payment_meta: 2/2 (100.00%)
+[SUCCESS] [2025-11-09 06:41:39] Table wp_wpforms_payment_meta restoration took 2.27685 seconds
+[STEP] [2025-11-09 06:41:40] Started restoration of wp_wpforms_payments 47/56 (83.93%) table
+[INFO] [2025-11-09 06:41:40] Progress of wp_wpforms_payments: 1/2 (50.00%)
+[INFO] [2025-11-09 06:41:42] Progress of wp_wpforms_payments: 2/2 (100.00%)
+[SUCCESS] [2025-11-09 06:41:42] Table wp_wpforms_payments restoration took 2.24151 seconds
+[STEP] [2025-11-09 06:41:43] Started restoration of wp_wpforms_protected_files 48/56 (85.71%) table
+[INFO] [2025-11-09 06:41:43] Progress of wp_wpforms_protected_files: 1/2 (50.00%)
+[INFO] [2025-11-09 06:41:45] Progress of wp_wpforms_protected_files: 2/2 (100.00%)
+[SUCCESS] [2025-11-09 06:41:45] Table wp_wpforms_protected_files restoration took 2.32426 seconds
+[STEP] [2025-11-09 06:41:46] Started restoration of wp_wpforms_tasks_meta 49/56 (87.50%) table
+[INFO] [2025-11-09 06:41:46] Progress of wp_wpforms_tasks_meta: 1/3 (33.33%)
+[INFO] [2025-11-09 06:41:48] Progress of wp_wpforms_tasks_meta: 2/3 (66.67%)
+[INFO] [2025-11-09 06:41:49] Progress of wp_wpforms_tasks_meta: 3/3 (100.00%)
+[SUCCESS] [2025-11-09 06:41:49] Table wp_wpforms_tasks_meta restoration took 3.62381 seconds
+[STEP] [2025-11-09 06:41:51] Started restoration of wp_wpmailsmtp_debug_events 50/56 (89.29%) table
+[INFO] [2025-11-09 06:41:51] Progress of wp_wpmailsmtp_debug_events: 1/3 (33.33%)
+[INFO] [2025-11-09 06:41:52] Progress of wp_wpmailsmtp_debug_events: 2/3 (66.67%)
+[INFO] [2025-11-09 06:41:53] Progress of wp_wpmailsmtp_debug_events: 3/3 (100.00%)
+[SUCCESS] [2025-11-09 06:41:53] Table wp_wpmailsmtp_debug_events restoration took 2.92024 seconds
+[STEP] [2025-11-09 06:41:55] Started restoration of wp_wpmailsmtp_tasks_meta 51/56 (91.07%) table
+[INFO] [2025-11-09 06:41:55] Progress of wp_wpmailsmtp_tasks_meta: 1/3 (33.33%)
+[INFO] [2025-11-09 06:41:56] Progress of wp_wpmailsmtp_tasks_meta: 2/3 (66.67%)
+[INFO] [2025-11-09 06:41:58] Progress of wp_wpmailsmtp_tasks_meta: 3/3 (100.00%)
+[SUCCESS] [2025-11-09 06:41:58] Table wp_wpmailsmtp_tasks_meta restoration took 3.11767 seconds
+[STEP] [2025-11-09 06:41:59] Started restoration of wp_yoast_indexable 52/56 (92.86%) table
+[INFO] [2025-11-09 06:41:59] Cleaning up contents of wp_yoast_indexable table.
+[INFO] [2025-11-09 06:41:59] Progress of wp_yoast_indexable: 1/2 (50.00%)
+[SUCCESS] [2025-11-09 06:41:59] Table wp_yoast_indexable restoration took 0.47984 seconds
+[STEP] [2025-11-09 06:42:00] Started restoration of wp_yoast_indexable_hierarchy 53/56 (94.64%) table
+[INFO] [2025-11-09 06:42:00] Progress of wp_yoast_indexable_hierarchy: 1/3 (33.33%)
+[INFO] [2025-11-09 06:42:02] Progress of wp_yoast_indexable_hierarchy: 2/3 (66.67%)
+[INFO] [2025-11-09 06:42:03] Progress of wp_yoast_indexable_hierarchy: 3/3 (100.00%)
+[SUCCESS] [2025-11-09 06:42:03] Table wp_yoast_indexable_hierarchy restoration took 3.70622 seconds
+[STEP] [2025-11-09 06:42:05] Started restoration of wp_yoast_migrations 54/56 (96.43%) table
+[INFO] [2025-11-09 06:42:05] Progress of wp_yoast_migrations: 1/3 (33.33%)
+[INFO] [2025-11-09 06:42:06] Progress of wp_yoast_migrations: 2/3 (66.67%)
+[INFO] [2025-11-09 06:42:07] Progress of wp_yoast_migrations: 3/3 (100.00%)
+[SUCCESS] [2025-11-09 06:42:07] Table wp_yoast_migrations restoration took 2.96868 seconds
+[STEP] [2025-11-09 06:42:09] Started restoration of wp_yoast_primary_term 55/56 (98.21%) table
+[INFO] [2025-11-09 06:42:09] Progress of wp_yoast_primary_term: 1/2 (50.00%)
+[INFO] [2025-11-09 06:42:10] Progress of wp_yoast_primary_term: 2/2 (100.00%)
+[SUCCESS] [2025-11-09 06:42:10] Table wp_yoast_primary_term restoration took 1.92395 seconds
+[STEP] [2025-11-09 06:42:12] Started restoration of wp_yoast_seo_links 56/56 (100.00%) table
+[INFO] [2025-11-09 06:42:12] Progress of wp_yoast_seo_links: 1/2 (50.00%)
+[INFO] [2025-11-09 06:42:13] Progress of wp_yoast_seo_links: 2/2 (100.00%)
+[SUCCESS] [2025-11-09 06:42:13] Table wp_yoast_seo_links restoration took 1.69527 seconds
+[VERBOSE] [2025-11-09 06:42:16] Previous detected domain: raymagtech.com
+[VERBOSE] [2025-11-09 06:42:16] Previous detected domain parsed: raymagtech.com
+[VERBOSE] [2025-11-09 06:42:16] New detected domain: localhost
+[VERBOSE] [2025-11-09 06:42:16] SSL: http://
+[VERBOSE] [2025-11-09 06:42:16] Previous ABSPATH: /var/www/html/
+[VERBOSE] [2025-11-09 06:42:16] New detected ABSPATH: /app/
+[STEP] [2025-11-09 06:42:16] Performing Search & Replace
+[INFO] [2025-11-09 06:42:16] Page size for that restoration: 50
+[STEP] [2025-11-09 06:42:16] Performing database adjustments for table 1/56: 1762670018_wp_4LT44_actionscheduler_actions (1.79%)
+[INFO] [2025-11-09 06:42:26] Adjustments are not required for this table.
+[STEP] [2025-11-09 06:42:27] Performing database adjustments for table 2/56: 1762670018_wp_4LT44_actionscheduler_claims (3.57%)
+[INFO] [2025-11-09 06:42:37] Adjustments are not required for this table.
+[STEP] [2025-11-09 06:42:39] Performing database adjustments for table 3/56: 1762670018_wp_4LT44_actionscheduler_groups (5.36%)
+[INFO] [2025-11-09 06:42:49] Adjustments are not required for this table.
+[STEP] [2025-11-09 06:42:51] Performing database adjustments for table 4/56: 1762670018_wp_4LT44_actionscheduler_logs (7.14%)
+[INFO] [2025-11-09 06:43:08] Adjustments are not required for this table.
+[STEP] [2025-11-09 06:43:11] Performing database adjustments for table 5/56: 1762670018_wp_4LT44_commentmeta (8.93%)
+[INFO] [2025-11-09 06:43:38] Adjustments are not required for this table.
+[STEP] [2025-11-09 06:43:40] Performing database adjustments for table 6/56: 1762670018_wp_4LT44_comments (10.71%)
+[INFO] [2025-11-09 06:44:02] Adjustments are not required for this table.
+[STEP] [2025-11-09 06:44:04] Performing database adjustments for table 7/56: 1762670018_wp_4LT44_links (12.50%)
+[INFO] [2025-11-09 06:44:26] Adjustments are not required for this table.
+[STEP] [2025-11-09 06:44:28] Performing database adjustments for table 8/56: 1762670018_wp_4LT44_options (14.29%)
+[INFO] [2025-11-09 06:44:28] Batch for path adjustment (1/1) updated: 1 fields.
+[INFO] [2025-11-09 06:44:35] Batch for domain (variant C) adjustments (1/1) updated: 2 fields.
+[STEP] [2025-11-09 06:44:48] Performing database adjustments for table 9/56: 1762670018_wp_4LT44_postmeta (16.07%)
+[INFO] [2025-11-09 06:45:08] Adjustments are not required for this table.
+[STEP] [2025-11-09 06:45:14] Performing database adjustments for table 10/56: 1762670018_wp_4LT44_posts (17.86%)
+[INFO] [2025-11-09 06:45:44] Adjustments are not required for this table.
+[STEP] [2025-11-09 06:45:50] Performing database adjustments for table 11/56: 1762670018_wp_4LT44_term_relationships (19.64%)
+[INFO] [2025-11-09 06:46:14] Adjustments are not required for this table.
+[STEP] [2025-11-09 06:46:16] Performing database adjustments for table 12/56: 1762670018_wp_4LT44_term_taxonomy (21.43%)
+[INFO] [2025-11-09 06:46:34] Adjustments are not required for this table.
+[STEP] [2025-11-09 06:46:36] Performing database adjustments for table 13/56: 1762670018_wp_4LT44_termmeta (23.21%)
+[INFO] [2025-11-09 06:46:45] Adjustments are not required for this table.
+[STEP] [2025-11-09 06:46:47] Performing database adjustments for table 14/56: 1762670018_wp_4LT44_terms (25.00%)
+[INFO] [2025-11-09 06:46:57] Adjustments are not required for this table.
+[STEP] [2025-11-09 06:46:59] Performing database adjustments for table 15/56: 1762670018_wp_4LT44_usermeta (26.79%)
+[INFO] [2025-11-09 06:47:09] Adjustments are not required for this table.
+[STEP] [2025-11-09 06:47:10] Performing database adjustments for table 16/56: 1762670018_wp_4LT44_users (28.57%)
+[INFO] [2025-11-09 06:47:20] Adjustments are not required for this table.
+[STEP] [2025-11-09 06:47:21] Performing database adjustments for table 17/56: 1762670018_wp_4LT44_yoast_indexable (30.36%)
+[INFO] [2025-11-09 06:47:31] Adjustments are not required for this table.
+[STEP] [2025-11-09 06:47:33] Performing database adjustments for table 18/56: 1762670018_wp_4LT44_yoast_indexable_hierarchy (32.14%)
+[INFO] [2025-11-09 06:47:43] Adjustments are not required for this table.
+[STEP] [2025-11-09 06:47:45] Performing database adjustments for table 19/56: 1762670018_wp_4LT44_yoast_migrations (33.93%)
+[INFO] [2025-11-09 06:47:55] Adjustments are not required for this table.
+[STEP] [2025-11-09 06:47:56] Performing database adjustments for table 20/56: 1762670018_wp_4LT44_yoast_primary_term (35.71%)
+[INFO] [2025-11-09 06:48:07] Adjustments are not required for this table.
+[STEP] [2025-11-09 06:48:08] Performing database adjustments for table 21/56: 1762670018_wp_4LT44_yoast_seo_links (37.50%)
+[INFO] [2025-11-09 06:48:38] Adjustments are not required for this table.
+[STEP] [2025-11-09 06:48:44] Performing database adjustments for table 22/56: 1762670018_wp_actionscheduler_actions (39.29%)
+[INFO] [2025-11-09 06:49:09] Adjustments are not required for this table.
+[STEP] [2025-11-09 06:49:11] Performing database adjustments for table 23/56: 1762670018_wp_actionscheduler_claims (41.07%)
+[INFO] [2025-11-09 06:49:26] Adjustments are not required for this table.
+[STEP] [2025-11-09 06:49:29] Performing database adjustments for table 24/56: 1762670018_wp_actionscheduler_groups (42.86%)
+[INFO] [2025-11-09 06:49:56] Adjustments are not required for this table.
+[STEP] [2025-11-09 06:49:58] Performing database adjustments for table 25/56: 1762670018_wp_actionscheduler_logs (44.64%)
+[INFO] [2025-11-09 06:50:29] Adjustments are not required for this table.
+[STEP] [2025-11-09 06:50:31] Performing database adjustments for table 26/56: 1762670018_wp_commentmeta (46.43%)
+[INFO] [2025-11-09 06:50:54] Adjustments are not required for this table.
+[STEP] [2025-11-09 06:50:56] Performing database adjustments for table 27/56: 1762670018_wp_comments (48.21%)
+[INFO] [2025-11-09 06:51:26] Adjustments are not required for this table.
+[STEP] [2025-11-09 06:51:29] Performing database adjustments for table 28/56: 1762670018_wp_links (50.00%)
+[INFO] [2025-11-09 06:51:56] Adjustments are not required for this table.
+[STEP] [2025-11-09 06:51:59] Performing database adjustments for table 29/56: 1762670018_wp_litespeed_url (51.79%)
+[INFO] [2025-11-09 06:52:22] Adjustments are not required for this table.
+[STEP] [2025-11-09 06:52:26] Performing database adjustments for table 30/56: 1762670018_wp_litespeed_url_file (53.57%)
+[INFO] [2025-11-09 06:52:50] Adjustments are not required for this table.
+[STEP] [2025-11-09 06:52:56] Performing database adjustments for table 31/56: 1762670018_wp_options (55.36%)
+[INFO] [2025-11-09 06:52:56] Batch for path adjustment (1/1) updated: 4 fields.
+[INFO] [2025-11-09 06:53:08] Batch for domain (variant C) adjustments (1/1) updated: 7 fields.
+[INFO] [2025-11-09 06:53:14] Batch for domain (variant F) adjustments (1/1) updated: 1 fields.
+[STEP] [2025-11-09 06:53:23] Performing database adjustments for table 32/56: 1762670018_wp_postmeta (57.14%)
+[INFO] [2025-11-09 06:53:46] Adjustments are not required for this table.
+[STEP] [2025-11-09 06:53:50] Performing database adjustments for table 33/56: 1762670018_wp_posts (58.93%)
+[INFO] [2025-11-09 06:53:59] Batch for domain (variant C) adjustments (1/1) updated: 4 fields.
+[INFO] [2025-11-09 06:54:10] Batch for domain (variant F) adjustments (1/1) updated: 4 fields.
+[STEP] [2025-11-09 06:54:16] Performing database adjustments for table 34/56: 1762670018_wp_term_relationships (60.71%)
+[INFO] [2025-11-09 06:54:35] Adjustments are not required for this table.
+[STEP] [2025-11-09 06:54:38] Performing database adjustments for table 35/56: 1762670018_wp_term_taxonomy (62.50%)
+[INFO] [2025-11-09 06:54:56] Adjustments are not required for this table.
+[STEP] [2025-11-09 06:54:59] Performing database adjustments for table 36/56: 1762670018_wp_termmeta (64.29%)
+[INFO] [2025-11-09 06:55:22] Adjustments are not required for this table.
+[STEP] [2025-11-09 06:55:25] Performing database adjustments for table 37/56: 1762670018_wp_terms (66.07%)
+[INFO] [2025-11-09 06:55:44] Adjustments are not required for this table.
+[STEP] [2025-11-09 06:55:46] Performing database adjustments for table 38/56: 1762670018_wp_usermeta (67.86%)
+[INFO] [2025-11-09 06:56:08] Adjustments are not required for this table.
+[STEP] [2025-11-09 06:56:11] Performing database adjustments for table 39/56: 1762670018_wp_users (69.64%)
+[INFO] [2025-11-09 06:56:35] Adjustments are not required for this table.
+[STEP] [2025-11-09 06:56:41] Performing database adjustments for table 40/56: 1762670018_wp_wpfm_backup (71.43%)
+[INFO] [2025-11-09 06:57:11] Adjustments are not required for this table.
+[STEP] [2025-11-09 06:57:13] Performing database adjustments for table 41/56: 1762670018_wp_wpforms_entries (73.21%)
+[INFO] [2025-11-09 06:57:38] Adjustments are not required for this table.
+[STEP] [2025-11-09 06:57:41] Performing database adjustments for table 42/56: 1762670018_wp_wpforms_entry_fields (75.00%)
+[INFO] [2025-11-09 06:58:11] Adjustments are not required for this table.
+[STEP] [2025-11-09 06:58:13] Performing database adjustments for table 43/56: 1762670018_wp_wpforms_entry_meta (76.79%)
+[INFO] [2025-11-09 06:58:25] Batch for domain (variant C) adjustments (1/1) updated: 5 fields.
+[STEP] [2025-11-09 06:58:47] Performing database adjustments for table 44/56: 1762670018_wp_wpforms_file_restrictions (78.57%)
+[INFO] [2025-11-09 06:59:13] Adjustments are not required for this table.
+[STEP] [2025-11-09 06:59:16] Performing database adjustments for table 45/56: 1762670018_wp_wpforms_logs (80.36%)
+[INFO] [2025-11-09 06:59:41] Adjustments are not required for this table.
+[STEP] [2025-11-09 06:59:45] Performing database adjustments for table 46/56: 1762670018_wp_wpforms_payment_meta (82.14%)
+[INFO] [2025-11-09 07:00:13] Adjustments are not required for this table.
+[STEP] [2025-11-09 07:00:17] Performing database adjustments for table 47/56: 1762670018_wp_wpforms_payments (83.93%)
+[INFO] [2025-11-09 07:00:47] Adjustments are not required for this table.
+[STEP] [2025-11-09 07:00:53] Performing database adjustments for table 48/56: 1762670018_wp_wpforms_protected_files (85.71%)
+[INFO] [2025-11-09 07:01:29] Adjustments are not required for this table.
+[STEP] [2025-11-09 07:01:35] Performing database adjustments for table 49/56: 1762670018_wp_wpforms_tasks_meta (87.50%)
+[INFO] [2025-11-09 07:02:01] Adjustments are not required for this table.
+[STEP] [2025-11-09 07:02:05] Performing database adjustments for table 50/56: 1762670018_wp_wpmailsmtp_debug_events (89.29%)
+[INFO] [2025-11-09 07:02:31] Adjustments are not required for this table.
+[STEP] [2025-11-09 07:02:34] Performing database adjustments for table 51/56: 1762670018_wp_wpmailsmtp_tasks_meta (91.07%)
+[INFO] [2025-11-09 07:03:00] Adjustments are not required for this table.
+[STEP] [2025-11-09 07:03:05] Performing database adjustments for table 52/56: 1762670018_wp_yoast_indexable (92.86%)
+[INFO] [2025-11-09 07:03:29] Adjustments are not required for this table.
+[STEP] [2025-11-09 07:03:32] Performing database adjustments for table 53/56: 1762670018_wp_yoast_indexable_hierarchy (94.64%)
+[INFO] [2025-11-09 07:03:52] Adjustments are not required for this table.
+[STEP] [2025-11-09 07:03:56] Performing database adjustments for table 54/56: 1762670018_wp_yoast_migrations (96.43%)
+[INFO] [2025-11-09 07:04:18] Adjustments are not required for this table.
+[STEP] [2025-11-09 07:04:20] Performing database adjustments for table 55/56: 1762670018_wp_yoast_primary_term (98.21%)
+[INFO] [2025-11-09 07:04:44] Adjustments are not required for this table.
+[STEP] [2025-11-09 07:04:48] Performing database adjustments for table 56/56: 1762670018_wp_yoast_seo_links (100.00%)
+[INFO] [2025-11-09 07:05:13] Adjustments are not required for this table.
+[SUCCESS] [2025-11-09 07:05:20] Search & Replace finished successfully.
+[SUCCESS] [2025-11-09 07:05:20] Database restored
+[STEP] [2025-11-09 07:05:22] Performing table replacement
+[INFO] [2025-11-09 07:05:22] Table 1762670018_wp_4LT44_actionscheduler_actions renamed to wp_4LT44_actionscheduler_actions
+[INFO] [2025-11-09 07:05:22] Table 1762670018_wp_4LT44_actionscheduler_claims renamed to wp_4LT44_actionscheduler_claims
+[INFO] [2025-11-09 07:05:22] Table 1762670018_wp_4LT44_actionscheduler_groups renamed to wp_4LT44_actionscheduler_groups
+[INFO] [2025-11-09 07:05:22] Table 1762670018_wp_4LT44_actionscheduler_logs renamed to wp_4LT44_actionscheduler_logs
+[INFO] [2025-11-09 07:05:22] Table 1762670018_wp_4LT44_commentmeta renamed to wp_4LT44_commentmeta
+[INFO] [2025-11-09 07:05:22] Table 1762670018_wp_4LT44_comments renamed to wp_4LT44_comments
+[INFO] [2025-11-09 07:05:22] Table 1762670018_wp_4LT44_links renamed to wp_4LT44_links
+[INFO] [2025-11-09 07:05:22] Table 1762670018_wp_4LT44_options renamed to wp_4LT44_options
+[INFO] [2025-11-09 07:05:22] Table 1762670018_wp_4LT44_postmeta renamed to wp_4LT44_postmeta
+[INFO] [2025-11-09 07:05:22] Table 1762670018_wp_4LT44_posts renamed to wp_4LT44_posts
+[INFO] [2025-11-09 07:05:22] Table 1762670018_wp_4LT44_term_relationships renamed to wp_4LT44_term_relationships
+[INFO] [2025-11-09 07:05:22] Table 1762670018_wp_4LT44_term_taxonomy renamed to wp_4LT44_term_taxonomy
+[INFO] [2025-11-09 07:05:22] Table 1762670018_wp_4LT44_termmeta renamed to wp_4LT44_termmeta
+[INFO] [2025-11-09 07:05:22] Table 1762670018_wp_4LT44_terms renamed to wp_4LT44_terms
+[INFO] [2025-11-09 07:05:22] Table 1762670018_wp_4LT44_usermeta renamed to wp_4LT44_usermeta
+[INFO] [2025-11-09 07:05:23] Table 1762670018_wp_4LT44_users renamed to wp_4LT44_users
+[INFO] [2025-11-09 07:05:23] Table 1762670018_wp_4LT44_yoast_indexable renamed to wp_4LT44_yoast_indexable
+[INFO] [2025-11-09 07:05:23] Table 1762670018_wp_4LT44_yoast_indexable_hierarchy renamed to wp_4LT44_yoast_indexable_hierarchy
+[INFO] [2025-11-09 07:05:23] Table 1762670018_wp_4LT44_yoast_migrations renamed to wp_4LT44_yoast_migrations
+[INFO] [2025-11-09 07:05:23] Table 1762670018_wp_4LT44_yoast_primary_term renamed to wp_4LT44_yoast_primary_term
+[INFO] [2025-11-09 07:05:23] Table 1762670018_wp_4LT44_yoast_seo_links renamed to wp_4LT44_yoast_seo_links
+[INFO] [2025-11-09 07:05:23] Table 1762670018_wp_actionscheduler_actions renamed to wp_actionscheduler_actions
+[INFO] [2025-11-09 07:05:23] Table 1762670018_wp_actionscheduler_claims renamed to wp_actionscheduler_claims
+[INFO] [2025-11-09 07:05:23] Table 1762670018_wp_actionscheduler_groups renamed to wp_actionscheduler_groups
+[INFO] [2025-11-09 07:05:23] Table 1762670018_wp_actionscheduler_logs renamed to wp_actionscheduler_logs
+[INFO] [2025-11-09 07:05:23] Table 1762670018_wp_commentmeta renamed to wp_commentmeta
+[INFO] [2025-11-09 07:05:23] Table 1762670018_wp_comments renamed to wp_comments
+[INFO] [2025-11-09 07:05:23] Table 1762670018_wp_links renamed to wp_links
+[INFO] [2025-11-09 07:05:23] Table 1762670018_wp_litespeed_url renamed to wp_litespeed_url
+[INFO] [2025-11-09 07:05:23] Table 1762670018_wp_litespeed_url_file renamed to wp_litespeed_url_file
+[INFO] [2025-11-09 07:05:23] Table 1762670018_wp_options renamed to wp_options
+[INFO] [2025-11-09 07:05:23] Table 1762670018_wp_postmeta renamed to wp_postmeta
+[INFO] [2025-11-09 07:05:23] Table 1762670018_wp_posts renamed to wp_posts
+[INFO] [2025-11-09 07:05:23] Table 1762670018_wp_term_relationships renamed to wp_term_relationships
+[INFO] [2025-11-09 07:05:23] Table 1762670018_wp_term_taxonomy renamed to wp_term_taxonomy
+[INFO] [2025-11-09 07:05:23] Table 1762670018_wp_termmeta renamed to wp_termmeta
+[INFO] [2025-11-09 07:05:23] Table 1762670018_wp_terms renamed to wp_terms
+[INFO] [2025-11-09 07:05:23] Table 1762670018_wp_usermeta renamed to wp_usermeta
+[INFO] [2025-11-09 07:05:23] Table 1762670018_wp_users renamed to wp_users
+[INFO] [2025-11-09 07:05:23] Table 1762670018_wp_wpfm_backup renamed to wp_wpfm_backup
+[INFO] [2025-11-09 07:05:23] Table 1762670018_wp_wpforms_entries renamed to wp_wpforms_entries
+[INFO] [2025-11-09 07:05:23] Table 1762670018_wp_wpforms_entry_fields renamed to wp_wpforms_entry_fields
+[INFO] [2025-11-09 07:05:23] Table 1762670018_wp_wpforms_entry_meta renamed to wp_wpforms_entry_meta
+[INFO] [2025-11-09 07:05:23] Table 1762670018_wp_wpforms_file_restrictions renamed to wp_wpforms_file_restrictions
+[INFO] [2025-11-09 07:05:23] Table 1762670018_wp_wpforms_logs renamed to wp_wpforms_logs
+[INFO] [2025-11-09 07:05:23] Table 1762670018_wp_wpforms_payment_meta renamed to wp_wpforms_payment_meta
+[INFO] [2025-11-09 07:05:23] Table 1762670018_wp_wpforms_payments renamed to wp_wpforms_payments
+[INFO] [2025-11-09 07:05:23] Table 1762670018_wp_wpforms_protected_files renamed to wp_wpforms_protected_files
+[INFO] [2025-11-09 07:05:23] Table 1762670018_wp_wpforms_tasks_meta renamed to wp_wpforms_tasks_meta
+[INFO] [2025-11-09 07:05:23] Table 1762670018_wp_wpmailsmtp_debug_events renamed to wp_wpmailsmtp_debug_events
+[INFO] [2025-11-09 07:05:23] Table 1762670018_wp_wpmailsmtp_tasks_meta renamed to wp_wpmailsmtp_tasks_meta
+[INFO] [2025-11-09 07:05:23] Table 1762670018_wp_yoast_indexable renamed to wp_yoast_indexable
+[INFO] [2025-11-09 07:05:23] Table 1762670018_wp_yoast_indexable_hierarchy renamed to wp_yoast_indexable_hierarchy
+[INFO] [2025-11-09 07:05:23] Table 1762670018_wp_yoast_migrations renamed to wp_yoast_migrations
+[INFO] [2025-11-09 07:05:23] Table 1762670018_wp_yoast_primary_term renamed to wp_yoast_primary_term
+[INFO] [2025-11-09 07:05:23] Table 1762670018_wp_yoast_seo_links renamed to wp_yoast_seo_links
+[SUCCESS] [2025-11-09 07:05:23] All tables replaced
+[VERBOSE] [2025-11-09 07:05:23] Detected table prefix: wp_
+[VERBOSE] [2025-11-09 07:05:23] Forwarded table prefix: wp_
+[VERBOSE] [2025-11-09 07:05:23] Manifest table prefix: wp_
+[STEP] [2025-11-09 07:05:23] Restoring wp-config file...
+[SUCCESS] [2025-11-09 07:05:23] WP-Config restored
+[STEP] [2025-11-09 07:05:23] Enabling plugins included in the backup
+[VERBOSE] [2025-11-09 07:05:23] Detected version WP/PHP for plugin: wpforms/wpforms.php, is (5.5/7.2)
+[INFO] [2025-11-09 07:05:24] Plugin wpforms/wpforms.php enabled successfully.
+[VERBOSE] [2025-11-09 07:05:24] Detected version WP/PHP for plugin: polylang/polylang.php, is (6.2/7.2)
+[INFO] [2025-11-09 07:05:24] Plugin polylang/polylang.php enabled successfully.
+[VERBOSE] [2025-11-09 07:05:24] Detected version WP/PHP for plugin: wordpress-seo/wp-seo.php, is (6.7/7.4)
+[INFO] [2025-11-09 07:05:24] Plugin wordpress-seo/wp-seo.php enabled successfully.
+[VERBOSE] [2025-11-09 07:05:24] Detected version WP/PHP for plugin: svg-support/svg-support.php, is (5.8/7.4)
+[INFO] [2025-11-09 07:05:24] Plugin svg-support/svg-support.php enabled successfully.
+[VERBOSE] [2025-11-09 07:05:24] Detected version WP/PHP for plugin: wp-mail-smtp/wp_mail_smtp.php, is (5.5/7.4)
+[INFO] [2025-11-09 07:05:24] Plugin wp-mail-smtp/wp_mail_smtp.php enabled successfully.
+[VERBOSE] [2025-11-09 07:05:24] Detected version WP/PHP for plugin: backup-backup/backup-backup.php, is (4.6/5.6)
+[INFO] [2025-11-09 07:05:24] Plugin backup-backup/backup-backup.php enabled successfully.
+[VERBOSE] [2025-11-09 07:05:24] Detected version WP/PHP for plugin: classic-editor/classic-editor.php, is (4.9/5.2.4)
+[INFO] [2025-11-09 07:05:24] Plugin classic-editor/classic-editor.php enabled successfully.
+[VERBOSE] [2025-11-09 07:05:24] Detected version WP/PHP for plugin: advanced-custom-fields-pro/acf.php, is (5.8/7.0)
+[INFO] [2025-11-09 07:05:25] Plugin advanced-custom-fields-pro/acf.php enabled successfully.
+[VERBOSE] [2025-11-09 07:05:25] Detected version WP/PHP for plugin: wp-file-manager/file_folder_manager.php, is (4.0/5.2.4)
+[INFO] [2025-11-09 07:05:25] Plugin wp-file-manager/file_folder_manager.php enabled successfully.
+[SUCCESS] [2025-11-09 07:05:25] All plugins enabled, you are ready to go :)
+[SUCCESS] [2025-11-09 07:05:25] Database restored
+[STEP] [2025-11-09 07:05:25] Making new login session
+[SUCCESS] [2025-11-09 07:05:25] User should be logged in
+[STEP] [2025-11-09 07:05:25] Cleaning temporary files...
+[INFO] [2025-11-09 07:05:26] Removing 1600 files
+[SUCCESS] [2025-11-09 07:05:29] Temporary files cleaned
+[INFO] [2025-11-09 07:05:29] Restore process took: 1772 seconds.
+[SUCCESS] [2025-11-09 07:05:29] Restore process completed
+[STEP] [2025-11-09 07:05:29] Finalizing restored files
+[INFO] [2025-11-09 07:05:29] Unlocking migration
+[END-CODE] [2025-11-09 07:05:29] #001
