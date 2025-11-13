@@ -1,1 +1,180 @@
-[STEP] [2025-11-09 06:35:50] Initializing backup...
+[WARN] [2025-11-12 22:21:18] PHP CLI is disabled manually, plugin will omit all PHP CLI steps.
+[WARN] [2025-11-12 22:21:18] PHP CLI file cannot be executed due to unknown reason.
+[STEP] [2025-11-12 22:21:18] Initializing backup...
+[INFO] [2025-11-12 22:21:18] Backup & Migration version: 1.4.9.1
+[INFO] [2025-11-12 22:21:18] Site which will be backed up: http://localhost
+[INFO] [2025-11-12 22:21:18] PHP Version: 8.2.7
+[INFO] [2025-11-12 22:21:18] WP Version: 6.8.3
+[INFO] [2025-11-12 22:21:18] MySQL Version: 11.2.3
+[INFO] [2025-11-12 22:21:18] MySQL Max Length: 16777216
+[INFO] [2025-11-12 22:21:18] Web server: Apache/2.4.38 (Debian)
+[INFO] [2025-11-12 22:21:18] Max execution time (in seconds): 300
+[INFO] [2025-11-12 22:21:18] Memory limit (server): 512M
+[INFO] [2025-11-12 22:21:18] Memory limit (wp-config): 40M
+[INFO] [2025-11-12 22:21:18] Memory limit (wp-config admin): 512M
+[INFO] [2025-11-12 22:21:18] Max rows per query (this site): 2000
+[INFO] [2025-11-12 22:21:18] Checking if backup dir is writable...
+[INFO] [2025-11-12 22:21:18] Initializing custom error handler
+[SUCCESS] [2025-11-12 22:21:18] Yup it is writable...
+[STEP] [2025-11-12 22:21:18] Scanning files...
+[WARN] [2025-11-12 22:21:22] Removing file from backup (due to path rules): /app/wp-content/backup-migration-config.php
+[INFO] [2025-11-12 22:21:22] Total size of excluded files: 4556 bytes
+[VERBOSE] [2025-11-12 22:21:22] Total size of excluded files (bytes): 4556
+[STEP] [2025-11-12 22:21:22] Checking free space, reserving...
+[INFO] [2025-11-12 22:21:22] Requires at least 285348974 bytes. [272.13 MB]
+[INFO] [2025-11-12 22:21:22] Disk free space function is disabled by hosting.
+[INFO] [2025-11-12 22:21:22] Using dummy file to check free space (it can take some time).
+[SUCCESS] [2025-11-12 22:21:23] Confirmed, there is more than enough space, checked: 285348974 bytes
+[INFO] [2025-11-12 22:21:23] Scanning done - found 12119 files...
+[SUCCESS] [2025-11-12 22:21:23] Backup initialized...
+[STEP] [2025-11-12 22:21:23] Initializing archiving system...
+[SUCCESS] [2025-11-12 22:21:23] Archive system initialized...
+[STEP] [2025-11-12 22:21:23] Preparing map of files...
+[SUCCESS] [2025-11-12 22:21:23] Files prepared.
+[INFO] [2025-11-12 22:21:23] Starting compression process...
+[STEP] [2025-11-12 22:21:23] Smart memory calculation...
+[INFO] [2025-11-12 22:21:23] There is 512 MBs of memory to use
+[INFO] [2025-11-12 22:21:23] WordPress memory limit: 512 MBs
+[SUCCESS] [2025-11-12 22:21:23] Setting the safe limit to 57 MB
+[INFO] [2025-11-12 22:21:23] ZipArchive is available this process should use ZipArchive
+[INFO] [2025-11-12 22:21:23] Legacy setting: Using default modules depending on user server
+[STEP] [2025-11-12 22:21:23] Making database backup (using v3 engine, requires at least v1.2.2 to restore)
+[INFO] [2025-11-12 22:21:23] Iterating database...
+[INFO] [2025-11-12 22:21:23] Memory usage after initialization: 10.52 MB
+[VERBOSE] [2025-11-12 22:21:23] Exporting database via zip.php
+[WARN] [2025-11-12 22:21:23] Could not get info about: wp_4LT44_actionscheduler_actions (#02)
+[WARN] [2025-11-12 22:21:23] Could not get info about: wp_4LT44_actionscheduler_claims (#02)
+[WARN] [2025-11-12 22:21:23] Could not get info about: wp_4LT44_actionscheduler_groups (#02)
+[WARN] [2025-11-12 22:21:23] Could not get info about: wp_4LT44_actionscheduler_logs (#02)
+[WARN] [2025-11-12 22:21:23] Could not get info about: wp_4LT44_commentmeta (#02)
+[WARN] [2025-11-12 22:21:23] Could not get info about: wp_4LT44_comments (#02)
+[WARN] [2025-11-12 22:21:23] Could not get info about: wp_4LT44_links (#02)
+[WARN] [2025-11-12 22:21:23] Could not get info about: wp_4LT44_options (#02)
+[WARN] [2025-11-12 22:21:23] Could not get info about: wp_4LT44_postmeta (#02)
+[WARN] [2025-11-12 22:21:23] Could not get info about: wp_4LT44_posts (#02)
+[WARN] [2025-11-12 22:21:23] Could not get info about: wp_4LT44_term_relationships (#02)
+[WARN] [2025-11-12 22:21:23] Could not get info about: wp_4LT44_term_taxonomy (#02)
+[WARN] [2025-11-12 22:21:23] Could not get info about: wp_4LT44_termmeta (#02)
+[WARN] [2025-11-12 22:21:23] Could not get info about: wp_4LT44_terms (#02)
+[WARN] [2025-11-12 22:21:23] Could not get info about: wp_4LT44_usermeta (#02)
+[WARN] [2025-11-12 22:21:23] Could not get info about: wp_4LT44_users (#02)
+[WARN] [2025-11-12 22:21:23] Could not get info about: wp_4LT44_yoast_indexable (#02)
+[WARN] [2025-11-12 22:21:23] Could not get info about: wp_4LT44_yoast_indexable_hierarchy (#02)
+[WARN] [2025-11-12 22:21:23] Could not get info about: wp_4LT44_yoast_migrations (#02)
+[WARN] [2025-11-12 22:21:23] Could not get info about: wp_4LT44_yoast_primary_term (#02)
+[WARN] [2025-11-12 22:21:23] Could not get info about: wp_4LT44_yoast_seo_links (#02)
+[INFO] [2025-11-12 22:21:23] Scan found 35 tables (8126 rows), estimated total size: 6.76 MB.
+[INFO] [2025-11-12 22:21:23] Memory usage after getting table names: 10.55 MB 
+[INFO] [2025-11-12 22:21:23] Getting table recipes...
+[INFO] [2025-11-12 22:21:23] Table recipes have been exported.
+[INFO] [2025-11-12 22:21:23] Memory usage after loading recipes: 10.58 MB 
+[INFO] [2025-11-12 22:21:23] Saving recipes...
+[INFO] [2025-11-12 22:21:23] Recipes saved.
+[INFO] [2025-11-12 22:21:23] Memory usage after recipe off-load: 10.56 MB
+[INFO] [2025-11-12 22:21:23] Exporting table data...
+[STEP] [2025-11-12 22:21:23] Getting data of table: wp_actionscheduler_actions (1/35, 0.19 MB)
+[SUCCESS] [2025-11-12 22:21:23] Table export for: wp_actionscheduler_actions finished (0.01691s)
+[STEP] [2025-11-12 22:21:23] Getting data of table: wp_actionscheduler_claims (2/35, 0.03 MB)
+[INFO] [2025-11-12 22:21:23] Table wp_actionscheduler_claims is empty, saving only recipe.
+[STEP] [2025-11-12 22:21:23] Getting data of table: wp_actionscheduler_groups (3/35, 0.03 MB)
+[SUCCESS] [2025-11-12 22:21:23] Table export for: wp_actionscheduler_groups finished (0.00447s)
+[STEP] [2025-11-12 22:21:23] Getting data of table: wp_actionscheduler_logs (4/35, 0.05 MB)
+[SUCCESS] [2025-11-12 22:21:23] Table export for: wp_actionscheduler_logs finished (0.02931s)
+[STEP] [2025-11-12 22:21:23] Getting data of table: wp_commentmeta (5/35, 0.05 MB)
+[INFO] [2025-11-12 22:21:23] Table wp_commentmeta is empty, saving only recipe.
+[STEP] [2025-11-12 22:21:23] Getting data of table: wp_comments (6/35, 0.09 MB)
+[INFO] [2025-11-12 22:21:23] Table wp_comments is empty, saving only recipe.
+[STEP] [2025-11-12 22:21:23] Getting data of table: wp_links (7/35, 0.03 MB)
+[INFO] [2025-11-12 22:21:23] Table wp_links is empty, saving only recipe.
+[STEP] [2025-11-12 22:21:23] Getting data of table: wp_litespeed_url (8/35, 0.05 MB)
+[INFO] [2025-11-12 22:21:23] Table wp_litespeed_url is empty, saving only recipe.
+[STEP] [2025-11-12 22:21:23] Getting data of table: wp_litespeed_url_file (9/35, 0.09 MB)
+[INFO] [2025-11-12 22:21:23] Table wp_litespeed_url_file is empty, saving only recipe.
+[STEP] [2025-11-12 22:21:23] Getting data of table: wp_options (10/35, 1.16 MB)
+[SUCCESS] [2025-11-12 22:21:24] Table export for: wp_options finished (0.09348s)
+[STEP] [2025-11-12 22:21:24] Getting data of table: wp_postmeta (11/35, 3.25 MB)
+[SUCCESS] [2025-11-12 22:21:25] Table export for: wp_postmeta finished (1.26239s)
+[STEP] [2025-11-12 22:21:25] Getting data of table: wp_posts (12/35, 0.47 MB)
+[SUCCESS] [2025-11-12 22:21:25] Table export for: wp_posts finished (0.12947s)
+[STEP] [2025-11-12 22:21:25] Getting data of table: wp_term_relationships (13/35, 0.03 MB)
+[SUCCESS] [2025-11-12 22:21:25] Table export for: wp_term_relationships finished (0.01142s)
+[STEP] [2025-11-12 22:21:25] Getting data of table: wp_term_taxonomy (14/35, 0.05 MB)
+[SUCCESS] [2025-11-12 22:21:25] Table export for: wp_term_taxonomy finished (0.00492s)
+[STEP] [2025-11-12 22:21:25] Getting data of table: wp_termmeta (15/35, 0.05 MB)
+[SUCCESS] [2025-11-12 22:21:25] Table export for: wp_termmeta finished (0.00438s)
+[STEP] [2025-11-12 22:21:25] Getting data of table: wp_terms (16/35, 0.05 MB)
+[SUCCESS] [2025-11-12 22:21:25] Table export for: wp_terms finished (0.00756s)
+[STEP] [2025-11-12 22:21:25] Getting data of table: wp_usermeta (17/35, 0.05 MB)
+[SUCCESS] [2025-11-12 22:21:25] Table export for: wp_usermeta finished (0.01447s)
+[STEP] [2025-11-12 22:21:25] Getting data of table: wp_users (18/35, 0.06 MB)
+[SUCCESS] [2025-11-12 22:21:25] Table export for: wp_users finished (0.00257s)
+[STEP] [2025-11-12 22:21:25] Getting data of table: wp_wpfm_backup (19/35, 0.02 MB)
+[INFO] [2025-11-12 22:21:25] Table wp_wpfm_backup is empty, saving only recipe.
+[STEP] [2025-11-12 22:21:25] Getting data of table: wp_wpforms_entries (20/35, 0.11 MB)
+[SUCCESS] [2025-11-12 22:21:25] Table export for: wp_wpforms_entries finished (0.00836s)
+[STEP] [2025-11-12 22:21:25] Getting data of table: wp_wpforms_entry_fields (21/35, 0.09 MB)
+[SUCCESS] [2025-11-12 22:21:25] Table export for: wp_wpforms_entry_fields finished (0.01492s)
+[STEP] [2025-11-12 22:21:25] Getting data of table: wp_wpforms_entry_meta (22/35, 0.03 MB)
+[SUCCESS] [2025-11-12 22:21:25] Table export for: wp_wpforms_entry_meta finished (0.02095s)
+[STEP] [2025-11-12 22:21:25] Getting data of table: wp_wpforms_file_restrictions (23/35, 0.05 MB)
+[INFO] [2025-11-12 22:21:25] Table wp_wpforms_file_restrictions is empty, saving only recipe.
+[STEP] [2025-11-12 22:21:25] Getting data of table: wp_wpforms_logs (24/35, 0.02 MB)
+[SUCCESS] [2025-11-12 22:21:25] Table export for: wp_wpforms_logs finished (0.00508s)
+[STEP] [2025-11-12 22:21:25] Getting data of table: wp_wpforms_payment_meta (25/35, 0.06 MB)
+[INFO] [2025-11-12 22:21:25] Table wp_wpforms_payment_meta is empty, saving only recipe.
+[STEP] [2025-11-12 22:21:25] Getting data of table: wp_wpforms_payments (26/35, 0.16 MB)
+[INFO] [2025-11-12 22:21:25] Table wp_wpforms_payments is empty, saving only recipe.
+[STEP] [2025-11-12 22:21:25] Getting data of table: wp_wpforms_protected_files (27/35, 0.08 MB)
+[INFO] [2025-11-12 22:21:25] Table wp_wpforms_protected_files is empty, saving only recipe.
+[STEP] [2025-11-12 22:21:25] Getting data of table: wp_wpforms_tasks_meta (28/35, 0.02 MB)
+[SUCCESS] [2025-11-12 22:21:25] Table export for: wp_wpforms_tasks_meta finished (0.01040s)
+[STEP] [2025-11-12 22:21:25] Getting data of table: wp_wpmailsmtp_debug_events (29/35, 0.02 MB)
+[SUCCESS] [2025-11-12 22:21:25] Table export for: wp_wpmailsmtp_debug_events finished (0.00292s)
+[STEP] [2025-11-12 22:21:25] Getting data of table: wp_wpmailsmtp_tasks_meta (30/35, 0.02 MB)
+[SUCCESS] [2025-11-12 22:21:25] Table export for: wp_wpmailsmtp_tasks_meta finished (0.00382s)
+[STEP] [2025-11-12 22:21:25] Getting data of table: wp_yoast_indexable (31/35, 0.11 MB)
+[SUCCESS] [2025-11-12 22:21:25] Table export for: wp_yoast_indexable finished (0.00806s)
+[STEP] [2025-11-12 22:21:25] Getting data of table: wp_yoast_indexable_hierarchy (32/35, 0.06 MB)
+[SUCCESS] [2025-11-12 22:21:25] Table export for: wp_yoast_indexable_hierarchy finished (0.00722s)
+[STEP] [2025-11-12 22:21:25] Getting data of table: wp_yoast_migrations (33/35, 0.03 MB)
+[SUCCESS] [2025-11-12 22:21:25] Table export for: wp_yoast_migrations finished (0.00696s)
+[STEP] [2025-11-12 22:21:25] Getting data of table: wp_yoast_primary_term (34/35, 0.05 MB)
+[INFO] [2025-11-12 22:21:25] Table wp_yoast_primary_term is empty, saving only recipe.
+[STEP] [2025-11-12 22:21:25] Getting data of table: wp_yoast_seo_links (35/35, 0.05 MB)
+[SUCCESS] [2025-11-12 22:21:25] Table export for: wp_yoast_seo_links finished (0.00320s)
+[INFO] [2025-11-12 22:21:25] Table data exported.
+[INFO] [2025-11-12 22:21:25] Memory usage after data export: 10.60 MB
+[INFO] [2025-11-12 22:21:25] Entire process took: 1.8477 s
+[SUCCESS] [2025-11-12 22:21:25] Database backup finished
+[STEP] [2025-11-12 22:21:25] Making archive
+[INFO] [2025-11-12 22:21:25] Compressing...
+[WARN] [2025-11-12 22:21:25] Backup will run as single-request, may be unstable...
+[INFO] [2025-11-12 22:21:25] Using ZipArchive extension for this backup process.
+[STEP] [2025-11-12 22:21:25] Adding database SQL file(s) to the backup file.
+[VERBOSE] [2025-11-12 22:21:25] Database files in total found: 35
+[SUCCESS] [2025-11-12 22:21:25] Database added to the backup successfully.
+[STEP] [2025-11-12 22:21:25] Performing site files backup...
+[INFO] [2025-11-12 22:21:25] Chunks contain 1000 files.
+[INFO] [2025-11-12 22:21:28] Milestone: 1000/12119
+[INFO] [2025-11-12 22:21:31] Milestone: 2000/12119
+[INFO] [2025-11-12 22:21:34] Milestone: 3000/12119
+[INFO] [2025-11-12 22:21:36] Milestone: 4000/12119
+[INFO] [2025-11-12 22:21:37] Milestone: 5000/12119
+[INFO] [2025-11-12 22:21:40] Milestone: 6000/12119
+[INFO] [2025-11-12 22:21:43] Milestone: 7000/12119
+[INFO] [2025-11-12 22:21:46] Milestone: 8000/12119
+[INFO] [2025-11-12 22:21:48] Milestone: 9000/12119
+[INFO] [2025-11-12 22:21:53] Milestone: 10000/12119
+[INFO] [2025-11-12 22:21:56] Milestone: 11000/12119
+[INFO] [2025-11-12 22:22:04] Milestone: 12000/12119
+[INFO] [2025-11-12 22:22:09] Milestone: 12119/12119
+[SUCCESS] [2025-11-12 22:22:09] Compressed 12119 files
+[INFO] [2025-11-12 22:22:09] Archiving of 12119 files took: 46.04s
+[STEP] [2025-11-12 22:22:09] Finalizing backup
+[INFO] [2025-11-12 22:22:09] Generating manifest file and saving current live-log...
+[INFO] [2025-11-12 22:22:10] Adding manifest...
+[SUCCESS] [2025-11-12 22:22:14] Manifest file and logs added to the backup. Temporary files removed.
+[STEP] [2025-11-12 22:22:14] Closing files and archives
+[SUCCESS] [2025-11-12 22:22:14] Cleanup finished, backup complete.
+[SUCCESS] [2025-11-12 22:22:14] New backup created and its name is: BM_2025-11-12_22_21_18_JLBO8WAYj920S5sD.zip
+[END-CODE] [2025-11-12 22:22:14] #001
