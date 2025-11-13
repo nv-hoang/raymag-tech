@@ -10,7 +10,7 @@
 
 if (! defined('_S_VERSION')) {
 	// Replace the version number of the theme on each release.
-	define('_S_VERSION', '1.0.2');
+	define('_S_VERSION', '1.0.4');
 }
 
 if (! defined('_LANG_DOMAIN')) {
@@ -189,6 +189,32 @@ if (defined('JETPACK__VERSION')) {
 }
 
 // ===================================================================================================================
+function allow_lottie_json_uploads( $mimes ) {
+    // Allow only Lottie JSON (safe)
+    $mimes['json'] = 'application/json';
+    return $mimes;
+}
+add_filter( 'upload_mimes', 'allow_lottie_json_uploads' );
+
+// Optional: make sure WP recognizes it properly
+function check_json_filetype( $data, $file, $filename, $mimes ) {
+    $ext = pathinfo( $filename, PATHINFO_EXTENSION );
+    if ( 'json' === strtolower( $ext ) ) {
+        $data['ext']  = 'json';
+        $data['type'] = 'application/json';
+    }
+    return $data;
+}
+add_filter( 'wp_check_filetype_and_ext', 'check_json_filetype', 10, 4 );
+
+// ===================================================================================================================
+function raymag_add_editor_styles() {
+    add_theme_support('editor-styles');
+    add_editor_style('editor-style.css'); // located in your theme root
+}
+add_action('after_setup_theme', 'raymag_add_editor_styles');
+// ===================================================================================================================
+
 add_filter('wpforms_setting', function ($value, $key, $default_value, $option) {
 	if ($key === 'validation-required') {
 		return '此欄位為必填項。';

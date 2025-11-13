@@ -30,7 +30,7 @@ get_header();
                         <?php
                         $title = explode('<br />', get_custom_field('home_kv.kv_title'), 2);
                         ?>
-                        <div class="ani-item gradient-1 text-[40px] leading-125 font-semibold lg:text-[88px] lg:leading-100"><?php echo array_shift($title); ?></div>
+                        <h1 class="ani-item gradient-1 text-[40px] leading-125 font-semibold lg:text-[88px] lg:leading-100"><?php echo array_shift($title); ?></h1>
                         <div class="ani-item-2 text-[40px] leading-125 font-semibold text-white lg:text-[88px] lg:leading-100"><?php echo array_shift($title); ?></div>
                     </div>
                     <div class="text-[20px] lg:text-[24px] leading-150 font-medium text-gray-100 mt-[100px] text-right">
@@ -51,7 +51,7 @@ get_header();
                 <div class="inline-block text-[64px] lg:text-[100px] leading-100 font-semibold" style="font-family: 'Inter';">
                     <div class="ani-item" data-classes="gradient-2"><?php the_custom_field('home_products.pro_bgtitle'); ?></div>
                 </div>
-                <h1 class="ani-item-2 text-[32px] lg:text-[40px] leading-150 2xl:leading-125 font-medium text-white -mt-10"><?php the_custom_field('home_products.pro_title'); ?></h1>
+                <h2 class="ani-item-2 text-[32px] lg:text-[40px] leading-150 2xl:leading-125 font-medium text-white -mt-10"><?php the_custom_field('home_products.pro_title'); ?></h2>
             </div>
             <h6 class="ani-item-2 text-[16px] lg:text-[18px] leading-175 text-gray-100 mt-5"><?php the_custom_field('home_products.pro_desc'); ?></h6>
 
@@ -159,7 +159,7 @@ get_header();
                 <div class="inline-block text-[64px] lg:text-[100px] leading-100 font-semibold" style="font-family: 'Inter';">
                     <div class="ani-item" data-classes="gradient-2"><?php the_custom_field('home_service.ser_bgtitle'); ?></div>
                 </div>
-                <h1 class="ani-item-2 text-[32px] lg:text-[40px] leading-150 2xl:leading-125 font-medium text-white -mt-10"><?php the_custom_field('home_service.ser_title'); ?></h1>
+                <h2 class="ani-item-2 text-[32px] lg:text-[40px] leading-150 2xl:leading-125 font-medium text-white -mt-10"><?php the_custom_field('home_service.ser_title'); ?></h2>
             </div>
             <h6 class="ani-item-2 text-[16px] lg:text-[18px] leading-175 text-gray-100 mt-5"><?php the_custom_field('home_service.ser_desc'); ?></h6>
         </div>
@@ -168,7 +168,7 @@ get_header();
     <div class="relative mt-[80px]">
         <div x-init="$dispatch('initswiper')" id="service-swiper" data-effect-speed="600" data-loop="true" data-effect="fade" data-next=".service-swiper-next" data-prev=".service-swiper-prev" data-index=".service-swiper-index" data-total=".service-swiper-total" class="relative swiper-ani">
             <div> <!-- swiper-wrapper -->
-                <?php foreach (get_custom_field('home_service.ser_slider') as $idx => $item): ?>
+                <?php foreach (get_custom_field('home_service.ser_slider', []) as $idx => $item): ?>
                     <div class="swiper-slide swiper-slide-<?php echo $idx; ?>">
                         <div data-ani="fadeUp" data-delay="0.4" data-target=".ani-item">
                             <div class="relative">
@@ -179,9 +179,9 @@ get_header();
                                             <div class="text-[40px] lg:text-[64px] leading-125 lg:leading-100 font-semibold overflow-hidden" style="font-family: 'Inter';">
                                                 <div class="ani-item gradient-1"><?php the_value($item, 'seritem_title'); ?></div>
                                             </div>
-                                            <h2 class="text-[24px] lg:text-[32px] leading-150 font-medium text-white mt-5 overflow-hidden">
+                                            <div class="text-[24px] lg:text-[32px] leading-150 font-medium text-white mt-5 overflow-hidden">
                                                 <div class="ani-item"><?php the_value($item, 'seritem_subtitle'); ?></div>
-                                            </h2>
+                                            </div>
                                         </div>
 
                                         <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-[80px] mt-10">
@@ -249,7 +249,7 @@ get_header();
                         <div class="inline-block text-[64px] lg:text-[100px] leading-100 font-semibold" style="font-family: 'Inter';">
                             <div class="ani-item-2" data-classes="gradient-2"><?php the_custom_field('home_equipment.equ_bgtitle'); ?></div>
                         </div>
-                        <h1 class="ani-item-3 text-[32px] lg:text-[40px] leading-150 2xl:leading-125 font-medium text-white -mt-10"><?php the_custom_field('home_equipment.equ_title'); ?></h1>
+                        <h2 class="ani-item-3 text-[32px] lg:text-[40px] leading-150 2xl:leading-125 font-medium text-white -mt-10"><?php the_custom_field('home_equipment.equ_title'); ?></h2>
                     </div>
                     <h6 class="ani-item-3 text-[16px] lg:text-[18px] leading-175 text-gray-100 mt-5"><?php the_custom_field('home_equipment.equ_desc'); ?></h6>
                 </div>
@@ -317,7 +317,17 @@ get_header();
 <div class="relative overflow-hidden">
     <img src="<?php the_theme_asset_url('assets/img/bg-home-contact.webp'); ?>" class="absolute inset-0 w-full h-full object-cover pointer-events-none">
     <div class="relative z-10">
-        <?php if (false): ?>
+        <?php 
+        $news_query = new WP_Query(array(
+            'post_type' => 'post',
+            'posts_per_page' => 3,
+            'orderby' => 'date',
+            'order' => 'DESC',
+            'post_status' => 'publish',
+        ));
+        $idx = 0;
+        ?>
+        <?php if ($news_query->have_posts()): ?>
             <div class="max-w-[1024px] mx-auto py-[100px] px-3 lg:px-10">
                 <div class="text-center">
                     <div data-ani="textfadeLeft2" data-delay="0.4" data-target=".ani-item" data-sequence="true">
@@ -326,59 +336,43 @@ get_header();
                                 <div class="inline-block text-[64px] lg:text-[100px] leading-100 font-semibold" style="font-family: 'Inter';">
                                     <div class="ani-item" data-classes="gradient-2">NEWS</div>
                                 </div>
-                                <h1 class="ani-item-2 text-[32px] lg:text-[40px] leading-150 2xl:leading-125 font-medium text-white -mt-10">最新消息</h1>
+                                <?php 
+                                    $page_news = get_template_page('raymag_template_news');
+                                ?>
+                                <h2 class="ani-item-2 text-[32px] lg:text-[40px] leading-150 2xl:leading-125 font-medium text-white -mt-10"><?php echo ($page_news ? $page_news->post_title : '最新消息'); ?></h2>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <div data-ani="fadeUp" data-delay="1" data-target=".ani-item" class="mt-[80px]">
-                    <div class="ani-item">
-                        <a href="#" class="flex flex-col lg:flex-row gap-3 lg:gap-10 hover-scale">
-                            <div class="lg:w-[320px]">
-                                <div class="inline-block w-full h-[210px] lg:h-[200px] overflow-hidden rounded-[8px]">
-                                    <img src="<?php the_theme_asset_url('assets/img/pic-home-news-1.webp'); ?>" class="w-full h-full object-cover transition-transform">
+                    <?php while ($news_query->have_posts()) : ?>
+                        <?php
+                        $idx++;
+                        $news_query->the_post();
+                        $thumbnail = get_the_post_thumbnail_url(get_the_ID(), 'full');
+                        if (empty($thumbnail)) {
+                            $thumbnail = get_theme_asset_url('assets/img/pic-home-news-2.webp');
+                        }
+                        ?>
+                        <div class="ani-item <?php echo ($idx % 2 == 0 ? 'mt-7 pt-7 border-t border-primary-300 border-opacity-20':''); ?>">
+                            <a href="<?php echo get_permalink(); ?>" class="flex flex-col lg:flex-row gap-3 lg:gap-10 hover-scale">
+                                <div class="lg:w-[320px]">
+                                    <div class="inline-block w-full h-[210px] lg:h-[200px] overflow-hidden rounded-[8px]">
+                                        <img src="<?php echo $thumbnail; ?>" class="w-full h-full object-cover transition-transform">
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="flex-1 px-3 lg:p-3">
-                                <div class="text-[16px] leading-175 text-primary-300 text-right">January 1, 2025</div>
-                                <h3 class="text-[20px] lg:text-[24px] leading-150 font-medium text-white mt-3">全方位金屬表面處理技術</h3>
-                                <p class="text-[16px] leading-175 text-gray-100 mt-3">透過創新的製程與專業技術，提供金屬材料耐蝕性、強度與外觀品質的全方位解決方案，滿足多元產業的應用需求。</p>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="ani-item mt-7 pt-7 border-t border-primary-300 border-opacity-20">
-                        <a href="#" class="flex flex-col lg:flex-row gap-3 lg:gap-10 hover-scale">
-                            <div class="lg:w-[320px]">
-                                <div class="inline-block w-full h-[210px] lg:h-[200px] overflow-hidden rounded-[8px]">
-                                    <img src="<?php the_theme_asset_url('assets/img/pic-home-news-2.webp'); ?>" class="w-full h-full object-cover transition-transform">
+                                <div class="flex-1 px-3 lg:p-3">
+                                    <div class="text-[16px] leading-175 text-primary-300 text-right"><?php echo get_the_date('F j, Y'); ?></div>
+                                    <h3 class="text-[20px] lg:text-[24px] leading-150 font-medium text-white mt-3"><?php the_title(); ?></h3>
+                                    <p class="text-[16px] leading-175 text-gray-100 mt-3"><?php echo get_the_excerpt(); ?></p>
                                 </div>
-                            </div>
-                            <div class="flex-1 px-3 lg:p-3">
-                                <div class="text-[16px] leading-175 text-primary-300 text-right">January 1, 2025</div>
-                                <h3 class="text-[20px] lg:text-[24px] leading-150 font-medium text-white mt-3">全方位金屬表面處理技術</h3>
-                                <p class="text-[16px] leading-175 text-gray-100 mt-3">透過創新的製程與專業技術，提供金屬材料耐蝕性、強度與外觀品質的全方位解決方案，滿足多元產業的應用需求。</p>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="ani-item mt-7 pt-7 border-t border-primary-300 border-opacity-20">
-                        <a href="#" class="flex flex-col lg:flex-row gap-3 lg:gap-10 hover-scale">
-                            <div class="lg:w-[320px]">
-                                <div class="inline-block w-full h-[210px] lg:h-[200px] overflow-hidden rounded-[8px]">
-                                    <img src="<?php the_theme_asset_url('assets/img/pic-home-news-3.webp'); ?>" class="w-full h-full object-cover transition-transform">
-                                </div>
-                            </div>
-                            <div class="flex-1 px-3 lg:p-3">
-                                <div class="text-[16px] leading-175 text-primary-300 text-right">January 1, 2025</div>
-                                <h3 class="text-[20px] lg:text-[24px] leading-150 font-medium text-white mt-3">全方位金屬表面處理技術</h3>
-                                <p class="text-[16px] leading-175 text-gray-100 mt-3">透過創新的製程與專業技術，提供金屬材料耐蝕性、強度與外觀品質的全方位解決方案，滿足多元產業的應用需求。</p>
-                            </div>
-                        </a>
-                    </div>
+                            </a>
+                        </div>
+                    <?php endwhile; ?>
                 </div>
             </div>
+            <?php wp_reset_postdata(); ?>
         <?php endif; ?>
 
         <div id="section-contact" class="max-w-[1440px] mx-auto py-[100px]">
@@ -391,7 +385,7 @@ get_header();
                                     <div class="inline-block text-[64px] lg:text-[100px] leading-100 font-semibold" style="font-family: 'Inter';">
                                         <div class="ani-item" data-classes="gradient-2"><?php the_custom_field('home_contact.contact_bgtitle'); ?></div>
                                     </div>
-                                    <h1 class="ani-item-2 text-[32px] lg:text-[40px] leading-150 2xl:leading-125 font-medium text-white -mt-10"><?php the_custom_field('home_contact.contact_title'); ?></h1>
+                                    <h2 class="ani-item-2 text-[32px] lg:text-[40px] leading-150 2xl:leading-125 font-medium text-white -mt-10"><?php the_custom_field('home_contact.contact_title'); ?></h2>
                                 </div>
                                 <h6 class="ani-item-2 text-[16px] lg:text-[18px] leading-175 text-gray-100 mt-5"><?php the_custom_field('home_contact.contact_desc'); ?></h6>
                             </div>

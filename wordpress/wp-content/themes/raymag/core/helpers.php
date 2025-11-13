@@ -40,7 +40,11 @@ function get_theme_option($key, $lang = false, $default = '')
 {
     if ($lang) $key .= '.' . get_current_lang('slug');
     $field = get_field(str_replace('.', '_', $key), 'option');
-    return empty($field) ? $default : $field;
+
+    if (empty($field)) {
+        $field = $default;
+    }
+    return is_string($field) && !isHtml($field) ? nl2br($field) : $field;
 }
 
 function the_theme_option($key, $lang = false, $default = '')

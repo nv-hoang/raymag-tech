@@ -1,0 +1,167 @@
+#tinymce h1,
+#tinymce h2,
+#tinymce h3,
+#tinymce h4,
+#tinymce h5,
+#tinymce h6 {
+    margin-top: 40px;
+    margin-bottom: 8px;
+}
+
+#tinymce p {
+    margin-bottom: 12px;
+}
+
+#tinymce ul li>ul,
+#tinymce ul li>ol,
+#tinymce ol li>ul,
+#tinymce ol li>ol {
+    margin-top: 8px;
+}
+
+#tinymce figure {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+#tinymce ul+p,
+#tinymce ol+p {
+    margin-top: 40px;
+}
+
+#tinymce h1 {
+    color: white;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 150%;
+}
+
+#tinymce h2 {
+    color: #0995da;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 150%;
+}
+
+#tinymce h3 {
+    color: #0995da;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 150%;
+}
+
+#tinymce h4 {
+    color: #0995da;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 175%;
+}
+
+#tinymce h5 {
+    color: #0995da;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 175%;
+}
+
+#tinymce h6 {
+    color: #0995da;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 175%;
+}
+
+#tinymce img {
+    max-width: 100% !important;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+#tinymce figcaption {
+    color: #0995da;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 175%;
+    margin-top: 8px;
+}
+
+#tinymce hr {
+    border: none;
+    border-top: 1px solid #0995da !important;
+    opacity: 0.2;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+#tinymce a {
+    color: var(--tw-primary-500);
+    font-weight: 500;
+}
+
+#tinymce a:hover {
+    color: #0995da;
+}
+
+#tinymce ul {
+    padding-left: 32px;
+    list-style-type: circle;
+}
+
+#tinymce ul li::marker {
+    color: #0995da;
+}
+
+#tinymce ul li:not(:last-child) {
+    margin-bottom: var(--li-mb, 12px);
+}
+
+#tinymce ol {
+    padding-left: 32px;
+    list-style-type: decimal;
+}
+
+#tinymce ol li:not(:last-child) {
+    margin-bottom: 12px;
+}
+
+@media (min-width: 1024px) {
+    #tinymce h1 {
+        font-weight: 500;
+        font-size: 40px;
+        line-height: 125%;
+    }
+
+    #tinymce h2 {
+        font-weight: 500;
+        font-size: 32px;
+        line-height: 150%;
+    }
+
+    #tinymce h3 {
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 150%;
+    }
+
+    #tinymce h4 {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 150%;
+    }
+
+    #tinymce h5 {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 175%;
+    }
+
+    #tinymce h6 {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 175%;
+    }
+
+    #tinymce img {
+        border-radius: 28px;
+    }
+}
