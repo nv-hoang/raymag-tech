@@ -7,8 +7,19 @@ import { gsap, startAnimation } from "./animations/animations";
 import { SwiperInit } from './animations/swiper';
 // import { FormInit } from './animations/form';
 import axios from 'axios';
+import Toastify from 'toastify-js';
+import "toastify-js/src/toastify.css";
 
 var $ = window.$ = window.jQuery || jQuery;
+window.Toastify = (message) => {
+    Toastify({
+        text: message,
+        gravity: "bottom",
+        style: {
+            background: "#1e1e1e",
+        },
+    }).showToast();
+};
 
 function start() {
     startAnimation();
